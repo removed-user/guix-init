@@ -1,6 +1,6 @@
-(include
-"/etc/guix/channels.d/guix-past.scm"
-"/etc/guix/channels.d/guix-science.scm"
-"/etc/guix/channels.d/guix.scm"
-"/etc/guix/channels.d/nonguix.scm"
+(list 
+load "/etc/guix/channels.d/guix.scm"
+load "/etc/guix/channels.d/nonguix.scm"
+; load "/etc/guix/channels.d/extra/guix-science.scm"
+; load "/etc/guix/channels.d/extra/guix-past.scm"
  )
