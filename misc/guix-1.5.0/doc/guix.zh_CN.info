@@ -1,0 +1,575 @@
+This is guix.zh_CN.info, produced by makeinfo version 6.8 from
+guix.zh_CN.texi.
+
+Copyright © 2012–2025 Ludovic Courtès
+Copyright © 2013, 2014, 2016, 2024 Andreas Enge
+Copyright © 2013 Nikita Karetnikov
+Copyright © 2014, 2015, 2016 Alex Kost
+Copyright © 2015, 2016 Mathieu Lirzin
+Copyright © 2014 Pierre-Antoine Rault
+Copyright © 2015 Taylan Ulrich Bayırlı/Kammer
+Copyright © 2015, 2016, 2017, 2019, 2020, 2021, 2023, 2025 Leo Famulari
+Copyright © 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Ricardo
+Wurmus
+Copyright © 2016 Ben Woodcroft
+Copyright © 2016, 2017, 2018, 2021 Chris Marusich
+Copyright © 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2025 Efraim
+Flashner
+Copyright © 2016 John Darrington
+Copyright © 2016, 2017 Nikita Gillmann
+Copyright © 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
+Janneke Nieuwenhuizen
+Copyright © 2016, 2017, 2018, 2019, 2020, 2021 Julien Lepiller
+Copyright © 2016 Alex ter Weele
+Copyright © 2016, 2017, 2018, 2019, 2020, 2021 Christopher Baines
+Copyright © 2017, 2018, 2019 Clément Lassieur
+Copyright © 2017, 2018, 2020, 2021, 2022 Mathieu Othacehe
+Copyright © 2017 Federico Beffa
+Copyright © 2017, 2018, 2024, 2025 Carlo Zancanaro
+Copyright © 2017 Thomas Danckaert
+Copyright © 2017 humanitiesNerd
+Copyright © 2017, 2021 Christine Lemmer-Webber
+Copyright © 2017, 2018, 2019, 2020, 2021, 2022 Marius Bakke
+Copyright © 2017, 2019, 2020, 2022 Hartmut Goebel
+Copyright © 2017, 2019–2025 Maxim Cournoyer
+Copyright © 2017–2022 Tobias Geerinckx-Rice
+Copyright © 2017 George Clemmer
+Copyright © 2017 Andy Wingo
+Copyright © 2017, 2018, 2019, 2020, 2023, 2024, 2025 Arun Isaac
+Copyright © 2017 nee
+Copyright © 2018 Rutger Helling
+Copyright © 2018, 2021, 2023, 2025 Oleg Pykhalov
+Copyright © 2018 Mike Gerwitz
+Copyright © 2018 Pierre-Antoine Rouby
+Copyright © 2018, 2019 Gábor Boskovits
+Copyright © 2018, 2019, 2020, 2022, 2023, 2024 Florian Pelz
+Copyright © 2018 Laura Lazzati
+Copyright © 2018 Alex Vong
+Copyright © 2019 Josh Holland
+Copyright © 2019, 2020 Diego Nicola Barbato
+Copyright © 2019 Ivan Petkov
+Copyright © 2019 Jakob L. Kreuze
+Copyright © 2019 Kyle Andrews
+Copyright © 2019 Alex Griffin
+Copyright © 2019, 2020, 2021, 2022 Guillaume Le Vaillant
+Copyright © 2020 Liliana Marie Prikler
+Copyright © 2019, 2020, 2021, 2022, 2023 Simon Tournier
+Copyright © 2020 Wiktor Żelazny
+Copyright © 2020 Damien Cassou
+Copyright © 2020 Jakub Kądziołka
+Copyright © 2020 Jack Hill
+Copyright © 2020 Naga Malleswari
+Copyright © 2020, 2021 Brice Waegeneire
+Copyright © 2020 R Veera Kumar
+Copyright © 2020, 2021, 2022 Pierre Langlois
+Copyright © 2020 pinoaffe
+Copyright © 2020, 2023 André Batista
+Copyright © 2020, 2021 Alexandru-Sergiu Marton
+Copyright © 2020 raingloom
+Copyright © 2020 Daniel Brooks
+Copyright © 2020 John Soo
+Copyright © 2020 Jonathan Brielmaier
+Copyright © 2020 Edgar Vincent
+Copyright © 2021, 2022 Maxime Devos
+Copyright © 2021 B. Wilson
+Copyright © 2021 Xinglu Chen
+Copyright © 2021 Raghav Gururajan
+Copyright © 2021 Domagoj Stolfa
+Copyright © 2021 Hui Lu
+Copyright © 2021 pukkamustard
+Copyright © 2021 Alice Brenon
+Copyright © 2021-2023 Josselin Poiret
+Copyright © 2021, 2023 muradm
+Copyright © 2021, 2022 Andrew Tropin
+Copyright © 2021 Sarah Morgensen
+Copyright © 2022 Remco van ’t Veer
+Copyright © 2022 Aleksandr Vityazev
+Copyright © 2022 Philip M^{c}Grath
+Copyright © 2022 Karl Hallsby
+Copyright © 2022 Justin Veilleux
+Copyright © 2022 Reily Siegel
+Copyright © 2022 Simon Streit
+Copyright © 2022 (
+Copyright © 2022 John Kehayias
+Copyright © 2022⁠–⁠2023 Bruno Victal
+Copyright © 2022 Ivan Vilata-i-Balaguer
+Copyright © 2023-2025 Giacomo Leidi
+Copyright © 2022 Antero Mejr
+Copyright © 2023 Karl Hallsby
+Copyright © 2023 Nathaniel Nicandro
+Copyright © 2023 Tanguy Le Carrour
+Copyright © 2023-2024 Zheng Junjie
+Copyright © 2023 Brian Cully
+Copyright © 2023 Felix Lechner
+Copyright © 2023 Foundation Devices, Inc.
+Copyright © 2023 Thomas Ieong
+Copyright © 2023 Saku Laesvuori
+Copyright © 2023 Graham James Addis
+Copyright © 2023-2025 Tomas Volf
+Copyright © 2024, 2025 Herman Rimm
+Copyright © 2024 Matthew Trzcinski
+Copyright © 2024 Richard Sent
+Copyright © 2024 Dariqq
+Copyright © 2024 Denis ’GNUtoo’ Carikli
+Copyright © 2024 Fabio Natali
+Copyright © 2024 Arnaud Daby-Seesaram
+Copyright © 2024-2025 Nigko Yerden
+Copyright © 2024 Troy Figiel
+Copyright © 2024 Sharlatan Hellseher
+Copyright © 2024 45mg
+Copyright © 2024 Greg Hogan
+Copyright © 2025 Sören Tempel
+Copyright © 2025 Rostislav Svoboda
+Copyright © 2025 Zacchaeus
+Copyright © 2025 Sergio Pastor Pérez
+Copyright © 2024 Evgeny Pisemsky
+Copyright © 2025 jgart
+Copyright © 2025 Artur Wroblewski
+Copyright © 2025 Edouard Klein
+Copyright © 2025 Rodion Goritskov
+Copyright © 2025 dan
+Copyright © 2025 Noé Lopez
+
+   现允许根据 GNU 自由文档许可证第 1.3 版或自由软件基金会发布的任何更高
+版本的条款复制、分发和（或）修改本文件；没有不可变小节，没有封面文字，也
+没有封底文字。此许可证的副本包含在标题为“GNU 自由文档许可证”的部分内。
+INFO-DIR-SECTION 系统管理
+START-INFO-DIR-ENTRY
+* Guix.zh_CN: (guix.zh_CN).  管理安装的软件和系统配置。
+* guix package: (guix.zh_CN) 调用 guix package.  安装、删除和升级软件包。
+* guix gc：(guix.zh_CN) 调用 guix gc.  回收不使用的硬盘空间。
+* guix pull: (guix.zh_CN) 调用 guix pull.  更新可用的软件包列表。
+* guix system: (guix.zh_CN) 调用 guix system.  管理操作系统配置。
+* guix deploy: (guix.zh_CN) 调用 guix deploy.  Manage operating system
+                                               configurations for remote
+                                               hosts.
+END-INFO-DIR-ENTRY
+
+INFO-DIR-SECTION 软件开发
+START-INFO-DIR-ENTRY
+* guix shell: (guix.zh_CN) 调用 guix shell.  Creating software environments.
+* guix environment: (guix.zh_CN) 调用 guix environment.  用 Guix 构建开发环境。
+* guix build: (guix.zh_CN) 调用 guix build.  构建软件包。
+* guix pack: (guix.zh_CN) 调用 guix pack.  创建二进制 bundle。
+END-INFO-DIR-ENTRY
+
+
+Indirect:
+guix.zh_CN.info-1: 6229
+guix.zh_CN.info-2: 307990
+guix.zh_CN.info-3: 607420
+guix.zh_CN.info-4: 912275
+guix.zh_CN.info-5: 1211927
+guix.zh_CN.info-6: 1510243
+guix.zh_CN.info-7: 1809980
+guix.zh_CN.info-8: 2117580
+guix.zh_CN.info-9: 2465767
+
+Tag Table:
+(Indirect)
+Node: Top6229
+Node: Introduction21900
+Ref: Introduction-Footnote-122695
+Ref: Introduction-Footnote-222769
+Node: 以 Guix 的方式管理软件23038
+Node: GNU 发行版25431
+Ref: GNU 发行版-Footnote-130119
+Node: 安装30240
+Ref: 安装-Footnote-131520
+Node: 二进制文件安装31555
+Node: 设置后台进程35134
+Node: 设置构建环境37017
+Ref: unprivileged-daemon-migration41015
+Ref: 设置构建环境-Footnote-145734
+Ref: 设置构建环境-Footnote-246088
+Node: 下发工作给后台进程的设置46257
+Ref: 下发工作给后台进程的设置-Footnote-154403
+Node: SELinux 的支持54515
+Node: AppArmor Support58490
+Node: 调用 guix-daemon59860
+Ref: daemon-substitute-urls62672
+Node: 设置应用程序72156
+Ref: locales-and-locpath72530
+Ref: 设置应用程序-Footnote-181268
+Node: 升级 Guix81459
+Node: 系统安装84158
+Node: 限制85362
+Node: 硬件的考虑86023
+Node: U 盘和 DVD 安装87711
+Node: 准备安装90618
+Node: 向导式图形安装91600
+Node: 手动安装92939
+Node: 键盘布局、网络和分区93789
+Ref: manual-installation-networking94543
+Ref: 键盘布局、网络和分区-Footnote-1100417
+Ref: 键盘布局、网络和分区-Footnote-2100597
+Node: 继续安装步骤100851
+Node: 系统安装之后104539
+Node: 在虚拟机里安装 Guix105211
+Node: 构建安装镜像106868
+Node: 入门108015
+Node: 软件包管理114964
+Node: 功能116484
+Ref: 功能-Footnote-1120988
+Node: 调用 guix package121040
+Ref: package-cmd-propagated-inputs124903
+Ref: profile-manifest130655
+Ref: guix-search136302
+Ref: export-manifest142364
+Node: 替代品144716
+Node: Official Substitute Servers145872
+Node: substitute 服务器授权147068
+Node: Getting Substitutes from Other Servers149738
+Node: 验证 substitute154354
+Node: 代理设置155929
+Node: substitute 失败156466
+Node: 关于信任二进制文件157960
+Node: 有多个输出的软件包160115
+Node: 调用 guix locate163147
+Node: 调用 guix gc167360
+Node: 调用 guix pull175768
+Node: 调用 guix time-machine185262
+Ref: 调用 guix time-machine-Footnote-1190050
+Node: 下级190208
+Node: 调用 guix describe195538
+Node: 调用 guix archive199285
+Node: 频道206373
+Node: 指定其他频道207972
+Node: 使用自定义 Guix 频道209551
+Node: 复制 Guix211277
+Node: Customizing the System-Wide Guix213699
+Node: 频道验证215923
+Ref: channel-authentication216088
+Node: Channels with Substitutes217606
+Node: 创建一个频道218672
+Node: Package Modules in a Sub-directory223312
+Node: Declaring Channel Dependencies224382
+Node: Specifying Channel Authorizations226035
+Ref: channel-authorizations226253
+Ref: Specifying Channel Authorizations-Footnote-1230059
+Node: Primary URL230361
+Node: 撰写频道新闻231219
+Node: 开发233958
+Node: 调用 guix shell234901
+Ref: shell-development-option241218
+Ref: shell-manifest243431
+Ref: shell-export-manifest243986
+Ref: 调用 guix shell-Footnote-1255096
+Ref: 调用 guix shell-Footnote-2255263
+Node: 调用 guix environment255378
+Ref: 调用 guix environment-Footnote-1270278
+Ref: 调用 guix environment-Footnote-2270791
+Node: 调用 guix pack270906
+Ref: pack-manifest287474
+Ref: pack-symlink-option288936
+Ref: 调用 guix pack-Footnote-1291654
+Node: GCC 工具链291818
+Node: 调用 guix git authenticate292809
+Node: 编程接口296371
+Node: 软件包模块298840
+Ref: 软件包模块-Footnote-1301116
+Ref: 软件包模块-Footnote-2301451
+Node: 定义软件包307990
+Node: 软件包引用316683
+Ref: package-propagated-inputs322131
+Node: origin 参考手册330190
+Node: 定义软件包变体341687
+Node: 书写清单352445
+Ref: package-development-manifest361612
+Node: 构建系统363812
+Ref: emacs-build-system426805
+Node: Build Phases433538
+Ref: phase-validate-runpath435716
+Ref: Build Phases-Footnote-1442881
+Node: 构建工具443023
+Node: 搜索路径460549
+Ref: 搜索路径-Footnote-1468815
+Node: 存储区468860
+Node: 派生474506
+Node: 存储区单子482783
+Ref: 存储区单子-Footnote-1494545
+Node: G 表达式494741
+Ref: gexp-input518929
+Ref: G 表达式-Footnote-1521470
+Node: 调用 guix repl521774
+Node: 交互式使用 Guix525069
+Node: 工具531466
+Node: 调用 guix build532886
+Node: 普通的构建选项534778
+Ref: fallback-option536253
+Ref: client-substitute-urls536422
+Node: 软件包转换选项540356
+Node: 额外的构建选项557549
+Ref: build-dependents562161
+Ref: build-check567455
+Node: 调试构建错误569779
+Node: 调用 guix edit572753
+Node: 调用 guix download573644
+Node: 调用 guix hash576485
+Node: 调用 guix import579392
+Node: 调用 guix refresh607420
+Node: 调用 guix style626067
+Node: 调用 guix lint634516
+Node: 调用 guix size642317
+Ref: 调用 guix size-Footnote-1647435
+Node: 调用 guix graph647636
+Node: 调用 guix publish657062
+Node: 调用 guix challenge668401
+Node: 调用 guix copy675686
+Ref: 调用 guix copy-Footnote-1677702
+Node: 调用 guix container677797
+Node: 调用 guix weather679417
+Node: 调用 guix processes685662
+Ref: 调用 guix processes-Footnote-1689267
+Node: Foreign Architectures689391
+Node: 交叉编译690329
+Node: 本地构建692011
+Node: 系统配置695345
+Node: Getting Started with the System697905
+Node: 使用配置系统704335
+Ref: 自动登录到 TTY711493
+Node: operating-system 参考724618
+Ref: operating-system-essential-services731756
+Ref: operating-system 参考-Footnote-1733629
+Node: 文件系统733808
+Ref: 文件系统-Footnote-1746352
+Ref: 文件系统-Footnote-2746617
+Node: Btrfs 文件系统746885
+Ref: Btrfs 文件系统-Footnote-1750165
+Node: 映射的设备750223
+Ref: 映射的设备-Footnote-1757941
+Node: 交换空间758307
+Node: 用户帐户765614
+Ref: user-account-password768589
+Ref: 用户帐户-Footnote-1771343
+Node: 键盘布局771377
+Node: 区域776758
+Ref: 区域-Footnote-1781955
+Node: 服务782079
+Node: 基础服务786249
+Ref: guix-configuration-type810884
+Ref: guix-configuration-channels816507
+Ref: guix-configuration-build-machines817722
+Ref: guix-publish-service-type829270
+Ref: pam-limits-service-type833434
+Ref: 基础服务-Footnote-1847648
+Node: 执行计划任务847711
+Ref: shepherd-timer-procedure849291
+Ref: mcron-service851313
+Node: 日志轮替857999
+Ref: log-rotation-configuration859768
+Node: Networking Setup864712
+Node: 网络服务912275
+Node: Unattended Upgrades986856
+Node: X 窗口993782
+Ref: gdm994204
+Ref: lightdm1005923
+Node: 打印服务1018860
+Node: 桌面服务1049419
+Ref: 桌面服务-Footnote-11100120
+Node: 声音服务1100316
+Node: File Search Services1108383
+Node: 数据库服务1112513
+Node: 邮件服务1127391
+Node: 消息服务1211927
+Node: 电话服务1261483
+Node: File-Sharing Services1279916
+Node: 监控服务1307164
+Ref: prometheus-node-exporter1308464
+Ref: vnstat1309923
+Ref: zabbix-agent1325531
+Ref: zabbix-front-end1328099
+Node: Kerberos 服务1330006
+Node: LDAP Services1334189
+Node: Web 服务1357500
+Ref: NGINX1364576
+Ref: nginx-server-configuration1374091
+Ref: nginx-location-configuration body1377857
+Ref: PHP-FPM1395564
+Node: High Availability Services1414663
+Ref: RabbitMQ1414942
+Node: 证书服务1416859
+Node: DNS 服务1427151
+Node: VNC Services1459444
+Node: VPN 服务1465546
+Node: 网络文件系统1480903
+Node: Samba Services1498812
+Node: 持续集成1510243
+Node: 电源管理服务1525628
+Ref: apcupsd-event-handlers1554057
+Node: 音频服务1557766
+Node: 虚拟化服务1572193
+Ref: transparent-emulation-qemu1590634
+Ref: build-vm1597309
+Ref: hurd-vm1601998
+Ref: 虚拟化服务-Footnote-11639142
+Node: 版本控制服务1639385
+Ref: 版本控制服务-Footnote-11683030
+Ref: 版本控制服务-Footnote-21683121
+Node: 游戏服务1683176
+Node: PAM Mount Service1684786
+Node: Guix Services1692379
+Ref: guix-home-service-type1709416
+Node: Linux Services1717381
+Node: Hurd Services1736698
+Node: 其它各种服务1737819
+Ref: subordinate-user-group-ids1772188
+Node: 特权程序1809980
+Node: X.509 证书1813523
+Node: Name Service Switch1816163
+Node: 初始化内存盘1821486
+Node: 引导配置1829921
+Node: 调用 guix system1847973
+Ref: guix system vm1858404
+Ref: system-extension-graph1873205
+Ref: system-shepherd-graph1873817
+Ref: 调用 guix system-Footnote-11874203
+Node: 调用 guix deploy1874349
+Node: 在虚拟机里运行 Guix1890707
+Node: 定义服务1896469
+Node: 合成服务1897122
+Node: 服务类型和服务1899789
+Node: 服务参考1904664
+Ref: provenance-service-type1915660
+Node: Shepherd 服务1918532
+Ref: shepherd-transient-timer-services1929598
+Ref: shepherd-system-log1930665
+Node: Complex Configurations1932948
+Node: System Troubleshooting Tips1946385
+Node: 改变目录进入现有系统1947207
+Node: Home Configuration1950171
+Node: Declaring the Home Environment1952348
+Node: 配置 Shell1956393
+Ref: 配置 Shell-Footnote-11958182
+Node: 家服务1958312
+Ref: 家服务-Footnote-11961131
+Node: Essential Home Services1961181
+Node: Shells Home Services1974930
+Ref: home-bash-configuration1976863
+Ref: home-inputrc-configuration1987014
+Node: Mcron Home Service1988879
+Node: Power Management Home Services1990950
+Node: Shepherd Home Service1994069
+Node: Secure Shell1998621
+Node: GNU Privacy Guard2011508
+Node: Desktop Home Services2014328
+Node: Guix Home Services2025501
+Node: Backup Home Services2026842
+Node: Fonts Home Services2029834
+Node: Sound Home Services2031424
+Node: Mail Home Services2037508
+Node: Messaging Home Services2041535
+Node: Media Home Services2043595
+Node: mpv Media Player2044713
+Node: Niri window manager2068752
+Node: Sway window manager2069740
+Node: Networking Home Services2085924
+Node: Secrets Home Services2087259
+Node: Miscellaneous Home Services2091227
+Node: 调用 guix home2099403
+Node: 文档2117580
+Ref: 文档-Footnote-12119448
+Node: 平台2119561
+Node: platform Reference2120125
+Node: Supported Platforms2122038
+Node: System Images2124040
+Node: image Reference2125788
+Node: partition 参考手册2129452
+Node: Instantiate an Image2132147
+Node: image-type Reference2137627
+Node: Image Modules2142520
+Node: 安装调试文件2144195
+Node: Separate Debug Info2144933
+Node: Rebuilding Debug Info2148065
+Node: Using TeX and LaTeX2150681
+Ref: Using TeX and LaTeX-Footnote-12154450
+Node: 安全更新2154621
+Node: 引导2158889
+Node: Full-Source Bootstrap2160700
+Ref: Full-Source Bootstrap-Footnote-12164361
+Node: Preparing to Use the Bootstrap Binaries2164550
+Ref: Preparing to Use the Bootstrap Binaries-Footnote-12172678
+Node: 移植2172834
+Node: 贡献2175157
+Node: 需求2177341
+Ref: 需求-Footnote-12180352
+Node: 从 Git 构建2180477
+Ref: 从 Git 构建-Footnote-12186306
+Node: 运行测试套件2186365
+Node: 在安装之前运行 Guix2190017
+Ref: 在安装之前运行 Guix-Footnote-12193264
+Node: 完美的配置2193442
+Node: 在 Emacs 内部浏览漏洞2197274
+Node: 替代配置2201037
+Node: Guile Studio2201743
+Node: Vim 和 NeoVim2202118
+Node: 源码树结构2203397
+Ref: 源码树结构-Footnote-12211841
+Node: 打包指导2212256
+Node: 软件自由2215766
+Node: 软件包命名2216957
+Node: 版本号2218369
+Node: 简介和描述2221737
+Node: 原始片段 vs. 构建阶段2224967
+Node: 模块的循环依赖2225694
+Node: Bulk Updates2227680
+Node: Emacs 包2229104
+Node: Python 模块2230723
+Node: Perl 模块2234759
+Node: Java 包2235402
+Node: Rust Crates2236132
+Node: Elm 包2239506
+Node: 字体2242577
+Node: 代码风格2244058
+Node: 编程范例2244622
+Node: 模块2244904
+Node: 数据类型和模式匹配2245648
+Node: 格式化代码2247178
+Node: 提交补丁2248482
+Ref: 提交补丁-Footnote-12257129
+Node: 配置 Git2257322
+Node: 发送补丁系列2258401
+Ref: Single Patches2258881
+Ref: Notifying Teams2261131
+Ref: Multiple Patches2261816
+Node: 跟踪程序漏洞及改动2263981
+Node: The Issue Tracker2264597
+Ref: The Issue Tracker-Footnote-12265404
+Node: Managing Patches and Branches2265565
+Ref: Managing Patches and Branches-Footnote-12269968
+Node: Debbugs User Interfaces2270249
+Ref: Debbugs User Interfaces-Footnote-12275878
+Node: Debbugs Usertags2275994
+Ref: Debbugs Usertags-Footnote-12278502
+Node: Cuirass Build Notifications2278663
+Node: 团队2280053
+Node: 做出决定2284222
+Node: 提交权利2285110
+Ref: 提交权利-Footnote-12294961
+Node: 审阅他人的工作2295103
+Ref: 审阅他人的工作-Footnote-12299432
+Ref: 审阅他人的工作-Footnote-22299685
+Node: 更新 Guix 软件包2300001
+Node: 弃用策略2301451
+Ref: package-removal-policy2304683
+Ref: 弃用策略-Footnote-12309735
+Node: 撰写文档2309874
+Node: 翻译 Guix2311643
+Node: 为 Guix 的基础设施做贡献2327297
+Node: Coding2328190
+Node: System Administration2329559
+Node: Day-to-Day System Administration2331706
+Node: On-Site Intervention2332814
+Node: Hosting2333592
+Node: Administrative Tasks2334434
+Node: 致谢2335021
+Node: GNU 自由文档许可证2335933
+Node: 概念索引2361268
+Node: 编程索引2465767
+
+End Tag Table
+
+
+Local Variables:
+coding: utf-8
+End:

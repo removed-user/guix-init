@@ -1,0 +1,2244 @@
+GNU Guix consists of Scheme code that implements the deployment model
+of the Nix package management tool.  In fact, it currently talks to a
+build daemon whose code comes from Nix (see the manual for details.)
+
+Nix was initially written by Eelco Dolstra; other people have been
+contributing to it.  See `nix/AUTHORS' for details.
+
+Contributors to GNU Guix 1.5.0:
+
+ 13327	Ricardo Wurmus <rekado@elephly.net>
+  7560	Efraim Flashner <efraim@flashner.co.il>
+  6528	Nicolas Goaziou <mail@nicolasgoaziou.fr>
+  6458	Sharlatan Hellseher <sharlatanus@gmail.com>
+  2906	Maxim Cournoyer <maxim@guixotic.coop>
+  2208	Nicolas Graves <ngraves@ngraves.fr>
+  1682	Zheng Junjie <873216071@qq.com>
+  1570	Ludovic Courtès <ludo@gnu.org>
+  1357	Sughosha <sughosha@disroot.org>
+  1187	宋文武 <iyzsong@envs.net>
+  1131	Liliana Marie Prikler <liliana.prikler@gmail.com>
+  1034	Tobias Geerinckx-Rice <me@tobias.gr>
+   839	Andreas Enge <andreas@enge.fr>
+   804	jgart <jgart@dismail.de>
+   775	Cayetano Santos <csantosb@inventati.org>
+   775	Marius Bakke <marius@gnu.org>
+   755	Hilton Chain <hako@ultrarare.space>
+   735	Leo Famulari <leo@famulari.name>
+   655	Danny Milosavljevic <dannym@friendly-machines.com>
+   639	Vinicius Monego <monego@posteo.net>
+   602	Zheng Junjie <z572@z572.online>
+   594	Herman Rimm <herman@rimm.ee>
+   574	Janneke Nieuwenhuizen <janneke@gnu.org>
+   570	Artyom V. Poptsov <poptsov.artyom@gmail.com>
+   518	Christopher Baines <mail@cbaines.net>
+   472	Steve George <steve@futurile.net>
+   420	Wilko Meyer <w@wmeyer.eu>
+   414	Guillaume Le Vaillant <glv@posteo.net>
+   412	Andy Tai <atai@atai.org>
+   351	Bruno Victal <mirai@makinata.eu>
+   341	Hartmut Goebel <h.goebel@crazy-compilers.com>
+   326	Giacomo Leidi <therewasa@fishinthecalculator.me>
+   326	Greg Hogan <code@greghogan.com>
+   324	Ashish SHUKLA <ashish.is@lostca.se>
+   321	Tomas Volf <~@wolfsden.cz>
+   254	John Kehayias <john.kehayias@protonmail.com>
+   223	Vivien Kraus <vivien@planete-kraus.eu>
+   191	Josselin Poiret <dev@jpoiret.xyz>
+   179	Simon Tournier <zimon.toutoune@gmail.com>
+   177	Sergey Trofimov <sarg@sarg.org.ru>
+   170	David Elsing <david.elsing@posteo.net>
+   169	Mădălin Ionel Patrașcu <madalinionel.patrascu@mdc-berlin.de>
+   161	Ian Eure <ian@retrospec.tv>
+   161	Jaeme Sifat <jaeme@runbox.com>
+   155	Julien Lepiller <julien@lepiller.eu>
+   154	VÖRÖSKŐI András <voroskoi@gmail.com>
+   151	Florian Pelz <pelzflorian@pelzflorian.de>
+   150	Troy Figiel <troy@troyfigiel.com>
+   145	Maxime Devos <maximedevos@telenet.be>
+   145	Patrick Norton <patrick.147.norton@gmail.com>
+   141	Hugo Buddelmeijer <hugo@buddelmeijer.nl>
+   138	André Batista <nandre@riseup.net>
+   126	Evgenii Klimov <eugene.dev@lipklim.org>
+   125	Andrew Tropin <andrew@trop.in>
+   124	Antero Mejr <antero@mailbox.org>
+   124	Romain GARBAGE <romain.garbage@inria.fr>
+   124	gemmaro <gemmaro.dev@gmail.com>
+   122	Arun Isaac <arunisaac@systemreboot.net>
+   119	Paul A. Patience <paul@apatience.com>
+   118	Jordan Moore <lockbox@struct.foo>
+   118	Roman Scherer <roman@burningswell.com>
+   116	Rutherther <rutherther@ditigal.xyz>
+   116	Timotej Lazar <timotej.lazar@araneo.si>
+   113	Felix Gruber <felgru@posteo.net>
+   112	Navid Afkhami <navid.afkhami@mdc-berlin.de>
+   109	Vagrant Cascadian <vagrant@debian.org>
+   101	Jelle Licht <jlicht@fsfe.org>
+    99	Lars-Dominik Braun <lars@6xq.net>
+    96	Murilo <murilo@disroot.org>
+    95	Morgan Smith <Morgan.J.Smith@outlook.com>
+    90	kiasoc5 <kiasoc5@disroot.org>
+    84	dan <i@dan.games>
+    82	Ahmad Draidi <a.r.draidi@redscript.org>
+    82	Simon South <simon@simonsouth.net>
+    77	Jean-Pierre De Jesus DIAZ <jean@foundationdevices.com>
+    76	Andre A. Gomes <andremegafone@gmail.com>
+    75	Dariqq <dariqq@posteo.net>
+    74	Andrew Wong <wongandj@icloud.com>
+    73	David Thompson <davet@gnu.org>
+    70	Nguyễn Gia Phong <cnx@loang.net>
+    70	Sören Tempel <soeren@soeren-tempel.net>
+    69	Gabriel Wicki <gabriel@erlikon.ch>
+    68	Anderson Torres <anderson.torres.8519@gmail.com>
+    64	Yelninei <yelninei@tutamail.com>
+    63	Evgeny Pisemsky <mail@pisemsky.site>
+    63	Igor Goryachev via Guix-patches via <guix-patches@gnu.org>
+    62	Danny Milosavljevic <dannym@scratchpost.org>
+    61	Zhu Zihao <all_but_last@163.com>
+    59	Kaelyn Takata <kaelyn.alexi@protonmail.com>
+    58	Clément Lassieur <clement@lassieur.org>
+    58	Felix Lechner <felix.lechner@lease-up.com>
+    56	Sergio Pastor Pérez <sergio.pastorperez@outlook.es>
+    55	Aaron Covrig <aaron.covrig.us@ieee.org>
+    54	Jean-Pierre De Jesus DIAZ <jean@foundation.xyz>
+    54	Kjartan Oli Agustsson <kjartanoli@outlook.com>
+    53	Mark H Weaver <mhw@netris.org>
+    52	Arthur Rodrigues <arthurhdrodrigues@proton.me>
+    52	Jake Forster <jakecameron.forster@gmail.com>
+    52	Kurome <hunt31999@gmail.com>
+    52	Noé Lopez <noelopez@free.fr>
+    52	Pierre Neidhardt <mail@ambrevar.xyz>
+    51	( <paren@disroot.org>
+    51	Juliana Sims <juli@incana.org>
+    51	fanquake <fanquake@gmail.com>
+    50	Ekaitz Zarraga <ekaitz@elenq.tech>
+    50	Vagrant Cascadian <vagrant@reproducible-builds.org>
+    49	pukkamustard <pukkamustard@posteo.net>
+    47	John Kehayias <john@guixotic.coop>
+    45	Oleg Pykhalov <go.wigust@gmail.com>
+    45	Suhail Singh <suhailsingh247@gmail.com>
+    44	Nicolas Graves via Guix-patches via <guix-patches@gnu.org>
+    43	Mathieu Othacehe <othacehe@gnu.org>
+    43	Remco van 't Veer <remco@remworks.net>
+    43	Yovan Naumovski <yovan@gorski.stream>
+    42	Denis 'GNUtoo' Carikli <GNUtoo@cyberdimension.org>
+    42	Simen Endsjø <contact@simendsjo.me>
+    41	raingloom <raingloom@riseup.net>
+    39	Aleksandr Vityazev <avityazew@gmail.com>
+    39	Feng Shu <tumashu@163.com>
+    38	Michael Rohleder <mike@rohleder.de>
+    37	Igor Goryachev <igor@goryachev.org>
+    37	Jonathan Brielmaier <jonathan.brielmaier@web.de>
+    37	Leo Nikkilä <hello@lnikki.la>
+    37	Lilah Tascheter <lilah@lunabee.space>
+    36	nomike <nomike@nomike.com>
+    34	Jan (janneke) Nieuwenhuizen <janneke@gnu.org>
+    34	Petr Hodina <phodina@protonmail.com>
+    34	Richard Sent <richard@freakingpenguin.com>
+    34	Spencer King <spencer.king@geneoscopy.com>
+    34	Timo Wilken <guix@twilken.net>
+    33	Daniel Ziltener <dziltener@lyrion.ch>
+    33	Divya Ranjan <divya@subvertising.org>
+    33	Lars Bilke <lars.bilke@ufz.de>
+    32	Benjamin <benjamin@uvy.fr>
+    32	Karl Hallsby <karl@hallsby.com>
+    31	Ada Stevenson <adanskana@gmail.com>
+    31	Adam Faiz <adam.faiz@disroot.org>
+    31	Eric Bavier <bavier@posteo.net>
+    31	Jack Hill <jackhill@jackhill.us>
+    31	Josep Bigorra <jjbigorra@gmail.com>
+    31	Konrad Hinsen <konrad.hinsen@fastmail.net>
+    31	Liam Hupfer <liam@hpfr.net>
+    31	zamfofex <zamfofex@twdb.moe>
+    30	Brendan Tildesley <mail@brendan.scot>
+    29	Katherine Cox-Buday <cox.katherine.e@gmail.com>
+    29	Rostislav Svoboda <rostislav.svoboda@gmail.com>
+    28	Afkhami, Navid <Navid.Afkhami@mdc-berlin.de>
+    28	Sughosha <Sughosha@proton.me>
+    28	cage <cage-dev@twistfold.it>
+    27	Ashvith Shetty <ashvithshetty0010@zohomail.in>
+    27	Fabio Natali <me@fabionatali.com>
+    27	Igorj Gorjaĉev <igor@goryachev.org>
+    27	Philip McGrath <philip@philipmcgrath.com>
+    27	Rodion Goritskov <rodion.goritskov@gmail.com>
+    27	luca <luca.kredel@web.de>
+    26	Brennan Vincent <brennan@umanwizard.com>
+    26	Sören Tempel <soeren+git@soeren-tempel.net>
+    25	Ayan Das <bvits@riseup.net>
+    25	Paul Alesius <paul@unnservice.com>
+    24	Arjan Adriaanse <arjan@adriaan.se>
+    24	Jakob Kirsch <jakob.kirsch@web.de>
+    24	Michael Ford <fanquake@gmail.com>
+    24	Peter Polidoro <peter@polidoro.io>
+    24	nafkhamdc <navid.afkhami@mdc-berlin.de>
+    24	wrobell <wrobell@riseup.net>
+    23	Attila Lendvai <attila@lendvai.name>
+    23	Parnikkapore <poomklao@yahoo.com>
+    22	Jean-Pierre De Jesus DIAZ <me@jeandudey.tech>
+    22	Thanos Apollo <public@thanosapollo.org>
+    21	Artyom Bologov <mail@aartaka.me>
+    21	Brian Cully <bjc@spork.org>
+    21	Nigko Yerden <nigko.yerden@gmail.com>
+    21	Omar Bassam <omar.bassam88@gmail.com>
+    21	Reepca Russelstein <reepca@russelstein.xyz>
+    21	aurtzy <aurtzy@gmail.com>
+    21	unmush <unmush@hashbang.sh>
+    20	AwesomeAdam54321 <adam.faiz@disroot.org>
+    20	Carlo Zancanaro <carlo@zancanaro.id.au>
+    20	Ghislain Vaillant <ghislain.vaillant@inria.fr>
+    20	Luca Matei Pintilie <luca@lucamatei.com>
+    20	Saku Laesvuori <saku@laesvuori.fi>
+    19	Alexey Abramov <levenson@mmer.org>
+    19	ColdSideOfYourPillow <ColdSideOfYourPillow@noreply.codeberg.org>
+    19	James Smith <jsubuntuxp@disroot.org>
+    19	Lee Thompson <lee.p.thomp@gmail.com>
+    19	normalmente <normally_js@posteo.net>
+    18	Grigory Shepelev <shegeley@gmail.com>
+    17	Charles Roelli <charles@adnoto.net>
+    17	David Pflug <david@pflug.io>
+    17	Distopico <distopico@riseup.net>
+    17	Matthias Riße <matrss@0px.xyz>
+    17	Rostislav Svoboda <Rostislav.Svoboda@gmail.com>
+    17	Santiago Payà i Miralta <santiagopim@gmail.com>
+    16	45mg <45mg.writes@gmail.com>
+    16	Andrew Jose <arnav.jose@gmail.com>
+    16	Fries <fries1234@protonmail.com>
+    16	John Khoo <johnkhootf@gmail.com>
+    16	Junker <dk@junkeria.club>
+    16	Philippe SWARTVAGHER <phil.swart@gmx.fr>
+    16	Pierre Langlois <pierre.langlois@gmx.com>
+    16	Sergio Pastor Pérez <sergio.pastorperez@gmail.com>
+    16	Timothy Sample <samplet@ngyro.com>
+    16	conses <contact@conses.eu>
+    15	Brian Kubisiak <brian@kubisiak.com>
+    15	Charles <charles@charje.net>
+    15	Fredrik Salomonsson <plattfot@posteo.net>
+    15	Gabriel Santos <gabriel.santos.smtp@gmail.com>
+    15	Michal Atlas <michal_atlas+git@posteo.net>
+    15	pinoaffe <pinoaffe@gmail.com>
+    14	Ashvith Shetty <Ashvith@noreply.codeberg.org>
+    14	Kyle Andrews <kyle@posteo.net>
+    14	bdunahu <bdunahu@operationnull.com>
+    14	muradm <mail@muradm.net>
+    13	Javier Olaechea <pirata@gmail.com>
+    13	Jesse Eisses <jesse@eisses.email>
+    13	Jussi Timperi <jussi.timperi@iki.fi>
+    13	Nikita Domnitskii <nikita@domnitskii.me>
+    13	Pierre-Henry Fröhring <phfrohring@deeplinks.com>
+    13	Raven Hallsby <karl@hallsby.com>
+    13	Sarah Morgensen <iskarian@mgsn.dev>
+    13	Yuval Langer <yuval.langer@gmail.com>
+    12	Antoine Côté <antoine.cote@posteo.net>
+    12	B. Wilson <elaexuotee@wilsonb.com>
+    12	Congcong Kuo <congcong.kuo@gmail.com>
+    12	David Arroyo <david@aqwari.net>
+    12	FuncProgLinux <softwarelibre@urutau-ltd.org>
+    12	Hendursaga <hendursaga@aol.com>
+    12	Homo <gay@disroot.org>
+    12	Lars-Dominik Braun <ldb@leibniz-psychology.org>
+    12	Olivier Dion <odion@efficios.com>
+    12	Rodion Goritskov <rodion@goritskov.com>
+    12	altadil <Altadil@protonmail.com>
+    12	kestrel <kestrel.w@proton.me>
+    11	Ashish SHUKLA via Guix-patches via <guix-patches@gnu.org>
+    11	Hennadii Stepanov <hebasto@gmail.com>
+    11	Jake Leporte <jakeleporte@outlook.com>
+    11	Julian Flake <flake@uni-koblenz.de>
+    11	Rikard Nordgren <hrn@posteo.net>
+    11	Simon Josefsson <simon@josefsson.org>
+    11	Simon Streit <simon@netpanic.org>
+    11	TakeV <takev@disroot.org>
+    11	moksh <mysticmoksh@riseup.net>
+    10	Antero Mejr <mail@antr.me>
+    10	Cayetano Santos via Guix-patches via <guix-patches@gnu.org>
+    10	Gabriel Santos <gabrielsantosdesouza@disroot.org>
+    10	Martin Schitter <ms@mur.at>
+    10	Matthew Elwin <elwin@northwestern.edu>
+    10	Picnoir <picnoir@alternativebit.fr>
+    10	Rick Huijzer <ikbenrickhuyzer@gmail.com>
+    10	Wamm K. D <jaft.r@outlook.com>
+    10	Wiktor Żelazny <wz@freeshell.de>
+    10	vicvbcun <guix@ikherbers.com>
+     9	Ashvith Shetty <ashvith@noreply.codeberg.org>
+     9	Daniel Szmulewicz <daniel.szmulewicz@gmail.com>
+     9	Ivan Vilata i Balaguer <ivan@selidor.net>
+     9	Jean SIMARD <woshilapin@tuziwo.info>
+     9	Jean-Baptiste Note <jean-baptiste.note@m4x.org>
+     9	Marco Rimoldi <rimarko@libero.it>
+     9	Olivier Rojon <o.rojon@posteo.net>
+     9	Raphaël Mélotte <raphael.melotte@mind.be>
+     9	Sergiu Ivanov <sivanov@colimite.fr>
+     9	Spencer King <spencer.king@wustl.edu>
+     9	Stefan <stefan-guix@vodafonemail.de>
+     9	Sughosha via Guix-patches via <guix-patches@gnu.org>
+     9	Tanguy Le Carrour <tanguy@bioneland.org>
+     9	Tobias Kortkamp <tobias.kortkamp@gmail.com>
+     8	Alex Devaure <ajadevaure@gmail.com>
+     8	Allan Adair <allan@adair.no>
+     8	Ashvith Shetty <ashvithshetty10@gmail.com>
+     8	Attila Lendvai <attila.lendvai@gmail.com>
+     8	Dominic Martinez <dom@dominicm.dev>
+     8	Jake Coble <j@kecoble.com>
+     8	Luca Cirrottola <luca.cirrottola@inria.fr>
+     8	Matthew Trzcinski <matt@excalamus.com>
+     8	Rutherther <rutherther@protonmail.com>
+     8	Skylar Hill <stellarskylark@posteo.net>
+     8	Suhail <suhail@bayesians.ca>
+     8	Trevor Arjeski <tmarjeski@gmail.com>
+     8	zimoun <zimon.toutoune@gmail.com>
+     7	Adam Quandour <adam.quandour@gmail.com>
+     7	Adriel Dumas--Jondeau <leirda@disroot.org>
+     7	Alexis Simon <alexis.simon@runbox.com>
+     7	Alvin Hsu <aurtzy@gmail.com>
+     7	Arnaud DABY-SEESARAM <ds-ac@nanein.fr>
+     7	Arne Babenhauserheide <arne_bab@web.de>
+     7	Brice Waegeneire <brice@waegenei.re>
+     7	Christina O'Donnell <cdo@mutix.org>
+     7	IliaLuetin <antonstimmer@gmx.de>
+     7	King, Spencer <spencer.king@wustl.edu>
+     7	Luca Cirrottola <luca.cirro@gmail.com>
+     7	Luis Felipe <sirgazil@zoho.com>
+     7	Marco Baggio <marco.baggio@mdc-berlin.de>
+     7	Nathan Merkley <nathanmerkley@gmail.com>
+     7	Nikolay Korotkiy <sikmir@disroot.org>
+     7	Runciter <runciter@whispers-vpn.org>
+     7	Simeon Prause <simeon.prause@icloud.com>
+     7	Vasile Dumitrascu via Guix-patches via <guix-patches@gnu.org>
+     7	Yarl Baudig <yarl-baudig@mailoo.org>
+     7	Zacchaeus <eikcaz@zacchae.us>
+     7	guix-patches--- via <guix-patches@gnu.org>
+     6	Ale Abdo <abdo@member.fsf.org>
+     6	Arseniy Zaostrovnykh <necto.ne@gmail.com>
+     6	Giacomo Leidi via Guix-patches via <guix-patches@gnu.org>
+     6	Jan Wielkiewicz <tona_kosmicznego_smiecia@interia.pl>
+     6	Laura Kirsch <laurakirsch240406@gmail.com>
+     6	Luis Guilherme Coelho <lgcoelho@disroot.org>
+     6	Marek Paśnikowski <marek@marekpasnikowski.pl>
+     6	Mark Walker <mark.damon.walker@gmail.com>
+     6	Matthew James Kraai <kraai@ftbfs.org>
+     6	Mattia Bunel <mattia.bunel@ehess.fr>
+     6	Mekeor Melire <mekeor@posteo.de>
+     6	Olivier Dion <olivier.dion@polymtl.ca>
+     6	Paul Garlick <pgarlick@tourbillion-technology.com>
+     6	Preston M. Firestone <firestone.preston@gmail.com>
+     6	Reza Housseini <reza@housseini.me>
+     6	Ron Nazarov <ron@noisytoot.org>
+     6	Sisiutl <sisiutl@egregore.fun>
+     6	Skylar Chan <schan12@umd.edu>
+     6	Spencer King <spencer@nursiapress.com>
+     6	Thomas Ieong <th.ieong@free.fr>
+     6	Tor-björn Claesson <tclaesson@gmail.com>
+     6	Vasilii Smirnov <vasilii.smirnov@mailbox.org>
+     6	florhizome <florhizome@posteo.net>
+     6	nathan <nathan_mail@nborghese.com>
+     6	ykonai <mail@ykonai.net>
+     5	Ahmad Draidi via Guix-patches via <guix-patches@gnu.org>
+     5	Aiden Isik <aidenisik+git@member.fsf.org>
+     5	Aleksandr Lebedev <alex.lebedev2003@icloud.com>
+     5	Aleksandr Vityazev <avityazev@posteo.org>
+     5	Andrew Wong via Guix-patches via <guix-patches@gnu.org>
+     5	Benoit Martin <bmartin@cea.fr>
+     5	EuAndreh <eu@euandre.org>
+     5	Formbi <formbi@protonmail.com>
+     5	Frederick Muriuki Muriithi <fredmanglis@gmail.com>
+     5	Jason Conroy <jconroy@tscripta.net>
+     5	Martin Becze <mjbecze@riseup.net>
+     5	Roel Janssen <roel@gnu.org>
+     5	Roman Scherer <roman.scherer@burningswell.com>
+     5	Sughosha <sughosha@proton.me>
+     5	Thiago Jung Bauermann <bauermann@kolabnow.com>
+     5	VnPower <vnpower@loang.net>
+     5	Wojtek Kosior <koszko@koszko.org>
+     5	Yovan Naumovski via Guix-patches via <guix-patches@gnu.org>
+     5	antlers <antlers@illucid.net>
+     5	apoorv569 <apoorvs569@gmail.com>
+     5	c4droid <c4droid@foxmail.com>
+     5	cdr-shdr-wdr <cdr-shdr-wdr@protonmail.ch>
+     5	charje <charles.b.jackson@protonmail.com>
+     5	chris <chris@bumblehead.com>
+     5	nik gaffney <nik@fo.am>
+     5	quanrong <quanrong@mailbox.org>
+     4	Abhishek Cherath <abhi@quic.us>
+     4	Adam Faiz via Guix-patches via <guix-patches@gnu.org>
+     4	Alex Bosco <me@alexbos.co>
+     4	Alice BRENON <alice.brenon@ens-lyon.fr>
+     4	Andrew Whatson <whatson@tailcall.au>
+     4	Andy Tai <ltai@roku.com>
+     4	Arnaud Daby-Seesaram <ds-ac@nanein.fr>
+     4	Arnaud Lechevallier <arnaud.lechevallier@free.fr>
+     4	Benjamin Slade <slade@lambda-y.net>
+     4	Cairn <cairn@pm.me>
+     4	Charles Jackson <charles@charje.net>
+     4	Christine Lemmer-Webber <cwebber@dustycloud.org>
+     4	Christopher O'Neill <code@chrisoneill.co.uk>
+     4	Danial Behzadi <dani.behzi@ubuntu.com>
+     4	Demis Balbach <db@minikn.xyz>
+     4	Dmytro Statyvka <dstatyvka@gmail.com>
+     4	Doğan Çeçen <sepeth@fastmail.com>
+     4	Edouard Klein <edk@beaver-labs.com>
+     4	Filip Lajszczak <filip@lajszczak.dev>
+     4	Foster Hangdaan <foster@hangdaan.email>
+     4	Frank Pursel <frank.pursel@gmail.com>
+     4	Hilton Chain via Guix-patches via <guix-patches@gnu.org>
+     4	Ignacio Marmolejo <ignacio.marmolejo@gmail.com>
+     4	Isidor Zeuner <guix@quidecco.pl>
+     4	Ivan Popovych <ivan@ipvych.com>
+     4	Jonas Freimuth <jonas.freimuth@posteo.de>
+     4	Lu Hui <luhux76@gmail.com>
+     4	Lukas Gradl <lgradl@posteo.net>
+     4	Martin Marshall <law@martinmarshall.com>
+     4	Mathieu Laparie <mlaparie@disr.it>
+     4	Mehmet Tekman <mtekman89@gmail.com>
+     4	Nikolaos Chatzikonstantinou <nchatz314@gmail.com>
+     4	Ryan Sundberg <ryan@arctype.co>
+     4	Sarthak Shah <shahsarthakw@gmail.com>
+     4	Sébastien Lerique <sl@eauchat.org>
+     4	Tom Willemse <tom@ryuslash.org>
+     4	Vasile Dumitrascu <va511e@yahoo.com>
+     4	Vincent Legoll <vincent.legoll@gmail.com>
+     4	Vincent Prat <vprat@deeplinks.com>
+     4	Vitalii Koshura <lestat.de.lionkur@gmail.com>
+     4	Wiktor Żelazny <wzelazny@vurv.cz>
+     4	guix@mawumag.com <guix@mawumag.com>
+     4	r0man <roman@burningswell.com>
+     4	reza <reza@housseini.me>
+     4	spacecadet@purge.sh <spacecadet@purge.sh>
+     4	squishypinkelephant <squishypinkelephant@gmail.com>
+     4	terramorpha <terramorpha@cock.li>
+     4	unwox <me@unwox.com>
+     3	Adrien 'neox' Bourmault <neox@gnu.org>
+     3	Akib Azmain Turja <akib@disroot.org>
+     3	Alexey Abramov via Guix-patches via <guix-patches@gnu.org>
+     3	Andrew Wong <wongandj@runbox.com>
+     3	Ben Sturmfels <ben@sturm.com.au>
+     3	Charles Roelli <charles@aurox.ch>
+     3	Daniel Khodabakhsh <d.khodabakhsh@gmail.com>
+     3	Daniel Meißner <daniel.meissner-i4k@rub.de>
+     3	David Boilleau <david_boilleau@gmx.fr>
+     3	Dominik Delgado Steuter <d@delgado.nrw>
+     3	Douglas Deslauriers <Douglas.Deslauriers@vector.com>
+     3	Dr. Arne Babenhauserheide <arne_bab@web.de>
+     3	François Joulaud <francois-oss@avalenn.eu>
+     3	Gabriel Hondet <gabriel.hondet@cominety.net>
+     3	Ilya Chernyshov <ichernyshovvv@gmail.com>
+     3	Ivana Drazovic <iv.dra@hotmail.com>
+     3	James Smith via Guix-patches via <guix-patches@gnu.org>
+     3	Joaquín Aguirrezabalaga <kinote@kinote.org>
+     3	John Fremlin <john@fremlin.org>
+     3	Jonathan Scoresby <me@jonscoresby.com>
+     3	Josselin Poiret via Guix-patches via <guix-patches@gnu.org>
+     3	LuHui <luhux76@gmail.com>
+     3	Luis Felipe <luis.felipe.la@protonmail.com>
+     3	Luis Higino <luishenriquegh2701@gmail.com>
+     3	Lynn Leichtle <lynn@lynn.sh>
+     3	Marcel van der Boom <marcel@van-der-boom.nl>
+     3	Markku Korkeala <markku.korkeala@iki.fi>
+     3	Martin Schitter <ms+git@mur.at>
+     3	Mazin AlHaddad <codeberg@getstate.dev>
+     3	Mekeor Melire <mekeor.melire@gmail.com>
+     3	Morgan Arnold <morgan.arnold@proton.me>
+     3	Nilesh Patra <nilesh@riseup.net>
+     3	Pierre-Evariste Dagand <doc@evr.ist>
+     3	Rivulet Cedar <rivulet_cedar@yeah.net>
+     3	Robin Templeton <robin@guixotic.coop>
+     3	Rovanion Luckey <rovanion.luckey@gmail.com>
+     3	Ryan Schanzenbacher <ryan@rschanz.org>
+     3	Sebastian Gibb <mail@sebastiangibb.de>
+     3	SeerLite <seerlite@disroot.org>
+     3	Skylar "The Cobra" Astaroth <cobra@vern.cc>
+     3	Skyler Ferris <skyvine@protonmail.com>
+     3	Stefan Baums <baums@stefanbaums.com>
+     3	Stefan Baums <sbaums@gmail.com>
+     3	Thomas Albers <thomas@thomaslabs.org>
+     3	Till Robin Zickel <trzickel@illegalaliensfrom.space>
+     3	Timothee Mathieu <timothee.mathieu@inria.fr>
+     3	Trevor Richards <trev@trevdev.ca>
+     3	Tristan Cottam <tristan@cott.am>
+     3	Winter <winter@winter.cafe>
+     3	Z572 via Guix-patches via <guix-patches@gnu.org>
+     3	Zac Berkowitz <zac.berkowitz@gmail.com>
+     3	Zongyuan Li <zongyuan.li@c0x0o.me>
+     3	emma thompson <bigbookofbug@proton.me>
+     3	flabbergasted <flabbergasted@nofog.net>
+     3	gnuphilic <>
+     3	hapster <o.rojon@posteo.net>
+     3	hiecaq <this@hiecaq.org>
+     3	iamawacko <iamawacko@protonmail.com>
+     3	jgart via Guix-patches via <guix-patches@gnu.org>
+     3	kiasoc5 via Guix-patches via <guix-patches@gnu.org>
+     3	kitzman <kitzman@disroot.org>
+     3	mikadoZero <mikadozero@yandex.com>
+     3	msglm <msglm@techchud.xyz>
+     3	spacecadet <spacecadet@purge.sh>
+     3	spencerpeters <spencerpeters@protonmail.com>
+     2	(unmatched-parenthesis <paren@disroot.org>
+     2	(unmatched-parenthesis d <paren@disroot.org>
+     2	Adam Maleszka <adam_maleszka@aol.com>
+     2	Alec Barreto <mrh57@posteo.net>
+     2	Alex Bosco via Guix-patches via <guix-patches@gnu.org>
+     2	Alex Sassmannshausen <alex@komputilo.eu>
+     2	Alissa Istleyeva <awth13@tutamail.com>
+     2	Amélia Coutard-Sander <git@ameliathe1st.gay>
+     2	André A. Gomes <andremegafone@gmail.com>
+     2	Arto Jantunen <viiru@iki.fi>
+     2	Artyom Bologov <aartaka@protonmail.com>
+     2	Bassam Saeed <guix@bassamsaeed.ca>
+     2	Benjamin Chabanne <benjamin@uvy.fr>
+     2	Björn Höfling <bjoern.hoefling@bjoernhoefling.de>
+     2	Cage <cage-dev@twistfold.it>
+     2	Charles Jackson <charles.b.jackson@protonmail.com>
+     2	Christian Miller <christian.miller@dadoes.de>
+     2	Christoph Buck <dev@icepic.de>
+     2	Christopher Howard <christopher@librehacker.com>
+     2	Csepp <raingloom@riseup.net>
+     2	Daniel Khodabakhsh <d@niel.khodabakh.sh>
+     2	Daniel Meißner <daniel.meissner-i4k@ruhr-uni-bochum.de>
+     2	Daniel Ziltener via Guix-patches via <guix-patches@gnu.org>
+     2	Danny Milosavljevic <dannym@nova.friendly-machines.com>
+     2	David Wilson <david@daviwil.com>
+     2	Declan Tsien <declantsien@riseup.net>
+     2	Denys Nykula <vegan@libre.net.ua>
+     2	Dominik Delgado Steuter via Guix-patches via <guix-patches@gnu.org>
+     2	Edison Ibáñez <arkhan@riseup.net>
+     2	Eidvilas Markevičius <markeviciuseidvilas@gmail.com>
+     2	Erik Eduardo <eduarskate8@gmail.com>
+     2	EuAndreh via Guix-patches via <guix-patches@gnu.org>
+     2	Eugen Stan <eugen.stan@netdava.com>
+     2	Felipe Silva <git@felipeqq2.rocks>
+     2	Fernando Ayats <ayatsfer@gmail.com>
+     2	Fi guadec <lapearldot@disroot.org>
+     2	Florent Pruvost <florent.pruvost@inria.fr>
+     2	Francisco-Galindo <yo@franciscogalindo.com>
+     2	Franz Geffke <franz@pantherx.org>
+     2	Georgios Athanasiou <yorgath@gmail.com>
+     2	Giovanni Biscuolo <g@xelera.eu>
+     2	Hikari <aneris@disroot.org>
+     2	Hugo Nobrega <hugonobrega@gmail.com>
+     2	Ignas Lapėnas <ignas@lapenas.dev>
+     2	Ivan Gankevich <igankevich@capybaramail.xyz>
+     2	Jaime Marquínez Ferrándiz <jaime.marquinez.ferrandiz@fastmail.net>
+     2	James <james.taylor@fastmail.com>
+     2	Jeff Sparkes <jsparkes@opentext.com>
+     2	Jesse Gibbons <jgibbons2357@gmail.com>
+     2	Jessica Tallon <tsyesika@tsyesika.se>
+     2	Jonas Meeuws <jonas.meeuws@gmail.com>
+     2	Jonathan Pieper <jpieper@mailbox.org>
+     2	Kristian Lein-Mathisen <kristianlein@gmail.com>
+     2	Luis Henrique Gomes Higino <luishenriquegh2701@gmail.com>
+     2	Luís Henriques <henrix@camandro.org>
+     2	Maciej Kalandyk <m.kalandyk@outlook.com>
+     2	Marco Baggio <guix@mawumag.com>
+     2	Mark L <cake@pydis.com>
+     2	Martin Schmidt <martin.schmidt13@gmx.de>
+     2	Massimo Zaniboni <mzan@dokmelody.org>
+     2	Mathieu Laparie <mathieu.laparie@inrae.fr>
+     2	Matthieu Lemerre <racin@free.fr>
+     2	Mazin Alhaddad <mazin@getstate.dev>
+     2	Meredith Oleander <mereditholeander@gmail.com>
+     2	Miguel Moreno <mmoreno@mmoreno.eu>
+     2	Miguel Ángel Moreno <mail@migalmoreno.com>
+     2	Miguel Ángel Moreno <me@mianmoreno.com>
+     2	Mike Delago <michaeldelago98@gmail.com>
+     2	Munyoki Kilyungi <me@bonfacemunyoki.com>
+     2	Nico Rikken <nico@nicorikken.eu>
+     2	Nikola <nikola@radojevic.rs>
+     2	Ontje Lünsdorf <ontje.luensdorf@dlr.de>
+     2	Owen T. Heisler <writer@owenh.net>
+     2	Peter Kannewitz <peter.kannewitz@posteo.net>
+     2	Philippe Virouleau <philippe.virouleau@inria.fr>
+     2	Pierre-Henry Fröhring <contact@phfrohring.com>
+     2	Quentin Vincent <quentin_vincent@disroot.org>
+     2	ROCKTAKEY <rocktakey@gmail.com>
+     2	Raghav Gururajan <rg@raghavgururajan.name>
+     2	Robby Zambito <contact@robbyzambito.me>
+     2	Robin Ole Heinemann <robin.ole.heinemann@gmail.com>
+     2	Ryan Tolboom <ryan.tolboom@njit.edu>
+     2	Rémi Teissier <rteissier.code@chillpc.fr>
+     2	Saku Laesvuori via Guix-patches via <guix-patches@gnu.org>
+     2	SameExpert <sughosha@disroot.org>
+     2	Sebastian Dümcke <code@sam-d.com>
+     2	Sergio Durigan Junior <sergiodj@sergiodj.net>
+     2	Spencer Skylar Chan <schan12@umd.edu>
+     2	Stefan Reichör <stefan@xsteve.at>
+     2	Taiju HIGASHI <higashi@taiju.info>
+     2	The Man <squishypinkelephant@gmail.com>
+     2	Theofilos Pechlivanis <theofilos.pechlivanis@gmail.com>
+     2	Tim Johann <t1m@phrogstar.de>
+     2	Ting-Wei Lan <lantw44@gmail.com>
+     2	Tomáš Čech <sleep_walker@gnu.org>
+     2	User <user@domain>
+     2	Yan Abu Arab <yanabuarab@gmail.com>
+     2	Yann Dupont <Yann.Dupont@univ-nantes.fr>
+     2	Yappaholic <sav.boyar@gmail.com>
+     2	Zzull <bstrazzull@hotmail.fr>
+     2	aecepoglu <aecepoglu@fastmail.fm>
+     2	andy Tai <atai@atai.org>
+     2	arthurhdrodrigues--- via Guix-patches via <guix-patches@gnu.org>
+     2	bigbug <bigbookofbug@proton.me>
+     2	forgoty <forgoty13@gmail.com>
+     2	kiasoc5 <kiasoc5@tutanota.com>
+     2	mason1920 <mason1920@use.startmail.com>
+     2	mstenek <mstenek@disroot.org>
+     2	ngraves@ngraves.fr <ngraves@ngraves.fr>
+     2	nicodebo <nicolas.debonnaire@gmail.com>
+     2	vga <v@vgz.li>
+     1	(unmatched-parenthesis ew syntax <paren@disroot.org>
+     1	4wph <4wph@noreply.codeberg.org>
+     1	8dcc <8dcc.git@gmail.com>
+     1	Abhiseck Paira <abhiseckpaira@disroot.org>
+     1	Adam Kandur <4164616d.4b616e647572@gmail.com>
+     1	Adrien Bourmault (neox) <neox@a-lec.org>
+     1	Ahmad Jarara <ajarara@fastmail.com>
+     1	Aizu <desdeunsotano@riseup.net>
+     1	Akira Kyle <akira@akirakyle.com>
+     1	Alexis Praga <alexis@praga.dev>
+     1	Amade Nemes <nemesamade@gmail.com>
+     1	Amy Grinn <grinn.amy@tuta.com>
+     1	Amy Pillow <amypillow@lavache.com>
+     1	Andreas Fuglesteg Dale <andreasfdale@gmail.com>
+     1	Andrew Patterson <andrewpatt7@gmail.com>
+     1	Andrew Stubbs <ams@baylibre.com>
+     1	Apoorv <apoorvs@tuta.io>
+     1	Aria Nolan <aria@chytrid.org>
+     1	Arvid Krein <arvid@krein.moe>
+     1	Arvid Krein <arvidkrein@zedat.fu-berlin.de>
+     1	Ayush Jha <ayushjha@protonmail.com>
+     1	Baptiste Strazzulla <baptiste.strazzulla@protonmail.com>
+     1	Bingshan Chang <chang@bingshan.org>
+     1	Blake Shaw <blake@reproduciblemedia.com>
+     1	Breno Brandão <lrabbt@gmail.com>
+     1	Brett Schalin <brettschalin@gmail.com>
+     1	Brian Cully <bjc@kublai.com>
+     1	Calum Irwin <calumirwin1@gmail.com>
+     1	Carlos <gcarlos@disroot.org>
+     1	Christian Birk Sørensen <chrbirks@gmail.com>
+     1	Christian Miller via Guix-patches via <guix-patches@gnu.org>
+     1	Christopher O'Neill <guix@chrisoneill.co.uk>
+     1	Collin J. Doering <collin@rekahsoft.ca>
+     1	Connor Clark <connor@psyleft.com>
+     1	Cory Fields <cory-nospam-@coryfields.com>
+     1	Dakota Logan <dklogan@riseup.net>
+     1	Daniel Brooks <db48x@db48x.net>
+     1	Daniel Lakeland <dlakelan@street-artists.org>
+     1	Daniel Maksymow <daniel.maksymow@tuta.io>
+     1	Danny O'Brien <danny@fil.org>
+     1	David Conner <dconner.pro@gmail.com>
+     1	David Hoppenbrouwers <guix@demindiro.com>
+     1	Dhruvin Gandhi <contact@dhruvin.dev>
+     1	Dominik Delgado Steuter <dds@disroot.org>
+     1	Edward Wilson <bienjensu@gmail.com>
+     1	Elizabeth Doughty <thymelizabeth@thymelizabeth.nz>
+     1	Ellis Kesterton <ellis@diagnosticbox.com>
+     1	Emmanuel Beffara <manu@beffara.org>
+     1	Erik Giorgis <git@egiorg.is>
+     1	Esther Flashner <esther@flashner.co.il>
+     1	Ethan Blanton <elb@kb8ojh.net>
+     1	Fabio Natali via Guix-patches via <guix-patches@gnu.org>
+     1	Felix Lechner via Guix-patches via <guix-patches@gnu.org>
+     1	Fernando Martínez González <me@frndmg.xyz>
+     1	Foo Chuan Wei <chuanwei.foo@hotmail.com>
+     1	Frank Terbeck <ft@bewatermyfriend.org>
+     1	From: Hilton Chain <hako@ultrarare.space>
+     1	GNU Guix Live <cage-dev@twistfold.it>
+     1	Gisement <sisiutl@egregore.fun>
+     1	Gleb Zakharov <snyssfx@gmail.com>
+     1	Graham James Addis <grahamjamesaddis@gmail.com>
+     1	Gruruya <greytest@disroot.org>
+     1	Gábor Udvari <mail@gaborudvari.com>
+     1	Hennadii Stepanov <32963518+hebasto@users.noreply.github.com>
+     1	Herman Rimm <herman_rimm@protonmail.com>
+     1	Herman Rimm via Guix-patches via <guix-patches@gnu.org>
+     1	Hikari <Quelln@protonmail.com>
+     1	Iliya Tikhonenko <tikhonenko@mpe.mpg.de>
+     1	Imran Iqbal <imran@imraniqbal.org>
+     1	Ingar <ingar@onionmail.info>
+     1	Iska Magg <iskamagg@gmail.com>
+     1	Ivan Kozlov <kanichos@yandex.ru>
+     1	Ivan Sokolov <ivan-p-sokolov@ya.ru>
+     1	Jacob Hrbek <kreyren@rixotstudio.cz>
+     1	Jai Vetrivelan <jaivetrivelan@gmail.com>
+     1	Jake Koroman <jake@jakekoroman.com>
+     1	Jake Koroman <jakekoroman@proton.me>
+     1	Jake Shilling <shilling.jake@gmail.com>
+     1	Jamie Cullen <sourcepluck@posteo.net>
+     1	Jason Darby <jasonkdarby@gmail.com>
+     1	Jiajie Chen <c@jia.je>
+     1	Jiyu <info@jiyu.dev>
+     1	Jodi D. <jodijodingtondev@gmail.com>
+     1	JodiMcJodson <JodiMcJodson@noreply.codeberg.org>
+     1	Joeke <joeke@posteo.net>
+     1	Joeke de Graaf <joeke@posteo.net>
+     1	Johannes Christ <jc@jchri.st>
+     1	John Nduli <rookie101@jnduli.co.ke>
+     1	Jonathan Lin <jonathanylin1111@gmail.com>
+     1	Jorge Acereda <jacereda@gmail.com>
+     1	Jos van den Oever <jos@vandenoever.info>
+     1	Joseph LaFreniere <joseph@lafreniere.xyz>
+     1	Justin Veilleux <terramorpha@cock.li>
+     1	KURASHIKI Satoru <lurdan@gmail.com>
+     1	Kabelo M'sobomvu Moiloa <personal@kabelom.com>
+     1	Kaelyn <kaelyn.alexi@protonmail.com>
+     1	Kai Jellinghaus <contact@kaij.tech>
+     1	Keisuke Kurosawa <k.kurochan9630@gmail.com>
+     1	Kimapr <kimapr@mail.ru>
+     1	King, Spencer via Guix-patches via <guix-patches@gnu.org>
+     1	Kiran Shila <me@kiranshila.com>
+     1	Lars Rustand <rustand.lars@gmail.com>
+     1	Laurent Gatto <laurent.gatto@uclouvain.be>
+     1	Laurent Gatto <lgatto@protonmail.ch>
+     1	Lesik Edelweiss <lesikedelweiss@disroot.org>
+     1	Lilah Tascheter via Guix-patches <guix-patches@gnu.org>
+     1	M <matf@disr.it>
+     1	MARAIT Gilles <gilles.marait@inria.fr>
+     1	Marc Coquand <marc@coquand.email>
+     1	Marcel Steinbeck <msteinbeck@posteo.net>
+     1	MarcoFalke <_@721217.xyz>
+     1	Marcus Quincy <mail@marcusquincy.org>
+     1	Martin Baulig <martin@baulig.is>
+     1	Mathieu <mlaparie@disr.it>
+     1	Mattia Bunel <mattia.bunel@ign.fr>
+     1	Maya <maya.omase@protonmail.com>
+     1	Maya Tomasek <maya.omase@protonmail.com>
+     1	Mazin AlHaddad <mazin@getstate.dev>
+     1	Mehrad Mahmoudian <m.mahmoudian@gmail.com>
+     1	Mickaël Fortunato <mickael.fortunato@protonmail.com>
+     1	Milkey Mouse <milkeymouse@meme.institute>
+     1	Morgan Willcock <morgan@ice9.digital>
+     1	Mădălin Ionel Patrașcu <MadalinIonel.Patrascu@mdc-berlin.de>
+     1	Nathaniel Nicandro <nathanielnicandro@gmail.com>
+     1	Nazar Klovanych <nazarn96@gmail.com>
+     1	NeYurii <yuriizkhr@gmail.com>
+     1	Nikolay Korotkiy <sikmir@gmail.com>
+     1	Noah Evans <noah@nevans.me>
+     1	Noah Evans <noahevans256@gmail.com>
+     1	Olivier Dion <olivier-dion@proton.me>
+     1	Oscar Chevalier <oscar.chevalier@gmail.com>
+     1	Ott Joon <oj@vern.cc>
+     1	Parnikkapore via Guix-patches via <guix-patches@gnu.org>
+     1	Patrick Noll <patrick@patricknoll.com>
+     1	Peepo Froggings <peepofroggings@tutanota.de>
+     1	Peter Lo <peterloleungyau@gmail.com>
+     1	Philip Munksgaard <philip@munksgaard.me>
+     1	Philipp Berger <Philipp.Berger@mail.de>
+     1	Philippe SWARTVAGHER <swartvagher@par.tuwien.ac.at>
+     1	Piotr Kwiecinski <piokwiecinski@gmail.com>
+     1	Preston Firestone <firestone.preston@gmail.com>
+     1	Ramin Honary <ramin.honary@cross-compass.com>
+     1	Ray Miller <ray@1729.org.uk>
+     1	Reed Meyerson <reed.meyerson@gmail.com>
+     1	Reily Siegel <mail@reilysiegel.com>
+     1	Reza Alizadeh Majd <r.majd@pantherx.org>
+     1	Ricardo G. Herdt <r.herdt@posteo.de>
+     1	Robert Vollmert <rob@vllmrt.net>
+     1	Rodrigo Morales <rodrigo@morales.pe>
+     1	Roman Riabenko <roman@riabenko.com>
+     1	Rutherther via Guix-patches via <guix-patches@gnu.org>
+     1	Ryan Barber <rfb@skyscraper.nu>
+     1	Ryan Desfosses <rdes@protonmail.com>
+     1	Ryan Desfosses <ryan@desfo.org>
+     1	Ryan Prior <rprior@protonmail.com>
+     1	Ryan Sundberg via Guix-patches via <guix-patches@gnu.org>
+     1	Sam Lockart <sam@samlockart.com>
+     1	SeerLite <seerlite@nixnet.email>
+     1	Sergey Trofimov via Guix-patches via <guix-patches@gnu.org>
+     1	ShinyZero0 <shinyzero0@tilde.club>
+     1	Sigve Sudland <sigve_sudland@hotmail.com>
+     1	Simen Endsjø <simendsjo@gmail.com>
+     1	Simeon Prause <simeon.prause@campus.tu-berlin.de>
+     1	Sixten Thames <pm@sith.st>
+     1	Skyler <skyvine@protonmail.com>
+     1	Stuart Dilts <stuart.dilts@gmail.com>
+     1	Superfly Johnson <superfly.johnson@yahoo.com>
+     1	Superfly Johnson via Guix-patches via <guix-patches@gnu.org>
+     1	Sébastien Farge <sebastien-farge@laposte.net>
+     1	Sébastien Helleu <flashcode@flashtux.org>
+     1	Thanos Apollo <public@thanosapollo.com>
+     1	Thiago Jung Bauermann <thiago.bauermann@linaro.org>
+     1	Thomas Guillermo Albers Raviola <thomas@thomaslabs.org>
+     1	Thomas Zdyrski <thomas.zdyrski@gmail.com>
+     1	Thorsten Wilms <t_w_@freenet.de>
+     1	Tiago de Paula Peixoto <tiago@skewed.de>
+     1	Timmy Douglas <mail@timmydouglas.com>
+     1	Timo Wilken <git@twilken.net>
+     1	TimotheeMathieu <timothee.mathieu@inria.fr>
+     1	TohsakaTypeclass <codeberg@getstate.dev>
+     1	Tom Fitzhenry <tom@tom-fitzhenry.me.uk>
+     1	Tomasz Jeneralczyk <tj@schwi.pl>
+     1	Tommy Langhelle <tomlanghe@gmail.com>
+     1	Tomás Ortín <tomasortin@mailbox.org>
+     1	Toorn, H.W.P. van den (Henk) <h.w.p.vandentoorn@uu.nl>
+     1	Tor-björn Claesson <tor-bjorn@claesson.fi>
+     1	Trev <trev@trevdev.ca>
+     1	Tyler Wolf <tyler@twolf.io>
+     1	Unstable Horse <stable.master@unstable.horse>
+     1	Vagrant Cascadian <vagrantc@reproducible-builds.org>
+     1	Valter Nazianzeno <manipuladordedados@gmail.com>
+     1	Vessel Vave <vesselwave@disroot.org>
+     1	Vitor Hugo <vitorhugonunes@proton.me>
+     1	Vivien Kraus via Guix-patches via <guix-patches@gnu.org>
+     1	W. Kosior <koszko@koszko.org>
+     1	Wil deBeest <bovid-19@4tii.de>
+     1	Wilke Schwiedop <wilke.schwiedop@agfa.com>
+     1	Yann Dupont <yann.dupont@univ-nantes.fr>
+     1	Yash Tiwari <yasht@mailbox.org>
+     1	Your Name <you@example.com>
+     1	Zacchaeus Scheffer <zaccysc@gmail.com>
+     1	angicque <antoine.a.gicquel@inria.fr>
+     1	aragaer <aragaer@gmail.com>
+     1	arkhan <arkhan@riseup.net>
+     1	buffersquid <mail@buffersquid.com>
+     1	cage-dev@twistfold.it <cage-dev@twistfold.it>
+     1	cancername <notcancername@protonmail.com>
+     1	casaca <lacasaca2019@gmail.com>
+     1	gnuphilic <none@example.org>
+     1	gravitydiv10 <gravitydiv10@protonmail.com>
+     1	h.nasajpour <h.nasajpour@pantherx.org>
+     1	hako <hako@ultrarare.space>
+     1	heq <human.equivalent@xhrpb.com>
+     1	ivan-p-sokolov@ya.ru <ivan-p-sokolov@ya.ru>
+     1	jaeme <jaeme@runbox.com>
+     1	jman <srht@city17.xyz>
+     1	john muhl <jm@pub.pink>
+     1	lynnlei <lynn@lynn.sh>
+     1	mathijsh <mathijshondshorst@freedom.nl>
+     1	michaeldelago <michaeldelago98@gmail.com>
+     1	mtekman <mtekman89@gmail.com>
+     1	ngraves <ngraves@gmx.com>
+     1	nlif-m <m.payunen@gumrfradio.ru>
+     1	npatra <nilesh@riseup.net>
+     1	pelzflorian (Florian Pelz) <pelzflorian@pelzflorian.de>
+     1	phodina <phodina@protonmail.com>
+     1	port19 <port19@port19.xyz>
+     1	racin@free.fr <racin@free.fr>
+     1	son0p <fede2001@gmail.com>
+     1	stuebinm <stuebinm@disroot.org>
+     1	unwox via Guix-patches via <guix-patches@gnu.org>
+     1	walky_talky <pat-hwaki@proton.me>
+     1	wvlab <me@wvlab.xyz>
+     1	zero@fedora <zero@fedora>
+     1	λx.x <case_lambda@disroot.org>
+     1	ギャラ <me@gyara.moe>
+
+Overall contributors:
+
+ 29175	Ricardo Wurmus <rekado@elephly.net>
+ 14938	Efraim Flashner <efraim@flashner.co.il>
+ 13648	Ludovic Courtès <ludo@gnu.org>
+ 12234	Tobias Geerinckx-Rice <me@tobias.gr>
+ 10658	Nicolas Goaziou <mail@nicolasgoaziou.fr>
+  7982	Marius Bakke <marius@gnu.org>
+  6730	Sharlatan Hellseher <sharlatanus@gmail.com>
+  6175	Maxim Cournoyer <maxim@guixotic.coop>
+  4587	Leo Famulari <leo@famulari.name>
+  3043	Mark H Weaver <mhw@netris.org>
+  2289	Nicolas Graves <ngraves@ngraves.fr>
+  2189	宋文武 <iyzsong@envs.net>
+  1969	Andreas Enge <andreas@enge.fr>
+  1832	Zheng Junjie <873216071@qq.com>
+  1823	Julien Lepiller <julien@lepiller.eu>
+  1727	Liliana Marie Prikler <liliana.prikler@gmail.com>
+  1358	Sughosha <sughosha@disroot.org>
+  1352	Christopher Baines <mail@cbaines.net>
+  1331	Hartmut Goebel <h.goebel@crazy-compilers.com>
+  1278	Guillaume Le Vaillant <glv@posteo.net>
+  1205	Vinicius Monego <monego@posteo.net>
+  1197	zimoun <zimon.toutoune@gmail.com>
+  1127	Pierre Neidhardt <mail@ambrevar.xyz>
+  1105	jgart <jgart@dismail.de>
+  1031	Eric Bavier <bavier@posteo.net>
+   878	Danny Milosavljevic <dannym@scratchpost.org>
+   837	Hilton Chain <hako@ultrarare.space>
+   813	Mathieu Othacehe <othacehe@gnu.org>
+   775	Cayetano Santos <csantosb@inventati.org>
+   771	Arun Isaac <arunisaac@systemreboot.net>
+   707	Timothy Sample <samplet@ngyro.com>
+   655	Danny Milosavljevic <dannym@friendly-machines.com>
+   645	Oleg Pykhalov <go.wigust@gmail.com>
+   632	Vagrant Cascadian <vagrant@debian.org>
+   619	Artyom V. Poptsov <poptsov.artyom@gmail.com>
+   602	Zheng Junjie <z572@z572.online>
+   594	Herman Rimm <herman@rimm.ee>
+   574	Janneke Nieuwenhuizen <janneke@gnu.org>
+   565	Alex Kost <alezost@gmail.com>
+   553	John Soo <jsoo1@asu.edu>
+   552	nikita <nikita@n0.is>
+   551	Greg Hogan <code@greghogan.com>
+   522	Rutger Helling <rhelling@mykolab.com>
+   505	Ben Woodcroft <donttrustben@gmail.com>
+   475	Steve George <steve@futurile.net>
+   474	David Thompson <davet@gnu.org>
+   468	Kei Kebreau <kkebreau@posteo.net>
+   453	Roel Janssen <roel@gnu.org>
+   447	Michael Rohleder <mike@rohleder.de>
+   435	Mathieu Othacehe <m.othacehe@gmail.com>
+   426	Andy Tai <atai@atai.org>
+   424	Giacomo Leidi <therewasa@fishinthecalculator.me>
+   420	Wilko Meyer <w@wmeyer.eu>
+   417	Maxime Devos <maximedevos@telenet.be>
+   385	Lars-Dominik Braun <lars@6xq.net>
+   363	Raghav Gururajan <rg@raghavgururajan.name>
+   353	Bruno Victal <mirai@makinata.eu>
+   351	David Craven <david@craven.ch>
+   324	Ashish SHUKLA <ashish.is@lostca.se>
+   321	Tomas Volf <~@wolfsden.cz>
+   320	Petr Hodina <phodina@protonmail.com>
+   318	John Kehayias <john.kehayias@protonmail.com>
+   315	Mădălin Ionel Patrașcu <madalinionel.patrascu@mdc-berlin.de>
+   304	Brett Gilio <brettg@gnu.org>
+   299	Jan Nieuwenhuizen <janneke@gnu.org>
+   295	Vivien Kraus <vivien@planete-kraus.eu>
+   280	Florian Pelz <pelzflorian@pelzflorian.de>
+   273	Josselin Poiret <dev@jpoiret.xyz>
+   271	Felix Gruber <felgru@posteo.net>
+   270	Brian Leung <bkleung89@gmail.com>
+   268	Clément Lassieur <clement@lassieur.org>
+   259	Valentin Ignatev <valentignatev@gmail.com>
+   249	Paul A. Patience <paul@apatience.com>
+   249	Raghav Gururajan <raghavgururajan@disroot.org>
+   241	Andrew Tropin <andrew@trop.in>
+   232	Jelle Licht <jlicht@fsfe.org>
+   224	Jakub Kądziołka <kuba@kadziolka.net>
+   222	Philip McGrath <philip@philipmcgrath.com>
+   220	Brendan Tildesley <mail@brendan.scot>
+   220	Xinglu Chen <public@yoctocell.xyz>
+   218	Vincent Legoll <vincent.legoll@gmail.com>
+   204	Jan (janneke) Nieuwenhuizen <janneke@gnu.org>
+   202	Timotej Lazar <timotej.lazar@araneo.si>
+   201	Paul van der Walt <paul@denknerd.org>
+   192	Kei Kebreau <kei@openmailbox.org>
+   191	John Darrington <jmd@gnu.org>
+   190	Morgan Smith <Morgan.J.Smith@outlook.com>
+   187	Brice Waegeneire <brice@waegenei.re>
+   186	Federico Beffa <beffa@fbengineering.ch>
+   185	David Elsing <david.elsing@posteo.net>
+   184	Sergey Trofimov <sarg@sarg.org.ru>
+   184	Zhu Zihao <all_but_last@163.com>
+   182	Katherine Cox-Buday <cox.katherine.e@gmail.com>
+   181	Jonathan Brielmaier <jonathan.brielmaier@web.de>
+   181	Pierre Langlois <pierre.langlois@gmx.com>
+   181	Simon Tournier <zimon.toutoune@gmail.com>
+   170	Tanguy Le Carrour <tanguy@bioneland.org>
+   168	Aleksandr Vityazev <avityazev@posteo.org>
+   167	Andy Wingo <wingo@igalia.com>
+   163	Simon South <simon@simonsouth.net>
+   161	Ian Eure <ian@retrospec.tv>
+   161	Jaeme Sifat <jaeme@runbox.com>
+   155	Léo Le Bouter <lle-bout@zaclys.net>
+   154	André Batista <nandre@riseup.net>
+   154	VÖRÖSKŐI András <voroskoi@gmail.com>
+   154	kiasoc5 <kiasoc5@disroot.org>
+   153	Vagrant Cascadian <vagrant@reproducible-builds.org>
+   150	Troy Figiel <troy@troyfigiel.com>
+   149	Paul Garlick <pgarlick@tourbillion-technology.com>
+   145	Antero Mejr <antero@mailbox.org>
+   145	Patrick Norton <patrick.147.norton@gmail.com>
+   142	Björn Höfling <bjoern.hoefling@bjoernhoefling.de>
+   142	Cyril Roelandt <tipecaml@gmail.com>
+   141	Hugo Buddelmeijer <hugo@buddelmeijer.nl>
+   138	Brian Leung <leungbk@mailfence.com>
+   137	Lars-Dominik Braun <ldb@leibniz-psychology.org>
+   135	Pierre Neidhardt <ambrevar@gmail.com>
+   134	Alex Vong <alexvong1995@gmail.com>
+   134	Taylan Ulrich Bayırlı/Kammer <taylanbayirli@gmail.com>
+   127	pukkamustard <pukkamustard@posteo.net>
+   126	Evgenii Klimov <eugene.dev@lipklim.org>
+   124	Romain GARBAGE <romain.garbage@inria.fr>
+   124	gemmaro <gemmaro.dev@gmail.com>
+   120	Christine Lemmer-Webber <cwebber@dustycloud.org>
+   119	Chris Marusich <cmmarusich@gmail.com>
+   119	Kyle Meyer <kyle@kyleam.com>
+   118	Jordan Moore <lockbox@struct.foo>
+   118	Roman Scherer <roman@burningswell.com>
+   116	Rutherther <rutherther@ditigal.xyz>
+   115	Navid Afkhami <navid.afkhami@mdc-berlin.de>
+   109	Thomas Danckaert <thomas.danckaert@gmail.com>
+   108	Mathieu Lirzin <mthl@gnu.org>
+   106	Konrad Hinsen <konrad.hinsen@fastmail.net>
+   103	Attila Lendvai <attila@lendvai.name>
+   102	Sarah Morgensen <iskarian@mgsn.dev>
+    99	Alex Griffin <a@ajgrf.com>
+    99	Foo Chuan Wei <chuanwei.foo@hotmail.com>
+    99	Jack Hill <jackhill@jackhill.us>
+    97	Alexandros Theodotou <alex@zrythm.org>
+    96	Murilo <murilo@disroot.org>
+    96	phodina <phodina@protonmail.com>
+    95	dan <i@dan.games>
+    95	raingloom <raingloom@riseup.net>
+    94	( <paren@disroot.org>
+    93	rsiddharth <s@ricketyspace.net>
+    92	Manolis Ragkousis <manolis837@gmail.com>
+    91	Joseph LaFreniere <joseph@lafreniere.xyz>
+    85	Ekaitz Zarraga <ekaitz@elenq.tech>
+    82	Ahmad Draidi <a.r.draidi@redscript.org>
+    82	Nikita Karetnikov <nikita@karetnikov.org>
+    81	Feng Shu <tumashu@163.com>
+    78	Ryan Prior <rprior@protonmail.com>
+    77	Jean-Pierre De Jesus DIAZ <jean@foundationdevices.com>
+    76	Andre A. Gomes <andremegafone@gmail.com>
+    76	Denis 'GNUtoo' Carikli <GNUtoo@cyberdimension.org>
+    76	Gabriel Wicki <gabriel@erlikon.ch>
+    75	Dariqq <dariqq@posteo.net>
+    74	Andrew Wong <wongandj@icloud.com>
+    73	Andy Patterson <ajpatter@uwaterloo.ca>
+    71	Gábor Boskovits <boskovits@gmail.com>
+    71	Nguyễn Gia Phong <cnx@loang.net>
+    70	Robert Vollmert <rob@vllmrt.net>
+    70	Sören Tempel <soeren@soeren-tempel.net>
+    70	cage <cage-dev@twistfold.it>
+    68	Anderson Torres <anderson.torres.8519@gmail.com>
+    68	Evgeny Pisemsky <mail@pisemsky.site>
+    67	Kaelyn Takata <kaelyn.alexi@protonmail.com>
+    66	Alex Sassmannshausen <alex@pompo.co>
+    66	Felix Lechner <felix.lechner@lease-up.com>
+    64	Yelninei <yelninei@tutamail.com>
+    63	Igor Goryachev via Guix-patches via <guix-patches@gnu.org>
+    63	Theodoros Foradis <theodoros.for@openmailbox.org>
+    62	Stefan Reichör <stefan@xsteve.at>
+    61	Martin Becze <mjbecze@riseup.net>
+    61	Tomáš Čech <sleep_walker@gnu.org>
+    59	Carlo Zancanaro <carlo@zancanaro.id.au>
+    57	nixo <nicolo@nixo.xyz>
+    56	Matthew James Kraai <kraai@ftbfs.org>
+    56	Sergio Pastor Pérez <sergio.pastorperez@outlook.es>
+    55	Aaron Covrig <aaron.covrig.us@ieee.org>
+    55	Remco van 't Veer <remco@remworks.net>
+    54	Jean-Pierre De Jesus DIAZ <jean@foundation.xyz>
+    54	Kjartan Oli Agustsson <kjartanoli@outlook.com>
+    54	Thiago Jung Bauermann <bauermann@kolabnow.com>
+    53	Juliana Sims <juli@incana.org>
+    53	Meiyo Peng <meiyo.peng@gmail.com>
+    53	Miguel Ángel Arruga Vivas <rosen644835@gmail.com>
+    52	Arthur Rodrigues <arthurhdrodrigues@proton.me>
+    52	Jake Forster <jakecameron.forster@gmail.com>
+    52	Jason Self <j@jxself.org>
+    52	Kurome <hunt31999@gmail.com>
+    52	Nicolas Graves via Guix-patches via <guix-patches@gnu.org>
+    52	Noé Lopez <noelopez@free.fr>
+    51	fanquake <fanquake@gmail.com>
+    48	Raoul Jean Pierre Bonnal <ilpuccio.febo@gmail.com>
+    47	John Kehayias <john@guixotic.coop>
+    46	Eric Bavier <bavier@cray.com>
+    45	Suhail Singh <suhailsingh247@gmail.com>
+    45	Vasile Dumitrascu <va511e@yahoo.com>
+    44	Jai Vetrivelan <jaivetrivelan@gmail.com>
+    44	Peter Lo <peterloleungyau@gmail.com>
+    44	Peter Polidoro <peter@polidoro.io>
+    44	Yovan Naumovski <yovan@gorski.stream>
+    44	pimi <madalinionel.patrascu@mdc-berlin.de>
+    43	Brendan Tildesley <brendan.tildesley@openmailbox.org>
+    43	Charles <charles.b.jackson@protonmail.com>
+    43	Petter <petter@mykolab.ch>
+    43	muradm <mail@muradm.net>
+    42	Leo Nikkilä <hello@lnikki.la>
+    42	Simen Endsjø <contact@simendsjo.me>
+    41	Alexey Abramov <levenson@mmer.org>
+    40	(unmatched-parenthesis <paren@disroot.org>
+    40	Diego Nicola Barbato <dnbarbato@posteo.de>
+    40	jgart via Guix-patches via <guix-patches@gnu.org>
+    39	Adriano Peluso <catonano@gmail.com>
+    39	Aleksandr Vityazev <avityazew@gmail.com>
+    39	Fabio Natali <me@fabionatali.com>
+    39	Lilah Tascheter <lilah@lunabee.space>
+    39	aecepoglu <aecepoglu@fastmail.fm>
+    38	Gabriel Hondet <gabrielhondet@gmail.com>
+    38	Pjotr Prins <pjotr.guix@thebird.nl>
+    37	EuAndreh <eu@euandre.org>
+    37	Igor Goryachev <igor@goryachev.org>
+    37	Meiyo Peng <meiyo@riseup.net>
+    37	guy fleury iteriteka <hoonandon@gmail.com>
+    36	L p R n d n <guix@lprndn.info>
+    36	Pierre-Antoine Rouby <pierre-antoine.rouby@inria.fr>
+    36	Stephen Paul Weber <singpolyma@singpolyma.net>
+    36	Wiktor Żelazny <wzelazny@vurv.cz>
+    36	nomike <nomike@nomike.com>
+    35	Fis Trivial <ybbs.daans@hotmail.com>
+    35	Olivier Dion <olivier.dion@polymtl.ca>
+    35	Rostislav Svoboda <rostislav.svoboda@gmail.com>
+    34	Alexandr Vityazev <avityazev@posteo.org>
+    34	Richard Sent <richard@freakingpenguin.com>
+    34	Spencer King <spencer.king@geneoscopy.com>
+    34	Sébastien Lerique <sl@eauchat.org>
+    34	Timo Wilken <guix@twilken.net>
+    34	zamfofex <zamfofex@twdb.moe>
+    33	Adam Faiz <adam.faiz@disroot.org>
+    33	Daniel Ziltener <dziltener@lyrion.ch>
+    33	Divya Ranjan <divya@subvertising.org>
+    33	Fredrik Salomonsson <plattfot@posteo.net>
+    33	Karl Hallsby <karl@hallsby.com>
+    33	Lars Bilke <lars.bilke@ufz.de>
+    33	Milkey Mouse <milkeymouse@meme.institute>
+    33	Rene Saavedra <rennes@openmailbox.org>
+    32	Benjamin <benjamin@uvy.fr>
+    32	Carl Dong <contact@carldong.me>
+    32	Jakob L. Kreuze <zerodaysfordays@sdf.org>
+    32	Sughosha <Sughosha@proton.me>
+    32	Wiktor Żelazny <wz@freeshell.de>
+    31	Ada Stevenson <adanskana@gmail.com>
+    31	Dave Love <fx@gnu.org>
+    31	Jean-Pierre De Jesus DIAZ <me@jeandudey.tech>
+    31	Josep Bigorra <jjbigorra@gmail.com>
+    31	Liam Hupfer <liam@hpfr.net>
+    31	Muriithi Frederick Muriuki <fredmanglis@gmail.com>
+    30	Alex ter Weele <alex.ter.weele@gmail.com>
+    29	Sergei Trofimovich <slyfox@inbox.ru>
+    28	Afkhami, Navid <Navid.Afkhami@mdc-berlin.de>
+    28	Artyom Bologov <mail@aartaka.me>
+    28	Brian Kubisiak <brian@kubisiak.com>
+    28	Ingo Ruhnke <grumbel@gmail.com>
+    28	Jan Wielkiewicz <tona_kosmicznego_smiecia@interia.pl>
+    27	Arjan Adriaanse <arjan@adriaan.se>
+    27	Ashvith Shetty <ashvithshetty0010@zohomail.in>
+    27	Igorj Gorjaĉev <igor@goryachev.org>
+    27	Michael Ford <fanquake@gmail.com>
+    27	Rodion Goritskov <rodion.goritskov@gmail.com>
+    27	luca <luca.kredel@web.de>
+    26	B. Wilson <elaexuotee@wilsonb.com>
+    26	Brennan Vincent <brennan@umanwizard.com>
+    26	Brian Cully <bjc@spork.org>
+    26	Ivan Petkov <ivanppetkov@gmail.com>
+    26	Simon Streit <simon@netpanic.org>
+    26	Stefan <stefan-guix@vodafonemail.de>
+    26	Sören Tempel <soeren+git@soeren-tempel.net>
+    25	Alexandru-Sergiu Marton <brown121407@posteo.ro>
+    25	Ayan Das <bvits@riseup.net>
+    25	Paul Alesius <paul@unnservice.com>
+    25	Tim Gesthuizen <tim.gesthuizen@yahoo.de>
+    24	Jakob Kirsch <jakob.kirsch@web.de>
+    24	Niklas Eklund <niklas.eklund@posteo.net>
+    24	kiasoc5 <kiasoc5@tutanota.com>
+    24	nafkhamdc <navid.afkhami@mdc-berlin.de>
+    24	wrobell <wrobell@riseup.net>
+    23	Antoine Côté <antoine.cote@posteo.net>
+    23	Arne Babenhauserheide <arne_bab@web.de>
+    23	Edouard Klein <edk@beaver-labs.com>
+    23	Parnikkapore <poomklao@yahoo.com>
+    23	Troy Sankey <sankeytms@gmail.com>
+    23	nee <nee.git@cock.li>
+    22	Amin Bandali <bandali@gnu.org>
+    22	Aurora <rind38@disroot.org>
+    22	Domagoj Stolfa <domagoj.stolfa@gmail.com>
+    22	Eelco Dolstra <eelco.dolstra@logicblox.com>
+    22	Jacob MacDonald <jaccarmac@gmail.com>
+    22	James Smith <jsubuntuxp@disroot.org>
+    22	Peter Mikkelsen <petermikkelsen10@gmail.com>
+    22	Thanos Apollo <public@thanosapollo.org>
+    21	Carlo Holl <carloholl@gmail.com>
+    21	Guillaume LE VAILLANT <glv@posteo.net>
+    21	Nigko Yerden <nigko.yerden@gmail.com>
+    21	Omar Bassam <omar.bassam88@gmail.com>
+    21	Reepca Russelstein <reepca@russelstein.xyz>
+    21	Ryan Prior via Guix-patches via <guix-patches@gnu.org>
+    21	Sughosha <sughosha@proton.me>
+    21	Vicente Vera Parra <vicentemvp@gmail.com>
+    21	aurtzy <aurtzy@gmail.com>
+    21	unmush <unmush@hashbang.sh>
+    20	Adam Kandur <rndd@tuta.io>
+    20	AwesomeAdam54321 <adam.faiz@disroot.org>
+    20	Ben Sturmfels <ben@sturm.com.au>
+    20	Ghislain Vaillant <ghislain.vaillant@inria.fr>
+    20	Jens Mølgaard <jens@zete.tk>
+    20	Jesse Gibbons <jgibbons2357+guix@gmail.com>
+    20	Kei Yamashita <kei@openmailbox.org>
+    20	Luca Matei Pintilie <luca@lucamatei.com>
+    20	Saku Laesvuori <saku@laesvuori.fi>
+    20	pinoaffe <pinoaffe@gmail.com>
+    19	Boris A. Dekshteyn <boris.dekshteyn@gmail.com>
+    19	ColdSideOfYourPillow <ColdSideOfYourPillow@noreply.codeberg.org>
+    19	Eric Dvorsak <eric@dvorsak.fr>
+    19	Ivan Vilata i Balaguer <ivan@selidor.net>
+    19	Lee Thompson <lee.p.thomp@gmail.com>
+    19	Reza Alizadeh Majd <r.majd@pantherx.org>
+    19	conses <contact@conses.eu>
+    19	normalmente <normally_js@posteo.net>
+    18	André A. Gomes <andremegafone@gmail.com>
+    18	Collin J. Doering <collin@rekahsoft.ca>
+    18	David Pflug <david@pflug.io>
+    18	Grigory Shepelev <shegeley@gmail.com>
+    18	Hendursaga <hendursaga@aol.com>
+    18	José Miguel Sánchez García <jmi2k@openmailbox.org>
+    18	Naga Malleswari <nagamalli@riseup.net>
+    18	Nikolay Korotkiy <sikmir@disroot.org>
+    18	Nikolay Korotkiy <sikmir@gmail.com>
+    18	Prafulla Giri <pratheblackdiamond@gmail.com>
+    18	Wamm K. D <jaft.r@outlook.com>
+    18	vicvbcun <guix@ikherbers.com>
+    17	Alex Sassmannshausen <alex@komputilo.eu>
+    17	Charles Roelli <charles@adnoto.net>
+    17	David Wilson <david@daviwil.com>
+    17	Distopico <distopico@riseup.net>
+    17	Gabriel Arazas <foo.dogsquared@gmail.com>
+    17	Matthias Riße <matrss@0px.xyz>
+    17	Raphaël Mélotte <raphael.melotte@mind.be>
+    17	Rostislav Svoboda <Rostislav.Svoboda@gmail.com>
+    17	Santiago Payà i Miralta <santiagopim@gmail.com>
+    17	Simon Josefsson <simon@josefsson.org>
+    17	Siniša Biđin <sinisa@bidin.eu>
+    17	Solene Rapenne <solene@perso.pw>
+    17	Sree Harsha Totakura <sreeharsha@totakura.in>
+    17	Steve Sprang <scs@stevesprang.com>
+    16	45mg <45mg.writes@gmail.com>
+    16	Andrew Jose <arnav.jose@gmail.com>
+    16	Fries <fries1234@protonmail.com>
+    16	Jean-Baptiste Note <jean-baptiste.note@m4x.org>
+    16	John Khoo <johnkhootf@gmail.com>
+    16	Junker <dk@junkeria.club>
+    16	Mike Rosset <mike.rosset@gmail.com>
+    16	Philippe SWARTVAGHER <phil.swart@gmx.fr>
+    16	Sergio Pastor Pérez <sergio.pastorperez@gmail.com>
+    15	Alexandru-Sergiu Marton <brown121407@gmail.com>
+    15	Andrew Whatson <whatson@gmail.com>
+    15	Charles <charles@charje.net>
+    15	Gabriel Santos <gabriel.santos.smtp@gmail.com>
+    15	Guix Together <jgart@dismail.de>
+    15	Holger Peters <holger.peters@posteo.de>
+    15	Michal Atlas <michal_atlas+git@posteo.net>
+    15	Nikita Domnitskii <nikita@domnitskii.me>
+    15	Reily Siegel <mail@reilysiegel.com>
+    15	Stefan Stefanović <stefanx2ovic@gmail.com>
+    15	Taiju HIGASHI <higashi@taiju.info>
+    15	Tobias Kortkamp <tobias.kortkamp@gmail.com>
+    15	r0man <roman@burningswell.com>
+    14	Ashvith Shetty <Ashvith@noreply.codeberg.org>
+    14	Caleb Ristvedt <caleb.ristvedt@cune.org>
+    14	Ivan Gankevich <i.gankevich@spbu.ru>
+    14	Kyle Andrews <kyle@posteo.net>
+    14	Malte Frank Gerdes <malte.f.gerdes@gmail.com>
+    14	Marek Benc <dusxmt@gmx.com>
+    14	Pkill -9 <pkill9@runbox.com>
+    14	bdunahu <bdunahu@operationnull.com>
+    13	Amar Singh <nly@disroot.org>
+    13	BonfaceKilz <me@bonfacemunyoki.com>
+    13	Brian Leung <brian@debian>
+    13	Cees de Groot <cg@evrl.com>
+    13	David Arroyo <david@aqwari.net>
+    13	David Hashe <david.hashe@dhashe.com>
+    13	Dominic Martinez <dom@dominicm.dev>
+    13	Javier Olaechea <pirata@gmail.com>
+    13	Jesse Eisses <jesse@eisses.email>
+    13	John Doe <dftxbs3e@free.fr>
+    13	Josh Holland <josh@inv.alid.pw>
+    13	Jussi Timperi <jussi.timperi@iki.fi>
+    13	Mark Meyer <mark@ofosos.org>
+    13	Mekeor Melire <mekeor.melire@gmail.com>
+    13	Mike Gerwitz <mtg@gnu.org>
+    13	Pierre-Henry Fröhring <phfrohring@deeplinks.com>
+    13	Raven Hallsby <karl@hallsby.com>
+    13	Sergiu Ivanov <sivanov@colimite.fr>
+    13	Yuval Langer <yuval.langer@gmail.com>
+    13	gyara <me@gyara.moe>
+    12	Alex Devaure <ajadevaure@gmail.com>
+    12	Congcong Kuo <congcong.kuo@gmail.com>
+    12	Damien Cassou <damien@cassou.me>
+    12	Daniel Meißner <daniel.meissner-i4k@ruhr-uni-bochum.de>
+    12	Dhruvin Gandhi <contact@dhruvin.dev>
+    12	Evan Straw <evan.straw99@gmail.com>
+    12	FuncProgLinux <softwarelibre@urutau-ltd.org>
+    12	Giovanni Biscuolo <g@xelera.eu>
+    12	Homo <gay@disroot.org>
+    12	Marcin Karpezo <sirmacik@wioo.waw.pl>
+    12	Olivier Dion <odion@efficios.com>
+    12	Rodion Goritskov <rodion@goritskov.com>
+    12	Ryan Desfosses <rdes@protonmail.com>
+    12	Sughosha via Guix-patches via <guix-patches@gnu.org>
+    12	TomZ <tomz@freedommail.ch>
+    12	Trevor Richards <trev@trevdev.ca>
+    12	altadil <Altadil@protonmail.com>
+    12	fesoj000 <fesoj000@gmail.com>
+    12	kestrel <kestrel.w@proton.me>
+    11	Ashish SHUKLA via Guix-patches via <guix-patches@gnu.org>
+    11	Hennadii Stepanov <hebasto@gmail.com>
+    11	Jake Leporte <jakeleporte@outlook.com>
+    11	Jean-Baptiste Volatier <jbv@pm.me>
+    11	Julian Flake <flake@uni-koblenz.de>
+    11	Lukas Gradl <lgradl@openmailbox.org>
+    11	Peter Kreye <kreyepr@gmail.com>
+    11	Pierre-Henry Fröhring <contact@phfrohring.com>
+    11	Rikard Nordgren <hrn@posteo.net>
+    11	Sebastian Schott <sschott@mailbox.org>
+    11	TakeV <takev@disroot.org>
+    11	Zzull <bstrazzull@hotmail.fr>
+    11	moksh <mysticmoksh@riseup.net>
+    11	raingloom <raingloom@protonmail.com>
+    11	terramorpha <terramorpha@cock.li>
+    11	ykonai <mail@ykonai.net>
+    10	Alice BRENON <alice.brenon@ens-lyon.fr>
+    10	Allan Adair <allan@adair.no>
+    10	Antero Mejr <mail@antr.me>
+    10	Cayetano Santos via Guix-patches via <guix-patches@gnu.org>
+    10	Christopher Howard <christopher@librehacker.com>
+    10	Ethan R. Jones <doubleplusgood23@gmail.com>
+    10	Fabian Harfert <fhmgufs@web.de>
+    10	Gabriel Santos <gabrielsantosdesouza@disroot.org>
+    10	Jovany Leandro G.C <bit4bit@riseup.net>
+    10	Lu Hui <luhux76@gmail.com>
+    10	Luis Felipe <luis.felipe.la@protonmail.com>
+    10	Luis Henrique Gomes Higino <luishenriquegh2701@gmail.com>
+    10	Martin Schitter <ms@mur.at>
+    10	Matthew Elwin <elwin@northwestern.edu>
+    10	Nicolò Balzarotti <anothersms@gmail.com>
+    10	Olivier Rojon <o.rojon@posteo.net>
+    10	Picnoir <picnoir@alternativebit.fr>
+    10	Rick Huijzer <ikbenrickhuyzer@gmail.com>
+    10	Solene Rapenne via Guix-patches via <guix-patches@gnu.org>
+    10	Thorsten Wilms <t_w_@freenet.de>
+    10	pinoaffe <pinoaffe@airmail.cc>
+    10	qblade <qblade@protonmail.com>
+    10	raid5atemyhomework <raid5atemyhomework@protonmail.com>
+     9	Alberto Eleuterio Flores Guerrero <barbanegra+guix@posteo.mx>
+     9	Alírio Eyng <alirioeyng@gmail.com>
+     9	Amirouche Boubekki <amirouche@hypermove.net>
+     9	Antero Mejr <antero@kodmin.com>
+     9	Ashvith Shetty <ashvith@noreply.codeberg.org>
+     9	Carl Dong <accounts@carldong.me>
+     9	Charlie Ritter <chewzerita@posteo.net>
+     9	Dan Frumin <dfrumin@cs.ru.nl>
+     9	Danial Behzadi <dani.behzi@ubuntu.com>
+     9	Daniel Szmulewicz <daniel.szmulewicz@gmail.com>
+     9	Eric Brown <ecbrown@ericcbrown.com>
+     9	Eric Le Bihan <eric.le.bihan.dev@free.fr>
+     9	Jacob Hrbek <kreyren@rixotstudio.cz>
+     9	Jean SIMARD <woshilapin@tuziwo.info>
+     9	LibreMiami <packaging-guix@libremiami.org>
+     9	Marco Rimoldi <rimarko@libero.it>
+     9	Marius Bakke <marius@devup.no>
+     9	Robert Smith <robertsmith@posteo.net>
+     9	Ryan Sundberg <ryan@arctype.co>
+     9	Spencer King <spencer.king@wustl.edu>
+     9	Tonton <tonton@riseup.net>
+     9	guy fleury iteriteka <gfleury@disroot.org>
+     9	la snesne <lasnesne@lagunposprasihopre.org>
+     8	Ashvith Shetty <ashvithshetty10@gmail.com>
+     8	Attila Lendvai <attila.lendvai@gmail.com>
+     8	AuPath <marco.au.grassi98@protonmail.com>
+     8	Brandon Lucas <br@ndon.dk>
+     8	Carlos Sánchez de La Lama <csanchezdll@gmail.com>
+     8	Erik Edrosa <erik.edrosa@gmail.com>
+     8	Hilton Chain via Guix-patches via <guix-patches@gnu.org>
+     8	Hugo Lecomte <hugo.lecomte@inria.fr>
+     8	Ivan Kozlov <kanichos@yandex.ru>
+     8	Jake Coble <j@kecoble.com>
+     8	LaFreniere, Joseph <joseph@lafreniere.xyz>
+     8	Luca Cirrottola <luca.cirrottola@inria.fr>
+     8	M <matf@disr.it>
+     8	Matthew Jordan <matthewjordandevops@yandex.com>
+     8	Matthew Trzcinski <matt@excalamus.com>
+     8	Miguel <rosen644835@gmail.com>
+     8	Nikolai Merinov <nikolai.merinov@member.fsf.org>
+     8	Pierre-Antoine Rouby <contact@parouby.fr>
+     8	Pierre-Moana Levesque <pierre.moana.levesque@gmail.com>
+     8	Pradana AUMARS <paumars@courrier.dev>
+     8	Rene <pacoon@protonmail.com>
+     8	Rutherther <rutherther@protonmail.com>
+     8	Skylar Hill <stellarskylark@posteo.net>
+     8	Suhail <suhail@bayesians.ca>
+     8	Thomas Albers <thomas@thomaslabs.org>
+     8	Tomasz Jeneralczyk <tj@schwi.pl>
+     8	Trevor Arjeski <tmarjeski@gmail.com>
+     8	Vincent Prat <vprat@deeplinks.com>
+     8	Yarl Baudig <yarl-baudig@mailoo.org>
+     8	florhizome <florhizome@posteo.net>
+     8	itd <itd@net.in.tum.de>
+     8	swedebugia <swedebugia@riseup.net>
+     7	Adam Massmann <massmannak@gmail.com>
+     7	Adam Quandour <adam.quandour@gmail.com>
+     7	Adriel Dumas--Jondeau <leirda@disroot.org>
+     7	Al McElrath <hello@yrns.org>
+     7	Ale Abdo <abdo@member.fsf.org>
+     7	Alexandru-Sergiu Marton <brown121407@member.fsf.org>
+     7	Alexis Simon <alexis.simon@runbox.com>
+     7	Alvin Hsu <aurtzy@gmail.com>
+     7	Arnaud DABY-SEESARAM <ds-ac@nanein.fr>
+     7	Christina O'Donnell <cdo@mutix.org>
+     7	Cyrill Schenkel <cyrill.schenkel@gmail.com>
+     7	David Dashyan <mail@davie.li>
+     7	Demis Balbach <db@minikn.xyz>
+     7	Dimakakos Dimos <me@bendersteed.tech>
+     7	EuAndreh via Guix-patches via <guix-patches@gnu.org>
+     7	Filip Lajszczak <filip@lajszczak.dev>
+     7	Frank Pursel <frank.pursel@gmail.com>
+     7	Fredrik Salomonsson <plattfot@gmail.com>
+     7	Giacomo Leidi via Guix-patches via <guix-patches@gnu.org>
+     7	HiPhish <hiphish@posteo.de>
+     7	Hong Li <hli@mdc-berlin.de>
+     7	IliaLuetin <antonstimmer@gmx.de>
+     7	Josselin Poiret via Guix-patches via <guix-patches@gnu.org>
+     7	Justus Winter <justus@sequoia-pgp.org>
+     7	King, Spencer <spencer.king@wustl.edu>
+     7	Luca Cirrottola <luca.cirro@gmail.com>
+     7	Luis Felipe <sirgazil@zoho.com>
+     7	Marco Baggio <marco.baggio@mdc-berlin.de>
+     7	Mohammed Sadiq <sadiq@sadiqpk.org>
+     7	Nathan Merkley <nathanmerkley@gmail.com>
+     7	Nicolò Balzarotti <nicolo@nixo.xyz>
+     7	Pavel Shlyak <p.shlyak@pantherx.org>
+     7	R Veera Kumar <vkor@vkten.in>
+     7	Rovanion Luckey <rovanion.luckey@gmail.com>
+     7	Runciter <runciter@whispers-vpn.org>
+     7	Simeon Prause <simeon.prause@icloud.com>
+     7	Tim Howes <timhowes@lavabit.com>
+     7	Timmy Douglas <mail@timmydouglas.com>
+     7	Tom Fitzhenry <tom@tom-fitzhenry.me.uk>
+     7	Tomás Ortín Fernández <tomasortin@mailbox.org>
+     7	Vasile Dumitrascu via Guix-patches via <guix-patches@gnu.org>
+     7	Zacchaeus <eikcaz@zacchae.us>
+     7	arkhan <arkhan@riseup.net>
+     7	guix-patches--- via <guix-patches@gnu.org>
+     6	Adam <rndd@tuta.io>
+     6	Andrew Miloradovsky <andrew@interpretmath.pw>
+     6	André Alexandre Gomes <andremegafone@gmail.com>
+     6	Aniket Patil <aniket112.patil@gmail.com>
+     6	Arseniy Zaostrovnykh <necto.ne@gmail.com>
+     6	Cairn <cairn@pm.me>
+     6	Chadwain Holness <chadwainholness@gmail.com>
+     6	Christopher Rodriguez <yewscion@gmail.com>
+     6	Daniel Brooks <db48x@db48x.net>
+     6	Evgenii Lepikhin <e.lepikhin@corp.mail.ru>
+     6	Formbi <formbi@protonmail.com>
+     6	Garek Dyszel <garekdyszel@disroot.org>
+     6	Hendursaga <hendursaga@yahoo.com>
+     6	Joshua Grant <tadni@riseup.net>
+     6	Kristian Lein-Mathisen <kristianlein@gmail.com>
+     6	Laura Kirsch <laurakirsch240406@gmail.com>
+     6	Leo Le Bouter <lle-bout@zaclys.net>
+     6	Lprndn <guix@lprndn.info>
+     6	Luis Guilherme Coelho <lgcoelho@disroot.org>
+     6	Marek Paśnikowski <marek@marekpasnikowski.pl>
+     6	Mark Walker <mark.damon.walker@gmail.com>
+     6	Martin Marshall <law@martinmarshall.com>
+     6	Masaya Tojo <masaya@tojo.tokyo>
+     6	Mattia Bunel <mattia.bunel@ehess.fr>
+     6	Mekeor Melire <mekeor@posteo.de>
+     6	Peng Mei Yu <i@pengmeiyu.com>
+     6	Peng Mei Yu <pengmeiyu@riseup.net>
+     6	Preston M. Firestone <firestone.preston@gmail.com>
+     6	Reza Housseini <reza@housseini.me>
+     6	Robby Zambito <contact@robbyzambito.me>
+     6	Roman Scherer <roman.scherer@burningswell.com>
+     6	Ron Nazarov <noisytoot@disroot.org>
+     6	Ron Nazarov <ron@noisytoot.org>
+     6	Sisiutl <sisiutl@egregore.fun>
+     6	Skylar Chan <schan12@umd.edu>
+     6	Sohom Bhattacharjee <soham.bhattacharjee15@gmail.com>
+     6	Spencer King <spencer@nursiapress.com>
+     6	Thomas Ieong <th.ieong@free.fr>
+     6	Timo Eisenmann <eisenmann@fn.de>
+     6	Tor-björn Claesson <tclaesson@gmail.com>
+     6	Vasilii Smirnov <vasilii.smirnov@mailbox.org>
+     6	Vitaliy Shatrov <D0dyBo0D0dyBo0@protonmail.com>
+     6	c4droid <c4droid@foxmail.com>
+     6	divoplade <d@divoplade.fr>
+     6	gabrielhdt <gabrielhondet@gmail.com>
+     6	kanichos@yandex.ru <kanichos@yandex.ru>
+     6	methuselah-0 <david.larsson@selfhosted.xyz>
+     6	nathan <nathan_mail@nborghese.com>
+     6	pelzflorian (Florian Pelz) <pelzflorian@pelzflorian.de>
+     6	pinoaffe@airmail.cc <pinoaffe@airmail.cc>
+     5	( via Guix-patches via <guix-patches@gnu.org>
+     5	Ahmad Draidi via Guix-patches via <guix-patches@gnu.org>
+     5	Aiden Isik <aidenisik+git@member.fsf.org>
+     5	Aleksandr Lebedev <alex.lebedev2003@icloud.com>
+     5	Alexey Abramov via Guix-patches via <guix-patches@gnu.org>
+     5	Andrew Wong via Guix-patches via <guix-patches@gnu.org>
+     5	Benjamin Slade <slade@lambda-y.net>
+     5	Benoit Martin <bmartin@cea.fr>
+     5	David Larsson <david.larsson@selfhosted.xyz>
+     5	Dion Mendel <guix@dm9.info>
+     5	Domagoj Stolfa <ds815@gmx.com>
+     5	Frederick Muriuki Muriithi <fredmanglis@gmail.com>
+     5	George Clemmer <myglc2@gmail.com>
+     5	Gregor Giesen <giesen@zaehlwerk.net>
+     5	Hamzeh Nasajpour <h.nasajpour@pantherx.org>
+     5	Jason Conroy <jconroy@tscripta.net>
+     5	Jeff Mickey <j@codemac.net>
+     5	Josh Marshall <joshua.r.marshall.1991@gmail.com>
+     5	Joshua Branson <jbranso@dismail.de>
+     5	Julian Graham <joolean@gmail.com>
+     5	Laura Lazzati <laura.lazzati.15@gmail.com>
+     5	Marcel van der Boom <marcel@van-der-boom.nl>
+     5	Mehmet Tekman <mtekman89@gmail.com>
+     5	Nam Nguyen <namn@berkeley.edu>
+     5	Noah Evans <noah@nevans.me>
+     5	Ontje Lünsdorf <ontje.luensdorf@dlr.de>
+     5	Philippe SWARTVAGHER <philippe.swartvagher@inria.fr>
+     5	Raimon Grau <raimonster@gmail.com>
+     5	Raymond Nicholson <rain1@openmailbox.org>
+     5	Riku Viitanen <riku.viitanen@protonmail.com>
+     5	Sahithi Yarlagadda <sahi@swecha.net>
+     5	Simen Endsjø <simendsjo@gmail.com>
+     5	Todor Kondić <tk.code@protonmail.com>
+     5	VnPower <vnpower@loang.net>
+     5	Wojtek Kosior <koszko@koszko.org>
+     5	Yovan Naumovski via Guix-patches via <guix-patches@gnu.org>
+     5	Zac Berkowitz <zac.berkowitz@gmail.com>
+     5	antlers <antlers@illucid.net>
+     5	apoorv569 <apoorvs569@gmail.com>
+     5	cdr-shdr-wdr <cdr-shdr-wdr@protonmail.ch>
+     5	charje <charles.b.jackson@protonmail.com>
+     5	chris <chris@bumblehead.com>
+     5	kiasoc5 via Guix-patches via <guix-patches@gnu.org>
+     5	mikadoZero <mikadozero@yandex.com>
+     5	nik gaffney <nik@fo.am>
+     5	nixo <anothersms@gmail.com>
+     5	quanrong <quanrong@mailbox.org>
+     5	wednesday <jessejohngildersleve@zohomail.eu>
+     5	ギャラ <me@gyara.moe>
+     4	8p8c <cameltheman@gmail.com>
+     4	Abhishek Cherath <abhi@quic.us>
+     4	Adam Faiz via Guix-patches via <guix-patches@gnu.org>
+     4	Adam Kandur <kefironpremise@gmail.com>
+     4	Adam Van Ymeren <adam@vany.ca>
+     4	Adonay Felipe Nogueira <adfeno@openmailbox.org>
+     4	Alex Bosco <me@alexbos.co>
+     4	Alexander I. Grafov <grafov@gmail.com>
+     4	Anders Thuné <asse.97@gmail.com>
+     4	Andrew Whatson <whatson@tailcall.au>
+     4	Andy Tai <ltai@roku.com>
+     4	Arnaud Daby-Seesaram <ds-ac@nanein.fr>
+     4	Arnaud Lechevallier <arnaud.lechevallier@free.fr>
+     4	BonfaceKilz <bonfacemunyoki@gmail.com>
+     4	Caliph Nomble <calnomble@protonmail.com>
+     4	Charles Jackson <charles@charje.net>
+     4	Christopher O'Neill <code@chrisoneill.co.uk>
+     4	Claes Wallin (韋嘉誠) <claes.wallin@greatsinodevelopment.com>
+     4	Daniel Pimentel <d4n1@d4n1.org>
+     4	Deck Pickard <deck.r.pickard@gmail.com>
+     4	Dmytro Statyvka <dstatyvka@gmail.com>
+     4	Doğan Çeçen <sepeth@fastmail.com>
+     4	Dr. Arne Babenhauserheide <arne_bab@web.de>
+     4	Eric Brown <brown@fastmail.com>
+     4	Foster Hangdaan <foster@hangdaan.email>
+     4	Fulbert <fulbert@bluewin.ch>
+     4	Huang Ying <huang.ying.caritas@gmail.com>
+     4	Ian Denhardt <ian@zenhack.net>
+     4	Ignacio Marmolejo <ignacio.marmolejo@gmail.com>
+     4	Imran Iqbal <imran@imraniqbal.org>
+     4	Isidor Zeuner <guix@quidecco.pl>
+     4	Ivan Popovych <ivan@ipvych.com>
+     4	Jesse Dowell <jessedowell@gmail.com>
+     4	Jesse Gibbons <jgibbons2357@gmail.com>
+     4	Jessica Tallon <tsyesika@tsyesika.se>
+     4	Jochem Raat <jchmrt@riseup.net>
+     4	John J. Foerch <jjfoerch@earthlink.net>
+     4	John Kehayias via Guix-patches via <guix-patches@gnu.org>
+     4	Jonas Freimuth <jonas.freimuth@posteo.de>
+     4	Jorge P. de Morais Neto <jorge+git@disr.it>
+     4	Jose G Perez Taveras <josegpt27@gmail.com>
+     4	Justin Veilleux <terramorpha@cock.li>
+     4	Lukas Gradl <lgradl@posteo.net>
+     4	Luther Thompson <lutheroto@gmail.com>
+     4	Mathieu Laparie <mlaparie@disr.it>
+     4	Mădălin Ionel Patrașcu <MadalinIonel.Patrascu@mdc-berlin.de>
+     4	Nikolaos Chatzikonstantinou <nchatz314@gmail.com>
+     4	Not Zed <notzed@gmail.com>
+     4	Oskar Köök <oskar@maatriks.ee>
+     4	Oskar Köök <oskarkook@maatriks.ee>
+     4	Rene Saavedra <nanuui@protonmail.com>
+     4	Robin Green <greenrd@greenrd.org>
+     4	Rodger Fox <thylakoid@openmailbox.org>
+     4	Roman Riabenko <roman@riabenko.com>
+     4	Ron Nazarov via Guix-patches via <guix-patches@gnu.org>
+     4	Royce Strange <royball@disroot.org>
+     4	Sarah Morgensen via Guix-patches via <guix-patches@gnu.org>
+     4	Sarthak Shah <shahsarthakw@gmail.com>
+     4	SeerLite via Guix-patches via <guix-patches@gnu.org>
+     4	Sergei Trofimovich <slyich@gmail.com>
+     4	Tom Willemse <tom@ryuslash.org>
+     4	Tom Zander via Guix-patches via <guix-patches@gnu.org>
+     4	Vinícius dos Santos Oliveira <vini.ipsmaker@gmail.com>
+     4	Vitalii Koshura <lestat.de.lionkur@gmail.com>
+     4	Z572 via Guix-patches via <guix-patches@gnu.org>
+     4	andy Tai <atai@atai.org>
+     4	dan <igaryhe@gmail.com>
+     4	doncatnip <gnopap@gmail.com>
+     4	fis trivial <ybbs.daans@hotmail.com>
+     4	guix@mawumag.com <guix@mawumag.com>
+     4	ison <ison@airmail.cc>
+     4	kitzman <kitzman@disroot.org>
+     4	nee <nee-git@hidamari.blue>
+     4	phodina via Guix-patches via <guix-patches@gnu.org>
+     4	reza <reza@housseini.me>
+     4	spacecadet@purge.sh <spacecadet@purge.sh>
+     4	squishypinkelephant <squishypinkelephant@gmail.com>
+     4	tiantian <typ22@foxmail.com>
+     4	unwox <me@unwox.com>
+     3	(unmatched parenthesis <paren@disroot.org>
+     3	Adam Maleszka <adam_maleszka@aol.com>
+     3	Adrien 'neox' Bourmault <neox@gnu.org>
+     3	Ahmad Jarara <git@ajarara.io>
+     3	Akib Azmain Turja <akib@disroot.org>
+     3	Alex McGrath <amk@amk.ie>
+     3	Alexander Krotov <krotov@iitp.ru>
+     3	Alexandre Hannud Abdo <abdo@member.fsf.org>
+     3	Andrew Wong <wongandj@runbox.com>
+     3	Benjamin Slade <slade@jnanam.net>
+     3	Charles Jackson <charles.b.jackson@protonmail.com>
+     3	Charles Roelli <charles@aurox.ch>
+     3	Csepp <raingloom@riseup.net>
+     3	Cyprien Nicolas <cyprien@nicolas.tf>
+     3	Daniel Khodabakhsh <d.khodabakhsh@gmail.com>
+     3	Daniel Meißner <daniel.meissner-i4k@rub.de>
+     3	David Boilleau <david_boilleau@gmx.fr>
+     3	Dimakakos Dimos <bendersteed@teknik.io>
+     3	Dominik Delgado Steuter <d@delgado.nrw>
+     3	Douglas Deslauriers <Douglas.Deslauriers@vector.com>
+     3	Esther Flashner <esther@flashner.co.il>
+     3	Florian Paul Schmidt <mista.tapas@gmx.net>
+     3	François J <francois-oss@avalenn.eu>
+     3	François Joulaud <francois-oss@avalenn.eu>
+     3	Gabriel Hondet <gabriel.hondet@cominety.net>
+     3	Hong.Li@mdc-berlin.de <Hong.Li@mdc-berlin.de>
+     3	Ilya Chernyshov <ichernyshovvv@gmail.com>
+     3	Ivana Drazovic <iv.dra@hotmail.com>
+     3	JOULAUD François <Francois.JOULAUD@radiofrance.com>
+     3	James Smith via Guix-patches via <guix-patches@gnu.org>
+     3	James Thomas <jimjoe@gmx.net>
+     3	Jens M <jens@zete.tk>
+     3	Jim Newsome <jnewsome@torproject.org>
+     3	Joaquín Aguirrezabalaga <kinote@kinote.org>
+     3	Joeke de Graaf <joeke@posteo.net>
+     3	John Fremlin <john@fremlin.org>
+     3	Jonathan Brielmaier <jbrielmaier@suse.de>
+     3	Jonathan Frederickson <jonathan@terracrypt.net>
+     3	Jonathan Scoresby <me@jonscoresby.com>
+     3	Kaelyn <kaelyn.alexi@protonmail.com>
+     3	Kevin Lemonnier <lemonnierk@ulrar.net>
+     3	Kyle Andrews <kyle.c.andrews@gmail.com>
+     3	LuHui <luhux76@gmail.com>
+     3	Luis Higino <luishenriquegh2701@gmail.com>
+     3	Lynn Leichtle <lynn@lynn.sh>
+     3	Marcel Schilling <marcel.schilling@uni-luebeck.de>
+     3	Markku Korkeala <markku.korkeala@iki.fi>
+     3	Martin Schitter <ms+git@mur.at>
+     3	Maurice Brémond <Maurice.Bremond@inria.fr>
+     3	Maya <maya.omase@protonmail.com>
+     3	Mazin AlHaddad <codeberg@getstate.dev>
+     3	McKinley Olsen <mck.olsen@gmail.com>
+     3	Meiyo Peng <meiyo@disroot.org>
+     3	Morgan Arnold <morgan.arnold@proton.me>
+     3	Nathan Benedetto Proença <nathan@vieiraproenca.com>
+     3	Nilesh Patra <nilesh@riseup.net>
+     3	Noah Landis <noahlandis@posteo.net>
+     3	Pierre-Evariste Dagand <doc@evr.ist>
+     3	ROCKTAKEY <rocktakey@gmail.com>
+     3	Raphaël Mélotte <raphael.melotte@posteo.net>
+     3	Rene Saavedra <pacoon@protonmail.com>
+     3	Rivulet Cedar <rivulet_cedar@yeah.net>
+     3	Robert Karszniewicz <avoidr@posteo.de>
+     3	Robin Templeton <robin@guixotic.coop>
+     3	Ryan Schanzenbacher <ryan@rschanz.org>
+     3	Ryan Sundberg via Guix-patches via <guix-patches@gnu.org>
+     3	Sam <smbaines8@gmail.com>
+     3	Sebastian Gibb <mail@sebastiangibb.de>
+     3	SeerLite <seerlite@disroot.org>
+     3	SeerLite <seerlite@nixnet.email>
+     3	Skylar "The Cobra" Astaroth <cobra@vern.cc>
+     3	Skyler Ferris <skyvine@protonmail.com>
+     3	Stefan Baums <baums@stefanbaums.com>
+     3	Stefan Baums <sbaums@gmail.com>
+     3	Stephen Webber <montokapro@gmail.com>
+     3	Taylan Kammer <taylan.kammer@gmail.com>
+     3	Thiago Jung Bauermann via Guix-patches via <guix-patches@gnu.org>
+     3	Till Robin Zickel <trzickel@illegalaliensfrom.space>
+     3	Tim Gesthuizen via Guix-patches via <guix-patches@gnu.org>
+     3	Timothee Mathieu <timothee.mathieu@inria.fr>
+     3	Ting-Wei Lan <lantw44@gmail.com>
+     3	Tobias Geerinckx-Rice via Guix-patches via <guix-patches@gnu.org>
+     3	Trevor Hass <thass@okstate.edu>
+     3	Tristan Cottam <tristan@cott.am>
+     3	Wiktor Zelazny <wzelazny@vurv.cz>
+     3	Winter <winter@winter.cafe>
+     3	WinterHound <winterhound@yandex.com>
+     3	Z. Ren <zren@dlut.edu.cn>
+     3	Zongyuan Li <zongyuan.li@c0x0o.me>
+     3	emma thompson <bigbookofbug@proton.me>
+     3	flabbergasted <flabbergasted@nofog.net>
+     3	frozenpigs <purpjuice@protonmail.com>
+     3	gnuphilic <>
+     3	h.nasajpour <h.nasajpour@pantherx.org>
+     3	hapster <o.rojon@posteo.net>
+     3	hiecaq <this@hiecaq.org>
+     3	iamawacko <iamawacko@protonmail.com>
+     3	luhux <luhux@outlook.com>
+     3	msglm <msglm@techchud.xyz>
+     3	simendsjo <simendsjo@gmail.com>
+     3	spacecadet <spacecadet@purge.sh>
+     3	spencerpeters <spencerpeters@protonmail.com>
+     2	(unmatched-parenthesis d <paren@disroot.org>
+     2	Ahriman <ahriman@fedora.email>
+     2	Albin Söderqvist <albin@fripost.org>
+     2	Alec Barreto <mrh57@posteo.net>
+     2	Alex Bosco via Guix-patches via <guix-patches@gnu.org>
+     2	Alexandr Vityazev <avityazew@gmail.com>
+     2	Alissa Istleyeva <awth13@tutamail.com>
+     2	Aljosha Papsch <misc@rpapsch.de>
+     2	Amélia Coutard-Sander <git@ameliathe1st.gay>
+     2	Andrew Patterson <andrewpatt7@gmail.com>
+     2	Andrius Štikonas <andrius@stikonas.eu>
+     2	Andrius Štikonas via Guix-patches via <guix-patches@gnu.org>
+     2	Andy Tai <lichengtai@gmail.com>
+     2	Artem Chernyak <artemchernyak@gmail.com>
+     2	Arto Jantunen <viiru@iki.fi>
+     2	Artyom Bologov <aartaka@protonmail.com>
+     2	Bassam Saeed <guix@bassamsaeed.ca>
+     2	Benjamin Chabanne <benjamin@uvy.fr>
+     2	Benoit Joly <benoit@benoitj.ca>
+     2	Bird <birdsite@airmail.cc>
+     2	Blake Shaw <blake@nonconstructivism.com>
+     2	Brian Cully <bjc@kublai.com>
+     2	Cage <cage-dev@twistfold.it>
+     2	Caliph Nomble <nomble@palism.com>
+     2	Calum Irwin <calumirwin1@gmail.com>
+     2	Cameron Chaparro <cameron@cameronchaparro.com>
+     2	Christian Miller <christian.miller@dadoes.de>
+     2	Christoph Buck <dev@icepic.de>
+     2	Corentin Bocquillon <corentin@nybble.fr>
+     2	Daniel Khodabakhsh <d@niel.khodabakh.sh>
+     2	Daniel Ziltener via Guix-patches via <guix-patches@gnu.org>
+     2	Danny Milosavljevic <dannym@nova.friendly-machines.com>
+     2	Danny O'Brien <danny@codetherapy.space>
+     2	David Truby <David.Truby@arm.com>
+     2	Declan Tsien <declantsien@riseup.net>
+     2	Denys Nykula <vegan@libre.net.ua>
+     2	Dmitry Bogatov <KAction@gnu.org>
+     2	Dominik Delgado Steuter via Guix-patches via <guix-patches@gnu.org>
+     2	Dylan Jeffers <sapientech@openmailbox.org>
+     2	Edison Ibáñez <arkhan@riseup.net>
+     2	Eidvilas Markevičius <markeviciuseidvilas@gmail.com>
+     2	Erik Eduardo <eduarskate8@gmail.com>
+     2	Eugen Stan <eugen.stan@netdava.com>
+     2	FELŠÖCI Marek <marek@felsoci.sk>
+     2	Felipe Balbi <felipe@balbi.sh>
+     2	Felipe Silva <git@felipeqq2.rocks>
+     2	Fernando Ayats <ayatsfer@gmail.com>
+     2	Fi guadec <lapearldot@disroot.org>
+     2	Florent Pruvost <florent.pruvost@inria.fr>
+     2	Francisco-Galindo <yo@franciscogalindo.com>
+     2	Franck Pérignon <Franck.Perignon@univ-grenoble-alpes.fr>
+     2	Franz Geffke <franz@pantherx.org>
+     2	Georgios Athanasiou <yorgath@gmail.com>
+     2	Gerd Heber <gerd.heber@gmail.com>
+     2	Helio Machado <0x2b3bfa0+git@googlemail.com>
+     2	Hikari <aneris@disroot.org>
+     2	Hugo Nobrega <hugonobrega@gmail.com>
+     2	Hunter Jozwiak <hunter.t.joz@gmail.com>
+     2	Ignas Lapėnas <ignas@lapenas.dev>
+     2	Ivan Gankevich <igankevich@capybaramail.xyz>
+     2	Jacob Adams <jacob@tookmund.com>
+     2	Jaft <jaft.r@outlook.com>
+     2	Jaime Marquínez Ferrándiz <jaime.marquinez.ferrandiz@fastmail.net>
+     2	James <james.taylor@fastmail.com>
+     2	James Richardson <james@jamestechnotes.com>
+     2	Jeff Sparkes <jsparkes@opentext.com>
+     2	Jethro Cao <jethrocao@gmail.com>
+     2	JoJo <jo@jo.zone>
+     2	Jonas Meeuws <jonas.meeuws@gmail.com>
+     2	Jonathan Pieper <jpieper@mailbox.org>
+     2	Jookia <166291@gmail.com>
+     2	Jorge Acereda <jacereda@gmail.com>
+     2	Jorge Gomez <jgart@dismail.de>
+     2	Kiran Shila <me@kiranshila.com>
+     2	Kristofer Buffington <kristoferbuffington@gmail.com>
+     2	Lulu <me@erkin.party>
+     2	Luís Henriques <henrix@camandro.org>
+     2	Maciej Kalandyk <m.kalandyk@outlook.com>
+     2	Manuel Graf <graf@init.at>
+     2	Marco Baggio <guix@mawumag.com>
+     2	Marco van Hulten <marco@hulten.org>
+     2	Mark L <cake@pydis.com>
+     2	Martin Castillo <castilma@uni-bremen.de>
+     2	Martin Schmidt <martin.schmidt13@gmx.de>
+     2	Massimo Zaniboni <mzan@dokmelody.org>
+     2	Mathieu Laparie <mathieu.laparie@inrae.fr>
+     2	Mathieu Othacehe <mathieu.othacehe@parrot.com>
+     2	Matthieu Lemerre <racin@free.fr>
+     2	Maximilian Heisinger <mail@maxheisinger.at>
+     2	Mazin Alhaddad <mazin@getstate.dev>
+     2	Meredith Oleander <mereditholeander@gmail.com>
+     2	Miguel Moreno <mmoreno@mmoreno.eu>
+     2	Miguel Ángel Moreno <mail@migalmoreno.com>
+     2	Miguel Ángel Moreno <me@mianmoreno.com>
+     2	Mike Delago <michaeldelago98@gmail.com>
+     2	Mike Jones <mike@mjones.io>
+     2	Mikhail Tsykalov <tsymsh@gmail.com>
+     2	Munyoki Kilyungi <me@bonfacemunyoki.com>
+     2	Niclas Meyer <niclas@countingsort.com>
+     2	Nico Rikken <nico@nicorikken.eu>
+     2	Nikola <nikola@radojevic.rs>
+     2	Owen T. Heisler <writer@owenh.net>
+     2	Patrick Hetu <patrick.hetu@auf.org>
+     2	Peng Mei Yu via Guix-patches via <guix-patches@gnu.org>
+     2	Peter <peter.feigl@nexoid.at>
+     2	Peter Kannewitz <peter.kannewitz@posteo.net>
+     2	Philip Kaludercic <philipk@posteo.net>
+     2	Philip Munksgaard <philip@munksgaard.me>
+     2	Philippe Virouleau <philippe.virouleau@inria.fr>
+     2	Pier-Hugues Pellerin <ph@heykimo.com>
+     2	Pier-Hugues Pellerin <phpellerin@gmail.com>
+     2	Pierre-Antoine Rault <par@rigelk.eu>
+     2	Quentin Vincent <quentin_vincent@disroot.org>
+     2	R H <rhelling@mykolab.com>
+     2	Raghav Gururajan via Guix-patches via <guix-patches@gnu.org>
+     2	Raphaël Mélotte via Guix-patches <guix-patches@gnu.org>
+     2	Riku Viitanen via Guix-patches via <guix-patches@gnu.org>
+     2	Rob Syme <rob.syme@gmail.com>
+     2	Robin Ole Heinemann <robin.ole.heinemann@gmail.com>
+     2	Robin Templeton <robin@terpri.org>
+     2	Ryan Desfosses <ryan@desfo.org>
+     2	Ryan Moe <ryan.moe@gmail.com>
+     2	Ryan Tolboom <ryan.tolboom@njit.edu>
+     2	Ryan Tolboom <ryan@using.tech>
+     2	Rémi Teissier <rteissier.code@chillpc.fr>
+     2	Saku Laesvuori via Guix-patches via <guix-patches@gnu.org>
+     2	SameExpert <sughosha@disroot.org>
+     2	Sebastian Dümcke <code@sam-d.com>
+     2	Sergei Trofimovich <slyfox@gentoo.org>
+     2	Sergio Durigan Junior <sergiodj@sergiodj.net>
+     2	Songlin Jiang <hollowman@hollowman.ml>
+     2	Spencer Skylar Chan <schan12@umd.edu>
+     2	The Man <squishypinkelephant@gmail.com>
+     2	Theofilos Pechlivanis <theofilos.pechlivanis@gmail.com>
+     2	Tim Johann <t1m@phrogstar.de>
+     2	Tobias Geerinckx-Rice via Bug reports for GNU Guix <bug-guix@gnu.org>
+     2	User <user@domain>
+     2	Vijayalakshmi Vedantham <vijimay12@gmail.com>
+     2	Yan Abu Arab <yanabuarab@gmail.com>
+     2	Yann Dupont <Yann.Dupont@univ-nantes.fr>
+     2	Yappaholic <sav.boyar@gmail.com>
+     2	Yoshinori Arai <kumagusu08@gmail.com>
+     2	Yuval Kogman <nothingmuch@woobling.org>
+     2	amirouche <amirouche+dev@hypermove.net>
+     2	arthurhdrodrigues--- via Guix-patches via <guix-patches@gnu.org>
+     2	bigbug <bigbookofbug@proton.me>
+     2	fis <ybbs.daans@hotmail.com>
+     2	forgoty <forgoty13@gmail.com>
+     2	iKaSeRo <ahmed@ikasero.com>
+     2	luhui <luhuins@163.com>
+     2	luishgh <51053603+luishgh@users.noreply.github.com>
+     2	mason1920 <mason1920@use.startmail.com>
+     2	michaeldelago <michaeldelago98@gmail.com>
+     2	mstenek <mstenek@disroot.org>
+     2	nee <nee@cock.li>
+     2	ngraves@ngraves.fr <ngraves@ngraves.fr>
+     2	nicodebo <nicolas.debonnaire@gmail.com>
+     2	okapi <okapi@firemail.cc>
+     2	paladhammika <paladhammika@protonmail.com>
+     2	vga <v@vgz.li>
+     2	xd1le <elisp.vim@gmail.com>
+     2	yarl-baudig@mailoo.org <yarl-baudig@mailoo.org>
+     2	ギャラ <aya@fubuki.me>
+     1	(unmatched-parenthesis ew syntax <paren@disroot.org>
+     1	(unmatched-parenthesis via Guix-patches via <guix-patches@gnu.org>
+     1	43317 <43317@etu.he2b.be>
+     1	4wph <4wph@noreply.codeberg.org>
+     1	6033fe7de85d <6033fe7de85d@airmail.cc>
+     1	8dcc <8dcc.git@gmail.com>
+     1	Abhiseck Paira <abhiseckpaira@disroot.org>
+     1	Adam Kandur <4164616d.4b616e647572@gmail.com>
+     1	Adam Zimmerman <adam@digitalpirate.ca>
+     1	Adonay Felipe Nogueira <adfeno@hyperbola.info>
+     1	Adrian Fullmer <adrianfullmer@yahoo.com>
+     1	Adrien Bourmault (neox) <neox@a-lec.org>
+     1	Ahmad Jarara <ajarara@fastmail.com>
+     1	Aizu <desdeunsotano@riseup.net>
+     1	Akira Kyle <akira@akirakyle.com>
+     1	Alberto EFG <albertoefg@posteo.mx>
+     1	Alejandro "HiPhish" Sanchez <hiphish@posteo.de>
+     1	Alex Branham <alex.branham@gmail.com>
+     1	Alex Branham <branham@utexas.edu>
+     1	Alexander Shendi <Alexander.Shendi@web.de>
+     1	Alexandre Gomes <andremegafone@gmail.com>
+     1	Alexis Praga <alexis@praga.dev>
+     1	Aljosha Papsch <ep@stern-data.com>
+     1	Allan Adair <allan@adair.io>
+     1	Alva <alva@skogen.is>
+     1	Amade Nemes <nemesamade@gmail.com>
+     1	Amar Singh <nly@dsiroot.org>
+     1	Amirouche <amirouche+dev@hyper.dev>
+     1	Amy Grinn <grinn.amy@tuta.com>
+     1	Amy Pillow <amypillow@lavache.com>
+     1	Anadon <joshua.r.marshall.1991@gmail.com>
+     1	Andreas Fuglesteg Dale <andreasfdale@gmail.com>
+     1	Andreas Rammhold <andreas@rammhold.de>
+     1	Andrew Stubbs <ams@baylibre.com>
+     1	André Miranda <eu@euandre.org>
+     1	Anonymous <mcrfan96@cock.li>
+     1	Apoorv <apoorvs@tuta.io>
+     1	Aria Nolan <aria@chytrid.org>
+     1	Arne Babenhauserheide <arne.babenhauserheide@kit.edu>
+     1	Arvid Krein <arvid@krein.moe>
+     1	Arvid Krein <arvidkrein@zedat.fu-berlin.de>
+     1	Ayush Jha <ayushjha@protonmail.com>
+     1	Bake Timmons <b3timmons@speedymail.org>
+     1	Baptiste Strazzulla <baptiste.strazzulla@protonmail.com>
+     1	Bastien Rivière <me@babariviere.com>
+     1	Benjamin Slade <slae@jnanam.net>
+     1	Benz Schenk <benz.schenk@uzh.ch>
+     1	Bingshan Chang <chang@bingshan.org>
+     1	Blake Shaw <blake@reproduciblemedia.com>
+     1	Boris A. Dekshteyn <harlequin78@gmail.com>
+     1	Boskovits, Gábor <boskovits@gmail.com>
+     1	Brandon Ludwig <bldtg@outlook.com>
+     1	Brant Gardner <brantcgardner@brantware.com>
+     1	Brant Gardner <mail@lnklnx.com>
+     1	Breno Brandão <lrabbt@gmail.com>
+     1	Brett Schalin <brettschalin@gmail.com>
+     1	Brit Butler <brit@kingcons.io>
+     1	Brit Butler via Guix-patches via <guix-patches@gnu.org>
+     1	Caliph Nomble via Guix-patches via <guix-patches@gnu.org>
+     1	Carlos <gcarlos@disroot.org>
+     1	Carolili <carolili@protonmail.com>
+     1	Charles via Guix-patches via <guix-patches@gnu.org>
+     1	Chris Bøg <chris@boeg.me>
+     1	Christian Birk Sørensen <chrbirks@gmail.com>
+     1	Christian Gelinek <cgelinek@radlogic.com.au>
+     1	Christian Miller via Guix-patches via <guix-patches@gnu.org>
+     1	Christopher Andersson <christopher@8bits.nu>
+     1	Christopher Lam <christopher.lck@gmail.com>
+     1	Christopher O'Neill <guix@chrisoneill.co.uk>
+     1	Christopher W. Carpenter <mordocai@mordocai.net>
+     1	Collin J. Doering via Guix-patches via <guix-patches@gnu.org>
+     1	Comrade Yuri <yuri@nijino>
+     1	Connor Clark <connor@psyleft.com>
+     1	Cory Fields <cory-nospam-@coryfields.com>
+     1	Dakota Logan <dklogan@riseup.net>
+     1	Dale Mellor <guix-devel-0brg6b@rdmp.org>
+     1	Daniel Lakeland <dlakelan@street-artists.org>
+     1	Daniel Lowe <dlowe@dlowe.net>
+     1	Daniel Maksymow <daniel.maksymow@tuta.io>
+     1	Daniel Schäfer <git@danielschaefer.me>
+     1	Danjela Lura <danielaluraa@gmail.com>
+     1	Danny Milosavljevic <danny.milo@datacom.wien>
+     1	Danny O'Brien <danny@fil.org>
+     1	Danny O'Brien <danny@spesh.com>
+     1	Dave Love <dave.love@manchester.ac.uk>
+     1	David Conner <dconner.pro@gmail.com>
+     1	David Hoppenbrouwers <guix@demindiro.com>
+     1	David Trudgian <dave@trudgian.net>
+     1	Dhruvin Gandhi via Guix-patches via <guix-patches@gnu.org>
+     1	Dimakakos Dimos via Guix-patches <guix-patches@gnu.org>
+     1	Divan Santana <divan@santanas.co.za>
+     1	Dmitry Polyakov <polyakov@liltechdude.xyz>
+     1	Dominik Delgado Steuter <dds@disroot.org>
+     1	Edgar Vincent <e-v@posteo.net>
+     1	Edward Wilson <bienjensu@gmail.com>
+     1	Ekaitz at ElenQ Technology <ekaitz@elenq.tech>
+     1	Elais Player <elais@fastmail.com>
+     1	Elizabeth Doughty <thymelizabeth@thymelizabeth.nz>
+     1	Ellen Papsch <ep@stern-data.com>
+     1	Ellis Kenyo <me@elken.dev>
+     1	Ellis Kenyő <me@elken.dev>
+     1	Ellis Kenyő via Guix-patches via <guix-patches@gnu.org>
+     1	Ellis Kesterton <ellis@diagnosticbox.com>
+     1	Emmanuel Beffara <manu@beffara.org>
+     1	Eric Bavier <&lt;bavier@cray.com&gt>
+     1	Erik Giorgis <git@egiorg.is>
+     1	Erik Šabič <erik.sab@gmail.com>
+     1	Ethan Blanton <elb@kb8ojh.net>
+     1	Ethan R. Jones <ethanrjones97@gmail.com>
+     1	Eugene Klimov via Guix-patches via <guix-patches@gnu.org>
+     1	Evan Hanson <evhan@foldling.org>
+     1	FPS <mista.tapas@gmx.net>
+     1	Fabio Natali via Guix-patches via <guix-patches@gnu.org>
+     1	Fakhri Sajadi <f.sajadi@pantherx.org>
+     1	Fatima Toothpaste <fatimatoothpaste@disroot.org>
+     1	Felipe Balbi <balbi@kernel.org>
+     1	Felix Lechner via Guix-patches via <guix-patches@gnu.org>
+     1	Fernando Martínez González <me@frndmg.xyz>
+     1	Fidel Ramos <f@fidelramos.net>
+     1	Francesco Frassinelli <fraph24@gmail.com>
+     1	Franck Pérignon <franck.perignon@univ-grenoble-alpes.fr>
+     1	Frank Terbeck <ft@bewatermyfriend.org>
+     1	Franz Josef <guix.riscv@gmail.com>
+     1	From: Hilton Chain <hako@ultrarare.space>
+     1	GNU Guix Live <cage-dev@twistfold.it>
+     1	Gisement <sisiutl@egregore.fun>
+     1	Gleb Zakharov <snyssfx@gmail.com>
+     1	Graham James Addis <grahamjamesaddis@gmail.com>
+     1	Grant Shangreaux <grant@unabridgedsoftware.com>
+     1	Grillon <thierry@moncourriel.eu>
+     1	Gruruya <greytest@disroot.org>
+     1	Gurjeet Singh <gurjeet@singh.im>
+     1	Guy Fleury Iteriteka <hoonandon@gmail.com>
+     1	Guy fleury <hoonandon@gmail.com>
+     1	Guy-Fleury Iteriteka <gfleury@disroot.org>
+     1	Gábor Boskovits <boskovits at>
+     1	Gábor Udvari <mail@gaborudvari.com>
+     1	Haider Mirza <x7and7@gmail.com>
+     1	Hendur Saga via Guix-patches via <guix-patches@gnu.org>
+     1	Hennadii Stepanov <32963518+hebasto@users.noreply.github.com>
+     1	Herman Rimm <herman_rimm@protonmail.com>
+     1	Herman Rimm via Guix-patches via <guix-patches@gnu.org>
+     1	Hikari <Quelln@protonmail.com>
+     1	Hugo Thiessard <htsr@pm.me>
+     1	Iliya Tikhonenko <tikhonenko@mpe.mpg.de>
+     1	Ingar <ingar@onionmail.info>
+     1	Iska Magg <iskamagg@gmail.com>
+     1	Ivan Sokolov <ivan-p-sokolov@ya.ru>
+     1	J. Sims via Guix-patches via <guix-patches@gnu.org>
+     1	Jacob Hart <hartja1@yahoo.com>
+     1	Jake Koroman <jake@jakekoroman.com>
+     1	Jake Koroman <jakekoroman@proton.me>
+     1	Jake Shilling <shilling.jake@gmail.com>
+     1	Jamie Cullen <sourcepluck@posteo.net>
+     1	Jane Baines <jmbaines8@gmail.com>
+     1	Jason Conroy <jconroy@google.com>
+     1	Jason Darby <jasonkdarby@gmail.com>
+     1	Jeremiah@pdp10.guru <Jeremiah@pdp10.guru>
+     1	Jesse Dowell <jesse.dowell@gmail.com>
+     1	Jiajie Chen <c@jia.je>
+     1	Jiyu <info@jiyu.dev>
+     1	Jodi D. <jodijodingtondev@gmail.com>
+     1	JodiMcJodson <JodiMcJodson@noreply.codeberg.org>
+     1	Joeke <joeke@posteo.net>
+     1	Johannes Christ <jc@jchri.st>
+     1	John D. Boy <jboy@bius.moe>
+     1	John Nduli <rookie101@jnduli.co.ke>
+     1	Jonathan Lin <jonathanylin1111@gmail.com>
+     1	Jos van den Oever <jos@vandenoever.info>
+     1	Josh Hoff <randomenduser@fastmail.com>
+     1	Josh Marshall <josh.marshall@jax.org>
+     1	Joshua Branson <jbranso@gnucode.me>
+     1	Joshua C. Randall <jcrandall@alum.mit.edu>
+     1	Josselin Poiret <josselin.poiret@protonmail.ch>
+     1	João Gabriel <joaog.bastos@protonmail.ch>
+     1	João Pedro Simas <jpsimas@gmail.com>
+     1	Justin Martin <jaming@protonmail.com>
+     1	Justin Veilleux <justun1011@gmail.com>
+     1	Justus Winter <justus@gnupg.org>
+     1	Jérémy Korwin-Zmijowski <jeremy@korwin-zmijowski.fr>
+     1	Jörg Thalheim <joerg@higgsboson.tk>
+     1	KURASHIKI Satoru <lurdan@gmail.com>
+     1	Kabelo M'sobomvu Moiloa <personal@kabelom.com>
+     1	Kai Jellinghaus <contact@kaij.tech>
+     1	Kei Kebrau <kkebrau@posteo.net>
+     1	Keisuke Kurosawa <k.kurochan9630@gmail.com>
+     1	Kenny Ballou <kballou@devnulllabs.io>
+     1	Kimapr <kimapr@mail.ru>
+     1	King, Spencer via Guix-patches via <guix-patches@gnu.org>
+     1	Konstantinos Agiannis <agiannis.kon@gmail.com>
+     1	Kris Fremen <me@krisfremen.com>
+     1	Kristian Trandem <kristian@devup.no>
+     1	Lars Rustand <rustand.lars@gmail.com>
+     1	Laurent Gatto <laurent.gatto@uclouvain.be>
+     1	Laurent Gatto <lgatto@protonmail.ch>
+     1	Lee <inbox@leefallat.ca>
+     1	Lenny Händler <lenny@lennyhaendler.com>
+     1	Lesik Edelweiss <lesikedelweiss@disroot.org>
+     1	Lilah Tascheter via Guix-patches <guix-patches@gnu.org>
+     1	MARAIT Gilles <gilles.marait@inria.fr>
+     1	Madalin Ionel-Patrascu <madalinionel.patrascu@mdc-berlin.de>
+     1	Magali Lemes <magalilemes00@gmail.com>
+     1	Marc Coquand <marc@coquand.email>
+     1	Marcel Steinbeck <msteinbeck@posteo.net>
+     1	MarcoFalke <_@721217.xyz>
+     1	Marcus Quincy <mail@marcusquincy.org>
+     1	Mario Daniel Ruiz Saavedra <desiderantes@rocketmail.com>
+     1	Mark Wielaard <mark@klomp.org>
+     1	Martin Baulig <martin@baulig.is>
+     1	Mason Hock <chaosmonk@riseup.net>
+     1	Mason Hock <masonhock@gmail.com>
+     1	Mathieu <mlaparie@disr.it>
+     1	Matt Wette <matt.wette@gmail.com>
+     1	Matthew Brooks <matthewfbrooks@mailbox.org>
+     1	Matthieu Simonin <matthieu.simonin@inria.fr>
+     1	Mattia Bunel <mattia.bunel@ign.fr>
+     1	Maurice Bremond <Maurice.Bremond@inria.fr>
+     1	Maxime Devos <maxime.devos@student.kuleuven.be>
+     1	Maya Tomasek <maya.omase@protonmail.com>
+     1	Maze <maze@pkbd.org>
+     1	Mazin AlHaddad <mazin@getstate.dev>
+     1	Mehrad Mahmoudian <m.mahmoudian@gmail.com>
+     1	Michael Vetter <jubalh@openmailbox.org>
+     1	Michal Atlas <michal_atlas@posteo.net>
+     1	Mickaël Fortunato <mickael.fortunato@protonmail.com>
+     1	Mike Rosset <mrosset@bufio.org>
+     1	Mike Swanson <mikeonthecomputer@gmail.com>
+     1	Mikhail Kirillov <w96k.ru@gmail.com>
+     1	Morgan Willcock <morgan@ice9.digital>
+     1	Mája Tomášek <maya.tomasek@disroot.org>
+     1	Nadya Voronova <voronovank@gmail.com>
+     1	Nathan Dehnel <ncdehnel@gmail.com>
+     1	Nathaniel Nicandro <nathanielnicandro@gmail.com>
+     1	Navid <navid.afkhami@mdc-berlin.de>
+     1	Nazar Klovanych <nazarn96@gmail.com>
+     1	NeYurii <yuriizkhr@gmail.com>
+     1	Nicholas von Klitzing <nicholas@nvk.pm>
+     1	Nick Zalutskiy <nick@const.fun>
+     1	Nicolas Vallet <nicolas.vallet@inserm.fr>
+     1	Nikolai Weidt <weidtn@gmail.com>
+     1	Nikolay Korotkiy via Guix-patches via <guix-patches@gnu.org>
+     1	Noah Evans <noahevans256@gmail.com>
+     1	Noodles! <nnoodle@chiru.no>
+     1	Oleh Malyi <astroclubzp@gmail.com>
+     1	Olivier Dion <olivier-dion@proton.me>
+     1	Olivier Dion via Guix-patches via <guix-patches@gnu.org>
+     1	Ontje Lünsdorf <Ontje.Luensdorf@dlr.de>
+     1	Orivej Desh <orivej@gmx.fr>
+     1	Oscar Chevalier <oscar.chevalier@gmail.com>
+     1	Ott Joon <oj@vern.cc>
+     1	P.C. Shyamshankar <shyam@sykloid.org>
+     1	Parnikkapore via Guix-patches via <guix-patches@gnu.org>
+     1	Patrick Noll <patrick@patricknoll.com>
+     1	Peepo Froggings <peepofroggings@tutanota.de>
+     1	Peter Mikkelsen <peter@alaok.org>
+     1	Philipp Berger <Philipp.Berger@mail.de>
+     1	Philippe SWARTVAGHER <swartvagher@par.tuwien.ac.at>
+     1	Pierre-Antoine Bouttier <pierre-antoine.bouttier@univ-grenoble-alpes.fr>
+     1	Pierre-Henry Fröhring <phf@phf.net>
+     1	Piotr Kwiecinski <piokwiecinski@gmail.com>
+     1	Pradana Aumars <paumars@courrier.dev>
+     1	Prafulla Giri <prafulla.giri@protonmail.com>
+     1	Preston Firestone <firestone.preston@gmail.com>
+     1	Rafa Gálvez <rafa@esat.kuleuven.be>
+     1	Rafael Luque Leiva <rafael.luque@osoco.es>
+     1	Ramin Honary <ramin.honary@cross-compass.com>
+     1	Ray Miller <ray@1729.org.uk>
+     1	Reed Meyerson <reed.meyerson@gmail.com>
+     1	Renzo Poddighe <renzo@poddighe.nl>
+     1	Ricardo G. Herdt <r.herdt@posteo.de>
+     1	Ricardo Wurmus <ricardo.wurmus at>
+     1	Riku Viitanen <riku.viitanen0@gmail.com>
+     1	Robin Templeton <robin@igalia.com>
+     1	Robin Templeton <rtempleton@igalia.com>
+     1	Rodrigo Morales <rodrigo@morales.pe>
+     1	Ron Nazarov <noisytoot@gmail.com>
+     1	Rutherther via Guix-patches via <guix-patches@gnu.org>
+     1	Ryan Barber <rfb@skyscraper.nu>
+     1	Sam Lockart <sam@samlockart.com>
+     1	Samuel Fadel <samuel@nihil.ws>
+     1	Sandeep Subramanian <sandeepsubramanian94@gmail.com>
+     1	Sergey Trofimov via Guix-patches via <guix-patches@gnu.org>
+     1	Sheng Yang <yangsheng6810@gmail.com>
+     1	ShinyZero0 <shinyzero0@tilde.club>
+     1	Sigve Sudland <sigve_sudland@hotmail.com>
+     1	Simeon Prause <simeon.prause@campus.tu-berlin.de>
+     1	Simon Josefsson via Guix-patches via <guix-patches@gnu.org>
+     1	Simon Mages <mages.simon@googlemail.com>
+     1	Simon Streit <lists@netpanic.org>
+     1	Sixten Thames <pm@sith.st>
+     1	Skyler <skyvine@protonmail.com>
+     1	Stephen Scheck <sscheck@gmail.com>
+     1	Stephen Webber <webber.sl@gmail.com>
+     1	Stuart Dilts <stuart.dilts@gmail.com>
+     1	Superfly Johnson <superfly.johnson@yahoo.com>
+     1	Superfly Johnson via Guix-patches via <guix-patches@gnu.org>
+     1	Sylvain Beucler <beuc@beuc.net>
+     1	Sébastien Farge <sebastien-farge@laposte.net>
+     1	Sébastien Helleu <flashcode@flashtux.org>
+     1	Taegil Bae <esrevinu@gmail.com>
+     1	Thanos Apollo <public@thanosapollo.com>
+     1	Thiago Jung Bauermann <thiago.bauermann@linaro.org>
+     1	Thomas Albers Raviola <thomas@thomaslabs.org>
+     1	Thomas Guillermo Albers Raviola <thomas@thomaslabs.org>
+     1	Thomas Zdyrski <thomas.zdyrski@gmail.com>
+     1	Thorsten Wilms <self@thorstenwilms.com>
+     1	Tiago de Paula Peixoto <tiago@skewed.de>
+     1	Tim Howes via Guix-patches via <guix-patches@gnu.org>
+     1	Tim Stahel <swedneck@swedneck.xyz>
+     1	Tim Van den Langenbergh <tmt_vdl@gmx.com>
+     1	Timo Wilken <git@twilken.net>
+     1	TimotheeMathieu <timothee.mathieu@inria.fr>
+     1	Timothy Sample <timsample@gmail.com>
+     1	Tissevert <tissevert+guix@marvid.fr>
+     1	TohsakaTypeclass <codeberg@getstate.dev>
+     1	Tommy Langhelle <tomlanghe@gmail.com>
+     1	Tomás Ortín <tomasortin@mailbox.org>
+     1	Toni Reina <areina@riseup.net>
+     1	Toorn, H.W.P. van den (Henk) <h.w.p.vandentoorn@uu.nl>
+     1	Tor Egil Hoftun Kvæstad <me@toregilhk.org>
+     1	Tor-björn Claesson <tor-bjorn@claesson.fi>
+     1	Trev <trev@trevdev.ca>
+     1	Tyler Wolf <tyler@twolf.io>
+     1	Uko Kokņevičs <perkontevs@gmail.com>
+     1	Unstable Horse <stable.master@unstable.horse>
+     1	Vagrant Cascadian <vagrantc@reproducible-builds.org>
+     1	Valentin Herrmann <herr.valentin.mann@gmail.com>
+     1	Valter Nazianzeno <manipuladordedados@gmail.com>
+     1	Vessel Vave <vesselwave@disroot.org>
+     1	Vijayalakshmi <vijimay12@gmail.com>
+     1	Vitor Hugo <vitorhugonunes@proton.me>
+     1	Vivien Kraus via Guix-patches via <guix-patches@gnu.org>
+     1	W. Kosior <koszko@koszko.org>
+     1	Wil deBeest <bovid-19@4tii.de>
+     1	Wilke Schwiedop <wilke.schwiedop@agfa.com>
+     1	YOANN P <yoann_mac_donald@hotmail.com>
+     1	Yakkala Yagnesh Raghava <hi@yagnesh.org>
+     1	Yann Dupont <yann.dupont@univ-nantes.fr>
+     1	Yash Tiwari <yasht@mailbox.org>
+     1	Ying Huang <huang_ying_caritas@163.com>
+     1	Yoav Marco <yoavm448@gmail.com>
+     1	Your Name <you@example.com>
+     1	Yurii Kholodkov <urist.mckorobochka@gmail.com>
+     1	Yuriy Glukhov <yuriy.glukhov@gmail.com>
+     1	Yusuf Talha <yusuftalha@tuta.io>
+     1	Zacchaeus Scheffer <zaccysc@gmail.com>
+     1	Zelphir Kaltstahl <zelphirkaltstahl@posteo.de>
+     1	ZmnSCPxj <ZmnSCPxj@protonmail.com>
+     1	ZmnSCPxj via Guix-patches via <guix-patches@gnu.org>
+     1	aleksandr barakin <alex@barak.in>
+     1	angicque <antoine.a.gicquel@inria.fr>
+     1	angryrectangle <angryrectangle@cock.li>
+     1	angryrectangle@cock.li <angryrectangle@cock.li>
+     1	antlers <autumnalantlers@gmail.com>
+     1	aragaer <aragaer@gmail.com>
+     1	buffersquid <mail@buffersquid.com>
+     1	cage-dev@twistfold.it <cage-dev@twistfold.it>
+     1	calum <calumirwin1@gmail.com>
+     1	cancername <notcancername@protonmail.com>
+     1	casaca <lacasaca2019@gmail.com>
+     1	derekchuank@outlook.com <derekchuank@outlook.com>
+     1	dftxbs3e <dftxbs3e@free.fr>
+     1	dissent <disseminatedissent@protonmail.com>
+     1	djwj <daniel@wilshirejones.com>
+     1	eacces <eacces@fastmail.com>
+     1	elaexuotee@wilsonb.com <elaexuotee@wilsonb.com>
+     1	gnuphilic <none@example.org>
+     1	gravitydiv10 <gravitydiv10@protonmail.com>
+     1	hackeryarn <artemchernyak@gmail.com>
+     1	hako <hako@ultrarare.space>
+     1	heq <human.equivalent@xhrpb.com>
+     1	hli <hli@mdc-berlin.de>
+     1	ivan-p-sokolov@ya.ru <ivan-p-sokolov@ya.ru>
+     1	jaeme <jaeme@runbox.com>
+     1	jman <srht@city17.xyz>
+     1	john muhl <jm@pub.pink>
+     1	jonscoresby--- <jonscoresby@mailbox.org>
+     1	lakshmi <lakshmiprasannakumaran@gmail.com>
+     1	lasnesne <lasnesne@lagunposprasihopre.org>
+     1	leungbk <bkleung89@gmail.com>
+     1	lsp <lsp@ableton.com>
+     1	lynnlei <lynn@lynn.sh>
+     1	mathijsh <mathijshondshorst@freedom.nl>
+     1	mephi42 <mephi42@gmail.com>
+     1	mirlan <milranmike@protonmail.com>
+     1	mjbecze@riseup.net <mjbecze@riseup.net>
+     1	msimonin <matthieu.simonin@inria.fr>
+     1	mtekman <mtekman89@gmail.com>
+     1	ngraves <ngraves@gmx.com>
+     1	nlif-m <m.payunen@gumrfradio.ru>
+     1	npatra <nilesh@riseup.net>
+     1	operator.name <operator.name@protonmail.com>
+     1	pineapples <guixuser6392@protonmail.com>
+     1	port19 <port19@port19.xyz>
+     1	pricly_yellow <pricly_yellow@dismail.de>
+     1	racin@free.fr <racin@free.fr>
+     1	raid5atemyhomework via Bug reports for GNU Guix <bug-guix@gnu.org>
+     1	raid5atemyhomework via Guix-patches via <guix-patches@gnu.org>
+     1	rendaw <7e9wc56emjakcm@s.rendaw.me>
+     1	ruhtra <ruhtra.mar@gmail.com>
+     1	shtwzrd <shtwzrd@protonmail.com>
+     1	sirgazil <sirgazil@zoho.com>
+     1	son0p <fede2001@gmail.com>
+     1	stuebinm <stuebinm@disroot.org>
+     1	tanguy@bioneland.org <tanguy@bioneland.org>
+     1	terramorpha@cock.li <terramorpha@cock.li>
+     1	tlecarrour@easter-eggs.com <tlecarrour@easter-eggs.com>
+     1	tsmish <tsymsh@gmail.com>
+     1	unwox via Guix-patches via <guix-patches@gnu.org>
+     1	walky_talky <pat-hwaki@proton.me>
+     1	wvlab <me@wvlab.xyz>
+     1	yarl baudig <yarl-baudig@mailoo.org>
+     1	your friendly localhost admin <raingloom@riseup.net>
+     1	zero@fedora <zero@fedora>
+     1	λx.x <case_lambda@disroot.org>
+     1	Алексей Дроздов <drozdov@portalenergy.tech>

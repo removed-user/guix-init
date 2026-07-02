@@ -1,0 +1,583 @@
+This is guix.pt_BR.info, produced by makeinfo version 6.8 from
+guix.pt_BR.texi.
+
+Copyright © 2012–2025 Ludovic Courtès
+Copyright © 2013, 2014, 2016, 2024 Andreas Enge
+Copyright © 2013 Nikita Karetnikov
+Copyright © 2014, 2015, 2016 Alex Kost
+Copyright © 2015, 2016 Mathieu Lirzin
+Copyright © 2014 Pierre-Antoine Rault
+Copyright © 2015 Taylan Ulrich Bayırlı/Kammer
+Copyright © 2015, 2016, 2017, 2019, 2020, 2021, 2023, 2025 Leo Famulari
+Copyright © 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Ricardo
+Wurmus
+Copyright © 2016 Ben Woodcroft
+Copyright © 2016, 2017, 2018, 2021 Chris Marusich
+Copyright © 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2025 Efraim
+Flashner
+Copyright © 2016 John Darrington
+Copyright © 2016, 2017 Nikita Gillmann
+Copyright © 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
+Janneke Nieuwenhuizen
+Copyright © 2016, 2017, 2018, 2019, 2020, 2021 Julien Lepiller
+Copyright © 2016 Alex ter Weele
+Copyright © 2016, 2017, 2018, 2019, 2020, 2021 Christopher Baines
+Copyright © 2017, 2018, 2019 Clément Lassieur
+Copyright © 2017, 2018, 2020, 2021, 2022 Mathieu Othacehe
+Copyright © 2017 Federico Beffa
+Copyright © 2017, 2018, 2024, 2025 Carlo Zancanaro
+Copyright © 2017 Thomas Danckaert
+Copyright © 2017 humanitiesNerd
+Copyright © 2017, 2021 Christine Lemmer-Webber
+Copyright © 2017, 2018, 2019, 2020, 2021, 2022 Marius Bakke
+Copyright © 2017, 2019, 2020, 2022 Hartmut Goebel
+Copyright © 2017, 2019–2025 Maxim Cournoyer
+Copyright © 2017–2022 Tobias Geerinckx-Rice
+Copyright © 2017 George Clemmer
+Copyright © 2017 Andy Wingo
+Copyright © 2017, 2018, 2019, 2020, 2023, 2024, 2025 Arun Isaac
+Copyright © 2017 nee
+Copyright © 2018 Rutger Helling
+Copyright © 2018, 2021, 2023, 2025 Oleg Pykhalov
+Copyright © 2018 Mike Gerwitz
+Copyright © 2018 Pierre-Antoine Rouby
+Copyright © 2018, 2019 Gábor Boskovits
+Copyright © 2018, 2019, 2020, 2022, 2023, 2024 Florian Pelz
+Copyright © 2018 Laura Lazzati
+Copyright © 2018 Alex Vong
+Copyright © 2019 Josh Holland
+Copyright © 2019, 2020 Diego Nicola Barbato
+Copyright © 2019 Ivan Petkov
+Copyright © 2019 Jakob L. Kreuze
+Copyright © 2019 Kyle Andrews
+Copyright © 2019 Alex Griffin
+Copyright © 2019, 2020, 2021, 2022 Guillaume Le Vaillant
+Copyright © 2020 Liliana Marie Prikler
+Copyright © 2019, 2020, 2021, 2022, 2023 Simon Tournier
+Copyright © 2020 Wiktor Żelazny
+Copyright © 2020 Damien Cassou
+Copyright © 2020 Jakub Kądziołka
+Copyright © 2020 Jack Hill
+Copyright © 2020 Naga Malleswari
+Copyright © 2020, 2021 Brice Waegeneire
+Copyright © 2020 R Veera Kumar
+Copyright © 2020, 2021, 2022 Pierre Langlois
+Copyright © 2020 pinoaffe
+Copyright © 2020, 2023 André Batista
+Copyright © 2020, 2021 Alexandru-Sergiu Marton
+Copyright © 2020 raingloom
+Copyright © 2020 Daniel Brooks
+Copyright © 2020 John Soo
+Copyright © 2020 Jonathan Brielmaier
+Copyright © 2020 Edgar Vincent
+Copyright © 2021, 2022 Maxime Devos
+Copyright © 2021 B. Wilson
+Copyright © 2021 Xinglu Chen
+Copyright © 2021 Raghav Gururajan
+Copyright © 2021 Domagoj Stolfa
+Copyright © 2021 Hui Lu
+Copyright © 2021 pukkamustard
+Copyright © 2021 Alice Brenon
+Copyright © 2021-2023 Josselin Poiret
+Copyright © 2021, 2023 muradm
+Copyright © 2021, 2022 Andrew Tropin
+Copyright © 2021 Sarah Morgensen
+Copyright © 2022 Remco van ’t Veer
+Copyright © 2022 Aleksandr Vityazev
+Copyright © 2022 Philip M^{c}Grath
+Copyright © 2022 Karl Hallsby
+Copyright © 2022 Justin Veilleux
+Copyright © 2022 Reily Siegel
+Copyright © 2022 Simon Streit
+Copyright © 2022 (
+Copyright © 2022 John Kehayias
+Copyright © 2022⁠–⁠2023 Bruno Victal
+Copyright © 2022 Ivan Vilata-i-Balaguer
+Copyright © 2023-2025 Giacomo Leidi
+Copyright © 2022 Antero Mejr
+Copyright © 2023 Karl Hallsby
+Copyright © 2023 Nathaniel Nicandro
+Copyright © 2023 Tanguy Le Carrour
+Copyright © 2023-2024 Zheng Junjie
+Copyright © 2023 Brian Cully
+Copyright © 2023 Felix Lechner
+Copyright © 2023 Foundation Devices, Inc.
+Copyright © 2023 Thomas Ieong
+Copyright © 2023 Saku Laesvuori
+Copyright © 2023 Graham James Addis
+Copyright © 2023-2025 Tomas Volf
+Copyright © 2024, 2025 Herman Rimm
+Copyright © 2024 Matthew Trzcinski
+Copyright © 2024 Richard Sent
+Copyright © 2024 Dariqq
+Copyright © 2024 Denis ’GNUtoo’ Carikli
+Copyright © 2024 Fabio Natali
+Copyright © 2024 Arnaud Daby-Seesaram
+Copyright © 2024-2025 Nigko Yerden
+Copyright © 2024 Troy Figiel
+Copyright © 2024 Sharlatan Hellseher
+Copyright © 2024 45mg
+Copyright © 2024 Greg Hogan
+Copyright © 2025 Sören Tempel
+Copyright © 2025 Rostislav Svoboda
+Copyright © 2025 Zacchaeus
+Copyright © 2025 Sergio Pastor Pérez
+Copyright © 2024 Evgeny Pisemsky
+Copyright © 2025 jgart
+Copyright © 2025 Artur Wroblewski
+Copyright © 2025 Edouard Klein
+Copyright © 2025 Rodion Goritskov
+Copyright © 2025 dan
+Copyright © 2025 Noé Lopez
+
+   Permissão concedida para copiar, distribuir e/ou modificar este
+documento sob os termos da Licença de Documentação Livre GNU, Versão 1.3
+ou qualquer versão mais recente publicada pela Free Software Foundation;
+sem Seções Invariantes, Textos de Capa Frontal, e sem Textos de
+Contracapa. Uma cópia da licença está incluída na seção intitulada “GNU
+Free Documentation License”.
+INFO-DIR-SECTION Administração do sistema
+START-INFO-DIR-ENTRY
+* Guix.pt_BR: (guix.pt_BR).  Gerencie softwares instalados e configuração do
+                               sistema.
+* guix package: (guix.pt_BR)Invocando guix package.  Instalando, removendo e
+                                                       atualizando pacotes.
+* guix gc: (guix.pt_BR)Invocando guix gc.  Recuperando espaço em disco não
+                                             utilizado.
+* guix pull: (guix.pt_BR)Invocando guix pull.  Atualize a lista de pacotes
+                                                 disponíveis.
+* guix system: (guix.pt_BR)Invocando guix system.  Gerencie a configuração
+                                                     do sistema operacional.
+* guix deploy: (guix.pt_BR)Invocando guix deploy.  Gerenciar configurações
+                                                     do sistema operacional
+                                                     para hosts remotos.
+END-INFO-DIR-ENTRY
+
+INFO-DIR-SECTION Desenvolvimento de software
+START-INFO-DIR-ENTRY
+* guix shell: (guix.pt_BR)Invocando guix shell.  Creating software
+                                                   environments.
+* guix environment: (guix.pt_BR)Invocando guix environment.  Compilando
+                                                               ambientes de
+                                                               desenvolvimento
+                                                               com Guix.
+* guix build: (guix.pt_BR)Invocando guix build.  Compilando pacotes.
+* guix pack: (guix.pt_BR)Invocando guix pack.  Criando embalagens de
+                                                 binários.
+END-INFO-DIR-ENTRY
+
+
+Indirect:
+guix.pt_BR.info-1: 6995
+guix.pt_BR.info-2: 328604
+guix.pt_BR.info-3: 614131
+guix.pt_BR.info-4: 908170
+guix.pt_BR.info-5: 1256715
+guix.pt_BR.info-6: 1511137
+guix.pt_BR.info-7: 1857026
+guix.pt_BR.info-8: 2126568
+guix.pt_BR.info-9: 2407057
+
+Tag Table:
+(Indirect)
+Node: Top6995
+Node: Introdução24358
+Ref: Introdução-Footnote-125299
+Ref: Introdução-Footnote-225417
+Node: Gerenciando software do jeito do Guix25764
+Node: Distribuição GNU28797
+Ref: Distribuição GNU-Footnote-134116
+Node: Instalação34364
+Ref: Instalação-Footnote-135877
+Node: Instalação de binários35927
+Node: Configurando o daemon39853
+Node: Configuração do ambiente de compilação42062
+Ref: unprivileged-daemon-migration46552
+Ref: Configuração do ambiente de compilação-Footnote-151508
+Ref: Configuração do ambiente de compilação-Footnote-251861
+Node: Configuração de descarregamento de daemon52053
+Ref: Configuração de descarregamento de daemon-Footnote-161618
+Node: Suporte a SELinux61744
+Node: AppArmor Support66399
+Node: Invocando guix-daemon67819
+Ref: daemon-substitute-urls71093
+Node: Configuração de aplicativo82029
+Ref: locales-and-locpath82490
+Ref: Configuração de aplicativo-Footnote-191925
+Node: Atualizando o Guix92130
+Node: Instalação do sistema94912
+Node: Limitações96244
+Node: Considerações de hardware97095
+Node: Instalação em um pendrive e em DVD99124
+Node: Preparando para instalação102592
+Node: Instalação gráfica guiada103859
+Node: Instalação manual105588
+Node: Disposição de teclado e rede e particionamento106658
+Ref: manual-installation-networking107559
+Ref: Disposição de teclado e rede e particionamento-Footnote-1114751
+Ref: Disposição de teclado e rede e particionamento-Footnote-2114981
+Node: Prosseguindo com a instalação115272
+Node: Após a instalação do sistema119517
+Node: Instalando Guix em uma VM120252
+Node: Compilando a imagem de instalação122143
+Node: Começando123425
+Node: Gerenciamento de pacote131021
+Node: Recursos132676
+Node: Invocando guix package137534
+Ref: package-cmd-propagated-inputs142132
+Ref: profile-manifest148153
+Ref: guix-search154080
+Ref: export-manifest160452
+Node: Substitutos163006
+Node: Official Substitute Servers164466
+Node: Autorização de servidor substituto166112
+Node: Obtendo substitutos de outros servidores168966
+Node: Autenticação de substituto173810
+Node: Configurações de proxy175524
+Node: Falha na substituição176131
+Node: Confiança em binários177792
+Node: Pacotes com múltiplas saídas180100
+Node: Invocando guix locate183398
+Node: Invocando guix gc188074
+Node: Invocando guix pull197446
+Node: Invocando guix time-machine207522
+Ref: Invocando guix time-machine-Footnote-1212671
+Node: Inferiores212842
+Node: Invocando guix describe218572
+Node: Invocando guix archive222579
+Node: Canais230318
+Node: Especificando canais adicionais232160
+Node: Usando um canal Guix personalizado233841
+Node: Replicando Guix235756
+Node: Customizing the System-Wide Guix238435
+Node: Autenticação de canal240721
+Ref: channel-authentication240918
+Node: Canais com substitutos242492
+Node: Criando um canal243579
+Node: Módulos de pacote em um subdiretório248608
+Node: Declarando dependências de canal249774
+Node: Especificando autorizações de canal251452
+Ref: channel-authorizations251685
+Ref: Especificando autorizações de canal-Footnote-1255706
+Node: URL principal256045
+Node: Escrevendo notícias do canal256947
+Node: Desenvolvimento259972
+Node: Invocando guix shell261080
+Ref: shell-development-option267706
+Ref: shell-manifest269956
+Ref: shell-export-manifest270548
+Ref: Invocando guix shell-Footnote-1282254
+Ref: Invocando guix shell-Footnote-2282432
+Node: Invocando guix environment282547
+Ref: Invocando guix environment-Footnote-1298145
+Ref: Invocando guix environment-Footnote-2298703
+Node: Invocando guix pack298818
+Ref: pack-manifest316794
+Ref: pack-symlink-option318404
+Ref: Invocando guix pack-Footnote-1321440
+Node: A cadeia de ferramentas do GCC328604
+Node: Invocando guix git authenticate329837
+Node: Interface de programação333625
+Node: Módulos de pacote336478
+Ref: Módulos de pacote-Footnote-1338992
+Ref: Módulos de pacote-Footnote-2339365
+Node: Definindo pacotes339712
+Node: Referência do package349172
+Ref: package-propagated-inputs355029
+Node: Referência do origin363817
+Node: Definindo variantes de pacote376066
+Node: Escrevendo manifestos387573
+Ref: package-development-manifest397372
+Node: Sistemas de compilação399571
+Ref: emacs-build-system462726
+Node: Fases de construção469453
+Ref: phase-validate-runpath471724
+Ref: Fases de construção-Footnote-1478926
+Node: Construir utilitários479068
+Node: Caminhos de pesquisa496680
+Ref: Caminhos de pesquisa-Footnote-1505009
+Node: O armazém505054
+Node: Derivações510750
+Node: A mônada do armazém519048
+Ref: A mônada do armazém-Footnote-1530843
+Node: Expressões-G531038
+Ref: gexp-input555253
+Ref: Expressões-G-Footnote-1557791
+Node: Invocando guix repl558094
+Node: Usando Guix interativamente561427
+Node: Utilitários567928
+Node: Invocando guix build569433
+Node: Opções de compilação comuns571449
+Ref: fallback-option572991
+Ref: client-substitute-urls573166
+Node: Opções de transformação de pacote577324
+Node: Opções de compilação adicional594687
+Ref: build-dependents599399
+Ref: build-check604744
+Node: Depurando falhas de compilação614131
+Node: Invocando guix edit617215
+Node: Invocando guix download618351
+Node: Invocando guix hash621436
+Node: Invocando guix import624366
+Node: Invocando guix refresh646147
+Node: Invocando guix style664935
+Node: Invocando guix lint673457
+Node: Invocando guix size681280
+Ref: Invocando guix size-Footnote-1686429
+Node: Invocando guix graph686646
+Node: Invocando guix publish696140
+Node: Invocando guix challenge707515
+Node: Invocando guix copy714817
+Ref: Invocando guix copy-Footnote-1716861
+Node: Invocando guix container716959
+Node: Invocando guix weather718599
+Node: Invocando guix processes724867
+Ref: Invocando guix processes-Footnote-1728504
+Node: Arquiteturas estrangeiras728628
+Node: Compilação cruzada729604
+Node: Construções nativas731330
+Node: Configuração do sistema734724
+Node: Começando com o Sistema737654
+Node: Usando o sistema de configuração744154
+Ref: auto-login to TTY752130
+Node: Referência do operating-system765327
+Ref: operating-system-essential-services772726
+Ref: Referência do operating-system-Footnote-1774615
+Node: Sistemas de arquivos774793
+Ref: Sistemas de arquivos-Footnote-1787397
+Ref: Sistemas de arquivos-Footnote-2787662
+Node: Sistema de arquivos Btrfs787929
+Node: Dispositivos mapeados791829
+Ref: Dispositivos mapeados-Footnote-1799640
+Node: Espaço de troca (swap)800005
+Node: Contas de usuário807381
+Ref: user-account-password810876
+Node: Disposição do teclado813878
+Node: Localidades819354
+Ref: Localidades-Footnote-1824605
+Node: Serviços824729
+Node: Serviços básicos829142
+Ref: guix-configuration-type853878
+Ref: guix-configuration-channels859545
+Ref: guix-configuration-build-machines860757
+Ref: guix-publish-service-type872326
+Ref: pam-limits-service-type876526
+Ref: Serviços básicos-Footnote-1890744
+Node: Execução de trabalho agendado890807
+Ref: shepherd-timer-procedure892447
+Ref: mcron-service894467
+Node: Rotação de log908170
+Ref: log-rotation-configuration909966
+Node: Networking Setup914931
+Node: Serviços de Rede956262
+Node: Atualizações sem supervisão1030858
+Node: X Window1037836
+Ref: gdm1038283
+Ref: lightdm1050006
+Node: Serviços de impressão1062972
+Node: Serviços de desktop1093490
+Ref: Serviços de desktop-Footnote-11144256
+Node: Serviços de som1144451
+Node: File Search Services1152553
+Node: Serviços de bancos de dados1156714
+Node: Serviços de correio1171654
+Node: Serviços de mensageria1256715
+Node: Serviços de telefonia1306175
+Node: Serviços de compartilhamento de arquivos1324647
+Node: Serviços de monitoramento1351965
+Ref: prometheus-node-exporter1353340
+Ref: vnstat1354792
+Ref: zabbix-agent1370354
+Ref: zabbix-front-end1372922
+Node: Serviços Kerberos1374830
+Node: Serviços LDAP1379043
+Node: Serviços web1402320
+Ref: NGINX1409419
+Ref: nginx-server-configuration1418911
+Ref: nginx-location-configuration body1422673
+Ref: PHP-FPM1440344
+Node: High Availability Services1459449
+Ref: RabbitMQ1459746
+Node: Serviços de certificado1461660
+Node: Serviços DNS1471962
+Node: VNC Services1511137
+Node: Serviços VPN1517232
+Node: Sistema de arquivos de rede1532616
+Node: Samba Services1550544
+Node: Integração Contínua1555793
+Node: Serviços de gerenciamento de energia1571223
+Ref: apcupsd-event-handlers1599706
+Node: Serviços de áudio1603421
+Node: Serviços de virtualização1617935
+Ref: transparent-emulation-qemu1636475
+Ref: build-vm1643160
+Ref: hurd-vm1647895
+Ref: Serviços de virtualização-Footnote-11685102
+Node: Serviços de controlando versão1685344
+Ref: Serviços de controlando versão-Footnote-11729052
+Ref: Serviços de controlando versão-Footnote-21729143
+Node: Serviços de jogos1729198
+Node: Serviço de montagem PAM1730867
+Node: Serviços Guix1738490
+Ref: guix-home-service-type1755545
+Node: Serviços Linux1763495
+Node: Serviços Hurd1782828
+Node: Serviços diversos1783965
+Ref: subordinate-user-group-ids1818383
+Node: Privileged Programs1857026
+Node: Certificados X.5091860633
+Node: Name Service Switch1863314
+Node: Disco de RAM inicial1868687
+Node: Configuração do carregador de inicialização1877830
+Node: Invocando guix system1896067
+Ref: guix system vm1906577
+Ref: system-extension-graph1921474
+Ref: system-shepherd-graph1922099
+Ref: Invocando guix system-Footnote-11922490
+Node: Invocando guix deploy1922636
+Node: Executando Guix em uma VM1939011
+Node: Definindo serviços1944830
+Node: Composição de serviço1945525
+Node: Tipos de Service e Serviços1948265
+Node: Referência de Service1953205
+Ref: provenance-service-type1964304
+Node: Serviços de Shepherd1967173
+Ref: shepherd-transient-timer-services1978311
+Ref: shepherd-system-log1979379
+Node: Complex Configurations1981672
+Node: Dicas para solução de problemas do sistema1995095
+Node: Acessando um sistema existente via chroot1996034
+Node: Home Configuration1999069
+Node: Declarando o ambiente pessoal2001846
+Node: Configurando o "Shell"2006620
+Node: Serviços pessoais2008671
+Node: Serviços essenciais pessoais2011708
+Node: Shells Home Services2025510
+Ref: home-bash-configuration2027466
+Ref: home-inputrc-configuration2037612
+Node: Mcron Home Service2039479
+Node: Power Management Home Services2041606
+Node: Shepherd Home Service2044729
+Node: Secure Shell2049320
+Node: GNU Privacy Guard2062216
+Node: Desktop Home Services2065046
+Node: Guix Home Services2076234
+Node: Backup Home Services2077607
+Node: Fonts Home Services2080605
+Node: Sound Home Services2082202
+Node: Mail Home Services2088293
+Node: Messaging Home Services2092334
+Node: Media Home Services2094406
+Node: mpv Media Player2095537
+Node: Niri window manager2126568
+Node: Gerenciador de janelas Sway2127572
+Node: Networking Home Services2143805
+Node: Secrets Home Services2145167
+Node: Miscellaneous Home Services2149152
+Node: Invocando guix home2157337
+Node: Documentação2169342
+Ref: Documentação-Footnote-12171235
+Node: Plataformas2171348
+Node: Referência do platform2171941
+Node: Supported Platforms2173882
+Node: Imagens do sistema2175910
+Node: image Reference2177728
+Node: Referência do partition2181408
+Node: Instanciar uma imagem2184159
+Node: image-type Reference2189742
+Node: Módulos de imagem2194742
+Node: Instalando arquivos de depuração2196441
+Node: Informações de depuração separadas2197353
+Node: Reconstruindo informações de depuração2200675
+Node: Usando TeX e LaTeX2203484
+Ref: Usando TeX e LaTeX-Footnote-12207354
+Node: Atualizações de segurança2207524
+Node: Inicializando2212039
+Node: Bootstrap de código fonte completo2214077
+Ref: Bootstrap de código fonte completo-Footnote-12218020
+Node: Preparando para usar os binários do Bootstrap2218206
+Ref: Preparando para usar os binários do Bootstrap-Footnote-12226771
+Node: Portando2226937
+Node: Contribuindo2229295
+Node: Requisitos2231878
+Ref: Requisitos-Footnote-12235161
+Node: Compilando do git2235299
+Ref: Compilando do git-Footnote-12241874
+Node: Executando o conjunto de testes2241956
+Node: Executando guix antes dele ser instalado2246201
+Ref: Executando guix antes dele ser instalado-Footnote-12249881
+Node: A configuração perfeita2250099
+Node: Visualizando Bugs no Emacs2254523
+Node: Configurações alternativas2258443
+Node: Guile Estúdio2259416
+Node: Vim e NeoVim2259878
+Node: Estrutura da árvore de origem2261360
+Ref: Estrutura da árvore de origem-Footnote-12271096
+Node: Diretrizes de empacotamento2271591
+Node: Liberdade de software2275769
+Node: Nomeando um pacote2277282
+Node: Números de versão2278963
+Node: Sinopses e descrições2282982
+Node: Snippets versus Phases2286854
+Node: Dependências do módulo cíclico2287827
+Node: Atualizações em massa2290012
+Node: Pacotes Emacs2291578
+Node: Módulos Python2293702
+Node: Módulos Perl2298536
+Node: Pacotes Java2299370
+Node: Rust Crates2300293
+Node: Pacotes Elm2303735
+Node: Fontes2306957
+Node: Estilo de código2308817
+Node: Paradigma de programação2309503
+Node: Módulos2309890
+Node: Tipos de dados e correspondência de padrão2310787
+Node: Formatação de código2312614
+Node: Enviando patches2314159
+Ref: Enviando patches-Footnote-12324226
+Node: Configurando o Git2324431
+Node: Enviando uma série de patches2325576
+Ref: Patches únicos2326163
+Ref: Notificando equipes2328563
+Ref: Vários Patches2329312
+Node: Rastreando Bugs e Mudanças2331741
+Node: O rastreador de problemas2332596
+Ref: O rastreador de problemas-Footnote-12333519
+Node: Gerenciando Patches e Branches2333689
+Ref: Gerenciando Patches e Branches-Footnote-12338437
+Node: Interfaces de usuário do Debbugs2338726
+Ref: Interfaces de usuário do Debbugs-Footnote-12344792
+Node: Debbugs Marcadores de usuário2344902
+Ref: Debbugs Marcadores de usuário-Footnote-12347675
+Node: Notificações de construção de Cuirass2347868
+Node: Equipes2349412
+Node: Tomando decisões2353992
+Node: Confirmar acesso2354972
+Ref: Confirmar acesso-Footnote-12366005
+Node: Revendo o trabalho de outros2366166
+Ref: Revendo o trabalho de outros-Footnote-12370775
+Ref: Revendo o trabalho de outros-Footnote-22371028
+Node: Atualizando o pacote Guix2371344
+Node: Política de depreciação2372981
+Ref: package-removal-policy2376580
+Ref: Política de depreciação-Footnote-12382023
+Node: Escrevendo documentação2382174
+Node: Traduzindo o Guix2384215
+Node: Contribuindo para a infraestrutura Guix2407057
+Node: Código2408052
+Node: Administração do sistema2409469
+Node: Administração diária do sistema2411677
+Node: Intervenção no local2412801
+Node: Hospedagem2413592
+Node: Tarefas administrativas2414453
+Node: Agradecimentos2415058
+Node: Licença de Documentação Livre GNU2416166
+Node: Índice de conceitos2441509
+Node: Índice de programação2577806
+
+End Tag Table
+
+
+Local Variables:
+coding: utf-8
+End:

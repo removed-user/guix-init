@@ -1,0 +1,570 @@
+This is guix.info, produced by makeinfo version 6.8 from guix.texi.
+
+Copyright © 2012–2025 Ludovic Courtès
+Copyright © 2013, 2014, 2016, 2024 Andreas Enge
+Copyright © 2013 Nikita Karetnikov
+Copyright © 2014, 2015, 2016 Alex Kost
+Copyright © 2015, 2016 Mathieu Lirzin
+Copyright © 2014 Pierre-Antoine Rault
+Copyright © 2015 Taylan Ulrich Bayırlı/Kammer
+Copyright © 2015, 2016, 2017, 2019, 2020, 2021, 2023, 2025 Leo Famulari
+Copyright © 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Ricardo
+Wurmus
+Copyright © 2016 Ben Woodcroft
+Copyright © 2016, 2017, 2018, 2021 Chris Marusich
+Copyright © 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2025 Efraim
+Flashner
+Copyright © 2016 John Darrington
+Copyright © 2016, 2017 Nikita Gillmann
+Copyright © 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
+Janneke Nieuwenhuizen
+Copyright © 2016, 2017, 2018, 2019, 2020, 2021 Julien Lepiller
+Copyright © 2016 Alex ter Weele
+Copyright © 2016, 2017, 2018, 2019, 2020, 2021 Christopher Baines
+Copyright © 2017, 2018, 2019 Clément Lassieur
+Copyright © 2017, 2018, 2020, 2021, 2022 Mathieu Othacehe
+Copyright © 2017 Federico Beffa
+Copyright © 2017, 2018, 2024, 2025 Carlo Zancanaro
+Copyright © 2017 Thomas Danckaert
+Copyright © 2017 humanitiesNerd
+Copyright © 2017, 2021 Christine Lemmer-Webber
+Copyright © 2017, 2018, 2019, 2020, 2021, 2022 Marius Bakke
+Copyright © 2017, 2019, 2020, 2022 Hartmut Goebel
+Copyright © 2017, 2019–2025 Maxim Cournoyer
+Copyright © 2017–2022 Tobias Geerinckx-Rice
+Copyright © 2017 George Clemmer
+Copyright © 2017 Andy Wingo
+Copyright © 2017, 2018, 2019, 2020, 2023, 2024, 2025 Arun Isaac
+Copyright © 2017 nee
+Copyright © 2018 Rutger Helling
+Copyright © 2018, 2021, 2023, 2025 Oleg Pykhalov
+Copyright © 2018 Mike Gerwitz
+Copyright © 2018 Pierre-Antoine Rouby
+Copyright © 2018, 2019 Gábor Boskovits
+Copyright © 2018, 2019, 2020, 2022, 2023, 2024 Florian Pelz
+Copyright © 2018 Laura Lazzati
+Copyright © 2018 Alex Vong
+Copyright © 2019 Josh Holland
+Copyright © 2019, 2020 Diego Nicola Barbato
+Copyright © 2019 Ivan Petkov
+Copyright © 2019 Jakob L. Kreuze
+Copyright © 2019 Kyle Andrews
+Copyright © 2019 Alex Griffin
+Copyright © 2019, 2020, 2021, 2022 Guillaume Le Vaillant
+Copyright © 2020 Liliana Marie Prikler
+Copyright © 2019, 2020, 2021, 2022, 2023 Simon Tournier
+Copyright © 2020 Wiktor Żelazny
+Copyright © 2020 Damien Cassou
+Copyright © 2020 Jakub Kądziołka
+Copyright © 2020 Jack Hill
+Copyright © 2020 Naga Malleswari
+Copyright © 2020, 2021 Brice Waegeneire
+Copyright © 2020 R Veera Kumar
+Copyright © 2020, 2021, 2022 Pierre Langlois
+Copyright © 2020 pinoaffe
+Copyright © 2020, 2023 André Batista
+Copyright © 2020, 2021 Alexandru-Sergiu Marton
+Copyright © 2020 raingloom
+Copyright © 2020 Daniel Brooks
+Copyright © 2020 John Soo
+Copyright © 2020 Jonathan Brielmaier
+Copyright © 2020 Edgar Vincent
+Copyright © 2021, 2022 Maxime Devos
+Copyright © 2021 B. Wilson
+Copyright © 2021 Xinglu Chen
+Copyright © 2021 Raghav Gururajan
+Copyright © 2021 Domagoj Stolfa
+Copyright © 2021 Hui Lu
+Copyright © 2021 pukkamustard
+Copyright © 2021 Alice Brenon
+Copyright © 2021-2023 Josselin Poiret
+Copyright © 2021, 2023 muradm
+Copyright © 2021, 2022 Andrew Tropin
+Copyright © 2021 Sarah Morgensen
+Copyright © 2022 Remco van ’t Veer
+Copyright © 2022 Aleksandr Vityazev
+Copyright © 2022 Philip M^{c}Grath
+Copyright © 2022 Karl Hallsby
+Copyright © 2022 Justin Veilleux
+Copyright © 2022 Reily Siegel
+Copyright © 2022 Simon Streit
+Copyright © 2022 (
+Copyright © 2022 John Kehayias
+Copyright © 2022⁠–⁠2023 Bruno Victal
+Copyright © 2022 Ivan Vilata-i-Balaguer
+Copyright © 2023-2025 Giacomo Leidi
+Copyright © 2022 Antero Mejr
+Copyright © 2023 Karl Hallsby
+Copyright © 2023 Nathaniel Nicandro
+Copyright © 2023 Tanguy Le Carrour
+Copyright © 2023-2024 Zheng Junjie
+Copyright © 2023 Brian Cully
+Copyright © 2023 Felix Lechner
+Copyright © 2023 Foundation Devices, Inc.
+Copyright © 2023 Thomas Ieong
+Copyright © 2023 Saku Laesvuori
+Copyright © 2023 Graham James Addis
+Copyright © 2023-2025 Tomas Volf
+Copyright © 2024, 2025 Herman Rimm
+Copyright © 2024 Matthew Trzcinski
+Copyright © 2024 Richard Sent
+Copyright © 2024 Dariqq
+Copyright © 2024 Denis ’GNUtoo’ Carikli
+Copyright © 2024 Fabio Natali
+Copyright © 2024 Arnaud Daby-Seesaram
+Copyright © 2024-2025 Nigko Yerden
+Copyright © 2024 Troy Figiel
+Copyright © 2024 Sharlatan Hellseher
+Copyright © 2024 45mg
+Copyright © 2024 Greg Hogan
+Copyright © 2025 Sören Tempel
+Copyright © 2025 Rostislav Svoboda
+Copyright © 2025 Zacchaeus
+Copyright © 2025 Sergio Pastor Pérez
+Copyright © 2024 Evgeny Pisemsky
+Copyright © 2025 jgart
+Copyright © 2025 Artur Wroblewski
+Copyright © 2025 Edouard Klein
+Copyright © 2025 Rodion Goritskov
+Copyright © 2025 dan
+Copyright © 2025 Noé Lopez
+
+   Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with no
+Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A
+copy of the license is included in the section entitled “GNU Free
+Documentation License”.
+INFO-DIR-SECTION System administration
+START-INFO-DIR-ENTRY
+* Guix: (guix).       Manage installed software and system configuration.
+* guix package: (guix)Invoking guix package.  Installing, removing, and upgrading packages.
+* guix gc: (guix)Invoking guix gc.            Reclaiming unused disk space.
+* guix pull: (guix)Invoking guix pull.        Update the list of available packages.
+* guix system: (guix)Invoking guix system.    Manage the operating system configuration.
+* guix deploy: (guix)Invoking guix deploy.    Manage operating system configurations for remote hosts.
+END-INFO-DIR-ENTRY
+
+INFO-DIR-SECTION Software development
+START-INFO-DIR-ENTRY
+* guix shell: (guix)Invoking guix shell.      Creating software environments.
+* guix environment: (guix)Invoking guix environment.  Building development environments with Guix.
+* guix build: (guix)Invoking guix build.      Building packages.
+* guix pack: (guix)Invoking guix pack.        Creating binary bundles.
+END-INFO-DIR-ENTRY
+
+
+Indirect:
+guix.info-1: 6230
+guix.info-2: 308584
+guix.info-3: 614951
+guix.info-4: 922572
+guix.info-5: 1222482
+guix.info-6: 1515736
+guix.info-7: 1821085
+guix.info-8: 2107360
+guix.info-9: 2508663
+
+Tag Table:
+(Indirect)
+Node: Top6230
+Node: Introduction21281
+Ref: Introduction-Footnote-122147
+Ref: Introduction-Footnote-222264
+Node: Managing Software the Guix Way22584
+Node: GNU Distribution25270
+Ref: GNU Distribution-Footnote-130243
+Node: Installation30380
+Ref: Installation-Footnote-131767
+Node: Binary Installation31810
+Node: Setting Up the Daemon35513
+Node: Build Environment Setup37419
+Ref: unprivileged-daemon-migration41530
+Ref: Build Environment Setup-Footnote-146318
+Ref: Build Environment Setup-Footnote-246672
+Node: Daemon Offload Setup46838
+Ref: Daemon Offload Setup-Footnote-155515
+Node: SELinux Support55627
+Node: AppArmor Support59928
+Node: Invoking guix-daemon61297
+Ref: daemon-substitute-urls64214
+Node: Application Setup74148
+Ref: locales-and-locpath74534
+Ref: Application Setup-Footnote-183316
+Node: Upgrading Guix83507
+Node: System Installation86220
+Node: Limitations87453
+Node: Hardware Considerations88171
+Node: USB Stick and DVD Installation90042
+Node: Preparing for Installation93189
+Node: Guided Graphical Installation94413
+Node: Manual Installation96030
+Node: Keyboard Layout and Networking and Partitioning97037
+Ref: manual-installation-networking97893
+Ref: Keyboard Layout and Networking and Partitioning-Footnote-1104413
+Ref: Keyboard Layout and Networking and Partitioning-Footnote-2104604
+Node: Proceeding with the Installation104843
+Node: After System Installation108694
+Node: Installing Guix in a VM109398
+Node: Building the Installation Image111113
+Node: Getting Started112305
+Node: Package Management119339
+Node: Features120897
+Node: Invoking guix package125297
+Ref: package-cmd-propagated-inputs129567
+Ref: profile-manifest135334
+Ref: guix-search140985
+Ref: export-manifest147061
+Node: Substitutes149440
+Node: Official Substitute Servers150704
+Node: Substitute Server Authorization152238
+Node: Getting Substitutes from Other Servers154953
+Node: Substitute Authentication159600
+Node: Proxy Settings161199
+Node: Substitution Failure161753
+Node: On Trusting Binaries163252
+Node: Packages with Multiple Outputs165403
+Node: Invoking guix locate168470
+Node: Invoking guix gc172698
+Node: Invoking guix pull181146
+Node: Invoking guix time-machine190668
+Ref: Invoking guix time-machine-Footnote-1195476
+Node: Inferiors195634
+Node: Invoking guix describe200992
+Node: Invoking guix archive204763
+Node: Channels211869
+Node: Specifying Additional Channels213488
+Node: Using a Custom Guix Channel215108
+Node: Replicating Guix216864
+Node: Customizing the System-Wide Guix219315
+Node: Channel Authentication221559
+Ref: channel-authentication221754
+Node: Channels with Substitutes223272
+Node: Creating a Channel224346
+Node: Package Modules in a Sub-directory229036
+Node: Declaring Channel Dependencies230102
+Node: Specifying Channel Authorizations231751
+Ref: channel-authorizations231965
+Ref: Specifying Channel Authorizations-Footnote-1235774
+Node: Primary URL236076
+Node: Writing Channel News236932
+Node: Development239679
+Node: Invoking guix shell240659
+Ref: shell-development-option246991
+Ref: shell-manifest249206
+Ref: shell-export-manifest249771
+Ref: Invoking guix shell-Footnote-1260892
+Ref: Invoking guix shell-Footnote-2261059
+Node: Invoking guix environment261174
+Ref: Invoking guix environment-Footnote-1276099
+Ref: Invoking guix environment-Footnote-2276612
+Node: Invoking guix pack276727
+Ref: pack-manifest293328
+Ref: pack-symlink-option294796
+Ref: Invoking guix pack-Footnote-1297524
+Node: The GCC toolchain297688
+Node: Invoking guix git authenticate298781
+Node: Programming Interface308584
+Node: Package Modules311069
+Ref: Package Modules-Footnote-1313365
+Ref: Package Modules-Footnote-2313700
+Node: Defining Packages314010
+Node: package Reference322756
+Ref: package-propagated-inputs328224
+Node: origin Reference336296
+Node: Defining Package Variants347813
+Node: Writing Manifests358643
+Ref: package-development-manifest367939
+Node: Build Systems370141
+Ref: emacs-build-system433183
+Node: Build Phases439923
+Ref: phase-validate-runpath442117
+Ref: Build Phases-Footnote-1449302
+Node: Build Utilities449444
+Node: Search Paths466992
+Ref: Search Paths-Footnote-1475279
+Node: The Store475324
+Node: Derivations481002
+Node: The Store Monad489294
+Ref: The Store Monad-Footnote-1501088
+Node: G-Expressions501284
+Ref: gexp-input525537
+Ref: G-Expressions-Footnote-1528083
+Node: Invoking guix repl528387
+Node: Using Guix Interactively531703
+Node: Utilities538139
+Node: Invoking guix build539572
+Node: Common Build Options541444
+Ref: fallback-option542934
+Ref: client-substitute-urls543106
+Node: Package Transformation Options547128
+Node: Additional Build Options564418
+Ref: build-dependents569074
+Ref: build-check574398
+Node: Debugging Build Failures576784
+Node: Invoking guix edit579792
+Node: Invoking guix download580913
+Node: Invoking guix hash583989
+Node: Invoking guix import586906
+Node: Invoking guix refresh614951
+Node: Invoking guix style633740
+Node: Invoking guix lint642232
+Node: Invoking guix size650050
+Ref: Invoking guix size-Footnote-1655184
+Node: Invoking guix graph655389
+Node: Invoking guix publish664851
+Node: Invoking guix challenge676217
+Node: Invoking guix copy683517
+Ref: Invoking guix copy-Footnote-1685543
+Node: Invoking guix container685644
+Node: Invoking guix weather687275
+Node: Invoking guix processes693534
+Ref: Invoking guix processes-Footnote-1697130
+Node: Foreign Architectures697254
+Node: Cross-Compilation698170
+Node: Native Builds699871
+Node: System Configuration703209
+Node: Getting Started with the System705786
+Node: Using the Configuration System712292
+Ref: auto-login to TTY720189
+Node: operating-system Reference733344
+Ref: operating-system-essential-services740584
+Ref: operating-system Reference-Footnote-1742471
+Node: File Systems742650
+Ref: File Systems-Footnote-1755178
+Ref: File Systems-Footnote-2755443
+Node: Btrfs file system755711
+Node: Mapped Devices759582
+Ref: Mapped Devices-Footnote-1767314
+Node: Swap Space767680
+Node: User Accounts774989
+Ref: user-account-password778442
+Node: Keyboard Layout781447
+Node: Locales786865
+Ref: Locales-Footnote-1792080
+Node: Services792204
+Node: Base Services796338
+Ref: guix-configuration-type821028
+Ref: guix-configuration-channels826674
+Ref: guix-configuration-build-machines827892
+Ref: guix-publish-service-type839415
+Ref: pam-limits-service-type843607
+Ref: Base Services-Footnote-1857829
+Node: Scheduled Job Execution857892
+Ref: shepherd-timer-procedure859492
+Ref: mcron-service861513
+Node: Log Rotation868215
+Ref: log-rotation-configuration869989
+Node: Networking Setup874941
+Node: Networking Services922572
+Node: Unattended Upgrades997222
+Node: X Window1004179
+Ref: gdm1004604
+Ref: lightdm1016323
+Node: Printing Services1029284
+Node: Desktop Services1059863
+Ref: Desktop Services-Footnote-11110614
+Node: Sound Services1110810
+Node: File Search Services1118895
+Node: Database Services1123035
+Node: Mail Services1137922
+Node: Messaging Services1222482
+Node: Telephony Services1272074
+Node: File-Sharing Services1290532
+Node: Monitoring Services1317791
+Ref: prometheus-node-exporter1319114
+Ref: vnstat1320573
+Ref: zabbix-agent1336181
+Ref: zabbix-front-end1338749
+Node: Kerberos Services1340656
+Node: LDAP Services1344850
+Node: Web Services1368161
+Ref: NGINX1375241
+Ref: nginx-server-configuration1384756
+Ref: nginx-location-configuration body1388522
+Ref: PHP-FPM1406211
+Node: High Availability Services1425346
+Ref: RabbitMQ1425631
+Node: Certificate Services1427549
+Node: DNS Services1437859
+Node: VNC Services1470123
+Node: VPN Services1476226
+Node: Network File System1491588
+Node: Samba Services1515736
+Node: Continuous Integration1520953
+Node: Power Management Services1536379
+Ref: apcupsd-event-handlers1564859
+Node: Audio Services1568580
+Node: Virtualization Services1583028
+Ref: transparent-emulation-qemu1601595
+Ref: build-vm1608271
+Ref: hurd-vm1612951
+Ref: Virtualization Services-Footnote-11650101
+Node: Version Control Services1650344
+Ref: Version Control Services-Footnote-11694051
+Ref: Version Control Services-Footnote-21694142
+Node: Game Services1694197
+Node: PAM Mount Service1695820
+Node: Guix Services1703410
+Ref: guix-home-service-type1720448
+Node: Linux Services1728413
+Node: Hurd Services1747725
+Node: Miscellaneous Services1748846
+Ref: subordinate-user-group-ids1783264
+Node: Privileged Programs1821085
+Node: X.509 Certificates1824675
+Node: Name Service Switch1827347
+Node: Initial RAM Disk1832695
+Node: Bootloader Configuration1841816
+Node: Invoking guix system1859939
+Ref: guix system vm1870434
+Ref: system-extension-graph1885266
+Ref: system-shepherd-graph1885888
+Ref: Invoking guix system-Footnote-11886276
+Node: Invoking guix deploy1886422
+Node: Running Guix in a VM1902767
+Node: Defining Services1908580
+Node: Service Composition1909245
+Node: Service Types and Services1911958
+Node: Service Reference1916879
+Ref: provenance-service-type1927950
+Node: Shepherd Services1930824
+Ref: shepherd-transient-timer-services1941938
+Ref: shepherd-system-log1943005
+Node: Complex Configurations1945289
+Node: System Troubleshooting Tips1958718
+Node: Chrooting into an existing system1959500
+Node: Home Configuration1962488
+Node: Declaring the Home Environment1965223
+Node: Configuring the Shell1969997
+Node: Home Services1972043
+Node: Essential Home Services1974949
+Node: Shells Home Services1988715
+Ref: home-bash-configuration1990655
+Ref: home-inputrc-configuration2000806
+Node: Mcron Home Service2002671
+Node: Power Management Home Services2004768
+Node: Shepherd Home Service2007885
+Node: Secure Shell2012455
+Node: GNU Privacy Guard2025349
+Node: Desktop Home Services2028167
+Node: Guix Home Services2039338
+Node: Backup Home Services2040696
+Node: Fonts Home Services2043691
+Node: Sound Home Services2045279
+Node: Mail Home Services2051361
+Node: Messaging Home Services2055386
+Node: Media Home Services2057444
+Node: mpv Media Player2058560
+Node: Niri window manager2082597
+Node: Sway window manager2083583
+Node: Networking Home Services2099783
+Node: Secrets Home Services2107360
+Node: Miscellaneous Home Services2111334
+Node: Invoking guix home2119524
+Node: Documentation2131527
+Ref: Documentation-Footnote-12133415
+Node: Platforms2133528
+Node: platform Reference2134110
+Node: Supported Platforms2136029
+Node: System Images2138028
+Node: image Reference2139823
+Node: partition Reference2143453
+Node: Instantiate an Image2146136
+Node: image-type Reference2151630
+Node: Image Modules2156567
+Node: Installing Debugging Files2158236
+Node: Separate Debug Info2159011
+Node: Rebuilding Debug Info2162157
+Node: Using TeX and LaTeX2164784
+Ref: Using TeX and LaTeX-Footnote-12168559
+Node: Security Updates2168730
+Node: Bootstrapping2173024
+Node: Full-Source Bootstrap2174819
+Ref: Full-Source Bootstrap-Footnote-12178488
+Node: Preparing to Use the Bootstrap Binaries2178677
+Ref: Preparing to Use the Bootstrap Binaries-Footnote-12186814
+Node: Porting2186970
+Node: Contributing2189311
+Node: Requirements2191528
+Ref: Requirements-Footnote-12194598
+Node: Building from Git2194722
+Ref: Building from Git-Footnote-12200862
+Node: Running the Test Suite2200940
+Node: Running Guix Before It Is Installed2204745
+Ref: Running Guix Before It Is Installed-Footnote-12208122
+Node: The Perfect Setup2208305
+Node: Viewing Bugs within Emacs2212314
+Node: Alternative Setups2216097
+Node: Guile Studio2216937
+Node: Vim and NeoVim2217346
+Node: Source Tree Structure2218723
+Ref: Source Tree Structure-Footnote-12227667
+Node: Packaging Guidelines2228095
+Node: Software Freedom2231843
+Node: Package Naming2233214
+Node: Version Numbers2234792
+Node: Synopses and Descriptions2238526
+Node: Snippets versus Phases2242239
+Node: Cyclic Module Dependencies2243118
+Node: Bulk Updates2245110
+Node: Emacs Packages2246546
+Node: Python Modules2248457
+Node: Perl Modules2252930
+Node: Java Packages2253700
+Node: Rust Crates2254553
+Node: Elm Packages2257940
+Node: Fonts2261027
+Node: Coding Style2262765
+Node: Programming Paradigm2263327
+Node: Modules2263667
+Node: Data Types and Pattern Matching2264441
+Node: Formatting Code2266049
+Node: Submitting Patches2267427
+Ref: Submitting Patches-Footnote-12276596
+Node: Configuring Git2276789
+Node: Sending a Patch Series2277892
+Ref: Single Patches2278402
+Ref: Notifying Teams2280696
+Ref: Multiple Patches2281386
+Node: Tracking Bugs and Changes2283552
+Node: The Issue Tracker2284185
+Ref: The Issue Tracker-Footnote-12284990
+Node: Managing Patches and Branches2285151
+Ref: Managing Patches and Branches-Footnote-12289548
+Node: Debbugs User Interfaces2289829
+Ref: Debbugs User Interfaces-Footnote-12295448
+Node: Debbugs Usertags2295564
+Ref: Debbugs Usertags-Footnote-12298064
+Node: Cuirass Build Notifications2298225
+Node: Teams2299607
+Node: Making Decisions2303788
+Node: Commit Access2304692
+Ref: Commit Access-Footnote-12314659
+Node: Reviewing the Work of Others2314801
+Ref: Reviewing the Work of Others-Footnote-12319172
+Ref: Reviewing the Work of Others-Footnote-22319425
+Node: Updating the Guix Package2319741
+Node: Deprecation Policy2321267
+Ref: package-removal-policy2324534
+Ref: Deprecation Policy-Footnote-12329589
+Node: Writing Documentation2329728
+Node: Translating Guix2331559
+Node: Contributing to Guix's Infrastructure2346591
+Node: Coding2347353
+Node: System Administration2348720
+Node: Day-to-Day System Administration2350865
+Node: On-Site Intervention2351971
+Node: Hosting2352747
+Node: Administrative Tasks2353587
+Node: Acknowledgments2354172
+Node: GNU Free Documentation License2355212
+Node: Concept Index2380573
+Node: Programming Index2508663
+
+End Tag Table
+
+
+Local Variables:
+coding: utf-8
+End:

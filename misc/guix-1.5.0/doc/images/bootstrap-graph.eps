@@ -1,0 +1,1825 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: graphviz version 7.0.1 (20221109.1506)
+%%Title: G
+%%Pages: 1
+%%BoundingBox: 36 36 772 681
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 772 681
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 736 645 boxprim clip newpath
+1 1 set_scale 0 rotate 40 40 translate
+% /nix/store/x60397za40lx0n88f51a2csfdq5xvb19-gcc-bootstrap-0.drv
+gsave
+0 0 1 nodecolor
+newpath 578.9713 38 moveto
+471.9713 38 lineto
+471.9713 20 lineto
+578.9713 20 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 578.9713 38 moveto
+471.9713 38 lineto
+471.9713 20 lineto
+578.9713 20 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+479.9713 26.8 moveto 91 (gcc-bootstrap-0.drv) alignedtext
+grestore
+% /nix/store/3iawic1z95112yfz5y9xdp66qbxxr8l1-tar
+gsave
+0 0 1 nodecolor
+newpath 103.9713 618 moveto
+74.9713 618 lineto
+74.9713 600 lineto
+103.9713 600 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 103.9713 618 moveto
+74.9713 618 lineto
+74.9713 600 lineto
+103.9713 600 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+82.9713 606.8 moveto 13 (tar) alignedtext
+grestore
+% /nix/store/3iawic1z95112yfz5y9xdp66qbxxr8l1-tar->/nix/store/x60397za40lx0n88f51a2csfdq5xvb19-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 74.7485 599.6283 moveto
+55.7807 587.9249 23.5756 564.7275 9.4713 535 curveto
+-7.8916 498.4046 4.4713 484.5054 4.4713 444 curveto
+4.4713 444 4.4713 444 4.4713 193 curveto
+4.4713 127.7468 60.8651 129.5534 120.4713 103 curveto
+233.0192 52.8619 377.7214 37.1472 460.1821 32.2301 curveto
+stroke
+0 0 0 edgecolor
+newpath 460.3388 35.7269 moveto
+470.1289 31.6768 lineto
+459.95 28.7377 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 460.3388 35.7269 moveto
+470.1289 31.6768 lineto
+459.95 28.7377 lineto
+closepath stroke
+grestore
+% /nix/store/4sv9xhcjap6byca130fzpzzjalb7iixv-glibc-bootstrap-0.drv
+gsave
+0 0 1 nodecolor
+newpath 249.4713 121 moveto
+137.4713 121 lineto
+137.4713 103 lineto
+249.4713 103 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 249.4713 121 moveto
+137.4713 121 lineto
+137.4713 103 lineto
+249.4713 103 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+145.4713 109.8 moveto 96 (glibc-bootstrap-0.drv) alignedtext
+grestore
+% /nix/store/3iawic1z95112yfz5y9xdp66qbxxr8l1-tar->/nix/store/4sv9xhcjap6byca130fzpzzjalb7iixv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 75.6019 599.6886 moveto
+57.3767 587.8927 26.0888 564.4221 12.4713 535 curveto
+-4.5421 498.2408 7.4713 484.5054 7.4713 444 curveto
+7.4713 444 7.4713 444 7.4713 276 curveto
+7.4713 232.9783 11.4807 216.7869 40.4713 185 curveto
+68.6417 154.1123 112.814 135.3092 146.4691 124.7037 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 147.4168 128.0736 moveto
+155.9912 121.8502 lineto
+145.4073 121.3682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 147.4168 128.0736 moveto
+155.9912 121.8502 lineto
+145.4073 121.3682 lineto
+closepath stroke
+grestore
+% /nix/store/r3dsy5j2c16sv26raala6kahff7w18hb-gcc-bootstrap-0-guile-builder
+gsave
+0 0 1 nodecolor
+newpath 721.4713 452 moveto
+573.4713 452 lineto
+573.4713 434 lineto
+721.4713 434 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 721.4713 452 moveto
+573.4713 452 lineto
+573.4713 434 lineto
+721.4713 434 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+581.4713 440.8 moveto 132 (gcc-bootstrap-0-guile-builder) alignedtext
+grestore
+% /nix/store/3iawic1z95112yfz5y9xdp66qbxxr8l1-tar->/nix/store/r3dsy5j2c16sv26raala6kahff7w18hb-gcc-bootstrap-0-guile-builder
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 104.4313 608.4017 moveto
+151.6876 608.9079 300.0368 604.5717 391.4713 535 curveto
+398.7543 529.4584 394.3327 522.7266 401.4713 517 curveto
+447.1997 480.3164 510.918 462.0572 562.048 452.9737 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 562.3132 456.4783 moveto
+571.595 451.3696 lineto
+561.1532 449.5751 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 562.3132 456.4783 moveto
+571.595 451.3696 lineto
+561.1532 449.5751 lineto
+closepath stroke
+grestore
+% /nix/store/8iivk9hpnps21yrbq3zzsxgzv9ixbhgh-glibc-bootstrap-0-guile-builder
+gsave
+0 0 1 nodecolor
+newpath 165.9713 535 moveto
+12.9713 535 lineto
+12.9713 517 lineto
+165.9713 517 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 165.9713 535 moveto
+12.9713 535 lineto
+12.9713 517 lineto
+165.9713 517 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+20.9713 523.8 moveto 137 (glibc-bootstrap-0-guile-builder) alignedtext
+grestore
+% /nix/store/3iawic1z95112yfz5y9xdp66qbxxr8l1-tar->/nix/store/8iivk9hpnps21yrbq3zzsxgzv9ixbhgh-glibc-bootstrap-0-guile-builder
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 89.4713 599.6367 moveto
+89.4713 587.2679 89.4713 563.7384 89.4713 546.8067 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 92.9714 546.9527 moveto
+89.4713 536.9527 lineto
+85.9714 546.9528 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 92.9714 546.9527 moveto
+89.4713 536.9527 lineto
+85.9714 546.9528 lineto
+closepath stroke
+grestore
+% /nix/store/bplka3yqdg8prqq3zdxza6wxlkjdhr2g-build-bootstrap-guile.sh
+gsave
+0 0 1 nodecolor
+newpath 522.4713 535 moveto
+398.4713 535 lineto
+398.4713 517 lineto
+522.4713 517 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 522.4713 535 moveto
+398.4713 535 lineto
+398.4713 517 lineto
+522.4713 517 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+406.4713 523.8 moveto 108 (build-bootstrap-guile.sh) alignedtext
+grestore
+% /nix/store/3iawic1z95112yfz5y9xdp66qbxxr8l1-tar->/nix/store/bplka3yqdg8prqq3zdxza6wxlkjdhr2g-build-bootstrap-guile.sh
+gsave
+1 setlinewidth
+0 1 1 edgecolor
+newpath 104.0149 604.8247 moveto
+154.6715 593.7649 324.9196 556.5948 410.4907 537.9122 curveto
+stroke
+0 1 1 edgecolor
+newpath 411.232 541.3329 moveto
+420.2553 535.7803 lineto
+409.7389 534.494 lineto
+closepath fill
+1 setlinewidth
+solid
+0 1 1 edgecolor
+newpath 411.232 541.3329 moveto
+420.2553 535.7803 lineto
+409.7389 534.494 lineto
+closepath stroke
+grestore
+% /nix/store/4sv9xhcjap6byca130fzpzzjalb7iixv-glibc-bootstrap-0.drv->/nix/store/x60397za40lx0n88f51a2csfdq5xvb19-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0 1 1 edgecolor
+newpath 228.0615 102.5608 moveto
+288.2704 87.8713 412.3227 57.6055 479.6226 41.186 curveto
+stroke
+0 1 1 edgecolor
+newpath 480.3537 44.6103 moveto
+489.2391 38.8398 lineto
+478.6945 37.8098 lineto
+closepath fill
+1 setlinewidth
+solid
+0 1 1 edgecolor
+newpath 480.3537 44.6103 moveto
+489.2391 38.8398 lineto
+478.6945 37.8098 lineto
+closepath stroke
+grestore
+% /nix/store/8cc81w6m04csm52y247xj3gydrbz2niv-xz
+gsave
+0 0 1 nodecolor
+newpath 584.4713 618 moveto
+558.4713 618 lineto
+558.4713 600 lineto
+584.4713 600 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 584.4713 618 moveto
+558.4713 618 lineto
+558.4713 600 lineto
+584.4713 600 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+566.4713 606.8 moveto 10 (xz) alignedtext
+grestore
+% /nix/store/8cc81w6m04csm52y247xj3gydrbz2niv-xz->/nix/store/x60397za40lx0n88f51a2csfdq5xvb19-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.33333 1 1 edgecolor
+newpath 584.9553 601.8567 moveto
+622.6659 583.649 726.4713 526.0748 726.4713 444 curveto
+726.4713 444 726.4713 444 726.4713 193 curveto
+726.4713 150.3959 722.7035 133.9933 693.4713 103 curveto
+662.9199 70.6081 615.5325 51.8117 578.8646 41.4287 curveto
+stroke
+0.33333 1 1 edgecolor
+newpath 579.8869 38.0793 moveto
+569.3212 38.8636 lineto
+578.0699 44.8394 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 1 edgecolor
+newpath 579.8869 38.0793 moveto
+569.3212 38.8636 lineto
+578.0699 44.8394 lineto
+closepath stroke
+grestore
+% /nix/store/8cc81w6m04csm52y247xj3gydrbz2niv-xz->/nix/store/4sv9xhcjap6byca130fzpzzjalb7iixv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 569.2019 599.6848 moveto
+562.5111 573.3608 545.2192 490.2747 576.4713 434 curveto
+601.8463 388.3079 640.5122 408.7295 674.4713 369 curveto
+705.6336 332.5424 735.7354 309.9408 712.4713 268 curveto
+678.6733 207.0688 644.4038 210.2721 579.4713 185 curveto
+472.7522 143.4643 339.879 125.4369 261.1302 117.9508 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 261.6991 114.4884 moveto
+251.421 117.0596 lineto
+261.0592 121.4591 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 261.6991 114.4884 moveto
+251.421 117.0596 lineto
+261.0592 121.4591 lineto
+closepath stroke
+grestore
+% /nix/store/8cc81w6m04csm52y247xj3gydrbz2niv-xz->/nix/store/r3dsy5j2c16sv26raala6kahff7w18hb-gcc-bootstrap-0-guile-builder
+gsave
+1 setlinewidth
+0.090196 0.38824 0.87059 edgecolor
+newpath 583.9925 599.6227 moveto
+600.7751 587.585 629.906 563.6589 642.4713 535 curveto
+652.4858 512.1588 652.0635 482.9459 650.2602 463.8671 curveto
+stroke
+0.090196 0.38824 0.87059 edgecolor
+newpath 653.7411 463.4987 moveto
+649.0816 453.9835 lineto
+646.7904 464.3276 lineto
+closepath fill
+1 setlinewidth
+solid
+0.090196 0.38824 0.87059 edgecolor
+newpath 653.7411 463.4987 moveto
+649.0816 453.9835 lineto
+646.7904 464.3276 lineto
+closepath stroke
+grestore
+% /nix/store/8cc81w6m04csm52y247xj3gydrbz2niv-xz->/nix/store/8iivk9hpnps21yrbq3zzsxgzv9ixbhgh-glibc-bootstrap-0-guile-builder
+gsave
+1 setlinewidth
+0.090196 0.38824 0.87059 edgecolor
+newpath 558.1394 605.1311 moveto
+550.6165 603.546 541.035 601.5833 532.4713 600 curveto
+399.5163 575.4187 243.3469 550.6334 156.4652 537.2063 curveto
+stroke
+0.090196 0.38824 0.87059 edgecolor
+newpath 157.1027 533.7633 moveto
+146.686 535.6982 lineto
+156.0357 540.6815 lineto
+closepath fill
+1 setlinewidth
+solid
+0.090196 0.38824 0.87059 edgecolor
+newpath 157.1027 533.7633 moveto
+146.686 535.6982 lineto
+156.0357 540.6815 lineto
+closepath stroke
+grestore
+% /nix/store/8cc81w6m04csm52y247xj3gydrbz2niv-xz->/nix/store/bplka3yqdg8prqq3zdxza6wxlkjdhr2g-build-bootstrap-guile.sh
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 560.0104 599.6367 moveto
+541.3989 586.0553 504.3471 559.0175 481.0731 542.0338 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 483.3998 539.3988 moveto
+473.2587 536.3314 lineto
+479.2735 545.0534 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 483.3998 539.3988 moveto
+473.2587 536.3314 lineto
+479.2735 545.0534 lineto
+closepath stroke
+grestore
+% /nix/store/96yx6013dhggr3mpg5ayxv8dm9mv2ghv-module-import.drv
+gsave
+0 0 1 nodecolor
+newpath 113.9713 369 moveto
+12.9713 369 lineto
+12.9713 351 lineto
+113.9713 351 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 113.9713 369 moveto
+12.9713 369 lineto
+12.9713 351 lineto
+113.9713 351 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+20.9713 357.8 moveto 85 (module-import.drv) alignedtext
+grestore
+% /nix/store/96yx6013dhggr3mpg5ayxv8dm9mv2ghv-module-import.drv->/nix/store/x60397za40lx0n88f51a2csfdq5xvb19-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 63.0372 350.7941 moveto
+61.6364 315.1433 61.1237 172.3891 137.4713 103 curveto
+183.9454 60.7616 362.6863 41.5888 460.5291 34.1024 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 460.5351 37.6118 moveto
+470.248 33.3797 lineto
+460.0159 30.631 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 460.5351 37.6118 moveto
+470.248 33.3797 lineto
+460.0159 30.631 lineto
+closepath stroke
+grestore
+% /nix/store/96yx6013dhggr3mpg5ayxv8dm9mv2ghv-module-import.drv->/nix/store/4sv9xhcjap6byca130fzpzzjalb7iixv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 66.83 350.8404 moveto
+73.5185 334.7601 89.1788 297.9368 104.4713 268 curveto
+130.3916 217.2577 164.9177 159.5616 182.3681 130.9942 curveto
+stroke
+0 0 0 edgecolor
+newpath 185.314 132.8854 moveto
+187.5627 122.532 lineto
+179.3483 129.2233 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 185.314 132.8854 moveto
+187.5627 122.532 lineto
+179.3483 129.2233 lineto
+closepath stroke
+grestore
+% /nix/store/y4n7rzysx6qz3p0n91dw9qz5w93l6iqv-module-import-compiled.drv
+gsave
+0 0 1 nodecolor
+newpath 250.4713 286 moveto
+104.4713 286 lineto
+104.4713 268 lineto
+250.4713 268 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 250.4713 286 moveto
+104.4713 286 lineto
+104.4713 268 lineto
+250.4713 268 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+112.4713 274.8 moveto 130 (module-import-compiled.drv) alignedtext
+grestore
+% /nix/store/96yx6013dhggr3mpg5ayxv8dm9mv2ghv-module-import.drv->/nix/store/y4n7rzysx6qz3p0n91dw9qz5w93l6iqv-module-import-compiled.drv
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 75.2419 350.6367 moveto
+94.3563 337.0553 132.4096 310.0175 156.3126 293.0338 curveto
+stroke
+0 0 0 edgecolor
+newpath 158.2355 295.9611 moveto
+164.3601 287.3159 lineto
+154.181 290.2548 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 158.2355 295.9611 moveto
+164.3601 287.3159 lineto
+154.181 290.2548 lineto
+closepath stroke
+grestore
+% /nix/store/fl9cwcczfdv73vq5sr0c4rd5hqzrgvac-gcc-4.7.2.tar.xz.drv
+gsave
+0 0 1 nodecolor
+newpath 578.4713 203 moveto
+472.4713 203 lineto
+472.4713 185 lineto
+578.4713 185 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 578.4713 203 moveto
+472.4713 203 lineto
+472.4713 185 lineto
+578.4713 185 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+480.4713 191.8 moveto 90 (gcc-4.7.2.tar.xz.drv) alignedtext
+grestore
+% /nix/store/fl9cwcczfdv73vq5sr0c4rd5hqzrgvac-gcc-4.7.2.tar.xz.drv->/nix/store/x60397za40lx0n88f51a2csfdq5xvb19-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 525.4713 184.6927 moveto
+525.4713 159.8474 525.4713 85.6221 525.4713 49.7883 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 528.9714 49.9995 moveto
+525.4713 39.9996 lineto
+521.9714 49.9996 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 528.9714 49.9995 moveto
+525.4713 39.9996 lineto
+521.9714 49.9996 lineto
+closepath stroke
+grestore
+% /nix/store/jaaqdl979wjirnbxz1jqsipg22nva5n4-bash
+gsave
+0 0 1 nodecolor
+newpath 645.4713 535 moveto
+607.4713 535 lineto
+607.4713 517 lineto
+645.4713 517 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 645.4713 535 moveto
+607.4713 535 lineto
+607.4713 517 lineto
+645.4713 517 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+615.4713 523.8 moveto 22 (bash) alignedtext
+grestore
+% /nix/store/jaaqdl979wjirnbxz1jqsipg22nva5n4-bash->/nix/store/x60397za40lx0n88f51a2csfdq5xvb19-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.090196 0.38824 0.87059 edgecolor
+newpath 644.4814 516.6397 moveto
+666.365 505.3941 702.3555 483.1478 718.4713 452 curveto
+737.0848 416.0246 723.4713 401.5054 723.4713 361 curveto
+723.4713 361 723.4713 361 723.4713 193 curveto
+723.4713 149.5807 715.7324 134.1368 685.4713 103 curveto
+654.8449 71.4874 608.0835 52.3345 573.0095 41.6042 curveto
+stroke
+0.090196 0.38824 0.87059 edgecolor
+newpath 574.1009 38.2768 moveto
+563.5208 38.8353 lineto
+572.1399 44.9965 lineto
+closepath fill
+1 setlinewidth
+solid
+0.090196 0.38824 0.87059 edgecolor
+newpath 574.1009 38.2768 moveto
+563.5208 38.8353 lineto
+572.1399 44.9965 lineto
+closepath stroke
+grestore
+% /nix/store/jaaqdl979wjirnbxz1jqsipg22nva5n4-bash->/nix/store/r3dsy5j2c16sv26raala6kahff7w18hb-gcc-bootstrap-0-guile-builder
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 628.6395 516.6367 moveto
+631.8777 504.1467 638.0664 480.276 642.4648 463.3107 curveto
+stroke
+0 0 0 edgecolor
+newpath 645.7818 464.4627 moveto
+644.9035 453.9043 lineto
+639.0058 462.7059 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 645.7818 464.4627 moveto
+644.9035 453.9043 lineto
+639.0058 462.7059 lineto
+closepath stroke
+grestore
+% /nix/store/x9x1a86flhx15cams7235rfy5gc5cww1-guile-bootstrap-2.0.drv
+gsave
+0 0 1 nodecolor
+newpath 498.9713 452 moveto
+377.9713 452 lineto
+377.9713 434 lineto
+498.9713 434 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 498.9713 452 moveto
+377.9713 452 lineto
+377.9713 434 lineto
+498.9713 434 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+385.9713 440.8 moveto 105 (guile-bootstrap-2.0.drv) alignedtext
+grestore
+% /nix/store/jaaqdl979wjirnbxz1jqsipg22nva5n4-bash->/nix/store/x9x1a86flhx15cams7235rfy5gc5cww1-guile-bootstrap-2.0.drv
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 607.0601 516.6367 moveto
+574.2011 502.4793 507.4044 473.6999 468.4793 456.929 curveto
+stroke
+0 0 0 edgecolor
+newpath 470.0173 453.7807 moveto
+459.4485 453.0381 lineto
+467.2475 460.2094 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 470.0173 453.7807 moveto
+459.4485 453.0381 lineto
+467.2475 460.2094 lineto
+closepath stroke
+grestore
+% /nix/store/r3dsy5j2c16sv26raala6kahff7w18hb-gcc-bootstrap-0-guile-builder->/nix/store/x60397za40lx0n88f51a2csfdq5xvb19-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 659.1999 433.6993 moveto
+675.2381 421.5788 703.3968 397.3672 715.4713 369 curveto
+731.3351 331.7303 720.4713 318.5054 720.4713 278 curveto
+720.4713 278 720.4713 278 720.4713 193 curveto
+720.4713 148.4756 708.024 134.4141 676.4713 103 curveto
+646.0671 72.7294 600.6399 53.1212 567.5551 41.9294 curveto
+stroke
+0 0 0 edgecolor
+newpath 568.8794 38.6796 moveto
+558.2873 38.9207 lineto
+566.7179 45.3376 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 568.8794 38.6796 moveto
+558.2873 38.9207 lineto
+566.7179 45.3376 lineto
+closepath stroke
+grestore
+% /nix/store/x9x1a86flhx15cams7235rfy5gc5cww1-guile-bootstrap-2.0.drv->/nix/store/x60397za40lx0n88f51a2csfdq5xvb19-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0 1 1 edgecolor
+newpath 498.0193 433.5568 moveto
+579.1558 418.3116 714.4713 377.9096 714.4713 278 curveto
+714.4713 278 714.4713 278 714.4713 193 curveto
+714.4713 113.142 616.512 63.7854 561.6416 42.4029 curveto
+stroke
+0 1 1 edgecolor
+newpath 562.969 39.1629 moveto
+552.3771 38.9144 lineto
+560.5023 45.7138 lineto
+closepath fill
+1 setlinewidth
+solid
+0 1 1 edgecolor
+newpath 562.969 39.1629 moveto
+552.3771 38.9144 lineto
+560.5023 45.7138 lineto
+closepath stroke
+grestore
+% /nix/store/x9x1a86flhx15cams7235rfy5gc5cww1-guile-bootstrap-2.0.drv->/nix/store/4sv9xhcjap6byca130fzpzzjalb7iixv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.33333 1 1 edgecolor
+newpath 435.766 433.6677 moveto
+428.8051 412.402 410.4055 357.3423 404.4713 351 curveto
+356.4962 299.7266 308.7513 336.9863 260.4713 286 curveto
+249.335 274.2396 214.3358 174.1572 199.8479 131.806 curveto
+stroke
+0.33333 1 1 edgecolor
+newpath 203.2243 130.8632 moveto
+196.6877 122.5251 lineto
+196.5979 133.1196 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 1 edgecolor
+newpath 203.2243 130.8632 moveto
+196.6877 122.5251 lineto
+196.5979 133.1196 lineto
+closepath stroke
+grestore
+% /nix/store/x9x1a86flhx15cams7235rfy5gc5cww1-guile-bootstrap-2.0.drv->/nix/store/96yx6013dhggr3mpg5ayxv8dm9mv2ghv-module-import.drv
+gsave
+1 setlinewidth
+0.33333 1 1 edgecolor
+newpath 399.4009 433.5608 moveto
+330.9723 418.7802 189.5348 388.2297 113.8521 371.8823 curveto
+stroke
+0.33333 1 1 edgecolor
+newpath 114.7282 368.4909 moveto
+104.2146 369.8006 lineto
+113.2502 375.3331 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 1 edgecolor
+newpath 114.7282 368.4909 moveto
+104.2146 369.8006 lineto
+113.2502 375.3331 lineto
+closepath stroke
+grestore
+% /nix/store/x9x1a86flhx15cams7235rfy5gc5cww1-guile-bootstrap-2.0.drv->/nix/store/fl9cwcczfdv73vq5sr0c4rd5hqzrgvac-gcc-4.7.2.tar.xz.drv
+gsave
+1 setlinewidth
+0 1 1 edgecolor
+newpath 492.7317 433.5441 moveto
+530.5438 424.5154 578.3666 406.1143 602.4713 369 curveto
+606.8287 362.2908 604.427 358.7573 602.4713 351 curveto
+594.4501 319.1848 582.1308 315.3537 567.4713 286 curveto
+555.0993 261.2269 541.8788 232.0878 533.6457 213.5842 curveto
+stroke
+0 1 1 edgecolor
+newpath 536.8726 212.2272 moveto
+529.6268 204.4975 lineto
+530.4708 215.0587 lineto
+closepath fill
+1 setlinewidth
+solid
+0 1 1 edgecolor
+newpath 536.8726 212.2272 moveto
+529.6268 204.4975 lineto
+530.4708 215.0587 lineto
+closepath stroke
+grestore
+% /nix/store/x9x1a86flhx15cams7235rfy5gc5cww1-guile-bootstrap-2.0.drv->/nix/store/y4n7rzysx6qz3p0n91dw9qz5w93l6iqv-module-import-compiled.drv
+gsave
+1 setlinewidth
+0 1 1 edgecolor
+newpath 435.5239 433.6269 moveto
+427.9403 412.2627 407.8988 356.9858 401.4713 351 curveto
+363.5186 315.6555 308.2104 297.4148 262.0494 288.0056 curveto
+stroke
+0 1 1 edgecolor
+newpath 262.7994 284.5857 moveto
+252.319 286.1388 lineto
+261.4805 291.4603 lineto
+closepath fill
+1 setlinewidth
+solid
+0 1 1 edgecolor
+newpath 262.7994 284.5857 moveto
+252.319 286.1388 lineto
+261.4805 291.4603 lineto
+closepath stroke
+grestore
+% /nix/store/wdwrkg02gn28bkpbxgdb2nv558v8s3ji-glibc-2.17.tar.xz.drv
+gsave
+0 0 1 nodecolor
+newpath 386.4713 203 moveto
+278.4713 203 lineto
+278.4713 185 lineto
+386.4713 185 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 386.4713 203 moveto
+278.4713 203 lineto
+278.4713 185 lineto
+386.4713 185 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+286.4713 191.8 moveto 92 (glibc-2.17.tar.xz.drv) alignedtext
+grestore
+% /nix/store/x9x1a86flhx15cams7235rfy5gc5cww1-guile-bootstrap-2.0.drv->/nix/store/wdwrkg02gn28bkpbxgdb2nv558v8s3ji-glibc-2.17.tar.xz.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 435.5063 433.5801 moveto
+430.8896 420.117 422.0396 392.8312 417.4713 369 curveto
+408.9788 324.6983 427.0431 308.6412 407.4713 268 curveto
+395.7638 243.6892 372.402 223.0189 354.8462 209.9459 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 357.2058 207.33 moveto
+347.0331 204.3692 lineto
+353.1391 213.0276 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 357.2058 207.33 moveto
+347.0331 204.3692 lineto
+353.1391 213.0276 lineto
+closepath stroke
+grestore
+% /nix/store/kvk5wp8c9rzvvrmq5fv5r58l78q8i6ch-module-import.drv
+gsave
+0 0 1 nodecolor
+newpath 403.9713 369 moveto
+302.9713 369 lineto
+302.9713 351 lineto
+403.9713 351 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 403.9713 369 moveto
+302.9713 369 lineto
+302.9713 351 lineto
+403.9713 351 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+310.9713 357.8 moveto 85 (module-import.drv) alignedtext
+grestore
+% /nix/store/x9x1a86flhx15cams7235rfy5gc5cww1-guile-bootstrap-2.0.drv->/nix/store/kvk5wp8c9rzvvrmq5fv5r58l78q8i6ch-module-import.drv
+gsave
+1 setlinewidth
+0.090196 0.38824 0.87059 edgecolor
+newpath 429.6949 433.6367 moveto
+415.6974 420.2979 388.0787 393.9788 370.2122 376.9531 curveto
+stroke
+0.090196 0.38824 0.87059 edgecolor
+newpath 373.0768 374.8483 moveto
+363.4229 370.4833 lineto
+368.2477 379.9158 lineto
+closepath fill
+1 setlinewidth
+solid
+0.090196 0.38824 0.87059 edgecolor
+newpath 373.0768 374.8483 moveto
+363.4229 370.4833 lineto
+368.2477 379.9158 lineto
+closepath stroke
+grestore
+% /nix/store/pzv319p3q7raiad7nq7fcdw9rafzp14k-module-import-compiled.drv
+gsave
+0 0 1 nodecolor
+newpath 560.4713 286 moveto
+414.4713 286 lineto
+414.4713 268 lineto
+560.4713 268 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 560.4713 286 moveto
+414.4713 286 lineto
+414.4713 268 lineto
+560.4713 268 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+422.4713 274.8 moveto 130 (module-import-compiled.drv) alignedtext
+grestore
+% /nix/store/x9x1a86flhx15cams7235rfy5gc5cww1-guile-bootstrap-2.0.drv->/nix/store/pzv319p3q7raiad7nq7fcdw9rafzp14k-module-import-compiled.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 490.597 433.5436 moveto
+527.912 424.4721 575.6109 406.0171 599.4713 369 curveto
+622.2868 333.6037 566.8557 305.4577 526.0948 290.301 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 527.3453 287.0311 moveto
+516.7506 286.9721 lineto
+524.9961 293.6252 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 527.3453 287.0311 moveto
+516.7506 286.9721 lineto
+524.9961 293.6252 lineto
+closepath stroke
+grestore
+% /nix/store/y4n7rzysx6qz3p0n91dw9qz5w93l6iqv-module-import-compiled.drv->/nix/store/x60397za40lx0n88f51a2csfdq5xvb19-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.33333 1 1 edgecolor
+newpath 185.6865 267.6868 moveto
+202.3674 251.019 241.7456 212.7391 278.4713 185 curveto
+355.327 126.9502 454.3646 69.577 500.1689 43.9345 curveto
+stroke
+0.33333 1 1 edgecolor
+newpath 501.7623 47.0533 moveto
+508.7974 39.1313 lineto
+498.3576 40.9371 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 1 edgecolor
+newpath 501.7623 47.0533 moveto
+508.7974 39.1313 lineto
+498.3576 40.9371 lineto
+closepath stroke
+grestore
+% /nix/store/y4n7rzysx6qz3p0n91dw9qz5w93l6iqv-module-import-compiled.drv->/nix/store/4sv9xhcjap6byca130fzpzzjalb7iixv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 178.2867 267.6927 moveto
+180.7255 242.8474 188.0114 168.6221 191.5288 132.7883 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 194.9967 133.2864 moveto
+192.4904 122.9923 lineto
+188.0302 132.6026 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 194.9967 133.2864 moveto
+192.4904 122.9923 lineto
+188.0302 132.6026 lineto
+closepath stroke
+grestore
+% /nix/store/8iivk9hpnps21yrbq3zzsxgzv9ixbhgh-glibc-bootstrap-0-guile-builder->/nix/store/4sv9xhcjap6byca130fzpzzjalb7iixv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.090196 0.38824 0.87059 edgecolor
+newpath 78.6744 516.6753 moveto
+63.5502 504.3473 36.4559 479.6897 23.4713 452 curveto
+6.1253 415.0101 10.4713 401.8551 10.4713 361 curveto
+10.4713 361 10.4713 361 10.4713 276 curveto
+10.4713 197.5509 105.4051 147.5496 158.5201 125.7135 curveto
+stroke
+0.090196 0.38824 0.87059 edgecolor
+newpath 159.7631 128.9858 moveto
+167.7637 122.0402 lineto
+157.178 122.4806 lineto
+closepath fill
+1 setlinewidth
+solid
+0.090196 0.38824 0.87059 edgecolor
+newpath 159.7631 128.9858 moveto
+167.7637 122.0402 lineto
+157.178 122.4806 lineto
+closepath stroke
+grestore
+% /nix/store/wdwrkg02gn28bkpbxgdb2nv558v8s3ji-glibc-2.17.tar.xz.drv->/nix/store/4sv9xhcjap6byca130fzpzzjalb7iixv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0 1 1 edgecolor
+newpath 317.8585 184.5898 moveto
+294.0203 170.8699 246.529 143.5369 217.6199 126.8985 curveto
+stroke
+0 1 1 edgecolor
+newpath 219.6129 124.0073 moveto
+209.2 122.0525 lineto
+216.1211 130.0742 lineto
+closepath fill
+1 setlinewidth
+solid
+0 1 1 edgecolor
+newpath 219.6129 124.0073 moveto
+209.2 122.0525 lineto
+216.1211 130.0742 lineto
+closepath stroke
+grestore
+% /nix/store/9zrdfvnrpljryr82an2n1mj6bh2przhn-module-import-guile-builder
+gsave
+0 0 1 nodecolor
+newpath 166.9713 452 moveto
+23.9713 452 lineto
+23.9713 434 lineto
+166.9713 434 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 166.9713 452 moveto
+23.9713 452 lineto
+23.9713 434 lineto
+166.9713 434 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+31.9713 440.8 moveto 127 (module-import-guile-builder) alignedtext
+grestore
+% /nix/store/9zrdfvnrpljryr82an2n1mj6bh2przhn-module-import-guile-builder->/nix/store/96yx6013dhggr3mpg5ayxv8dm9mv2ghv-module-import.drv
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 92.1672 433.6367 moveto
+87.185 421.0254 77.619 396.8114 70.9057 379.8185 curveto
+stroke
+0 0 0 edgecolor
+newpath 74.2909 378.8614 moveto
+67.3614 370.8469 lineto
+67.7805 381.4334 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 74.2909 378.8614 moveto
+67.3614 370.8469 lineto
+67.7805 381.4334 lineto
+closepath stroke
+grestore
+% /nix/store/mj7amprgvl2rgash1nr0v64apik8vc7f-utils.scm
+gsave
+0 0 1 nodecolor
+newpath 228.9713 535 moveto
+171.9713 535 lineto
+171.9713 517 lineto
+228.9713 517 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 228.9713 535 moveto
+171.9713 535 lineto
+171.9713 517 lineto
+228.9713 517 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+179.9713 523.8 moveto 41 (utils.scm) alignedtext
+grestore
+% /nix/store/mj7amprgvl2rgash1nr0v64apik8vc7f-utils.scm->/nix/store/96yx6013dhggr3mpg5ayxv8dm9mv2ghv-module-import.drv
+gsave
+1 setlinewidth
+0 1 1 edgecolor
+newpath 199.1821 516.6571 moveto
+196.2002 499.6028 187.4925 460.1552 167.4713 434 curveto
+147.3552 407.7209 115.0996 387.1721 91.8412 374.6623 curveto
+stroke
+0 1 1 edgecolor
+newpath 93.6962 371.6817 moveto
+83.2075 370.1853 lineto
+90.4737 377.8959 lineto
+closepath fill
+1 setlinewidth
+solid
+0 1 1 edgecolor
+newpath 93.6962 371.6817 moveto
+83.2075 370.1853 lineto
+90.4737 377.8959 lineto
+closepath stroke
+grestore
+% /nix/store/mj7amprgvl2rgash1nr0v64apik8vc7f-utils.scm->/nix/store/9zrdfvnrpljryr82an2n1mj6bh2przhn-module-import-guile-builder
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 189.6299 516.6367 moveto
+172.1031 503.116 137.288 476.2586 115.2552 459.2619 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 117.665 456.7005 moveto
+107.6093 453.3637 lineto
+113.3894 462.243 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 117.665 456.7005 moveto
+107.6093 453.3637 lineto
+113.3894 462.243 lineto
+closepath stroke
+grestore
+% /nix/store/mj7amprgvl2rgash1nr0v64apik8vc7f-utils.scm->/nix/store/kvk5wp8c9rzvvrmq5fv5r58l78q8i6ch-module-import.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 198.5888 516.594 moveto
+195.2449 499.4233 190.1419 459.7724 207.4713 434 curveto
+229.2078 401.6731 269.6963 383.015 302.5316 372.6671 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 303.2891 376.0931 moveto
+311.8842 369.8983 lineto
+301.302 369.381 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 303.2891 376.0931 moveto
+311.8842 369.8983 lineto
+301.302 369.381 lineto
+closepath stroke
+grestore
+% /nix/store/yfixjx2gpvsi5dhkpdx5gj6gx0xdk1c8-module-import-guile-builder
+gsave
+0 0 1 nodecolor
+newpath 347.9713 452 moveto
+204.9713 452 lineto
+204.9713 434 lineto
+347.9713 434 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 347.9713 452 moveto
+204.9713 452 lineto
+204.9713 434 lineto
+347.9713 434 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+212.9713 440.8 moveto 127 (module-import-guile-builder) alignedtext
+grestore
+% /nix/store/mj7amprgvl2rgash1nr0v64apik8vc7f-utils.scm->/nix/store/yfixjx2gpvsi5dhkpdx5gj6gx0xdk1c8-module-import-guile-builder
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 208.3183 516.6367 moveto
+220.72 503.4191 245.0802 477.4563 261.0651 460.4198 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 263.2273 463.2304 moveto
+267.5174 453.543 lineto
+258.1225 458.4407 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 263.2273 463.2304 moveto
+267.5174 453.543 lineto
+258.1225 458.4407 lineto
+closepath stroke
+grestore
+% /nix/store/6kslnirvm26fij7wpjqbw617ri4gf5x5-gcc-4.7.2.tar.xz-guile-builder
+gsave
+0 0 1 nodecolor
+newpath 711.9713 286 moveto
+564.9713 286 lineto
+564.9713 268 lineto
+711.9713 268 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 711.9713 286 moveto
+564.9713 286 lineto
+564.9713 268 lineto
+711.9713 268 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+572.9713 274.8 moveto 131 (gcc-4.7.2.tar.xz-guile-builder) alignedtext
+grestore
+% /nix/store/6kslnirvm26fij7wpjqbw617ri4gf5x5-gcc-4.7.2.tar.xz-guile-builder->/nix/store/fl9cwcczfdv73vq5sr0c4rd5hqzrgvac-gcc-4.7.2.tar.xz.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 626.8039 267.6367 moveto
+607.8571 254.0553 570.1376 227.0175 546.4444 210.0338 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 548.6413 207.3023 moveto
+538.4746 204.321 lineto
+544.5631 212.9917 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 548.6413 207.3023 moveto
+538.4746 204.321 lineto
+544.5631 212.9917 lineto
+closepath stroke
+grestore
+% /nix/store/kvk5wp8c9rzvvrmq5fv5r58l78q8i6ch-module-import.drv->/nix/store/fl9cwcczfdv73vq5sr0c4rd5hqzrgvac-gcc-4.7.2.tar.xz.drv
+gsave
+1 setlinewidth
+0.090196 0.38824 0.87059 edgecolor
+newpath 359.7276 350.6498 moveto
+369.6459 337.2822 389.3981 310.125 404.4713 286 curveto
+409.3205 278.2387 408.246 274.7082 414.4713 268 curveto
+438.3884 242.2276 473.1809 221.2637 497.416 208.5203 curveto
+stroke
+0.090196 0.38824 0.87059 edgecolor
+newpath 498.751 211.7687 moveto
+506.0642 204.1026 lineto
+495.5666 205.5349 lineto
+closepath fill
+1 setlinewidth
+solid
+0.090196 0.38824 0.87059 edgecolor
+newpath 498.751 211.7687 moveto
+506.0642 204.1026 lineto
+495.5666 205.5349 lineto
+closepath stroke
+grestore
+% /nix/store/kvk5wp8c9rzvvrmq5fv5r58l78q8i6ch-module-import.drv->/nix/store/wdwrkg02gn28bkpbxgdb2nv558v8s3ji-glibc-2.17.tar.xz.drv
+gsave
+1 setlinewidth
+0 1 1 edgecolor
+newpath 333.602 350.6166 moveto
+310.4294 339.6171 273.2839 317.8893 257.4713 286 curveto
+242.229 255.2611 279.0857 225.7692 306.3606 209.0652 curveto
+stroke
+0 1 1 edgecolor
+newpath 308.0364 212.1397 moveto
+314.9091 204.0763 lineto
+304.5081 206.0939 lineto
+closepath fill
+1 setlinewidth
+solid
+0 1 1 edgecolor
+newpath 308.0364 212.1397 moveto
+314.9091 204.0763 lineto
+304.5081 206.0939 lineto
+closepath stroke
+grestore
+% /nix/store/kvk5wp8c9rzvvrmq5fv5r58l78q8i6ch-module-import.drv->/nix/store/pzv319p3q7raiad7nq7fcdw9rafzp14k-module-import-compiled.drv
+gsave
+1 setlinewidth
+0.33333 1 1 edgecolor
+newpath 367.3069 350.6367 moveto
+390.0757 336.8734 435.7061 309.2909 463.7203 292.3569 curveto
+stroke
+0.33333 1 1 edgecolor
+newpath 465.4675 295.3906 moveto
+472.2148 287.2222 lineto
+461.8462 289.4 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 1 edgecolor
+newpath 465.4675 295.3906 moveto
+472.2148 287.2222 lineto
+461.8462 289.4 lineto
+closepath stroke
+grestore
+% /nix/store/pzv319p3q7raiad7nq7fcdw9rafzp14k-module-import-compiled.drv->/nix/store/fl9cwcczfdv73vq5sr0c4rd5hqzrgvac-gcc-4.7.2.tar.xz.drv
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 491.3948 267.6367 moveto
+497.3112 255.0254 508.6709 230.8114 516.6428 213.8185 curveto
+stroke
+0 0 0 edgecolor
+newpath 519.7907 215.3492 moveto
+520.8693 204.8094 lineto
+513.4534 212.3762 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 519.7907 215.3492 moveto
+520.8693 204.8094 lineto
+513.4534 212.3762 lineto
+closepath stroke
+grestore
+% /nix/store/pzv319p3q7raiad7nq7fcdw9rafzp14k-module-import-compiled.drv->/nix/store/wdwrkg02gn28bkpbxgdb2nv558v8s3ji-glibc-2.17.tar.xz.drv
+gsave
+1 setlinewidth
+0.33333 1 1 edgecolor
+newpath 471.4673 267.6367 moveto
+444.7822 253.6915 390.9491 225.5594 358.6704 208.6911 curveto
+stroke
+0.33333 1 1 edgecolor
+newpath 360.4456 205.6698 moveto
+349.9618 204.1402 lineto
+357.2035 211.8737 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 1 edgecolor
+newpath 360.4456 205.6698 moveto
+349.9618 204.1402 lineto
+357.2035 211.8737 lineto
+closepath stroke
+grestore
+% /nix/store/abagrdbdndkd0y2dwk0nw1gw0g0rhl2z-ftp-client.scm
+gsave
+0 0 1 nodecolor
+newpath 310.9713 535 moveto
+231.9713 535 lineto
+231.9713 517 lineto
+310.9713 517 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 310.9713 535 moveto
+231.9713 535 lineto
+231.9713 517 lineto
+310.9713 517 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+239.9713 523.8 moveto 63 (ftp-client.scm) alignedtext
+grestore
+% /nix/store/abagrdbdndkd0y2dwk0nw1gw0g0rhl2z-ftp-client.scm->/nix/store/kvk5wp8c9rzvvrmq5fv5r58l78q8i6ch-module-import.drv
+gsave
+1 setlinewidth
+0.33333 1 1 edgecolor
+newpath 284.3765 516.6917 moveto
+301.7 504.7341 331.8675 480.9004 345.4713 452 curveto
+356.1728 429.2653 356.6923 399.8154 355.534 380.6706 curveto
+stroke
+0.33333 1 1 edgecolor
+newpath 359.0278 380.449 moveto
+354.6963 370.7801 lineto
+352.0528 381.0398 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 1 edgecolor
+newpath 359.0278 380.449 moveto
+354.6963 370.7801 lineto
+352.0528 381.0398 lineto
+closepath stroke
+grestore
+% /nix/store/abagrdbdndkd0y2dwk0nw1gw0g0rhl2z-ftp-client.scm->/nix/store/yfixjx2gpvsi5dhkpdx5gj6gx0xdk1c8-module-import-guile-builder
+gsave
+1 setlinewidth
+0.33333 1 1 edgecolor
+newpath 271.9875 516.6367 moveto
+272.751 504.2679 274.2035 480.7384 275.2486 463.8067 curveto
+stroke
+0.33333 1 1 edgecolor
+newpath 278.7342 464.1465 moveto
+275.8571 453.9499 lineto
+271.7475 463.7152 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 1 edgecolor
+newpath 278.7342 464.1465 moveto
+275.8571 453.9499 lineto
+271.7475 463.7152 lineto
+closepath stroke
+grestore
+% /nix/store/dwd2iwd1ban8a8rmx568dpgrbkkidfhw-download.scm
+gsave
+0 0 1 nodecolor
+newpath 394.4713 535 moveto
+312.4713 535 lineto
+312.4713 517 lineto
+394.4713 517 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 394.4713 535 moveto
+312.4713 535 lineto
+312.4713 517 lineto
+394.4713 517 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+320.4713 523.8 moveto 66 (download.scm) alignedtext
+grestore
+% /nix/store/dwd2iwd1ban8a8rmx568dpgrbkkidfhw-download.scm->/nix/store/kvk5wp8c9rzvvrmq5fv5r58l78q8i6ch-module-import.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 353.4713 516.6417 moveto
+353.4713 491.5278 353.4713 416.2675 353.4713 380.4092 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 356.9714 380.6603 moveto
+353.4713 370.6603 lineto
+349.9714 380.6604 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 356.9714 380.6603 moveto
+353.4713 370.6603 lineto
+349.9714 380.6604 lineto
+closepath stroke
+grestore
+% /nix/store/dwd2iwd1ban8a8rmx568dpgrbkkidfhw-download.scm->/nix/store/yfixjx2gpvsi5dhkpdx5gj6gx0xdk1c8-module-import-guile-builder
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 345.5209 516.6367 moveto
+332.9561 503.4191 308.2754 477.4563 292.0802 460.4198 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 294.9631 458.3725 moveto
+285.5365 453.5362 lineto
+289.8897 463.1954 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 294.9631 458.3725 moveto
+285.5365 453.5362 lineto
+289.8897 463.1954 lineto
+closepath stroke
+grestore
+% /nix/store/yfixjx2gpvsi5dhkpdx5gj6gx0xdk1c8-module-import-guile-builder->/nix/store/kvk5wp8c9rzvvrmq5fv5r58l78q8i6ch-module-import.drv
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 284.4216 433.6367 moveto
+296.9864 420.4191 321.6671 394.4563 337.8624 377.4198 curveto
+stroke
+0 0 0 edgecolor
+newpath 340.0529 380.1954 moveto
+344.406 370.5362 lineto
+334.9794 375.3725 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 340.0529 380.1954 moveto
+344.406 370.5362 lineto
+334.9794 375.3725 lineto
+closepath stroke
+grestore
+% /nix/store/98gzqlgpm4gxrpl5bzykpqbwrx8ckx8l-module-import-compiled-guile-builder
+gsave
+0 0 1 nodecolor
+newpath 601.9713 369 moveto
+414.9713 369 lineto
+414.9713 351 lineto
+601.9713 351 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 601.9713 369 moveto
+414.9713 369 lineto
+414.9713 351 lineto
+601.9713 351 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+422.9713 357.8 moveto 171 (module-import-compiled-guile-builder) alignedtext
+grestore
+% /nix/store/98gzqlgpm4gxrpl5bzykpqbwrx8ckx8l-module-import-compiled-guile-builder->/nix/store/pzv319p3q7raiad7nq7fcdw9rafzp14k-module-import-compiled.drv
+gsave
+1 setlinewidth
+0 1 1 edgecolor
+newpath 506.303 350.6367 moveto
+503.0648 338.1467 496.8761 314.276 492.4777 297.3107 curveto
+stroke
+0 1 1 edgecolor
+newpath 495.9367 296.7059 moveto
+490.039 287.9043 lineto
+489.1607 298.4627 lineto
+closepath fill
+1 setlinewidth
+solid
+0 1 1 edgecolor
+newpath 495.9367 296.7059 moveto
+490.039 287.9043 lineto
+489.1607 298.4627 lineto
+closepath stroke
+grestore
+% /nix/store/q7as3jddipj4g6si8lawrdbkjg0zcjvg-glibc-2.17.tar.xz-guile-builder
+gsave
+0 0 1 nodecolor
+newpath 406.9713 286 moveto
+257.9713 286 lineto
+257.9713 268 lineto
+406.9713 268 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 406.9713 286 moveto
+257.9713 286 lineto
+257.9713 268 lineto
+406.9713 268 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+265.9713 274.8 moveto 133 (glibc-2.17.tar.xz-guile-builder) alignedtext
+grestore
+% /nix/store/q7as3jddipj4g6si8lawrdbkjg0zcjvg-glibc-2.17.tar.xz-guile-builder->/nix/store/wdwrkg02gn28bkpbxgdb2nv558v8s3ji-glibc-2.17.tar.xz.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 332.4713 267.6367 moveto
+332.4713 255.2679 332.4713 231.7384 332.4713 214.8067 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 335.9714 214.9527 moveto
+332.4713 204.9527 lineto
+328.9714 214.9528 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 335.9714 214.9527 moveto
+332.4713 204.9527 lineto
+328.9714 214.9528 lineto
+closepath stroke
+grestore
+% /nix/store/bplka3yqdg8prqq3zdxza6wxlkjdhr2g-build-bootstrap-guile.sh->/nix/store/x9x1a86flhx15cams7235rfy5gc5cww1-guile-bootstrap-2.0.drv
+gsave
+1 setlinewidth
+0.090196 0.38824 0.87059 edgecolor
+newpath 458.1997 516.6367 moveto
+454.8074 504.1467 448.324 480.276 443.7161 463.3107 curveto
+stroke
+0.090196 0.38824 0.87059 edgecolor
+newpath 447.1589 462.6328 moveto
+441.1601 453.8998 lineto
+440.4036 464.4676 lineto
+closepath fill
+1 setlinewidth
+solid
+0.090196 0.38824 0.87059 edgecolor
+newpath 447.1589 462.6328 moveto
+441.1601 453.8998 lineto
+440.4036 464.4676 lineto
+closepath stroke
+grestore
+% /nix/store/4xv2y0m6zr2lgi8x8pcb3zxjqxsz69kj-mkdir
+gsave
+0 0 1 nodecolor
+newpath 437.9713 618 moveto
+394.9713 618 lineto
+394.9713 600 lineto
+437.9713 600 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 437.9713 618 moveto
+394.9713 618 lineto
+394.9713 600 lineto
+437.9713 600 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+402.9713 606.8 moveto 27 (mkdir) alignedtext
+grestore
+% /nix/store/4xv2y0m6zr2lgi8x8pcb3zxjqxsz69kj-mkdir->/nix/store/bplka3yqdg8prqq3zdxza6wxlkjdhr2g-build-bootstrap-guile.sh
+gsave
+1 setlinewidth
+0.33333 1 1 edgecolor
+newpath 421.0143 599.6367 moveto
+427.9307 586.9042 441.2717 562.3447 450.514 545.3303 curveto
+stroke
+0.33333 1 1 edgecolor
+newpath 453.4667 547.2271 moveto
+455.1645 536.7692 lineto
+447.3156 543.8857 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 1 edgecolor
+newpath 453.4667 547.2271 moveto
+455.1645 536.7692 lineto
+447.3156 543.8857 lineto
+closepath stroke
+grestore
+% /nix/store/c450lqvaaz3ngx9pfiiiw55rqq6ssfda-guile-2.0.7.tar.xz
+gsave
+0 0 1 nodecolor
+newpath 531.9713 618 moveto
+438.9713 618 lineto
+438.9713 600 lineto
+531.9713 600 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 531.9713 618 moveto
+438.9713 618 lineto
+438.9713 600 lineto
+531.9713 600 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+446.9713 606.8 moveto 77 (guile-2.0.7.tar.xz) alignedtext
+grestore
+% /nix/store/c450lqvaaz3ngx9pfiiiw55rqq6ssfda-guile-2.0.7.tar.xz->/nix/store/bplka3yqdg8prqq3zdxza6wxlkjdhr2g-build-bootstrap-guile.sh
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 482.89 599.6367 moveto
+479.0351 587.1467 471.6675 563.276 466.4313 546.3107 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 469.8159 545.4084 moveto
+463.5223 536.8854 lineto
+463.1272 547.4729 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 469.8159 545.4084 moveto
+463.5223 536.8854 lineto
+463.1272 547.4729 lineto
+closepath stroke
+grestore
+% /nix/store/8jiqjlb6zxjys16ca7s6jvxcc620c71k-module-import-compiled-guile-builder
+gsave
+0 0 1 nodecolor
+newpath 301.9713 369 moveto
+114.9713 369 lineto
+114.9713 351 lineto
+301.9713 351 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 301.9713 369 moveto
+114.9713 369 lineto
+114.9713 351 lineto
+301.9713 351 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+122.9713 357.8 moveto 171 (module-import-compiled-guile-builder) alignedtext
+grestore
+% /nix/store/8jiqjlb6zxjys16ca7s6jvxcc620c71k-module-import-compiled-guile-builder->/nix/store/y4n7rzysx6qz3p0n91dw9qz5w93l6iqv-module-import-compiled.drv
+gsave
+1 setlinewidth
+0.090196 0.38824 0.87059 edgecolor
+newpath 205.2705 350.6367 moveto
+200.444 338.0254 191.1769 313.8114 184.6734 296.8185 curveto
+stroke
+0.090196 0.38824 0.87059 edgecolor
+newpath 188.0852 295.9411 moveto
+181.2421 287.8527 lineto
+181.5477 298.4432 lineto
+closepath fill
+1 setlinewidth
+solid
+0.090196 0.38824 0.87059 edgecolor
+newpath 188.0852 295.9411 moveto
+181.2421 287.8527 lineto
+181.5477 298.4432 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+end
+restore
+%%EOF

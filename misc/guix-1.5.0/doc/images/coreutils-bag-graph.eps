@@ -1,0 +1,4430 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: graphviz version 7.0.1 (20221109.1506)
+%%Title: Guix bag-emerged
+%%Pages: 1
+%%BoundingBox: 36 36 1355 1223
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 1355 1223
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 1319 1187 boxprim clip newpath
+1 1 set_scale 0 rotate 40 40 translate
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 661 1116 moveto
+582 1116 lineto
+582 1098 lineto
+661 1098 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+590 1104.8 moveto 63 (coreutils-8.25) alignedtext
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 652 288 moveto
+585 288 lineto
+585 270 lineto
+652 270 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+593 276.8 moveto 51 (perl-5.24.0) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 623.263 1097.7969 moveto
+628.9421 1070.8992 646.7237 982.8661 652.5 909 curveto
+671.2789 668.8574 632.575 376.3217 621.4014 299.3164 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 624.8996 299.0464 moveto
+619.9762 289.665 lineto
+617.9747 300.0691 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 624.8996 299.0464 moveto
+619.9762 289.665 lineto
+617.9747 300.0691 lineto
+closepath stroke
+grestore
+% /gnu/store/7ijl8lybdx95kndajavdrpz05jdiwy9g-tar-1.29.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 53 81 moveto
+0 81 lineto
+0 63 lineto
+53 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+8 69.8 moveto 37 (tar-1.29) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/7ijl8lybdx95kndajavdrpz05jdiwy9g-tar-1.29.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 587.8602 1097.5164 moveto
+471.9872 1066.0755 96.5 944.8392 96.5 694 curveto
+96.5 694 96.5 694 96.5 485 curveto
+96.5 331.5635 48.7287 150.4678 32.1142 92.1238 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 35.5516 91.4112 moveto
+29.4117 82.7769 lineto
+28.827 93.3556 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 35.5516 91.4112 moveto
+29.4117 82.7769 lineto
+28.827 93.3556 lineto
+closepath stroke
+grestore
+% /gnu/store/0ykf3p023pzfcg2bw8ahjc7cvmc12zjq-gzip-1.8.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 459 81 moveto
+406 81 lineto
+406 63 lineto
+459 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+414 69.8 moveto 37 (gzip-1.8) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/0ykf3p023pzfcg2bw8ahjc7cvmc12zjq-gzip-1.8.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 615.8683 1097.7304 moveto
+598.104 1071.3254 542.5337 986.2377 510.5 909 curveto
+473.8974 820.7461 467.0127 796.4345 452.5 702 curveto
+415.9467 464.1462 427.4879 169.9608 431.4231 92.4503 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 434.9036 92.9093 moveto
+431.9387 82.7378 lineto
+427.9134 92.5381 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 434.9036 92.9093 moveto
+431.9387 82.7378 lineto
+427.9134 92.5381 lineto
+closepath stroke
+grestore
+% /gnu/store/xx3hiqhqn0d94zz7b46hgggwsz3wjiiw-bzip2-1.0.6.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 254.5 81 moveto
+186.5 81 lineto
+186.5 63 lineto
+254.5 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+194.5 69.8 moveto 52 (bzip2-1.0.6) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/xx3hiqhqn0d94zz7b46hgggwsz3wjiiw-bzip2-1.0.6.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 615.5958 1097.6283 moveto
+596.8999 1070.9203 537.8578 985.0317 497.5 909 curveto
+403.2641 731.4652 374.3629 687.1827 315.5 495 curveto
+285.732 397.8099 297.0683 369.1097 274.5 270 curveto
+259.4932 204.0967 236.9 127.1291 226.3348 92.1017 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 229.7167 91.1928 moveto
+223.4626 82.6408 lineto
+223.0186 93.2264 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 229.7167 91.1928 moveto
+223.4626 82.6408 lineto
+223.0186 93.2264 lineto
+closepath stroke
+grestore
+% /gnu/store/kz8rzasivw4aflsv4rll3m539xybf226-xz-5.2.2.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 513 81 moveto
+460 81 lineto
+460 63 lineto
+513 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+468 69.8 moveto 37 (xz-5.2.2) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/kz8rzasivw4aflsv4rll3m539xybf226-xz-5.2.2.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 616.0935 1097.7098 moveto
+599.0449 1071.2436 545.7546 985.9942 515.5 909 curveto
+411.3169 643.8666 445.5753 554.1704 465.5 270 curveto
+470.0852 204.6055 479.483 127.3891 483.9859 92.2013 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 487.3979 93.1064 moveto
+485.2111 82.7397 lineto
+480.4558 92.2074 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 487.3979 93.1064 moveto
+485.2111 82.7397 lineto
+480.4558 92.2074 lineto
+closepath stroke
+grestore
+% /gnu/store/3pwrlsd23k2h104akxfj3cxhqcp973g9-file-5.28.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 710.5 81 moveto
+656.5 81 lineto
+656.5 63 lineto
+710.5 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+664.5 69.8 moveto 38 (file-5.28) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/3pwrlsd23k2h104akxfj3cxhqcp973g9-file-5.28.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 625.1936 1097.6966 moveto
+643.4572 1056.1738 724.4349 866.5274 754.5 702 curveto
+789.0161 513.1149 786.7813 458.3588 749.5 270 curveto
+736.1562 202.5823 706.1147 126.3915 691.6228 91.8329 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 694.9247 90.6536 moveto
+687.7904 82.8208 lineto
+688.4829 93.393 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 694.9247 90.6536 moveto
+687.7904 82.8208 lineto
+688.4829 93.393 lineto
+closepath stroke
+grestore
+% /gnu/store/f1ww5vh5abnvr8b24llipm5dl89s5lq2-diffutils-3.5.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 323.5 81 moveto
+255.5 81 lineto
+255.5 63 lineto
+323.5 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+263.5 69.8 moveto 52 (diffutils-3.5) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/f1ww5vh5abnvr8b24llipm5dl89s5lq2-diffutils-3.5.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 615.4907 1097.7554 moveto
+596.5206 1071.4244 537.0646 986.5324 501.5 909 curveto
+360.6324 601.9023 303.3882 186.6743 291.7935 92.5214 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 295.2829 92.2233 moveto
+290.6136 82.7129 lineto
+288.333 93.0594 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 295.2829 92.2233 moveto
+290.6136 82.7129 lineto
+288.333 93.0594 lineto
+closepath stroke
+grestore
+% /gnu/store/0cbgdhhyh7hsgwq1x54n9vnq99rfjch9-patch-2.7.5.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 124.5 81 moveto
+54.5 81 lineto
+54.5 63 lineto
+124.5 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+62.5 69.8 moveto 54 (patch-2.7.5) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/0cbgdhhyh7hsgwq1x54n9vnq99rfjch9-patch-2.7.5.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 604.4786 1097.5776 moveto
+532.7122 1060.7401 258.5 906.1097 258.5 694 curveto
+258.5 694 258.5 694 258.5 485 curveto
+258.5 320.8549 142.2551 145.591 102.5833 90.5567 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 105.5425 88.6739 moveto
+96.8125 82.6708 lineto
+99.8935 92.8078 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 105.5425 88.6739 moveto
+96.8125 82.6708 lineto
+99.8935 92.8078 lineto
+closepath stroke
+grestore
+% /gnu/store/8xjnm44dfwwxp90hxq6zhb6qvia7rb3l-sed-4.2.2.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 185 81 moveto
+126 81 lineto
+126 63 lineto
+185 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+134 69.8 moveto 43 (sed-4.2.2) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/8xjnm44dfwwxp90hxq6zhb6qvia7rb3l-sed-4.2.2.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 615.4096 1097.5746 moveto
+596.0951 1070.7068 534.8743 984.3962 490.5 909 curveto
+385.8513 731.1918 336.9991 693.4312 280.5 495 curveto
+252.9965 398.4046 288.1616 366.2581 259.5 270 curveto
+238.3869 199.0929 190.7552 124.1546 168.0264 90.8034 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 171.0154 88.9721 moveto
+162.4481 82.7389 lineto
+165.2584 92.9543 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 171.0154 88.9721 moveto
+162.4481 82.7389 lineto
+165.2584 92.9543 lineto
+closepath stroke
+grestore
+% /gnu/store/54wjl6dp6rp47r67f4nyfqyv8nh456yc-findutils-4.6.0.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 404.5 81 moveto
+324.5 81 lineto
+324.5 63 lineto
+404.5 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+332.5 69.8 moveto 64 (findutils-4.6.0) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/54wjl6dp6rp47r67f4nyfqyv8nh456yc-findutils-4.6.0.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 615.4693 1097.8107 moveto
+596.4638 1071.6439 537.1476 987.1858 504.5 909 curveto
+376.5507 602.5816 365.3894 186.8353 364.5415 92.55 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 368.0426 92.7166 moveto
+364.4873 82.7361 lineto
+361.0427 92.7553 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 368.0426 92.7166 moveto
+364.4873 82.7361 lineto
+361.0427 92.7553 lineto
+closepath stroke
+grestore
+% /gnu/store/k951w49yw74ikg19l4mmlwfrq9w7a7zd-gawk-4.1.4.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 1310.5 81 moveto
+1242.5 81 lineto
+1242.5 63 lineto
+1310.5 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+1250.5 69.8 moveto 52 (gawk-4.1.4) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/k951w49yw74ikg19l4mmlwfrq9w7a7zd-gawk-4.1.4.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 646.8868 1097.6137 moveto
+743.3208 1063.9957 1081.5 929.3263 1081.5 694 curveto
+1081.5 694 1081.5 694 1081.5 485 curveto
+1081.5 316.6344 1216.187 143.5516 1261.6883 89.883 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 1264.2353 92.289 moveto
+1268.1065 82.4267 lineto
+1258.93 87.7223 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 1264.2353 92.289 moveto
+1268.1065 82.4267 lineto
+1258.93 87.7223 lineto
+closepath stroke
+grestore
+% /gnu/store/n48xdjkvhlhj5mgdzy59n0dpb9vn0v78-grep-2.25.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 836.5 81 moveto
+774.5 81 lineto
+774.5 63 lineto
+836.5 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+782.5 69.8 moveto 46 (grep-2.25) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/n48xdjkvhlhj5mgdzy59n0dpb9vn0v78-grep-2.25.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 625.6487 1097.51 moveto
+638.775 1070.4504 680.1458 983.633 707.5 909 curveto
+740.5496 818.8278 752.8648 796.5864 769.5 702 curveto
+811.2305 464.7235 807.8019 170.122 806.0311 92.484 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 809.5368 92.6634 moveto
+805.7874 82.7542 lineto
+802.539 92.8388 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 809.5368 92.6634 moveto
+805.7874 82.7542 lineto
+802.539 92.8388 lineto
+closepath stroke
+grestore
+% /gnu/store/i52csyja3036ns0zj6z85lkgz3wfyym7-coreutils-8.25.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 655 81 moveto
+576 81 lineto
+576 63 lineto
+655 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+584 69.8 moveto 63 (coreutils-8.25) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/i52csyja3036ns0zj6z85lkgz3wfyym7-coreutils-8.25.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 616.0304 1097.8135 moveto
+598.8697 1071.6553 545.9049 987.2195 523.5 909 curveto
+484.3829 772.4355 464.1175 405.8951 505.5 270 curveto
+527.3292 198.3154 577.9572 123.7615 602.1548 90.6544 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 604.9592 92.7485 moveto
+608.1102 82.633 lineto
+599.3389 88.5757 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 604.9592 92.7485 moveto
+608.1102 82.633 lineto
+599.3389 88.5757 lineto
+closepath stroke
+grestore
+% /gnu/store/nv4mnbz3mpd4gv80djk7762wyvxpccqk-make-4.2.1.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 1024.5 81 moveto
+956.5 81 lineto
+956.5 63 lineto
+1024.5 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+964.5 69.8 moveto 52 (make-4.2.1) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/nv4mnbz3mpd4gv80djk7762wyvxpccqk-make-4.2.1.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 626.2066 1097.5912 moveto
+641.0737 1070.7727 687.7445 984.5925 716.5 909 curveto
+750.5129 819.5868 753.3426 795.0626 775.5 702 curveto
+820.7837 511.8049 784.1544 450.8246 858.5 270 curveto
+888.5773 196.8454 947.856 122.5373 975.565 90.0101 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 978.2069 92.3058 moveto
+982.0942 82.4499 lineto
+972.9091 87.7305 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 978.2069 92.3058 moveto
+982.0942 82.4499 lineto
+972.9091 87.7305 lineto
+closepath stroke
+grestore
+% /gnu/store/2c60vlcvpj5dvmgklajkp7cpynhcqixr-bash-4.4.0.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 1091 81 moveto
+1026 81 lineto
+1026 63 lineto
+1091 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+1034 69.8 moveto 49 (bash-4.4.0) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/2c60vlcvpj5dvmgklajkp7cpynhcqixr-bash-4.4.0.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 626.5353 1097.6475 moveto
+642.4255 1070.9962 692.1884 985.2579 721.5 909 curveto
+755.6946 820.0383 754.4065 794.467 777.5 702 curveto
+825.2287 510.8928 784.5702 444.2094 876.5 270 curveto
+918.5701 190.2761 1001.0929 118.4709 1038.8267 88.2 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 1040.542 91.3056 moveto
+1046.2159 82.3581 lineto
+1036.2007 85.8145 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 1040.542 91.3056 moveto
+1046.2159 82.3581 lineto
+1036.2007 85.8145 lineto
+closepath stroke
+grestore
+% /gnu/store/zhc5c4s0xvzizpgpq2za6x84vxv57iy6-ld-wrapper-0.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 1166.5 81 moveto
+1092.5 81 lineto
+1092.5 63 lineto
+1166.5 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+1100.5 69.8 moveto 58 (ld-wrapper-0) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/zhc5c4s0xvzizpgpq2za6x84vxv57iy6-ld-wrapper-0.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 631.8526 1097.6741 moveto
+679.7461 1058.1487 877.5 883.4753 877.5 694 curveto
+877.5 694 877.5 694 877.5 485 curveto
+877.5 389.4186 840.033 355.6292 882.5 270 curveto
+929.239 175.7569 1044.5768 112.1548 1099.4969 86.1774 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 1100.9637 89.3553 moveto
+1108.5715 81.9816 lineto
+1098.0259 83.0016 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 1100.9637 89.3553 moveto
+1108.5715 81.9816 lineto
+1098.0259 83.0016 lineto
+closepath stroke
+grestore
+% /gnu/store/9k1js0kalh4s6q4hf0rgg2n0zdyrwi69-binutils-2.27.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 1241.5 81 moveto
+1167.5 81 lineto
+1167.5 63 lineto
+1241.5 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+1175.5 69.8 moveto 58 (binutils-2.27) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/9k1js0kalh4s6q4hf0rgg2n0zdyrwi69-binutils-2.27.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 632.1268 1097.8074 moveto
+663.7396 1072.8997 758.1715 994.5335 809.5 909 curveto
+861.2805 822.7133 880.5 794.6311 880.5 694 curveto
+880.5 694 880.5 694 880.5 485 curveto
+880.5 290.7598 1105.7672 133.9946 1180.6334 87.2581 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 1182.1849 90.4129 moveto
+1188.8707 82.1939 lineto
+1178.5188 84.4497 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 1182.1849 90.4129 moveto
+1188.8707 82.1939 lineto
+1178.5188 84.4497 lineto
+closepath stroke
+grestore
+% /gnu/store/hv3dl3my12mq0gkwvckmnqccnckn39l0-gcc-4.9.4.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 574.5 81 moveto
+514.5 81 lineto
+514.5 63 lineto
+574.5 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+522.5 69.8 moveto 44 (gcc-4.9.4) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/hv3dl3my12mq0gkwvckmnqccnckn39l0-gcc-4.9.4.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 615.9415 1097.8087 moveto
+598.4791 1071.636 544.4062 987.1624 519.5 909 curveto
+433.1235 637.9274 432.9016 550.3202 481.5 270 curveto
+493.1869 202.5887 522.376 126.3948 536.5404 91.8342 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 539.6784 93.4032 moveto
+540.2891 82.8259 lineto
+533.2156 90.7137 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 539.6784 93.4032 moveto
+540.2891 82.8259 lineto
+533.2156 90.7137 lineto
+closepath stroke
+grestore
+% /gnu/store/qbfynm50snyn31w2c3paiw2n6wvzksg8-glibc-2.24.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 773.5 81 moveto
+711.5 81 lineto
+711.5 63 lineto
+773.5 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+719.5 69.8 moveto 46 (glibc-2.24) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/qbfynm50snyn31w2c3paiw2n6wvzksg8-glibc-2.24.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 625.532 1097.5226 moveto
+638.274 1070.5004 678.3185 983.782 703.5 909 curveto
+765.713 724.2448 788.3992 671.7453 779.5 477 curveto
+772.729 328.827 752.059 151.0387 744.9399 92.6345 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 748.4165 92.2295 moveto
+743.7208 82.7321 lineto
+741.469 93.0848 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 748.4165 92.2295 moveto
+743.7208 82.7321 lineto
+741.469 93.0848 lineto
+closepath stroke
+grestore
+% /gnu/store/ir0lq2x7h64g2z5mlqvnlysjk2bc9xka-glibc-utf8-locales-2.24.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 955 81 moveto
+838 81 lineto
+838 63 lineto
+955 63 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+846 69.8 moveto 101 (glibc-utf8-locales-2.24) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/ir0lq2x7h64g2z5mlqvnlysjk2bc9xka-glibc-utf8-locales-2.24.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 625.9777 1097.561 moveto
+640.1278 1070.6532 684.5927 984.2366 712.5 909 curveto
+813.2298 637.4381 777.95 552.8071 840.5 270 curveto
+855.135 203.8309 879.0185 126.9933 890.2674 92.0496 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 893.5736 93.2001 moveto
+893.3322 82.6081 lineto
+886.9156 91.0388 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 893.5736 93.2001 moveto
+893.3322 82.6081 lineto
+886.9156 91.0388 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 586.5 909 moveto
+524.5 909 lineto
+524.5 891 lineto
+586.5 891 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+532.5 897.8 moveto 46 (acl-2.2.52) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 618.831 1097.7099 moveto
+609.1293 1067.5757 575.5754 963.3554 561.6411 920.0745 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 564.99 919.0556 moveto
+558.5938 910.6094 lineto
+558.3268 921.2009 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 564.99 919.0556 moveto
+558.5938 910.6094 lineto
+558.3268 921.2009 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 725 495 moveto
+660 495 lineto
+660 477 lineto
+725 477 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+668 483.8 moveto 49 (gmp-6.1.1) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 623.3634 1097.7926 moveto
+629.4037 1070.8817 648.6227 982.8128 658.5 909 curveto
+679.1188 754.9153 688.8755 567.3853 691.6443 506.85 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 695.1401 507.0212 moveto
+692.0871 496.8758 lineto
+688.1469 506.7107 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 695.1401 507.0212 moveto
+692.0871 496.8758 lineto
+688.1469 506.7107 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 655.5 909 moveto
+587.5 909 lineto
+587.5 891 lineto
+655.5 891 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+595.5 897.8 moveto 52 (libcap-2.24) alignedtext
+grestore
+% /gnu/store/yv2r96w2dvbb0sjrf9f2imybpnyd616b-coreutils-8.25.drv->/gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 621.5 1097.7099 moveto
+621.5 1067.705 621.5 964.2486 621.5 920.6351 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 625.0001 920.6822 moveto
+621.5 910.6822 lineto
+618.0001 920.6823 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 625.0001 920.6822 moveto
+621.5 910.6822 lineto
+618.0001 920.6823 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/7ijl8lybdx95kndajavdrpz05jdiwy9g-tar-1.29.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 594.1892 269.5816 moveto
+501.6228 237.5273 170.9194 123.0101 61.7508 85.2068 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 63.0384 81.9488 moveto
+52.4436 81.9839 lineto
+60.7478 88.5634 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 63.0384 81.9488 moveto
+52.4436 81.9839 lineto
+60.7478 88.5634 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/0ykf3p023pzfcg2bw8ahjc7cvmc12zjq-gzip-1.8.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 610.9782 269.7099 moveto
+583.1089 238.9937 485.3984 131.3021 447.5941 89.636 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 450.2403 87.3437 moveto
+440.9286 82.2896 lineto
+445.0561 92.0474 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 450.2403 87.3437 moveto
+440.9286 82.2896 lineto
+445.0561 92.0474 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/xx3hiqhqn0d94zz7b46hgggwsz3wjiiw-bzip2-1.0.6.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 602.405 269.7099 moveto
+541.2772 238.2245 323.1252 125.8597 246.966 86.632 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 248.6335 83.5539 moveto
+238.1408 82.0864 lineto
+245.4282 89.777 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 248.6335 83.5539 moveto
+238.1408 82.0864 lineto
+245.4282 89.777 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/kz8rzasivw4aflsv4rll3m539xybf226-xz-5.2.2.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 613.162 269.7099 moveto
+593.5503 239.2524 525.2052 133.1103 497.8987 90.7025 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 500.9358 88.9542 moveto
+492.5793 82.4413 lineto
+495.0504 92.7439 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 500.9358 88.9542 moveto
+492.5793 82.4413 lineto
+495.0504 92.7439 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/3pwrlsd23k2h104akxfj3cxhqcp973g9-file-5.28.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 621.1286 269.7099 moveto
+630.6833 239.5757 663.7288 135.3554 677.452 92.0745 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 680.7663 93.2016 moveto
+680.4525 82.6115 lineto
+674.0936 91.0859 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 680.7663 93.2016 moveto
+680.4525 82.6115 lineto
+674.0936 91.0859 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/f1ww5vh5abnvr8b24llipm5dl89s5lq2-diffutils-3.5.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 605.1953 269.7099 moveto
+554.9757 238.418 376.5457 127.2382 312.552 87.3637 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 314.593 84.5116 moveto
+304.2548 82.1937 lineto
+310.8911 90.4527 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 314.593 84.5116 moveto
+304.2548 82.1937 lineto
+310.8911 90.4527 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/0cbgdhhyh7hsgwq1x54n9vnq99rfjch9-patch-2.7.5.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 596.7763 269.5816 moveto
+514.3116 237.6246 220.3413 123.7041 121.8927 85.5529 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 123.405 82.3854 moveto
+112.816 82.0355 lineto
+120.8756 88.9125 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 123.405 82.3854 moveto
+112.816 82.0355 lineto
+120.8756 88.9125 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/8xjnm44dfwwxp90hxq6zhb6qvia7rb3l-sed-4.2.2.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 599.4867 269.5816 moveto
+527.6766 237.7866 272.6218 124.8574 185.1752 86.1391 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 186.6166 82.9496 moveto
+176.0557 82.1014 lineto
+183.7825 89.3503 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 186.6166 82.9496 moveto
+176.0557 82.1014 lineto
+183.7825 89.3503 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/54wjl6dp6rp47r67f4nyfqyv8nh456yc-findutils-4.6.0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 608.2283 269.7099 moveto
+569.8567 238.7406 434.5322 129.5221 383.8529 88.6195 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 386.0572 85.9008 moveto
+376.0773 82.3439 lineto
+381.6608 91.348 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 386.0572 85.9008 moveto
+376.0773 82.3439 lineto
+381.6608 91.348 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/k951w49yw74ikg19l4mmlwfrq9w7a7zd-gawk-4.1.4.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 645.5211 269.5816 moveto
+748.7195 237.4301 1118.2122 122.3146 1238.4166 84.8649 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 1239.3024 88.2549 moveto
+1247.8087 81.9388 lineto
+1237.2202 81.5718 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1239.3024 88.2549 moveto
+1247.8087 81.9388 lineto
+1237.2202 81.5718 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/n48xdjkvhlhj5mgdzy59n0dpb9vn0v78-grep-2.25.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 626.0622 269.7099 moveto
+654.0813 238.9937 752.3172 131.3021 790.3247 89.636 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 792.875 92.0337 moveto
+797.0285 82.2869 lineto
+787.7034 87.3161 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 792.875 92.0337 moveto
+797.0285 82.2869 lineto
+787.7034 87.3161 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/i52csyja3036ns0zj6z85lkgz3wfyym7-coreutils-8.25.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 618.3787 269.7099 moveto
+617.9396 239.705 616.4256 136.2486 615.7873 92.6351 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 619.2877 92.6298 moveto
+615.6417 82.6821 lineto
+612.2885 92.7323 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 619.2877 92.6298 moveto
+615.6417 82.6821 lineto
+612.2885 92.7323 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/nv4mnbz3mpd4gv80djk7762wyvxpccqk-make-4.2.1.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 633.5436 269.7099 moveto
+690.561 238.289 893.7439 126.3199 965.3237 86.8741 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 966.8747 90.0156 moveto
+973.9436 82.1238 lineto
+963.4962 83.8849 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 966.8747 90.0156 moveto
+973.9436 82.1238 lineto
+963.4962 83.8849 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/2c60vlcvpj5dvmgklajkp7cpynhcqixr-bash-4.4.0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 636.5688 269.5816 moveto
+704.8195 237.783 947.2519 124.8315 1030.3275 86.1258 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 1031.5651 89.4105 moveto
+1039.1514 82.0147 lineto
+1028.6088 83.0654 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1031.5651 89.4105 moveto
+1039.1514 82.0147 lineto
+1028.6088 83.0654 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/zhc5c4s0xvzizpgpq2za6x84vxv57iy6-ld-wrapper-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 639.4845 269.5816 moveto
+719.0624 237.657 1002.535 123.9351 1097.9196 85.6692 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 1098.9581 89.0238 moveto
+1106.9359 82.0521 lineto
+1096.3518 82.5271 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1098.9581 89.0238 moveto
+1106.9359 82.0521 lineto
+1096.3518 82.5271 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/9k1js0kalh4s6q4hf0rgg2n0zdyrwi69-binutils-2.27.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 642.5644 269.5816 moveto
+734.1926 237.5273 1061.5443 123.0101 1169.6064 85.2068 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 1170.5231 88.5942 moveto
+1178.8064 81.9884 lineto
+1168.2116 81.9868 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1170.5231 88.5942 moveto
+1178.8064 81.9884 lineto
+1168.2116 81.9868 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/hv3dl3my12mq0gkwvckmnqccnckn39l0-gcc-4.9.4.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 615.5075 269.7099 moveto
+604.6064 239.511 566.8472 134.9077 551.2852 91.7967 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 554.6501 90.8099 moveto
+547.9626 82.5923 lineto
+548.0659 93.1867 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 554.6501 90.8099 moveto
+547.9626 82.5923 lineto
+548.0659 93.1867 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/qbfynm50snyn31w2c3paiw2n6wvzksg8-glibc-2.24.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 623.5145 269.7099 moveto
+641.8985 239.317 705.8682 133.5607 731.6282 90.9735 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 734.5947 92.8317 moveto
+736.7756 82.4638 lineto
+728.6052 89.2087 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 734.5947 92.8317 moveto
+736.7756 82.4638 lineto
+728.6052 89.2087 lineto
+closepath stroke
+grestore
+% /gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv->/gnu/store/ir0lq2x7h64g2z5mlqvnlysjk2bc9xka-glibc-utf8-locales-2.24.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 629.7422 269.7099 moveto
+671.9145 238.6116 821.0867 128.6105 876.0069 88.1118 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 877.9286 91.0435 moveto
+883.8997 82.2916 lineto
+873.7741 85.4096 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 877.9286 91.0435 moveto
+883.8997 82.2916 lineto
+873.7741 85.4096 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 560.0613 890.6987 moveto
+574.3278 864.1994 618.0123 778.8625 632.5 702 curveto
+647.3275 623.3347 626.6648 371.7373 620.2763 299.5393 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 623.7764 299.3829 moveto
+619.3966 289.7357 lineto
+616.8045 300.0085 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 623.7764 299.3829 moveto
+619.3966 289.7357 lineto
+616.8045 300.0085 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/7ijl8lybdx95kndajavdrpz05jdiwy9g-tar-1.29.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 539.0128 890.6537 moveto
+493.8084 867.0158 366.4266 795.2401 293.5 702 curveto
+251.797 648.6807 72.2243 190.4613 33.7676 91.7059 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 37.0652 90.5287 moveto
+30.1781 82.4777 lineto
+30.5413 93.0663 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 37.0652 90.5287 moveto
+30.1781 82.4777 lineto
+30.5413 93.0663 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/0ykf3p023pzfcg2bw8ahjc7cvmc12zjq-gzip-1.8.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 551.7677 890.5478 moveto
+540.019 863.6007 503.4541 777.0803 484.5 702 curveto
+461.7299 611.8038 462.7119 587.5687 453.5 495 curveto
+438.1364 340.6148 433.8249 153.2808 432.7903 92.8228 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 436.2906 92.8083 moveto
+432.6324 82.8651 lineto
+429.2915 92.9193 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 436.2906 92.8083 moveto
+432.6324 82.8651 lineto
+429.2915 92.9193 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/xx3hiqhqn0d94zz7b46hgggwsz3wjiiw-bzip2-1.0.6.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 539.7192 890.5526 moveto
+497.8977 867.1719 384.3567 797.0038 339.5 702 curveto
+257.4178 528.1549 365.8469 456.0704 317.5 270 curveto
+299.0737 199.0835 253.6397 123.6095 232.138 90.3948 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 235.3125 88.8522 moveto
+226.8939 82.4196 lineto
+229.4637 92.6981 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 235.3125 88.8522 moveto
+226.8939 82.4196 lineto
+229.4637 92.6981 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/kz8rzasivw4aflsv4rll3m539xybf226-xz-5.2.2.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 551.6259 890.5931 moveto
+539.4749 863.7804 502.0025 777.6154 486.5 702 curveto
+447.8932 513.6901 455.2978 461.9558 465.5 270 curveto
+468.9793 204.5374 478.918 127.3543 483.7694 92.188 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 487.1728 93.1205 moveto
+485.095 82.7314 lineto
+480.2406 92.1486 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 487.1728 93.1205 moveto
+485.095 82.7314 lineto
+480.2406 92.1486 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/3pwrlsd23k2h104akxfj3cxhqcp973g9-file-5.28.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 560.5551 890.5948 moveto
+585.0545 849.3344 691.7946 663.4217 729.5 495 curveto
+751.3573 397.3684 749.6092 369.1858 736.5 270 curveto
+727.6578 203.099 702.6184 126.6558 690.3903 91.9343 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 693.8226 91.1372 moveto
+687.1571 82.9018 lineto
+687.2321 93.4964 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 693.8226 91.1372 moveto
+687.1571 82.9018 lineto
+687.2321 93.4964 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/f1ww5vh5abnvr8b24llipm5dl89s5lq2-diffutils-3.5.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 547.4222 890.8578 moveto
+522.7797 865.4784 448.1964 784.5529 414.5 702 curveto
+341.0738 522.1131 389.9193 459.6083 347.5 270 curveto
+332.6644 203.6871 307.7704 126.9198 296.0183 92.0214 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 299.3443 90.9308 moveto
+292.8131 82.5885 lineto
+292.7165 93.1829 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 299.3443 90.9308 moveto
+292.8131 82.5885 lineto
+292.7165 93.1829 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/0cbgdhhyh7hsgwq1x54n9vnq99rfjch9-patch-2.7.5.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 535.8935 890.5643 moveto
+486.5285 868.1644 357.0942 801.9856 301.5 702 curveto
+207.6919 533.2871 332.2911 447.5379 256.5 270 curveto
+222.5645 190.5072 145.0415 119.0269 108.8184 88.5676 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 111.2616 86.0462 moveto
+101.3241 82.3725 lineto
+106.8016 91.4415 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 111.2616 86.0462 moveto
+101.3241 82.3725 lineto
+106.8016 91.4415 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/8xjnm44dfwwxp90hxq6zhb6qvia7rb3l-sed-4.2.2.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 536.7152 890.6193 moveto
+488.825 868.1219 362.2383 801.304 309.5 702 curveto
+219.1497 531.8742 333.6521 453.3221 274.5 270 curveto
+250.9265 196.9417 195.7116 122.5854 169.6256 90.0281 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 172.5152 88.0338 moveto
+163.4879 82.4877 lineto
+167.0863 92.4527 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 172.5152 88.0338 moveto
+163.4879 82.4877 lineto
+167.0863 92.4527 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/54wjl6dp6rp47r67f4nyfqyv8nh456yc-findutils-4.6.0.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 548.2502 890.7472 moveto
+526.198 865.0492 459.9452 783.3043 435.5 702 curveto
+380.1794 518.0049 449.0925 459.839 419.5 270 curveto
+409.0792 203.1496 383.7031 126.6817 371.4061 91.9442 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 374.8342 91.1341 moveto
+368.1596 82.9061 lineto
+368.2463 93.5006 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 374.8342 91.1341 moveto
+368.1596 82.9061 lineto
+368.2463 93.5006 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/k951w49yw74ikg19l4mmlwfrq9w7a7zd-gawk-4.1.4.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 561.7686 890.507 moveto
+603.3948 834.2873 845.0902 510.6036 1068.5 270 curveto
+1134.9535 198.4322 1221.8368 120.7519 1258.7126 88.4417 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 1260.5952 91.4443 moveto
+1265.8273 82.2314 lineto
+1255.992 86.1707 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 1260.5952 91.4443 moveto
+1265.8273 82.2314 lineto
+1255.992 86.1707 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/n48xdjkvhlhj5mgdzy59n0dpb9vn0v78-grep-2.25.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 561.1572 890.6949 moveto
+579.0254 864.1844 635.1034 778.8179 669.5 702 curveto
+709.0743 613.6187 714.6152 589.0939 737.5 495 curveto
+774.67 342.1706 796.9032 153.1406 803.4543 92.6104 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 806.9064 93.2457 moveto
+804.4828 82.9318 lineto
+799.9456 92.506 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 806.9064 93.2457 moveto
+804.4828 82.9318 lineto
+799.9456 92.506 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/i52csyja3036ns0zj6z85lkgz3wfyym7-coreutils-8.25.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 552.73 890.628 moveto
+534.8169 835.1849 438.2376 515.5994 507.5 270 curveto
+527.752 198.188 578.0431 123.6971 602.1712 90.6299 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 604.9656 92.7375 moveto
+608.1127 82.6209 lineto
+599.3437 88.5669 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 604.9656 92.7375 moveto
+608.1127 82.6209 lineto
+599.3437 88.5669 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/nv4mnbz3mpd4gv80djk7762wyvxpccqk-make-4.2.1.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 561.7196 890.7861 moveto
+581.3515 864.5462 642.8674 779.895 679.5 702 curveto
+720.7109 614.3698 718.9462 587.5314 747.5 495 curveto
+778.1923 395.5387 761.8675 360.9446 812.5 270 curveto
+855.9295 191.9933 935.5377 119.254 971.7171 88.4666 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 973.752 91.3282 moveto
+979.1599 82.2174 lineto
+969.2508 85.9672 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 973.752 91.3282 moveto
+979.1599 82.2174 lineto
+969.2508 85.9672 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/2c60vlcvpj5dvmgklajkp7cpynhcqixr-bash-4.4.0.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 561.9782 890.8238 moveto
+582.4252 864.696 646.4834 780.3409 684.5 702 curveto
+695.5524 679.2242 815.371 291.0063 829.5 270 curveto
+886.1163 185.8255 987.9164 116.3825 1034.2953 87.4663 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 1036.0975 90.4668 moveto
+1042.7871 82.251 lineto
+1032.4342 84.5019 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 1036.0975 90.4668 moveto
+1042.7871 82.251 lineto
+1032.4342 84.5019 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/zhc5c4s0xvzizpgpq2za6x84vxv57iy6-ld-wrapper-0.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 562.1749 890.8316 moveto
+583.2529 864.727 649.3672 780.433 689.5 702 curveto
+736.0277 611.0692 784.2271 350.965 846.5 270 curveto
+917.1312 178.1678 1042.703 112.5972 1099.7843 86.0631 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 1100.9185 89.3931 moveto
+1108.5578 82.052 lineto
+1098.0079 83.0268 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 1100.9185 89.3931 moveto
+1108.5578 82.052 lineto
+1098.0079 83.0268 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/9k1js0kalh4s6q4hf0rgg2n0zdyrwi69-binutils-2.27.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 562.3583 890.831 moveto
+584.0277 864.7248 652.0936 780.4266 694.5 702 curveto
+743.6081 611.1793 798.1497 348.2556 865.5 270 curveto
+950.8858 170.7886 1099.2699 109.4697 1167.8326 85.0952 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 1168.7985 88.4652 moveto
+1177.0874 81.8664 lineto
+1166.4925 81.8559 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 1168.7985 88.4652 moveto
+1177.0874 81.8664 lineto
+1166.4925 81.8559 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/hv3dl3my12mq0gkwvckmnqccnckn39l0-gcc-4.9.4.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 551.5734 890.6106 moveto
+539.2853 863.85 501.6061 777.8225 488.5 702 curveto
+472.1476 607.3964 469.1396 364.9264 483.5 270 curveto
+493.7039 202.5492 522.5097 126.3746 536.5749 91.8264 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 539.7108 93.4016 moveto
+540.3017 82.8233 lineto
+533.243 90.7243 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 539.7108 93.4016 moveto
+540.3017 82.8233 lineto
+533.243 90.7243 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/qbfynm50snyn31w2c3paiw2n6wvzksg8-glibc-2.24.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 560.8748 890.6519 moveto
+577.8577 864.0139 631.2075 778.3103 664.5 702 curveto
+703.223 613.2424 715.5827 590.3477 732.5 495 curveto
+748.5815 404.363 737.3022 380.0263 739.5 288 curveto
+741.2221 215.892 742.0537 130.1548 742.3579 92.4394 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 745.8556 92.7428 moveto
+742.4325 82.7162 lineto
+738.8558 92.689 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 745.8556 92.7428 moveto
+742.4325 82.7162 lineto
+738.8558 92.689 lineto
+closepath stroke
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/ir0lq2x7h64g2z5mlqvnlysjk2bc9xka-glibc-utf8-locales-2.24.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 561.4388 890.7396 moveto
+580.19 864.3619 638.99 779.3464 674.5 702 curveto
+714.9035 613.9947 715.6767 588.0478 742.5 495 curveto
+771.0445 395.9815 762.8957 366.7047 798.5 270 curveto
+823.7567 201.4003 866.0154 125.2777 885.7438 91.2128 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 888.7238 93.0503 moveto
+890.7495 82.651 lineto
+882.6808 89.5172 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 888.7238 93.0503 moveto
+890.7495 82.651 lineto
+882.6808 89.5172 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 629 495 moveto
+498 495 lineto
+498 477 lineto
+629 477 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+506 483.8 moveto 115 (gettext-minimal-0.19.8.1) alignedtext
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 555.6598 890.7701 moveto
+556.6258 841.0203 561.6916 580.1342 563.123 506.4172 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 566.6155 506.8288 moveto
+563.3104 496.7627 lineto
+559.6169 506.6928 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 566.6155 506.8288 moveto
+563.3104 496.7627 lineto
+559.6169 506.6928 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 635 702 moveto
+570 702 lineto
+570 684 lineto
+635 684 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+578 690.8 moveto 49 (attr-2.4.47) alignedtext
+grestore
+% /gnu/store/ywmblv73pqa8lqqz368g46ysz65pnm0v-acl-2.2.52.drv->/gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 557.4007 890.7099 moveto
+564.2946 860.6404 588.1014 756.8023 598.0627 713.354 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 601.4657 714.1732 moveto
+600.2889 703.644 lineto
+594.6427 712.6089 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 601.4657 714.1732 moveto
+600.2889 703.644 lineto
+594.6427 712.6089 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/7ijl8lybdx95kndajavdrpz05jdiwy9g-tar-1.29.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 678.8946 476.5834 moveto
+595.7845 425.17 156.5724 153.4652 49.8726 87.4587 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 51.7166 84.4839 moveto
+41.3709 82.1994 lineto
+48.0339 90.4369 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 51.7166 84.4839 moveto
+41.3709 82.1994 lineto
+48.0339 90.4369 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/0ykf3p023pzfcg2bw8ahjc7cvmc12zjq-gzip-1.8.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 681.0407 476.5643 moveto
+647.9071 451.582 551.0755 374.3115 499.5 288 curveto
+460.4013 222.5682 441.9962 132.1014 435.4422 92.6805 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 438.9109 92.2068 moveto
+433.8968 82.8736 lineto
+431.9962 93.2965 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 438.9109 92.2068 moveto
+433.8968 82.8736 lineto
+431.9962 93.2965 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/xx3hiqhqn0d94zz7b46hgggwsz3wjiiw-bzip2-1.0.6.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 682.8597 476.79 moveto
+651.2723 449.8714 548.0685 361.7812 463.5 288 curveto
+378.6208 213.9477 278.0756 124.3995 238.1286 88.7477 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 240.6484 86.3054 moveto
+230.8578 82.2562 lineto
+235.9863 91.5271 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 240.6484 86.3054 moveto
+230.8578 82.2562 lineto
+235.9863 91.5271 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/kz8rzasivw4aflsv4rll3m539xybf226-xz-5.2.2.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 680.0029 476.6022 moveto
+645.0194 452.2923 546.0251 377.8398 505.5 288 curveto
+475.4607 221.4061 480.1556 131.5472 484.1021 92.4823 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 487.5523 93.1209 moveto
+485.1915 82.7925 lineto
+480.5961 92.3388 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 487.5523 93.1209 moveto
+485.1915 82.7925 lineto
+480.5961 92.3388 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/3pwrlsd23k2h104akxfj3cxhqcp973g9-file-5.28.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 695.2915 476.8346 moveto
+704.6791 448.4114 734.0512 351.1197 725.5 270 curveto
+718.5128 203.7166 698.6494 126.9349 688.9556 92.0272 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 692.3837 91.2875 moveto
+686.2983 82.6147 lineto
+685.647 93.1895 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 692.3837 91.2875 moveto
+686.2983 82.6147 lineto
+685.647 93.1895 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/f1ww5vh5abnvr8b24llipm5dl89s5lq2-diffutils-3.5.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 682.8385 476.6865 moveto
+652.1505 450.1512 554.5011 364.7191 479.5 288 curveto
+410.4543 217.3728 334.3832 127.1724 303.5905 90.0888 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 306.4953 88.109 moveto
+297.4226 82.6375 lineto
+301.103 92.5726 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 306.4953 88.109 moveto
+297.4226 82.6375 lineto
+301.103 92.5726 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/0cbgdhhyh7hsgwq1x54n9vnq99rfjch9-patch-2.7.5.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 680.1816 476.5834 moveto
+605.0045 425.2186 208.0203 153.979 110.9367 87.6466 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 113.0299 84.8379 moveto
+102.7986 82.0863 lineto
+109.0808 90.6176 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 113.0299 84.8379 moveto
+102.7986 82.0863 lineto
+109.0808 90.6176 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/8xjnm44dfwwxp90hxq6zhb6qvia7rb3l-sed-4.2.2.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 681.7732 476.7701 moveto
+615.5869 425.9903 262.6927 155.2409 175.1588 88.0828 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 177.5176 85.481 moveto
+167.4532 82.1708 lineto
+173.2566 91.0348 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 177.5176 85.481 moveto
+167.4532 82.1708 lineto
+173.2566 91.0348 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/54wjl6dp6rp47r67f4nyfqyv8nh456yc-findutils-4.6.0.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 682.389 476.7686 moveto
+651.3021 451.1323 555.3782 369.546 491.5 288 curveto
+438.9265 220.8855 392.1813 130.0098 373.3343 91.4842 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 376.5691 90.1339 moveto
+369.0643 82.6555 lineto
+370.2675 93.1818 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 376.5691 90.1339 moveto
+369.0643 82.6555 lineto
+370.2675 93.1818 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/k951w49yw74ikg19l4mmlwfrq9w7a7zd-gawk-4.1.4.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 700.5076 476.8508 moveto
+725.8619 450.8033 805.9193 366.6603 860.5 288 curveto
+865.7172 280.4811 863.8522 276.2897 870.5 270 curveto
+979.6151 166.7625 1153.0238 107.6618 1233.2144 84.4941 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 1233.7742 87.9736 moveto
+1242.4385 81.876 lineto
+1231.8628 81.2396 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 1233.7742 87.9736 moveto
+1242.4385 81.876 lineto
+1231.8628 81.2396 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/n48xdjkvhlhj5mgdzy59n0dpb9vn0v78-grep-2.25.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 695.1751 476.7888 moveto
+703.9085 449.8663 732.1905 361.7656 752.5 288 curveto
+772.3037 216.0714 792.5392 129.645 801.1716 92.0349 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 804.4848 93.2469 moveto
+803.2999 82.7185 lineto
+797.6606 91.6879 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 804.4848 93.2469 moveto
+803.2999 82.7185 lineto
+797.6606 91.6879 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/i52csyja3036ns0zj6z85lkgz3wfyym7-coreutils-8.25.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 690.9792 476.7975 moveto
+685.6856 448.2528 667.569 350.6121 652.5 270 curveto
+640.3128 204.8038 625.7637 127.4904 619.1249 92.2401 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 622.6269 91.9233 moveto
+617.3362 82.7441 lineto
+615.7479 93.2192 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 622.6269 91.9233 moveto
+617.3362 82.7441 lineto
+615.7479 93.2192 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/nv4mnbz3mpd4gv80djk7762wyvxpccqk-make-4.2.1.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 696.4894 476.7259 moveto
+714.9813 438.3972 791.7441 279.558 798.5 270 curveto
+851.8932 194.4615 934.4023 120.4554 971.4035 88.9052 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 973.6416 91.5963 moveto
+979.0232 82.47 lineto
+969.125 86.2484 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 973.6416 91.5963 moveto
+979.0232 82.47 lineto
+969.125 86.2484 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/2c60vlcvpj5dvmgklajkp7cpynhcqixr-bash-4.4.0.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 697.3304 476.7721 moveto
+713.1509 449.7984 764.7878 361.5587 806.5 288 curveto
+811.0143 280.0392 810.6231 277.0153 816.5 270 curveto
+884.2779 189.0926 989.0526 117.235 1035.2577 87.5119 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 1037.1088 90.4826 moveto
+1043.6668 82.1613 lineto
+1033.351 84.5767 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 1037.1088 90.4826 moveto
+1043.6668 82.1613 lineto
+1033.351 84.5767 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/zhc5c4s0xvzizpgpq2za6x84vxv57iy6-ld-wrapper-0.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 698.5501 476.5255 moveto
+717.7541 449.5122 778.761 362.8169 824.5 288 curveto
+829.2735 280.1919 828.2984 276.73 834.5 270 curveto
+915.6835 181.8985 1043.828 113.9379 1100.6855 86.381 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 1102.1945 89.539 moveto
+1109.7061 82.0673 lineto
+1099.1746 83.224 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 1102.1945 89.539 moveto
+1109.7061 82.0673 lineto
+1099.1746 83.224 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/9k1js0kalh4s6q4hf0rgg2n0zdyrwi69-binutils-2.27.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 699.5341 476.68 moveto
+721.8291 450.1254 792.403 364.6423 842.5 288 curveto
+847.5072 280.3396 846.0389 276.4813 852.5 270 curveto
+948.2763 173.9235 1100.659 110.4477 1169.1383 85.2478 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 1170.1377 88.6084 moveto
+1178.3477 81.9116 lineto
+1167.7535 82.027 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 1170.1377 88.6084 moveto
+1178.3477 81.9116 lineto
+1167.7535 82.027 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/hv3dl3my12mq0gkwvckmnqccnckn39l0-gcc-4.9.4.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 679.934 476.6819 moveto
+644.8255 452.5817 545.9561 378.628 510.5 288 curveto
+483.4236 218.7911 518.0106 129.0388 535.501 91.1465 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 538.4804 93.0285 moveto
+539.6396 82.4973 lineto
+532.1661 90.0071 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 538.4804 93.0285 moveto
+539.6396 82.4973 lineto
+532.1661 90.0071 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/qbfynm50snyn31w2c3paiw2n6wvzksg8-glibc-2.24.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 694.7754 476.8291 moveto
+702.1229 450.0301 725.2721 362.2648 734.5 288 curveto
+743.3993 216.3793 743.4222 130.3939 742.8982 92.5273 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 746.4017 92.6941 moveto
+742.7298 82.7559 lineto
+739.4028 92.8148 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 746.4017 92.6941 moveto
+742.7298 82.7559 lineto
+739.4028 92.8148 lineto
+closepath stroke
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/ir0lq2x7h64g2z5mlqvnlysjk2bc9xka-glibc-utf8-locales-2.24.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 695.4393 476.6097 moveto
+705.7573 447.4517 741.7985 348.0486 780.5 270 curveto
+814.389 201.6567 862.7773 124.8921 884.7911 90.8742 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 887.6127 92.9553 moveto
+890.1343 82.6649 lineto
+881.7459 89.1368 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 887.6127 92.9553 moveto
+890.1343 82.6649 lineto
+881.7459 89.1368 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 725 288 moveto
+660 288 lineto
+660 270 lineto
+725 270 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+668 276.8 moveto 49 (m4-1.4.17) alignedtext
+grestore
+% /gnu/store/7gqg2kmrm1bjgphnd70ps5c11gqml571-gmp-6.1.1.drv->/gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 692.5 476.7099 moveto
+692.5 446.705 692.5 343.2486 692.5 299.6351 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 696.0001 299.6822 moveto
+692.5 289.6822 lineto
+689.0001 299.6823 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 696.0001 299.6822 moveto
+692.5 289.6822 lineto
+689.0001 299.6823 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 622.2967 890.7536 moveto
+624.863 863.7231 632.8977 775.3294 635.5 702 curveto
+639.0466 602.0629 639.8027 576.9074 635.5 477 curveto
+632.6972 411.9193 624.709 335.0802 620.7627 299.6721 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 624.2416 299.2874 moveto
+619.6378 289.7451 lineto
+617.2861 300.0756 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 624.2416 299.2874 moveto
+619.6378 289.7451 lineto
+617.2861 300.0756 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/7ijl8lybdx95kndajavdrpz05jdiwy9g-tar-1.29.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 615.4173 890.5557 moveto
+558.5372 811.5929 120.1199 202.9665 39.289 90.7541 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 42.1772 88.7754 moveto
+33.4924 82.7071 lineto
+36.4974 92.8668 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 42.1772 88.7754 moveto
+33.4924 82.7071 lineto
+36.4974 92.8668 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/0ykf3p023pzfcg2bw8ahjc7cvmc12zjq-gzip-1.8.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 617.3375 890.565 moveto
+604.2078 863.669 563.1387 777.2839 539.5 702 curveto
+466.4101 469.2253 439.8831 171.3791 433.9006 92.7473 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 437.398 92.5825 moveto
+433.1745 82.8659 lineto
+430.4169 93.0956 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 437.398 92.5825 moveto
+433.1745 82.8659 lineto
+430.4169 93.0956 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/xx3hiqhqn0d94zz7b46hgggwsz3wjiiw-bzip2-1.0.6.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 617.5398 890.7712 moveto
+604.5733 863.7949 562.2851 775.5482 528.5 702 curveto
+440.7197 510.9072 431.5376 457.0791 335.5 270 curveto
+300.7387 202.2858 253.3517 125.2057 231.8909 90.9915 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 234.9817 89.3311 moveto
+226.6899 82.736 lineto
+229.0591 93.0625 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 234.9817 89.3311 moveto
+226.6899 82.736 lineto
+229.0591 93.0625 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/kz8rzasivw4aflsv4rll3m539xybf226-xz-5.2.2.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 617.6848 890.5126 moveto
+605.6335 863.4608 567.8027 776.6641 544.5 702 curveto
+516.3332 611.7509 507.4634 588.7825 495.5 495 curveto
+475.8462 340.9317 482.567 152.7142 485.4619 92.5004 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 488.9383 93.0532 moveto
+485.9488 82.8889 lineto
+481.9472 92.699 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 488.9383 93.0532 moveto
+485.9488 82.8889 lineto
+481.9472 92.699 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/3pwrlsd23k2h104akxfj3cxhqcp973g9-file-5.28.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 629.1856 890.8498 moveto
+652.5418 865.4474 722.5456 784.4626 746.5 702 curveto
+773.2798 609.8108 761.2977 364.8527 746.5 270 curveto
+735.9541 202.4009 706.2075 126.2987 691.6835 91.7973 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 694.9859 90.618 moveto
+687.833 82.8022 lineto
+688.5507 93.3727 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 694.9859 90.618 moveto
+687.833 82.8022 lineto
+688.5507 93.3727 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/f1ww5vh5abnvr8b24llipm5dl89s5lq2-diffutils-3.5.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 617.1934 890.5396 moveto
+603.5795 863.5682 560.7646 776.9838 533.5 702 curveto
+516.4456 655.0966 430.5809 315.6896 410.5 270 curveto
+379.3259 199.0702 326.3685 123.1005 302.2026 90.0191 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 305.335 88.3695 moveto
+296.5817 82.4004 lineto
+299.7021 92.5253 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 305.335 88.3695 moveto
+296.5817 82.4004 lineto
+299.7021 92.5253 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/0cbgdhhyh7hsgwq1x54n9vnq99rfjch9-patch-2.7.5.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 617.0541 890.7169 moveto
+581.8927 825.2889 347.8026 391.197 261.5 270 curveto
+210.2251 197.9933 137.4568 121.5674 105.5454 89.0931 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 108.2644 86.865 moveto
+98.7442 82.2155 lineto
+103.2871 91.787 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 108.2644 86.865 moveto
+98.7442 82.2155 lineto
+103.2871 91.787 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/8xjnm44dfwwxp90hxq6zhb6qvia7rb3l-sed-4.2.2.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 617.4071 890.8005 moveto
+581.0926 818.0558 315.148 285.4518 305.5 270 curveto
+261.3626 199.3115 198.0532 122.711 169.9204 89.6904 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 172.8209 87.6961 moveto
+163.6549 82.3824 lineto
+167.5066 92.2523 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 172.8209 87.6961 moveto
+163.6549 82.3824 lineto
+167.5066 92.2523 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/54wjl6dp6rp47r67f4nyfqyv8nh456yc-findutils-4.6.0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 617.3481 890.5379 moveto
+604.231 863.5615 563.0399 776.9637 537.5 702 curveto
+473.534 514.2497 479.7382 460.788 425.5 270 curveto
+406.84 204.3617 382.1533 127.2645 370.7568 92.1536 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 374.0883 91.0805 moveto
+367.6638 82.6557 lineto
+367.4323 93.248 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 374.0883 91.0805 moveto
+367.6638 82.6557 lineto
+367.4323 93.248 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/k951w49yw74ikg19l4mmlwfrq9w7a7zd-gawk-4.1.4.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 636.0182 890.5103 moveto
+676.9713 865.9587 795.0609 790.9312 866.5 702 curveto
+1000.6878 534.9558 955.7604 444.213 1080.5 270 curveto
+1135.1337 193.6978 1219.9011 119.6132 1257.4674 88.4282 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 1259.2845 91.4654 moveto
+1264.7851 82.4103 lineto
+1254.8383 86.0588 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1259.2845 91.4654 moveto
+1264.7851 82.4103 lineto
+1254.8383 86.0588 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/n48xdjkvhlhj5mgdzy59n0dpb9vn0v78-grep-2.25.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 629.7633 890.5127 moveto
+654.2091 864.7819 726.2288 784.3541 754.5 702 curveto
+784.4397 614.7857 762.322 587.003 768.5 495 curveto
+775.2148 395.0032 774.6029 369.8263 783.5 270 curveto
+789.3228 204.668 798.6698 127.421 803.0658 92.2135 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 806.4812 93.1047 moveto
+804.2568 82.7461 lineto
+799.536 92.231 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 806.4812 93.1047 moveto
+804.2568 82.7461 lineto
+799.536 92.231 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/i52csyja3036ns0zj6z85lkgz3wfyym7-coreutils-8.25.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 622.6638 890.8257 moveto
+630.2112 836.6516 671.2375 523.7619 649.5 270 curveto
+643.8542 204.0919 627.7692 127.1267 619.9185 92.1007 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 623.4035 91.6406 moveto
+617.7695 82.6679 lineto
+616.5783 93.1955 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 623.4035 91.6406 moveto
+617.7695 82.6679 lineto
+616.5783 93.1955 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/nv4mnbz3mpd4gv80djk7762wyvxpccqk-make-4.2.1.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 633.6652 890.5477 moveto
+667.6854 866.0946 763.7132 791.3012 800.5 702 curveto
+873.7014 524.3012 748.3201 448.5181 819.5 270 curveto
+851.8352 188.9038 932.4362 118.2349 970.2773 88.2741 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 972.3879 91.0666 moveto
+978.1374 82.1675 lineto
+968.0932 85.5388 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 972.3879 91.0666 moveto
+978.1374 82.1675 lineto
+968.0932 85.5388 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/2c60vlcvpj5dvmgklajkp7cpynhcqixr-bash-4.4.0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 635.4052 890.5313 moveto
+673.2492 866.5804 777.9667 794.079 818.5 702 curveto
+895.9303 526.1027 755.0581 443.6049 837.5 270 curveto
+879.9179 180.6771 983.3917 114.3504 1032.199 86.9019 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 1033.6189 90.1157 moveto
+1040.6884 82.2244 lineto
+1030.2408 83.9847 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1033.6189 90.1157 moveto
+1040.6884 82.2244 lineto
+1030.2408 83.9847 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/zhc5c4s0xvzizpgpq2za6x84vxv57iy6-ld-wrapper-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 637.2456 890.5488 moveto
+678.9673 867.1588 792.1948 796.9696 836.5 702 curveto
+917.7515 527.8348 764.0874 439.0534 855.5 270 curveto
+908.7561 171.5112 1035.1924 110.285 1095.872 85.5728 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 1097.0002 88.8908 moveto
+1104.9982 81.9421 lineto
+1094.4127 82.3866 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1097.0002 88.8908 moveto
+1104.9982 81.9421 lineto
+1094.4127 82.3866 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/9k1js0kalh4s6q4hf0rgg2n0zdyrwi69-binutils-2.27.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 639.1886 890.6003 moveto
+684.8398 867.8241 806.4037 799.9515 854.5 702 curveto
+896.8533 615.7444 824.1821 352.4717 873.5 270 curveto
+937.8932 162.3187 1085.6878 106.6606 1160.0495 84.6096 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 1160.8089 88.0334 moveto
+1169.4456 81.8967 lineto
+1158.8671 81.3081 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1160.8089 88.0334 moveto
+1169.4456 81.8967 lineto
+1158.8671 81.3081 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/hv3dl3my12mq0gkwvckmnqccnckn39l0-gcc-4.9.4.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 617.9534 890.6843 moveto
+600.4331 849.1028 522.9466 659.2194 497.5 495 curveto
+482.1866 396.1755 483.3405 369.262 495.5 270 curveto
+503.6675 203.3265 526.8337 126.7355 538.1382 91.9508 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 541.427 93.153 moveto
+541.2416 82.5598 lineto
+534.7805 90.9565 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 541.427 93.153 moveto
+541.2416 82.5598 lineto
+534.7805 90.9565 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/qbfynm50snyn31w2c3paiw2n6wvzksg8-glibc-2.24.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 629.1972 890.8297 moveto
+652.6262 865.3693 723.1349 784.2355 750.5 702 curveto
+789.4038 585.0893 753.5107 185.5975 744.4517 92.5024 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 747.9561 92.3738 moveto
+743.4906 82.766 lineto
+740.99 93.0615 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 747.9561 92.3738 moveto
+743.4906 82.766 lineto
+740.99 93.0615 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/ir0lq2x7h64g2z5mlqvnlysjk2bc9xka-glibc-utf8-locales-2.24.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 632.0233 890.5982 moveto
+662.2758 865.7078 749.4279 788.6615 782.5 702 curveto
+851.0224 522.445 754.5778 456.3696 801.5 270 curveto
+819.3178 199.2296 863.9296 123.6824 885.0594 90.422 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 887.7287 92.7406 moveto
+890.2102 82.4404 lineto
+881.847 88.9449 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 887.7287 92.7406 moveto
+890.2102 82.4404 lineto
+881.847 88.9449 lineto
+closepath stroke
+grestore
+% /gnu/store/ijv3y5l1fbbzwb77lc867r1qbsf147i8-libcap-2.24.drv->/gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 620.7316 890.7099 moveto
+617.9447 860.6404 608.3207 756.8023 604.2938 713.354 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 607.8048 713.3101 moveto
+603.3968 703.6758 lineto
+600.8347 713.9561 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 607.8048 713.3101 moveto
+603.3968 703.6758 lineto
+600.8347 713.9561 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/7ijl8lybdx95kndajavdrpz05jdiwy9g-tar-1.29.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 546.7511 476.5366 moveto
+499.378 452.0544 361.8815 377.1918 269.5 288 curveto
+262.4006 281.1457 263.1832 277.2607 256.5 270 curveto
+186.929 194.4174 89.5734 119.4506 47.3736 88.1891 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 49.455 85.3753 moveto
+39.3257 82.2688 lineto
+45.3069 91.0139 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 49.455 85.3753 moveto
+39.3257 82.2688 lineto
+45.3069 91.0139 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/0ykf3p023pzfcg2bw8ahjc7cvmc12zjq-gzip-1.8.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 558.8657 476.6393 moveto
+544.2695 449.9638 498.7812 364.1614 474.5 288 curveto
+452.0816 217.6814 439.5167 130.4241 434.7491 92.3176 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 438.2828 92.3854 moveto
+433.6095 82.8769 lineto
+431.3332 93.2243 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 438.2828 92.3854 moveto
+433.6095 82.8769 lineto
+431.3332 93.2243 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/xx3hiqhqn0d94zz7b46hgggwsz3wjiiw-bzip2-1.0.6.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 556.8472 476.6179 moveto
+535.7504 449.8787 468.8867 363.9079 420.5 288 curveto
+415.5808 280.2828 415.9448 277.3558 410.5 270 curveto
+355.4839 195.6749 274.3138 120.5077 238.5473 88.7306 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 241.0491 86.2703 moveto
+231.233 82.2835 lineto
+236.4205 91.5216 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 241.0491 86.2703 moveto
+231.233 82.2835 lineto
+236.4205 91.5216 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/kz8rzasivw4aflsv4rll3m539xybf226-xz-5.2.2.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 559.3814 476.633 moveto
+546.4855 449.9389 506.8892 364.0872 492.5 288 curveto
+479.0931 217.1069 482.5062 130.7508 484.9866 92.6586 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 488.4685 93.0354 moveto
+485.6883 82.8119 lineto
+481.4862 92.5378 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 488.4685 93.0354 moveto
+485.6883 82.8119 lineto
+481.4862 92.5378 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/3pwrlsd23k2h104akxfj3cxhqcp973g9-file-5.28.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 574.0788 476.6337 moveto
+604.46 451.8397 691.7608 375.0288 722.5 288 curveto
+747.2314 217.9806 711.3383 129.3339 693.0735 91.486 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 696.335 90.1828 moveto
+688.7342 82.8018 lineto
+690.0732 93.3117 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 696.335 90.1828 moveto
+688.7342 82.8018 lineto
+690.0732 93.3117 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/f1ww5vh5abnvr8b24llipm5dl89s5lq2-diffutils-3.5.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 558.0865 476.8492 moveto
+540.3808 450.1118 482.7874 362.5138 438.5 288 curveto
+433.8242 280.133 433.3673 277.75 428.5 270 curveto
+385.5273 201.5763 328.3302 124.3333 302.7924 90.474 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 305.6748 88.4827 moveto
+296.8478 82.6231 lineto
+300.0941 92.7084 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 305.6748 88.4827 moveto
+296.8478 82.6231 lineto
+300.0941 92.7084 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/0cbgdhhyh7hsgwq1x54n9vnq99rfjch9-patch-2.7.5.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 549.1191 476.6016 moveto
+507.9582 452.0092 387.8147 376.2951 312.5 288 curveto
+306.5609 281.0373 308.1525 277.1974 302.5 270 curveto
+241.9835 192.9444 150.4584 119.2513 109.9854 88.2979 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 112.1363 85.5364 moveto
+102.052 82.2872 lineto
+107.9091 91.1159 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 112.1363 85.5364 moveto
+102.052 82.2872 lineto
+107.9091 91.1159 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/8xjnm44dfwwxp90hxq6zhb6qvia7rb3l-sed-4.2.2.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 551.4445 476.5481 moveto
+515.9539 451.2234 410.1042 372.4733 342.5 288 curveto
+336.7817 280.8548 337.814 277.4508 332.5 270 curveto
+280.7648 197.4614 205.9339 121.862 172.6158 89.3992 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 175.0816 86.9149 moveto
+165.4607 82.4776 lineto
+170.2146 91.946 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 175.0816 86.9149 moveto
+165.4607 82.4776 lineto
+170.2146 91.946 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/54wjl6dp6rp47r67f4nyfqyv8nh456yc-findutils-4.6.0.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 558.5157 476.5083 moveto
+542.7109 449.4439 492.6299 362.6137 456.5 288 curveto
+422.0126 216.7783 386.7109 129.3798 371.8256 91.7213 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 375.2084 90.7593 moveto
+368.2911 82.7343 lineto
+368.6941 93.3215 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 375.2084 90.7593 moveto
+368.2911 82.7343 lineto
+368.6941 93.3215 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/k951w49yw74ikg19l4mmlwfrq9w7a7zd-gawk-4.1.4.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 574.1006 476.5069 moveto
+612.241 446.1704 746.6266 341.1825 867.5 270 curveto
+1003.1976 190.0876 1176.2296 114.9085 1245.6499 85.7562 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 1246.6078 89.1493 moveto
+1254.4838 82.0628 lineto
+1243.9076 82.6911 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 1246.6078 89.1493 moveto
+1254.4838 82.0628 lineto
+1243.9076 82.6911 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/n48xdjkvhlhj5mgdzy59n0dpb9vn0v78-grep-2.25.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 572.4229 476.8547 moveto
+599.7544 451.4663 683.3189 370.5178 730.5 288 curveto
+768.7558 221.0921 792.2417 131.3974 801.2665 92.4287 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 804.6658 93.2647 moveto
+803.4415 82.7409 lineto
+797.8359 91.7312 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 804.6658 93.2647 moveto
+803.4415 82.7409 lineto
+797.8359 91.7312 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/i52csyja3036ns0zj6z85lkgz3wfyym7-coreutils-8.25.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 564.128 476.7789 moveto
+566.3504 448.1737 574.2618 350.3591 584.5 270 curveto
+592.8398 204.5413 605.9445 127.3563 612.0965 92.1887 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 615.4758 93.1791 moveto
+613.7641 82.7235 lineto
+608.582 91.9645 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 615.4758 93.1791 moveto
+613.7641 82.7235 lineto
+608.582 91.9645 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/nv4mnbz3mpd4gv80djk7762wyvxpccqk-make-4.2.1.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 572.0295 476.7701 moveto
+624.4446 426.1963 902.9919 157.434 974.0106 88.9101 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 976.0949 91.7627 moveto
+980.861 82.3004 lineto
+971.2344 86.7252 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 976.0949 91.7627 moveto
+980.861 82.3004 lineto
+971.2344 86.7252 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/2c60vlcvpj5dvmgklajkp7cpynhcqixr-bash-4.4.0.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 572.9401 476.6841 moveto
+605.8123 447.7693 718.4307 349.065 813.5 270 curveto
+896.6376 200.8581 997.8295 120.7473 1039.3392 88.0553 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 1041.2476 91.0072 moveto
+1046.9422 82.0729 lineto
+1036.919 85.506 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 1041.2476 91.0072 moveto
+1046.9422 82.0729 lineto
+1036.919 85.506 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/zhc5c4s0xvzizpgpq2za6x84vxv57iy6-ld-wrapper-0.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 572.983 476.8612 moveto
+607.0714 447.7208 726.9175 346.2707 831.5 270 curveto
+930.9105 197.5012 1055.2093 119.0595 1106.1202 87.4255 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 1107.8922 90.445 moveto
+1114.5482 82.2019 lineto
+1104.2045 84.4951 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 1107.8922 90.445 moveto
+1114.5482 82.2019 lineto
+1104.2045 84.4951 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/9k1js0kalh4s6q4hf0rgg2n0zdyrwi69-binutils-2.27.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 573.5177 476.6597 moveto
+609.5506 446.8391 736.4255 343.377 849.5 270 curveto
+967.2268 193.6041 1116.5715 116.8756 1177.1369 86.545 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 1178.645 89.7041 moveto
+1186.0306 82.1078 lineto
+1175.5199 83.4404 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 1178.645 89.7041 moveto
+1186.0306 82.1078 lineto
+1175.5199 83.4404 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/hv3dl3my12mq0gkwvckmnqccnckn39l0-gcc-4.9.4.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 560.1758 476.5419 moveto
+549.7794 449.5771 517.9542 363.0101 507.5 288 curveto
+497.3541 215.2023 523.8526 129.2244 537.2687 91.8822 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 540.5188 93.184 moveto
+540.7184 82.5911 lineto
+533.9565 90.7475 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 540.5188 93.184 moveto
+540.7184 82.5911 lineto
+533.9565 90.7475 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/qbfynm50snyn31w2c3paiw2n6wvzksg8-glibc-2.24.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 574.0249 476.5801 moveto
+604.3032 451.6408 691.6839 374.4751 726.5 288 curveto
+753.6947 220.4545 748.7978 131.4113 744.8788 92.5482 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 748.3681 92.257 moveto
+743.7793 82.7074 lineto
+741.4114 93.0343 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 748.3681 92.257 moveto
+743.7793 82.7074 lineto
+741.4114 93.0343 lineto
+closepath stroke
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/ir0lq2x7h64g2z5mlqvnlysjk2bc9xka-glibc-utf8-locales-2.24.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 571.342 476.5728 moveto
+596.2517 449.6997 675.5226 363.375 736.5 288 curveto
+794.2775 216.5805 858.1042 127.4397 884.2826 90.3935 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 886.8603 92.8116 moveto
+889.7597 82.6212 lineto
+881.1383 88.7793 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 886.8603 92.8116 moveto
+889.7597 82.6212 lineto
+881.1383 88.7793 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 577 288 moveto
+508 288 lineto
+508 270 lineto
+577 270 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+516 276.8 moveto 53 (expat-2.2.0) alignedtext
+grestore
+% /gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv->/gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 562.6508 476.7099 moveto
+559.5705 446.6404 548.9334 342.8023 544.4826 299.354 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 547.992 299.2656 moveto
+543.491 289.6744 lineto
+541.0284 299.979 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 547.992 299.2656 moveto
+543.491 289.6744 lineto
+541.0284 299.979 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/jxcx1jcvzxb17dc69sfwb352vgwyr108-perl-5.24.0.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 604.0358 683.7838 moveto
+608.9831 656.846 624.4727 568.7039 629.5 495 curveto
+634.4144 422.9515 625.6441 337.184 621.0469 299.4501 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 624.5421 299.1906 moveto
+619.8142 289.7091 lineto
+617.5974 300.0695 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 624.5421 299.1906 moveto
+619.8142 289.7091 lineto
+617.5974 300.0695 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/7ijl8lybdx95kndajavdrpz05jdiwy9g-tar-1.29.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 594.3759 683.6947 moveto
+554.7171 642.9026 378.5871 458.8461 260.5 288 curveto
+255.2965 280.4716 256.2422 277.126 250.5 270 curveto
+187.1752 191.4143 90.4566 118.3152 47.8812 87.8886 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 50.1506 85.2069 moveto
+39.966 82.2871 lineto
+46.1068 90.9208 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 50.1506 85.2069 moveto
+39.966 82.2871 lineto
+46.1068 90.9208 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/0ykf3p023pzfcg2bw8ahjc7cvmc12zjq-gzip-1.8.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 596.6189 683.8596 moveto
+578.1424 657.8382 520.9234 573.7641 494.5 495 curveto
+468.7804 418.3338 441.8186 165.3245 434.4545 92.6687 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 437.9443 92.3908 moveto
+433.4633 82.7902 lineto
+430.9792 93.0897 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 437.9443 92.3908 moveto
+433.4633 82.7902 lineto
+430.9792 93.0897 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/xx3hiqhqn0d94zz7b46hgggwsz3wjiiw-bzip2-1.0.6.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 597.1481 683.7868 moveto
+579.6219 656.8584 522.4404 568.7415 476.5 495 curveto
+379.6589 339.5549 266.0843 149.5271 231.2149 91.0057 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 234.3774 89.4756 moveto
+226.2537 82.6744 lineto
+228.363 93.0572 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 234.3774 89.4756 moveto
+226.2537 82.6744 lineto
+228.363 93.0572 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/kz8rzasivw4aflsv4rll3m539xybf226-xz-5.2.2.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 596.1451 683.5753 moveto
+576.8166 657.3824 518.7613 574.3644 497.5 495 curveto
+457.2158 344.6268 476.2094 153.2603 483.8448 92.456 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 487.2877 93.1189 moveto
+485.1174 82.7487 lineto
+480.3471 92.2089 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 487.2877 93.1189 moveto
+485.1174 82.7487 lineto
+480.3471 92.2089 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/3pwrlsd23k2h104akxfj3cxhqcp973g9-file-5.28.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 610.0297 683.8139 moveto
+632.9173 658.3081 701.5569 577.0575 725.5 495 curveto
+769.3977 344.554 711.2579 152.5394 690.4161 92.096 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 693.722 90.9462 moveto
+687.0893 82.6844 lineto
+687.1221 93.2791 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 693.722 90.9462 moveto
+687.0893 82.6844 lineto
+687.1221 93.2791 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/f1ww5vh5abnvr8b24llipm5dl89s5lq2-diffutils-3.5.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 596.5885 683.727 moveto
+577.9183 657.3119 519.3326 572.1975 483.5 495 curveto
+439.0608 399.2603 451.7607 365.8224 407.5 270 curveto
+375.3687 200.4373 324.9716 124.2843 301.8471 90.647 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 304.7911 88.7504 moveto
+296.2175 82.5259 lineto
+299.0382 92.7384 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 304.7911 88.7504 moveto
+296.2175 82.5259 lineto
+299.0382 92.7384 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/0cbgdhhyh7hsgwq1x54n9vnq99rfjch9-patch-2.7.5.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 595.9198 683.5638 moveto
+561.6914 639.7381 400.2933 433.7895 262.5 270 curveto
+205.1815 201.8678 134.4514 122.8371 104.2706 89.3419 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 107.1897 87.3524 moveto
+97.8921 82.2726 lineto
+101.9925 92.0418 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 107.1897 87.3524 moveto
+97.8921 82.2726 lineto
+101.9925 92.0418 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/8xjnm44dfwwxp90hxq6zhb6qvia7rb3l-sed-4.2.2.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 596.7536 683.5882 moveto
+566.862 639.8843 425.9094 434.4464 305.5 270 curveto
+256.0358 202.4454 195.0095 123.6494 168.648 89.8229 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 171.7416 88.0981 moveto
+162.8303 82.3675 lineto
+166.2229 92.4045 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 171.7416 88.0981 moveto
+162.8303 82.3675 lineto
+166.2229 92.4045 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/54wjl6dp6rp47r67f4nyfqyv8nh456yc-findutils-4.6.0.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 596.6863 683.7769 moveto
+578.3629 657.5098 521.1599 572.7864 489.5 495 curveto
+450.5695 399.3501 461.0357 368.9552 431.5 270 curveto
+411.7213 203.7342 384.0586 126.4167 371.3623 91.6292 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 374.7828 90.7908 moveto
+368.0541 82.607 lineto
+368.2107 93.2006 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 374.7828 90.7908 moveto
+368.0541 82.607 lineto
+368.2107 93.2006 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/k951w49yw74ikg19l4mmlwfrq9w7a7zd-gawk-4.1.4.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 610.2024 683.8567 moveto
+634.5757 657.8266 711.4186 573.7296 762.5 495 curveto
+766.3136 489.1223 871.5177 274.9261 876.5 270 curveto
+981.7785 165.9083 1153.0084 107.3943 1232.8866 84.4546 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 1233.4032 87.9455 moveto
+1242.0784 81.8635 lineto
+1231.5038 81.2081 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 1233.4032 87.9455 moveto
+1242.0784 81.8635 lineto
+1231.5038 81.2081 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/n48xdjkvhlhj5mgdzy59n0dpb9vn0v78-grep-2.25.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 609.9847 683.7347 moveto
+632.8215 658.0009 701.9659 576.1638 733.5 495 curveto
+770.1506 400.667 751.3796 369.744 768.5 270 curveto
+779.7202 204.6305 794.7421 127.4019 801.6857 92.2062 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 805.0538 93.215 moveto
+803.5624 82.7257 lineto
+798.1871 91.8556 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 805.0538 93.215 moveto
+803.5624 82.7257 lineto
+798.1871 91.8556 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/i52csyja3036ns0zj6z85lkgz3wfyym7-coreutils-8.25.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 603.8654 683.7751 moveto
+608.2634 656.8108 622.0335 568.5967 626.5 495 curveto
+632.6481 393.6953 580.3414 371.2383 587.5 270 curveto
+592.1441 204.3231 605.3932 127.2448 611.8602 92.146 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 615.2284 93.1742 moveto
+613.6288 82.7008 lineto
+608.348 91.8857 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 615.2284 93.1742 moveto
+613.6288 82.7008 lineto
+608.348 91.8857 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/nv4mnbz3mpd4gv80djk7762wyvxpccqk-make-4.2.1.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 610.1038 683.6627 moveto
+633.3723 657.7215 704.3416 575.3511 742.5 495 curveto
+786.9969 401.3019 753.611 360.3859 804.5 270 curveto
+849.1749 190.6512 932.6503 118.6538 970.6939 88.2669 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 972.4576 91.3331 moveto
+978.1469 82.3954 lineto
+968.1257 85.8345 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 972.4576 91.3331 moveto
+978.1469 82.3954 lineto
+968.1257 85.8345 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/2c60vlcvpj5dvmgklajkp7cpynhcqixr-bash-4.4.0.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 610.2067 683.6257 moveto
+633.8206 657.5781 706.0755 574.9338 747.5 495 curveto
+771.7504 448.2058 792.8065 313.544 822.5 270 curveto
+880.7854 184.5274 986.1113 115.5458 1033.8239 87.0859 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 1035.4606 90.1837 moveto
+1042.3105 82.101 lineto
+1031.9152 84.1479 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 1035.4606 90.1837 moveto
+1042.3105 82.101 lineto
+1031.9152 84.1479 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/zhc5c4s0xvzizpgpq2za6x84vxv57iy6-ld-wrapper-0.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 610.3148 683.5834 moveto
+634.2892 657.4138 707.8682 574.4558 752.5 495 curveto
+765.6467 471.5955 823.7744 290.9967 840.5 270 curveto
+913.7181 178.0846 1041.3945 112.5565 1099.3489 86.0482 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 1100.5885 89.3285 moveto
+1108.2719 82.0335 lineto
+1097.7163 82.9449 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 1100.5885 89.3285 moveto
+1108.2719 82.0335 lineto
+1097.7163 82.9449 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/9k1js0kalh4s6q4hf0rgg2n0zdyrwi69-binutils-2.27.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 610.4288 683.5366 moveto
+634.7806 657.2322 709.7274 573.9277 757.5 495 curveto
+764.5948 483.2783 849.2858 280.1407 858.5 270 curveto
+947.8882 171.6243 1098.2115 109.8856 1167.4914 85.2505 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 1168.5682 88.5818 moveto
+1176.855 81.9803 lineto
+1166.2601 81.9732 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 1168.5682 88.5818 moveto
+1176.855 81.9803 lineto
+1166.2601 81.9732 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/hv3dl3my12mq0gkwvckmnqccnckn39l0-gcc-4.9.4.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 596.2084 683.5723 moveto
+577.0917 657.3708 519.8194 574.3309 500.5 495 curveto
+463.4815 342.992 518.1751 152.7368 537.8824 92.3308 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 541.1814 93.5015 moveto
+541.0314 82.9077 lineto
+534.5423 91.2828 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 541.1814 93.5015 moveto
+541.0314 82.9077 lineto
+534.5423 91.2828 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/qbfynm50snyn31w2c3paiw2n6wvzksg8-glibc-2.24.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 610.1827 683.8383 moveto
+633.5501 658.4027 703.7415 577.3327 729.5 495 curveto
+753.4002 418.607 745.9817 165.4047 743.2875 92.6863 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 746.7893 92.6619 moveto
+742.9064 82.8043 lineto
+739.7945 92.9318 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 746.7893 92.6619 moveto
+742.9064 82.8043 lineto
+739.7945 92.9318 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/ir0lq2x7h64g2z5mlqvnlysjk2bc9xka-glibc-utf8-locales-2.24.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 610.0053 683.6934 moveto
+632.9407 657.8404 702.6562 575.6971 737.5 495 curveto
+778.0702 401.0408 750.2707 365.7168 786.5 270 curveto
+813.1517 199.587 861.7878 123.8605 884.3748 90.4886 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 887.1162 92.68 moveto
+889.8771 82.4512 lineto
+881.3401 88.7257 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 887.1162 92.68 moveto
+889.8771 82.4512 lineto
+881.3401 88.7257 lineto
+closepath stroke
+grestore
+% /gnu/store/gplx9i7c01f2r6qvm6d5w60iam73zmin-attr-2.4.47.drv->/gnu/store/nw68wjvbw505klgpsavq7dk195wg8ffj-gettext-minimal-0.19.8.1.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 600.9229 683.7099 moveto
+595.2023 653.6404 575.4478 549.8023 567.182 506.354 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 570.6442 505.8252 moveto
+565.3369 496.6556 lineto
+563.7676 507.1335 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 570.6442 505.8252 moveto
+565.3369 496.6556 lineto
+563.7676 507.1335 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/7ijl8lybdx95kndajavdrpz05jdiwy9g-tar-1.29.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 521.3102 269.5816 moveto
+440.9536 237.657 154.7073 123.9351 58.3894 85.6692 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 59.8587 82.4869 moveto
+49.273 82.0474 lineto
+57.2741 88.9923 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 59.8587 82.4869 moveto
+49.273 82.0474 lineto
+57.2741 88.9923 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/0ykf3p023pzfcg2bw8ahjc7cvmc12zjq-gzip-1.8.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 538.0516 269.7099 moveto
+521.778 239.3817 465.2373 134.0104 442.2906 91.2462 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 445.4111 89.6591 moveto
+437.5988 82.5024 lineto
+439.243 92.9689 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 445.4111 89.6591 moveto
+437.5988 82.5024 lineto
+439.243 92.9689 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/xx3hiqhqn0d94zz7b46hgggwsz3wjiiw-bzip2-1.0.6.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 529.4784 269.7099 moveto
+480.3273 238.418 305.6936 127.2382 243.0615 87.3637 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 245.2756 84.6242 moveto
+234.9604 82.2061 lineto
+241.5163 90.5291 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 245.2756 84.6242 moveto
+234.9604 82.2061 lineto
+241.5163 90.5291 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/kz8rzasivw4aflsv4rll3m539xybf226-xz-5.2.2.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 540.2354 269.7099 moveto
+532.0036 239.5757 503.5337 135.3554 491.7106 92.0745 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 495.1418 91.353 moveto
+489.1303 82.6287 lineto
+488.3892 93.1976 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 495.1418 91.353 moveto
+489.1303 82.6287 lineto
+488.3892 93.1976 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/3pwrlsd23k2h104akxfj3cxhqcp973g9-file-5.28.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 548.202 269.7099 moveto
+569.1953 239.1877 642.466 132.6593 671.5093 90.4333 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 674.2405 92.6385 moveto
+677.0238 82.4157 lineto
+668.473 88.6715 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 674.2405 92.6385 moveto
+677.0238 82.4157 lineto
+668.473 88.6715 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/f1ww5vh5abnvr8b24llipm5dl89s5lq2-diffutils-3.5.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 532.2687 269.7099 moveto
+494.0482 238.7406 359.2565 129.5221 308.7768 88.6195 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 311.0076 85.9223 moveto
+301.0345 82.3462 lineto
+306.6007 91.3611 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 311.0076 85.9223 moveto
+301.0345 82.3462 lineto
+306.6007 91.3611 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/0cbgdhhyh7hsgwq1x54n9vnq99rfjch9-patch-2.7.5.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 523.8973 269.5816 moveto
+453.5585 237.7505 203.5254 124.6009 118.2436 86.0076 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 119.9403 82.9337 moveto
+109.3867 81.9995 lineto
+117.0542 89.3111 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 119.9403 82.9337 moveto
+109.3867 81.9995 lineto
+117.0542 89.3111 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/8xjnm44dfwwxp90hxq6zhb6qvia7rb3l-sed-4.2.2.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 526.8498 269.7099 moveto
+467.4115 238.2245 255.2888 125.8597 181.2345 86.632 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 183.1575 83.6899 moveto
+172.6824 82.1018 lineto
+179.8808 89.8757 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 183.1575 83.6899 moveto
+172.6824 82.1018 lineto
+179.8808 89.8757 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/54wjl6dp6rp47r67f4nyfqyv8nh456yc-findutils-4.6.0.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 535.3017 269.7099 moveto
+508.6311 238.9937 415.1232 131.3021 378.9449 89.636 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 381.7843 87.5677 moveto
+372.5852 82.3115 lineto
+376.4987 92.1571 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 381.7843 87.5677 moveto
+372.5852 82.3115 lineto
+376.4987 92.1571 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/k951w49yw74ikg19l4mmlwfrq9w7a7zd-gawk-4.1.4.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 572.6421 269.5816 moveto
+688.1082 237.3329 1102.4253 121.6176 1235.2267 84.5273 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 1235.9591 87.9568 moveto
+1244.649 81.8957 lineto
+1234.0761 81.2148 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 1235.9591 87.9568 moveto
+1244.649 81.8957 lineto
+1234.0761 81.2148 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/n48xdjkvhlhj5mgdzy59n0dpb9vn0v78-grep-2.25.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 553.1356 269.7099 moveto
+592.9497 238.6761 733.5706 129.0666 785.7881 88.3648 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 787.8029 91.232 moveto
+793.5383 82.3238 lineto
+783.4995 85.7111 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 787.8029 91.232 moveto
+793.5383 82.3238 lineto
+783.4995 85.7111 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/i52csyja3036ns0zj6z85lkgz3wfyym7-coreutils-8.25.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 545.4521 269.7099 moveto
+556.2058 239.511 593.4548 134.9077 608.8065 91.7967 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 612.0259 93.1892 moveto
+612.0834 82.5945 lineto
+605.4315 90.8409 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 612.0259 93.1892 moveto
+612.0834 82.5945 lineto
+605.4315 90.8409 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/nv4mnbz3mpd4gv80djk7762wyvxpccqk-make-4.2.1.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 560.8973 269.5816 moveto
+630.3889 237.783 877.2292 124.8315 961.8152 86.1258 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 963.1833 89.3489 moveto
+970.8202 82.0053 lineto
+960.2706 82.9836 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 963.1833 89.3489 moveto
+970.8202 82.0053 lineto
+960.2706 82.9836 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/2c60vlcvpj5dvmgklajkp7cpynhcqixr-bash-4.4.0.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 563.6898 269.5816 moveto
+644.0464 237.657 930.2927 123.9351 1026.6106 85.6692 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 1027.7259 88.9923 moveto
+1035.727 82.0474 lineto
+1025.1413 82.4869 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 1027.7259 88.9923 moveto
+1035.727 82.0474 lineto
+1025.1413 82.4869 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/zhc5c4s0xvzizpgpq2za6x84vxv57iy6-ld-wrapper-0.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 566.6055 269.5816 moveto
+658.3901 237.5273 986.3003 123.0101 1094.5469 85.2068 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 1095.4779 88.589 moveto
+1103.7648 81.9876 lineto
+1093.1699 81.9804 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 1095.4779 88.589 moveto
+1103.7648 81.9876 lineto
+1093.1699 81.9804 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/9k1js0kalh4s6q4hf0rgg2n0zdyrwi69-binutils-2.27.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 569.6854 269.5816 moveto
+673.5111 237.4301 1045.2499 122.3146 1166.1851 84.8649 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 1167.1252 88.2378 moveto
+1175.6423 81.9363 lineto
+1165.0545 81.5511 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 1167.1252 88.2378 moveto
+1175.6423 81.9363 lineto
+1165.0545 81.5511 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/hv3dl3my12mq0gkwvckmnqccnckn39l0-gcc-4.9.4.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 542.5809 269.7099 moveto
+542.8736 239.705 543.8829 136.2486 544.3084 92.6351 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 547.8077 92.7159 moveto
+544.4055 82.6822 lineto
+540.8081 92.6475 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 547.8077 92.7159 moveto
+544.4055 82.6822 lineto
+540.8081 92.6475 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/qbfynm50snyn31w2c3paiw2n6wvzksg8-glibc-2.24.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 550.5879 269.7099 moveto
+580.618 238.9291 686.0627 130.8483 726.5257 89.3737 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 728.9956 91.8541 moveto
+733.4736 82.2521 lineto
+723.9851 86.9658 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 728.9956 91.8541 moveto
+733.4736 82.2521 lineto
+723.9851 86.9658 lineto
+closepath stroke
+grestore
+% /gnu/store/4dql1pzyivg87jwyfmmkwc6jll1vnizc-expat-2.2.0.drv->/gnu/store/ir0lq2x7h64g2z5mlqvnlysjk2bc9xka-glibc-utf8-locales-2.24.drv
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 556.8157 269.7099 moveto
+610.9627 238.3535 803.6322 126.7794 872.1207 87.118 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 873.7967 90.192 moveto
+880.6964 82.1518 lineto
+870.2887 84.1344 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 873.7967 90.192 moveto
+880.6964 82.1518 lineto
+870.2887 84.1344 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/7ijl8lybdx95kndajavdrpz05jdiwy9g-tar-1.29.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 665.1504 269.5816 moveto
+560.4601 237.3571 185.0129 121.7915 64.2218 84.6111 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 65.3786 81.3052 moveto
+54.7915 81.7083 lineto
+63.3193 87.9954 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 65.3786 81.3052 moveto
+54.7915 81.7083 lineto
+63.3193 87.9954 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/0ykf3p023pzfcg2bw8ahjc7cvmc12zjq-gzip-1.8.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 681.9857 269.7099 moveto
+642.6258 238.6761 503.6089 129.0666 451.987 88.3648 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 454.3535 85.7736 moveto
+444.3337 82.3304 lineto
+450.0194 91.2705 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 454.3535 85.7736 moveto
+444.3337 82.3304 lineto
+450.0194 91.2705 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/xx3hiqhqn0d94zz7b46hgggwsz3wjiiw-bzip2-1.0.6.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 673.1171 269.5816 moveto
+599.8365 237.7542 339.3681 124.627 250.48 86.021 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 251.9993 82.865 moveto
+241.4327 82.0915 lineto
+249.2106 89.2856 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 251.9993 82.865 moveto
+241.4327 82.0915 lineto
+249.2106 89.2856 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/kz8rzasivw4aflsv4rll3m539xybf226-xz-5.2.2.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 684.1694 269.7099 moveto
+653.1735 238.8644 544.1738 130.3938 502.6918 89.1132 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 505.3385 86.8093 moveto
+495.7814 82.2363 lineto
+500.4008 91.7711 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 505.3385 86.8093 moveto
+495.7814 82.2363 lineto
+500.4008 91.7711 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/3pwrlsd23k2h104akxfj3cxhqcp973g9-file-5.28.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 692.136 269.7099 moveto
+690.8188 239.705 686.2768 136.2486 684.362 92.6351 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 687.8603 92.5176 moveto
+683.925 82.6808 lineto
+680.8671 92.8247 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 687.8603 92.5176 moveto
+683.925 82.6808 lineto
+680.8671 92.8247 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/f1ww5vh5abnvr8b24llipm5dl89s5lq2-diffutils-3.5.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 675.9506 269.5816 moveto
+613.5668 237.8479 392.2988 125.2922 315.7711 86.3637 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 317.814 83.4761 moveto
+307.314 82.0617 lineto
+314.6402 89.7153 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 317.814 83.4761 moveto
+307.314 82.0617 lineto
+314.6402 89.7153 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/0cbgdhhyh7hsgwq1x54n9vnq99rfjch9-patch-2.7.5.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 667.7375 269.5816 moveto
+573.3558 237.4949 235.9215 122.7784 125.0692 85.0924 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 126.4963 81.8808 moveto
+115.9018 81.9758 lineto
+124.2431 88.5083 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 126.4963 81.8808 moveto
+115.9018 81.9758 lineto
+124.2431 88.5083 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/8xjnm44dfwwxp90hxq6zhb6qvia7rb3l-sed-4.2.2.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 670.4478 269.5816 moveto
+586.736 237.6246 288.32 123.7041 188.3825 85.5529 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 189.7406 82.3251 moveto
+179.15 82.0284 lineto
+187.2441 88.8647 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 189.7406 82.3251 moveto
+179.15 82.0284 lineto
+187.2441 88.8647 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/54wjl6dp6rp47r67f4nyfqyv8nh456yc-findutils-4.6.0.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 679.2358 269.7099 moveto
+629.1688 238.418 451.2811 127.2382 387.4819 87.3637 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 389.5478 84.5275 moveto
+379.2128 82.1955 lineto
+385.8378 90.4635 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 389.5478 84.5275 moveto
+379.2128 82.1955 lineto
+385.8378 90.4635 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/k951w49yw74ikg19l4mmlwfrq9w7a7zd-gawk-4.1.4.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 716.4823 269.5816 moveto
+807.7978 237.5273 1134.0322 123.0101 1241.7255 85.2068 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 1242.6135 88.6045 moveto
+1250.8898 81.9899 lineto
+1240.295 81.9996 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 1242.6135 88.6045 moveto
+1250.8898 81.9899 lineto
+1240.295 81.9996 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/n48xdjkvhlhj5mgdzy59n0dpb9vn0v78-grep-2.25.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 697.0697 269.7099 moveto
+713.7872 239.3817 771.8699 134.0104 795.4423 91.2462 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 798.5044 92.9415 moveto
+800.2666 82.4942 lineto
+792.374 89.5623 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 798.5044 92.9415 moveto
+800.2666 82.4942 lineto
+792.374 89.5623 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/i52csyja3036ns0zj6z85lkgz3wfyym7-coreutils-8.25.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 689.3861 269.7099 moveto
+678.0432 239.511 638.7531 134.9077 622.5602 91.7967 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 625.8932 90.7163 moveto
+619.1004 82.5856 lineto
+619.3402 93.1777 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 625.8932 90.7163 moveto
+619.1004 82.5856 lineto
+619.3402 93.1777 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/nv4mnbz3mpd4gv80djk7762wyvxpccqk-make-4.2.1.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 704.551 269.7099 moveto
+749.8511 238.5471 910.3253 128.1538 968.8977 87.8606 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 970.7969 90.8024 moveto
+977.052 82.2511 lineto
+966.8295 85.0352 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 970.7969 90.8024 moveto
+977.052 82.2511 lineto
+966.8295 85.0352 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/2c60vlcvpj5dvmgklajkp7cpynhcqixr-bash-4.4.0.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 707.3009 269.7099 moveto
+763.3987 238.289 963.3045 126.3199 1033.7297 86.8741 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 1035.1801 90.0734 moveto
+1042.1944 82.1329 lineto
+1031.7593 83.9661 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 1035.1801 90.0734 moveto
+1042.1944 82.1329 lineto
+1031.7593 83.9661 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/zhc5c4s0xvzizpgpq2za6x84vxv57iy6-ld-wrapper-0.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 710.4456 269.5816 moveto
+778.1618 237.8154 1018.5192 125.0619 1101.2665 86.2446 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 1102.7088 89.434 moveto
+1110.2757 82.0183 lineto
+1099.7358 83.0967 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 1102.7088 89.434 moveto
+1110.2757 82.0183 lineto
+1099.7358 83.0967 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/9k1js0kalh4s6q4hf0rgg2n0zdyrwi69-binutils-2.27.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 713.5255 269.5816 moveto
+793.2592 237.657 1077.2865 123.9351 1172.8578 85.6692 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 1173.9116 89.0175 moveto
+1181.8942 82.0512 lineto
+1171.3096 82.519 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 1173.9116 89.0175 moveto
+1181.8942 82.0512 lineto
+1171.3096 82.519 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/hv3dl3my12mq0gkwvckmnqccnckn39l0-gcc-4.9.4.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 686.5149 269.7099 moveto
+664.4794 239.1877 587.5711 132.6593 557.086 90.4333 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 559.9746 88.455 moveto
+551.2834 82.3959 lineto
+554.2991 92.5524 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 559.9746 88.455 moveto
+551.2834 82.3959 lineto
+554.2991 92.5524 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/qbfynm50snyn31w2c3paiw2n6wvzksg8-glibc-2.24.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 694.522 269.7099 moveto
+701.856 239.6404 727.1824 135.8023 737.7795 92.354 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 741.1797 93.1837 moveto
+740.149 82.6391 lineto
+734.379 91.525 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 741.1797 93.1837 moveto
+740.149 82.6391 lineto
+734.379 91.525 lineto
+closepath stroke
+grestore
+% /gnu/store/d1n7i55s1zcwzi21pnsxhamk3b1zf61d-m4-1.4.17.drv->/gnu/store/ir0lq2x7h64g2z5mlqvnlysjk2bc9xka-glibc-utf8-locales-2.24.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 700.7497 269.7099 moveto
+731.4447 238.8644 839.3862 130.3938 880.4654 89.1132 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 882.7307 91.7987 moveto
+887.3035 82.2416 lineto
+877.7688 86.8611 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 882.7307 91.7987 moveto
+887.3035 82.2416 lineto
+877.7688 86.8611 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+end
+restore
+%%EOF

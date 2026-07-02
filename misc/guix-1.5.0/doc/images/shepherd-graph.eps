@@ -1,0 +1,1368 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: graphviz version 7.0.1 (20221109.1506)
+%%Title: Guix shepherd-service
+%%Pages: 1
+%%BoundingBox: 36 36 885 800
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 885 800
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 849 764 boxprim clip newpath
+1 1 set_scale 0 rotate 40 40 translate
+% user-file-systems
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 252 226 moveto
+160 226 lineto
+160 208 lineto
+252 208 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+168 214.8 moveto 76 (user-file-systems) alignedtext
+grestore
+% user-processes
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 376.5 387 moveto
+293.5 387 lineto
+293.5 369 lineto
+376.5 369 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+301.5 375.8 moveto 67 (user-processes) alignedtext
+grestore
+% user-processes->user-file-systems
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 328.4255 368.8966 moveto
+308.3315 344.1295 247.4247 269.0583 219.8395 235.058 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 222.6879 233.0136 moveto
+213.6695 227.4531 lineto
+217.252 237.4239 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 222.6879 233.0136 moveto
+213.6695 227.4531 lineto
+217.252 237.4239 lineto
+closepath stroke
+grestore
+% root-file-system
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 465 65 moveto
+379 65 lineto
+379 47 lineto
+465 47 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+387 53.8 moveto 70 (root-file-system) alignedtext
+grestore
+% user-processes->root-file-system
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 347.714 368.6989 moveto
+377.2887 348.5249 450.2164 293.5778 477 226 curveto
+498.5516 171.6233 458.0254 105.1077 435.5419 74.2488 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 438.4555 72.2992 moveto
+429.6365 66.4275 lineto
+432.869 76.5172 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 438.4555 72.2992 moveto
+429.6365 66.4275 lineto
+432.869 76.5172 lineto
+closepath stroke
+grestore
+% file-system-/dev/pts
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 158.5 226 moveto
+53.5 226 lineto
+53.5 208 lineto
+158.5 208 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+61.5 214.8 moveto 89 (file-system-/dev/pts) alignedtext
+grestore
+% user-processes->file-system-/dev/pts
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 323.0104 368.6753 moveto
+286.2291 343.1372 174.635 265.6549 127.4407 232.8868 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 129.6008 230.1257 moveto
+119.3905 227.2973 lineto
+125.6085 235.8756 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 129.6008 230.1257 moveto
+119.3905 227.2973 lineto
+125.6085 235.8756 lineto
+closepath stroke
+grestore
+% file-system-/dev/shm
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 363 226 moveto
+253 226 lineto
+253 208 lineto
+363 208 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+261 214.8 moveto 94 (file-system-/dev/shm) alignedtext
+grestore
+% user-processes->file-system-/dev/shm
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 333.6239 368.8966 moveto
+329.5085 344.661 317.2135 272.2571 311.2778 237.3027 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 314.7839 237.0428 moveto
+309.6591 227.77 lineto
+307.8827 238.2148 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 314.7839 237.0428 moveto
+309.6591 227.77 lineto
+307.8827 238.2148 lineto
+closepath stroke
+grestore
+% file-system-/gnu/store
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 479.5 226 moveto
+364.5 226 lineto
+364.5 208 lineto
+479.5 208 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+372.5 214.8 moveto 99 (file-system-/gnu/store) alignedtext
+grestore
+% user-processes->file-system-/gnu/store
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 339.434 368.8966 moveto
+352.8694 344.3421 393.3593 270.3434 412.1823 235.9426 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 415.0144 238.0582 moveto
+416.7441 227.6056 lineto
+408.8735 234.6981 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 415.0144 238.0582 moveto
+416.7441 227.6056 lineto
+408.8735 234.6981 lineto
+closepath stroke
+grestore
+% nscd
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 89 548 moveto
+51 548 lineto
+51 530 lineto
+89 530 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+59 536.8 moveto 22 (nscd) alignedtext
+grestore
+% nscd->user-processes
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 83.8744 529.6753 moveto
+126.7056 503.9766 257.203 425.6782 311.2103 393.2738 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 312.8712 396.359 moveto
+319.6453 388.2128 lineto
+309.2697 390.3566 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 312.8712 396.359 moveto
+319.6453 388.2128 lineto
+309.2697 390.3566 lineto
+closepath stroke
+grestore
+% guix-daemon
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 166 548 moveto
+90 548 lineto
+90 530 lineto
+166 530 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+98 536.8 moveto 60 (guix-daemon) alignedtext
+grestore
+% guix-daemon->user-processes
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 138.8378 529.6753 moveto
+171.9461 504.2443 272.114 427.3037 315.0794 394.3013 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 317.021 397.2233 moveto
+322.8195 388.3561 lineto
+312.7569 391.672 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 317.021 397.2233 moveto
+322.8195 388.3561 lineto
+312.7569 391.672 lineto
+closepath stroke
+grestore
+% urandom-seed
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 249 548 moveto
+167 548 lineto
+167 530 lineto
+249 530 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+175 536.8 moveto 66 (urandom-seed) alignedtext
+grestore
+% urandom-seed->user-processes
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 214.4725 529.8966 moveto
+234.255 505.1295 294.2175 430.0583 321.375 396.058 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 323.9373 398.4582 moveto
+327.4436 388.4604 lineto
+318.4679 394.0895 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 323.9373 398.4582 moveto
+327.4436 388.4604 lineto
+318.4679 394.0895 lineto
+closepath stroke
+grestore
+% syslogd
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 50 548 moveto
+0 548 lineto
+0 530 lineto
+50 530 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+8 536.8 moveto 34 (syslogd) alignedtext
+grestore
+% syslogd->user-processes
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 41.2305 529.6753 moveto
+91.648 503.816 245.9044 424.6974 308.3445 392.6717 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 309.9089 395.8029 moveto
+317.2095 388.1248 lineto
+306.7142 389.5744 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 309.9089 395.8029 moveto
+317.2095 388.1248 lineto
+306.7142 389.5744 lineto
+closepath stroke
+grestore
+% term-tty6
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 562 548 moveto
+502 548 lineto
+502 530 lineto
+562 530 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+510 536.8 moveto 44 (term-tty6) alignedtext
+grestore
+% term-tty6->user-processes
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 521.6858 529.6753 moveto
+490.17 504.2387 394.8059 427.2697 353.9311 394.2795 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 356.3698 391.7499 moveto
+346.3899 388.1929 lineto
+351.9733 397.1971 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 356.3698 391.7499 moveto
+346.3899 388.1929 lineto
+351.9733 397.1971 lineto
+closepath stroke
+grestore
+% udev
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 492.5 387 moveto
+453.5 387 lineto
+453.5 369 lineto
+492.5 369 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+461.5 375.8 moveto 23 (udev) alignedtext
+grestore
+% term-tty6->udev
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 528.9931 529.8966 moveto
+519.9606 505.5547 492.8971 432.6211 479.9928 397.845 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 483.3585 396.8545 moveto
+476.5982 388.6968 lineto
+476.7958 399.2898 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 483.3585 396.8545 moveto
+476.5982 388.6968 lineto
+476.7958 399.2898 lineto
+closepath stroke
+grestore
+% host-name
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 562.5 387 moveto
+497.5 387 lineto
+497.5 369 lineto
+562.5 369 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+505.5 375.8 moveto 49 (host-name) alignedtext
+grestore
+% term-tty6->host-name
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 531.8981 529.8966 moveto
+531.5946 505.7673 530.6905 433.8913 530.2486 398.7648 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 533.7488 398.7464 moveto
+530.1232 388.7912 lineto
+526.7493 398.8345 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 533.7488 398.7464 moveto
+530.1232 388.7912 lineto
+526.7493 398.8345 lineto
+closepath stroke
+grestore
+% term-tty5
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 623 548 moveto
+563 548 lineto
+563 530 lineto
+623 530 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+571 536.8 moveto 44 (term-tty5) alignedtext
+grestore
+% term-tty5->user-processes
+gsave
+1 setlinewidth
+0 1 1 edgecolor
+newpath 579.4921 529.6753 moveto
+537.7923 503.9766 410.742 425.6782 358.1613 393.2738 curveto
+stroke
+0 1 1 edgecolor
+newpath 360.3235 390.4951 moveto
+349.974 388.2282 lineto
+356.6509 396.4543 lineto
+closepath fill
+1 setlinewidth
+solid
+0 1 1 edgecolor
+newpath 360.3235 390.4951 moveto
+349.974 388.2282 lineto
+356.6509 396.4543 lineto
+closepath stroke
+grestore
+% term-tty5->udev
+gsave
+1 setlinewidth
+0 1 1 edgecolor
+newpath 586.8842 529.8966 moveto
+568.1921 505.1295 511.5346 430.0583 485.874 396.058 curveto
+stroke
+0 1 1 edgecolor
+newpath 488.9769 394.3593 moveto
+480.1592 388.4859 lineto
+483.3896 398.5762 lineto
+closepath fill
+1 setlinewidth
+solid
+0 1 1 edgecolor
+newpath 488.9769 394.3593 moveto
+480.1592 388.4859 lineto
+483.3896 398.5762 lineto
+closepath stroke
+grestore
+% term-tty5->host-name
+gsave
+1 setlinewidth
+0 1 1 edgecolor
+newpath 589.7892 529.8966 moveto
+580.1443 505.5547 551.2461 432.6211 537.4669 397.845 curveto
+stroke
+0 1 1 edgecolor
+newpath 540.775 396.6924 moveto
+533.8374 388.6849 lineto
+534.2672 399.271 lineto
+closepath fill
+1 setlinewidth
+solid
+0 1 1 edgecolor
+newpath 540.775 396.6924 moveto
+533.8374 388.6849 lineto
+534.2672 399.271 lineto
+closepath stroke
+grestore
+% term-tty4
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 684 548 moveto
+624 548 lineto
+624 530 lineto
+684 530 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+632 536.8 moveto 44 (term-tty4) alignedtext
+grestore
+% term-tty4->user-processes
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 637.2983 529.6753 moveto
+585.3096 503.7625 426.0245 424.3696 362.0315 392.4734 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 363.787 389.4378 moveto
+353.2758 388.1093 lineto
+360.6644 395.7027 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 363.787 389.4378 moveto
+353.2758 388.1093 lineto
+360.6644 395.7027 lineto
+closepath stroke
+grestore
+% term-tty4->udev
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 644.7753 529.8966 moveto
+616.2184 504.8106 528.9129 428.1168 490.9467 394.7653 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 493.3831 392.2469 moveto
+483.5602 388.2767 lineto
+488.7632 397.506 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 493.3831 392.2469 moveto
+483.5602 388.2767 lineto
+488.7632 397.506 lineto
+closepath stroke
+grestore
+% term-tty4->host-name
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 647.6803 529.8966 moveto
+628.3652 505.1295 569.8191 430.0583 543.3031 396.058 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 546.2961 394.2044 moveto
+537.3864 388.4713 lineto
+540.7762 398.5092 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 546.2961 394.2044 moveto
+537.3864 388.4713 lineto
+540.7762 398.5092 lineto
+closepath stroke
+grestore
+% term-tty3
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 379 548 moveto
+319 548 lineto
+319 530 lineto
+379 530 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+327 536.8 moveto 44 (term-tty3) alignedtext
+grestore
+% term-tty3->user-processes
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 348.2865 529.8966 moveto
+346.1525 505.661 339.7774 433.2571 336.6996 398.3027 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 340.2253 398.4399 moveto
+335.8616 388.7855 lineto
+333.2523 399.054 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 340.2253 398.4399 moveto
+335.8616 388.7855 lineto
+333.2523 399.054 lineto
+closepath stroke
+grestore
+% term-tty3->udev
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 355.3197 529.8966 moveto
+374.6348 505.1295 433.1809 430.0583 459.6969 396.058 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 462.2238 398.5092 moveto
+465.6136 388.4713 lineto
+456.7039 394.2044 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 462.2238 398.5092 moveto
+465.6136 388.4713 lineto
+456.7039 394.2044 lineto
+closepath stroke
+grestore
+% term-tty3->host-name
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 358.2247 529.8966 moveto
+386.7816 504.8106 474.0871 428.1168 512.0533 394.7653 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 514.2368 397.506 moveto
+519.4398 388.2767 lineto
+509.6169 392.2469 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 514.2368 397.506 moveto
+519.4398 388.2767 lineto
+509.6169 392.2469 lineto
+closepath stroke
+grestore
+% term-tty2
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 440 548 moveto
+380 548 lineto
+380 530 lineto
+440 530 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+388 536.8 moveto 44 (term-tty2) alignedtext
+grestore
+% term-tty2->user-processes
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 406.1776 529.8966 moveto
+394.6455 505.4484 359.9921 431.9832 343.6753 397.3916 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 346.9821 396.1978 moveto
+339.5503 388.6467 lineto
+340.651 399.1842 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 346.9821 396.1978 moveto
+339.5503 388.6467 lineto
+340.651 399.1842 lineto
+closepath stroke
+grestore
+% term-tty2->udev
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 413.2108 529.8966 moveto
+422.8557 505.5547 451.7539 432.6211 465.5331 397.845 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 468.7328 399.271 moveto
+469.1626 388.6849 lineto
+462.225 396.6924 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 468.7328 399.271 moveto
+469.1626 388.6849 lineto
+462.225 396.6924 lineto
+closepath stroke
+grestore
+% term-tty2->host-name
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 416.1158 529.8966 moveto
+434.8079 505.1295 491.4654 430.0583 517.126 396.058 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 519.6104 398.5762 moveto
+522.8408 388.4859 lineto
+514.0231 394.3593 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 519.6104 398.5762 moveto
+522.8408 388.4859 lineto
+514.0231 394.3593 lineto
+closepath stroke
+grestore
+% term-tty1
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 501 548 moveto
+441 548 lineto
+441 530 lineto
+501 530 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+449 536.8 moveto 44 (term-tty1) alignedtext
+grestore
+% term-tty1->user-processes
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 464.0688 529.8966 moveto
+442.7935 505.0232 378.1206 429.413 349.218 395.6225 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 352.224 393.7523 moveto
+343.0642 388.428 lineto
+346.9045 398.3023 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 352.224 393.7523 moveto
+343.0642 388.428 lineto
+346.9045 398.3023 lineto
+closepath stroke
+grestore
+% term-tty1->udev
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 471.1019 529.8966 moveto
+471.4054 505.7673 472.3095 433.8913 472.7514 398.7648 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 476.2507 398.8345 moveto
+472.8768 388.7912 lineto
+469.2512 398.7464 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 476.2507 398.8345 moveto
+472.8768 388.7912 lineto
+469.2512 398.7464 lineto
+closepath stroke
+grestore
+% term-tty1->host-name
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 474.0069 529.8966 moveto
+483.0394 505.5547 510.1029 432.6211 523.0072 397.845 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 526.2042 399.2898 moveto
+526.4018 388.6968 lineto
+519.6415 396.8545 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 526.2042 399.2898 moveto
+526.4018 388.6968 lineto
+519.6415 396.8545 lineto
+closepath stroke
+grestore
+% networking
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 318 548 moveto
+250 548 lineto
+250 530 lineto
+318 530 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+258 536.8 moveto 52 (networking) alignedtext
+grestore
+% networking->user-processes
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 286.5992 529.8966 moveto
+294.407 505.5547 317.8008 432.6211 328.9554 397.845 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 332.161 399.3102 moveto
+331.8826 388.719 lineto
+325.4955 397.1721 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 332.161 399.3102 moveto
+331.8826 388.719 lineto
+325.4955 397.1721 lineto
+closepath stroke
+grestore
+% networking->udev
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 293.8954 529.6753 moveto
+324.1314 504.2387 415.6228 427.2697 454.8376 394.2795 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 456.6453 397.3326 moveto
+462.0444 388.2166 lineto
+452.1389 391.976 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 456.6453 397.3326 moveto
+462.0444 388.2166 lineto
+452.1389 391.976 lineto
+closepath stroke
+grestore
+% ssh-daemon
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 147.5 709 moveto
+76.5 709 lineto
+76.5 691 lineto
+147.5 691 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+84.5 697.8 moveto 55 (ssh-daemon) alignedtext
+grestore
+% ssh-daemon->syslogd
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 107.566 690.8966 moveto
+94.1306 666.3421 53.6407 592.3434 34.8177 557.9426 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 38.1265 556.6981 moveto
+30.2559 549.6056 lineto
+31.9856 560.0582 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 38.1265 556.6981 moveto
+30.2559 549.6056 lineto
+31.9856 560.0582 lineto
+closepath stroke
+grestore
+% ssh-daemon->networking
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 120.766 690.8966 moveto
+147.903 665.8106 230.8673 589.1168 266.9457 555.7653 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 268.9667 558.6634 moveto
+273.934 549.3052 lineto
+264.215 553.5232 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 268.9667 558.6634 moveto
+273.934 549.3052 lineto
+264.215 553.5232 lineto
+closepath stroke
+grestore
+% console-font-tty6
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 594.5 709 moveto
+501.5 709 lineto
+501.5 691 lineto
+594.5 691 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+509.5 697.8 moveto 77 (console-font-tty6) alignedtext
+grestore
+% console-font-tty6->term-tty6
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 547.1846 690.8966 moveto
+544.7458 666.661 537.4598 594.2571 533.9424 559.3027 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 537.4683 559.383 moveto
+532.9845 549.7837 lineto
+530.5034 560.0839 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 537.4683 559.383 moveto
+532.9845 549.7837 lineto
+530.5034 560.0839 lineto
+closepath stroke
+grestore
+% console-font-tty5
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 688.5 709 moveto
+595.5 709 lineto
+595.5 691 lineto
+688.5 691 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+603.5 697.8 moveto 77 (console-font-tty5) alignedtext
+grestore
+% console-font-tty5->term-tty5
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 639.5027 690.8966 moveto
+632.0011 666.5547 609.5247 593.6211 598.8076 558.845 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 602.2867 558.2499 moveto
+595.9968 549.7242 lineto
+595.5971 560.3115 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 602.2867 558.2499 moveto
+595.9968 549.7242 lineto
+595.5971 560.3115 lineto
+closepath stroke
+grestore
+% console-font-tty4
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 782.5 709 moveto
+689.5 709 lineto
+689.5 691 lineto
+782.5 691 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+697.5 697.8 moveto 77 (console-font-tty4) alignedtext
+grestore
+% console-font-tty4->term-tty4
+gsave
+1 setlinewidth
+0.78039 1 0.82745 edgecolor
+newpath 731.8209 690.8966 moveto
+719.2124 666.4484 681.3247 592.9832 663.485 558.3916 curveto
+stroke
+0.78039 1 0.82745 edgecolor
+newpath 666.6571 556.9064 moveto
+658.9628 549.623 lineto
+660.4357 560.1149 lineto
+closepath fill
+1 setlinewidth
+solid
+0.78039 1 0.82745 edgecolor
+newpath 666.6571 556.9064 moveto
+658.9628 549.623 lineto
+660.4357 560.1149 lineto
+closepath stroke
+grestore
+% console-font-tty3
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 312.5 709 moveto
+219.5 709 lineto
+219.5 691 lineto
+312.5 691 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+227.5 697.8 moveto 77 (console-font-tty3) alignedtext
+grestore
+% console-font-tty3->term-tty3
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 270.2301 690.8966 moveto
+282.9923 666.4484 321.3421 592.9832 339.3994 558.3916 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 342.4536 560.104 moveto
+343.9785 549.6195 lineto
+336.2482 556.8647 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 342.4536 560.104 moveto
+343.9785 549.6195 lineto
+336.2482 556.8647 lineto
+closepath stroke
+grestore
+% console-font-tty2
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 406.5 709 moveto
+313.5 709 lineto
+313.5 691 lineto
+406.5 691 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+321.5 697.8 moveto 77 (console-font-tty2) alignedtext
+grestore
+% console-font-tty2->term-tty2
+gsave
+1 setlinewidth
+0.33333 0.23922 0.73725 edgecolor
+newpath 362.5482 690.8966 moveto
+370.2029 666.5547 393.138 593.6211 404.0739 558.845 curveto
+stroke
+0.33333 0.23922 0.73725 edgecolor
+newpath 407.2818 560.311 moveto
+406.9429 549.7216 lineto
+400.6042 558.2111 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 0.23922 0.73725 edgecolor
+newpath 407.2818 560.311 moveto
+406.9429 549.7216 lineto
+400.6042 558.2111 lineto
+closepath stroke
+grestore
+% console-font-tty1
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 500.5 709 moveto
+407.5 709 lineto
+407.5 691 lineto
+500.5 691 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+415.5 697.8 moveto 77 (console-font-tty1) alignedtext
+grestore
+% console-font-tty1->term-tty1
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 454.8664 690.8966 moveto
+457.4576 666.661 465.1989 594.2571 468.9362 559.3027 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 472.371 560.0982 moveto
+469.954 549.7827 lineto
+465.4107 559.354 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 472.371 560.0982 moveto
+469.954 549.7827 lineto
+465.4107 559.354 lineto
+closepath stroke
+grestore
+% file-system-/dev/pts->root-file-system
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 122.5446 207.6753 moveto
+174.0444 181.7625 331.8315 102.3696 395.2228 70.4734 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 396.5261 73.7357 moveto
+403.8859 66.1144 lineto
+393.3798 67.4826 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 396.5261 73.7357 moveto
+403.8859 66.1144 lineto
+393.3798 67.4826 lineto
+closepath stroke
+grestore
+% file-system-/dev/shm->root-file-system
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 313.81 207.8966 moveto
+331.4913 183.2358 384.9308 108.7018 409.4542 74.4981 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 412.2006 76.6742 moveto
+415.1831 66.5078 lineto
+406.5117 72.5954 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 412.2006 76.6742 moveto
+415.1831 66.5078 lineto
+406.5117 72.5954 lineto
+closepath stroke
+grestore
+% file-system-/gnu/store->root-file-system
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 422 207.8966 moveto
+422 183.7673 422 111.8913 422 76.7648 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 425.5001 76.7913 moveto
+422 66.7913 lineto
+418.5001 76.7914 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 425.5001 76.7913 moveto
+422 66.7913 lineto
+418.5001 76.7914 lineto
+closepath stroke
+grestore
+% udev->root-file-system
+gsave
+1 setlinewidth
+0.33333 0.23922 0.73725 edgecolor
+newpath 474.6201 368.8173 moveto
+479.2166 344.2259 491.2979 268.9223 480 208 curveto
+470.7254 157.988 445.5408 103.1568 431.6023 75.3609 curveto
+stroke
+0.33333 0.23922 0.73725 edgecolor
+newpath 434.7601 73.8486 moveto
+427.0863 66.5436 lineto
+428.5298 77.0397 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 0.23922 0.73725 edgecolor
+newpath 434.7601 73.8486 moveto
+427.0863 66.5436 lineto
+428.5298 77.0397 lineto
+closepath stroke
+grestore
+% loopback
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 840.5 709 moveto
+783.5 709 lineto
+783.5 691 lineto
+840.5 691 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+791.5 697.8 moveto 41 (loopback) alignedtext
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+end
+restore
+%%EOF

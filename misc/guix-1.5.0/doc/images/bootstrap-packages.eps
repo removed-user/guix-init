@@ -1,0 +1,2365 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: graphviz version 7.0.1 (20221109.1506)
+%%Title: Guix bag
+%%Pages: 1
+%%BoundingBox: 36 36 609 503
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 609 503
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 573 467 boxprim clip newpath
+1 1 set_scale 0 rotate 40 40 translate
+% /gnu/store/aymf6jlxxpwgr71rkiz24m646nqsyii6-glibc-intermediate-2.24.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 324.7896 447 moveto
+201.7896 447 lineto
+201.7896 429 lineto
+324.7896 429 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+209.7896 435.8 moveto 107 (glibc-intermediate-2.24) alignedtext
+grestore
+% /gnu/store/wx8ifbb7x22cl4998fyldsr24fcv18j3-texinfo-6.3.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 250.2896 388 moveto
+184.2896 388 lineto
+184.2896 370 lineto
+250.2896 370 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+192.2896 376.8 moveto 50 (texinfo-6.3) alignedtext
+grestore
+% /gnu/store/aymf6jlxxpwgr71rkiz24m646nqsyii6-glibc-intermediate-2.24.drv->/gnu/store/wx8ifbb7x22cl4998fyldsr24fcv18j3-texinfo-6.3.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 256.5021 428.5895 moveto
+249.8434 420.3385 239.4961 407.5168 231.1023 397.1158 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 234.0593 395.2068 moveto
+225.0554 389.6229 lineto
+228.6119 399.603 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 234.0593 395.2068 moveto
+225.0554 389.6229 lineto
+228.6119 399.603 lineto
+closepath stroke
+grestore
+% /gnu/store/ccj3as3258l70lmphi48hs7n017wv75s-perl-boot0-5.24.0.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 169.2896 328 moveto
+73.2896 328 lineto
+73.2896 310 lineto
+169.2896 310 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+81.2896 316.8 moveto 80 (perl-boot0-5.24.0) alignedtext
+grestore
+% /gnu/store/aymf6jlxxpwgr71rkiz24m646nqsyii6-glibc-intermediate-2.24.drv->/gnu/store/ccj3as3258l70lmphi48hs7n017wv75s-perl-boot0-5.24.0.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 201.4679 431.308 moveto
+145.1737 424.6938 68.0549 411.5477 49.2896 388 curveto
+32.4513 366.8705 63.4135 346.0593 89.8378 333.1369 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 91.0255 336.4443 moveto
+98.6253 329.0623 lineto
+88.0808 330.0937 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 91.0255 336.4443 moveto
+98.6253 329.0623 lineto
+88.0808 330.0937 lineto
+closepath stroke
+grestore
+% /gnu/store/w9adgzgdqkwz0w13zxf2fn363v9wcllc-gcc-cross-boot0-4.9.4.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 367.2896 388 moveto
+251.2896 388 lineto
+251.2896 370 lineto
+367.2896 370 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+259.2896 376.8 moveto 100 (gcc-cross-boot0-4.9.4) alignedtext
+grestore
+% /gnu/store/aymf6jlxxpwgr71rkiz24m646nqsyii6-glibc-intermediate-2.24.drv->/gnu/store/w9adgzgdqkwz0w13zxf2fn363v9wcllc-gcc-cross-boot0-4.9.4.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 270.077 428.5895 moveto
+276.7357 420.3385 287.083 407.5168 295.4768 397.1158 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 297.9672 399.603 moveto
+301.5237 389.6229 lineto
+292.5198 395.2068 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 297.9672 399.603 moveto
+301.5237 389.6229 lineto
+292.5198 395.2068 lineto
+closepath stroke
+grestore
+% /gnu/store/72snmrnjphwjxffknjhzm3xg38wd08al-ld-wrapper-x86_64-guix-linux-gnu-0.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 553.7896 388 moveto
+374.7896 388 lineto
+374.7896 370 lineto
+553.7896 370 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+382.7896 376.8 moveto 163 (ld-wrapper-x86_64-guix-linux-gnu-0) alignedtext
+grestore
+% /gnu/store/aymf6jlxxpwgr71rkiz24m646nqsyii6-glibc-intermediate-2.24.drv->/gnu/store/72snmrnjphwjxffknjhzm3xg38wd08al-ld-wrapper-x86_64-guix-linux-gnu-0.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 292.9478 428.5895 moveto
+327.5359 418.7809 384.9014 402.5131 423.6264 391.5313 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 424.3878 394.9535 moveto
+433.0535 388.858 lineto
+422.478 388.2191 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 424.3878 394.9535 moveto
+433.0535 388.858 lineto
+422.478 388.2191 lineto
+closepath stroke
+grestore
+% /gnu/store/v1v7jp438hc5rpgriwpjp04x049vh0g4-binutils-cross-boot0-2.27.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 373.7896 328 moveto
+244.7896 328 lineto
+244.7896 310 lineto
+373.7896 310 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+252.7896 316.8 moveto 113 (binutils-cross-boot0-2.27) alignedtext
+grestore
+% /gnu/store/aymf6jlxxpwgr71rkiz24m646nqsyii6-glibc-intermediate-2.24.drv->/gnu/store/v1v7jp438hc5rpgriwpjp04x049vh0g4-binutils-cross-boot0-2.27.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 303.3447 428.5187 moveto
+325.4026 421.5828 350.9445 409.3071 364.2896 388 curveto
+376.7001 368.185 354.2815 347.6049 334.4432 334.3492 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 336.4035 331.4473 moveto
+326.0718 329.1007 lineto
+332.6852 337.378 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 336.4035 331.4473 moveto
+326.0718 329.1007 lineto
+332.6852 337.378 lineto
+closepath stroke
+grestore
+% /gnu/store/1jpld53g41rzv2bmjp6v9mckmyw75vs3-make-boot0-4.2.1.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 200.2896 149 moveto
+102.2896 149 lineto
+102.2896 131 lineto
+200.2896 131 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+110.2896 137.8 moveto 82 (make-boot0-4.2.1) alignedtext
+grestore
+% /gnu/store/aymf6jlxxpwgr71rkiz24m646nqsyii6-glibc-intermediate-2.24.drv->/gnu/store/1jpld53g41rzv2bmjp6v9mckmyw75vs3-make-boot0-4.2.1.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 201.5004 431.3966 moveto
+143.8194 424.7828 63.6586 411.5774 43.2896 388 curveto
+23.4786 365.0686 38.2896 350.3038 38.2896 320 curveto
+38.2896 320 38.2896 320 38.2896 258 curveto
+38.2896 226.9238 38.6576 215.0897 58.2896 191 curveto
+72.3265 173.7757 93.9201 161.653 112.7676 153.6622 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 114.0515 156.9183 moveto
+122.0622 149.9844 lineto
+111.4759 150.4093 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 114.0515 156.9183 moveto
+122.0622 149.9844 lineto
+111.4759 150.4093 lineto
+closepath stroke
+grestore
+% /gnu/store/zpphawi07xidhfs2dja3w7hmnfp99j02-diffutils-boot0-3.5.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 315.7896 209 moveto
+218.7896 209 lineto
+218.7896 191 lineto
+315.7896 191 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+226.7896 197.8 moveto 81 (diffutils-boot0-3.5) alignedtext
+grestore
+% /gnu/store/aymf6jlxxpwgr71rkiz24m646nqsyii6-glibc-intermediate-2.24.drv->/gnu/store/zpphawi07xidhfs2dja3w7hmnfp99j02-diffutils-boot0-3.5.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 301.5423 428.5181 moveto
+323.9937 421.4938 350.8972 409.1264 366.2896 388 curveto
+382.1316 366.2564 372.5079 354.8436 374.2896 328 curveto
+374.8194 320.0176 377.3168 317.4051 374.2896 310 curveto
+357.3699 268.6115 316.3187 234.4571 290.2652 215.9628 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 292.2467 213.0778 moveto
+282.0219 210.3022 lineto
+288.2841 218.8483 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 292.2467 213.0778 moveto
+282.0219 210.3022 lineto
+288.2841 218.8483 lineto
+closepath stroke
+grestore
+% /gnu/store/m4900ip34w4rcgn5620iqdi1wv198d9s-findutils-boot0-4.6.0.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 274.2896 268 moveto
+164.2896 268 lineto
+164.2896 250 lineto
+274.2896 250 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+172.2896 256.8 moveto 94 (findutils-boot0-4.6.0) alignedtext
+grestore
+% /gnu/store/aymf6jlxxpwgr71rkiz24m646nqsyii6-glibc-intermediate-2.24.drv->/gnu/store/m4900ip34w4rcgn5620iqdi1wv198d9s-findutils-boot0-4.6.0.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 238.9601 428.6252 moveto
+221.1194 421.0526 198.1844 407.9872 187.2896 388 curveto
+167.6247 351.9236 191.2282 303.5609 207.1198 277.8415 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 209.9758 279.8699 moveto
+212.4855 269.5766 lineto
+204.1046 276.0582 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 209.9758 279.8699 moveto
+212.4855 269.5766 lineto
+204.1046 276.0582 lineto
+closepath stroke
+grestore
+% /gnu/store/nwzyr3xskw0ms8cndffsfvhvm5xz96pc-file-boot0-5.28.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 141.7896 209 moveto
+58.7896 209 lineto
+58.7896 191 lineto
+141.7896 191 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+66.7896 197.8 moveto 67 (file-boot0-5.28) alignedtext
+grestore
+% /gnu/store/aymf6jlxxpwgr71rkiz24m646nqsyii6-glibc-intermediate-2.24.drv->/gnu/store/nwzyr3xskw0ms8cndffsfvhvm5xz96pc-file-boot0-5.28.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 201.4226 431.5257 moveto
+144.2791 425.036 65.4312 411.9459 46.2896 388 curveto
+42.2223 382.9119 35.2382 303.8974 58.2896 250 curveto
+63.6428 237.4835 73.3753 225.8104 82.1243 216.9996 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 84.3905 219.6739 moveto
+89.2477 210.258 lineto
+79.5788 214.5897 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 84.3905 219.6739 moveto
+89.2477 210.258 lineto
+79.5788 214.5897 lineto
+closepath stroke
+grestore
+% /gnu/store/wda0p45jlbzg6w9j8zxw2sd11n2a4pbv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 211.2896 30 moveto
+117.2896 30 lineto
+117.2896 12 lineto
+211.2896 12 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+125.2896 18.8 moveto 78 (glibc-bootstrap-0) alignedtext
+grestore
+% /gnu/store/aymf6jlxxpwgr71rkiz24m646nqsyii6-glibc-intermediate-2.24.drv->/gnu/store/wda0p45jlbzg6w9j8zxw2sd11n2a4pbv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 325.1959 435.1356 moveto
+401.0677 431.4481 523.2788 420.4927 553.2896 388 curveto
+573.8748 365.7123 559.2896 350.3396 559.2896 320 curveto
+559.2896 320 559.2896 320 559.2896 139 curveto
+559.2896 69.6641 332.7099 38.2415 222.7629 27.0753 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 223.3457 23.616 moveto
+213.0496 26.1142 lineto
+222.6564 30.582 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 223.3457 23.616 moveto
+213.0496 26.1142 lineto
+222.6564 30.582 lineto
+closepath stroke
+grestore
+% /gnu/store/jxlg2pb4bhxjld9kimc0vgc1pvgifzag-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 132.7896 89 moveto
+43.7896 89 lineto
+43.7896 71 lineto
+132.7896 71 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+51.7896 77.8 moveto 73 (gcc-bootstrap-0) alignedtext
+grestore
+% /gnu/store/aymf6jlxxpwgr71rkiz24m646nqsyii6-glibc-intermediate-2.24.drv->/gnu/store/jxlg2pb4bhxjld9kimc0vgc1pvgifzag-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 201.4913 431.607 moveto
+142.9728 425.1156 61.0548 411.9667 40.2896 388 curveto
+20.4459 365.0969 35.2896 350.3038 35.2896 320 curveto
+35.2896 320 35.2896 320 35.2896 258 curveto
+35.2896 201.3442 24.6172 183.3468 46.2896 131 curveto
+51.5585 118.2735 61.2867 106.3646 70.0546 97.3638 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 72.444 99.9219 moveto
+77.2121 90.4606 lineto
+67.5846 94.8834 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 72.444 99.9219 moveto
+77.2121 90.4606 lineto
+67.5846 94.8834 lineto
+closepath stroke
+grestore
+% /gnu/store/aymf6jlxxpwgr71rkiz24m646nqsyii6-glibc-intermediate-2.24.drv->/gnu/store/jxlg2pb4bhxjld9kimc0vgc1pvgifzag-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 201.4261 431.5153 moveto
+143.2062 424.9921 61.9574 411.8543 41.2896 388 curveto
+21.4459 365.0969 36.2896 350.3038 36.2896 320 curveto
+36.2896 320 36.2896 320 36.2896 258 curveto
+36.2896 201.3442 25.6172 183.3468 47.2896 131 curveto
+52.5585 118.2735 62.2867 106.3646 70.9477 97.3638 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 73.285 99.9739 moveto
+77.9682 90.4703 lineto
+68.3806 94.9792 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 73.285 99.9739 moveto
+77.9682 90.4703 lineto
+68.3806 94.9792 lineto
+closepath stroke
+grestore
+% /gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 383.7896 89 moveto
+276.7896 89 lineto
+276.7896 71 lineto
+383.7896 71 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+284.7896 77.8 moveto 91 (bootstrap-binaries-0) alignedtext
+grestore
+% /gnu/store/aymf6jlxxpwgr71rkiz24m646nqsyii6-glibc-intermediate-2.24.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 325.1922 435.4446 moveto
+400.7654 432.084 522.0296 421.4742 550.2896 388 curveto
+575.4122 358.242 447.6697 183.2425 396.2896 131 curveto
+383.1515 117.6414 366.2263 105.0411 352.8026 95.8311 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 354.8542 92.9928 moveto
+344.5981 90.3351 lineto
+350.9583 98.8085 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 354.8542 92.9928 moveto
+344.5981 90.3351 lineto
+350.9583 98.8085 lineto
+closepath stroke
+grestore
+% /gnu/store/aymf6jlxxpwgr71rkiz24m646nqsyii6-glibc-intermediate-2.24.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 325.2272 435.4736 moveto
+401.0627 432.1453 522.9478 421.5711 551.2896 388 curveto
+576.4122 358.242 448.6697 183.2425 397.2896 131 curveto
+384.1515 117.6414 367.2263 105.0411 353.6743 95.8311 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 355.6218 92.9229 moveto
+345.3497 90.3275 lineto
+351.7612 98.7621 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 355.6218 92.9229 moveto
+345.3497 90.3275 lineto
+351.7612 98.7621 lineto
+closepath stroke
+grestore
+% /gnu/store/aymf6jlxxpwgr71rkiz24m646nqsyii6-glibc-intermediate-2.24.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 325.2591 435.5022 moveto
+401.3584 432.2061 523.866 421.668 552.2896 388 curveto
+577.4122 358.242 449.6697 183.2425 398.2896 131 curveto
+385.0227 117.5105 367.8941 104.7941 354.1447 95.5612 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 356.3906 92.8473 moveto
+346.1018 90.3192 lineto
+352.5684 98.7117 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 356.3906 92.8473 moveto
+346.1018 90.3192 lineto
+352.5684 98.7117 lineto
+closepath stroke
+grestore
+% /gnu/store/5syba2bxhh8z79jhq83fzy8fxcx5xb4s-linux-libre-headers-4.4.18.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 179.7896 388 moveto
+46.7896 388 lineto
+46.7896 370 lineto
+179.7896 370 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+54.7896 376.8 moveto 117 (linux-libre-headers-4.4.18) alignedtext
+grestore
+% /gnu/store/aymf6jlxxpwgr71rkiz24m646nqsyii6-glibc-intermediate-2.24.drv->/gnu/store/5syba2bxhh8z79jhq83fzy8fxcx5xb4s-linux-libre-headers-4.4.18.drv
+gsave
+1 setlinewidth
+0.83137 1 1 edgecolor
+newpath 241.1565 428.5895 moveto
+216.0092 419.0335 174.728 403.3466 145.8949 392.39 curveto
+stroke
+0.83137 1 1 edgecolor
+newpath 147.5193 389.2632 moveto
+136.9282 388.9827 lineto
+145.0328 395.8067 lineto
+closepath fill
+1 setlinewidth
+solid
+0.83137 1 1 edgecolor
+newpath 147.5193 389.2632 moveto
+136.9282 388.9827 lineto
+145.0328 395.8067 lineto
+closepath stroke
+grestore
+% /gnu/store/wx8ifbb7x22cl4998fyldsr24fcv18j3-texinfo-6.3.drv->/gnu/store/ccj3as3258l70lmphi48hs7n017wv75s-perl-boot0-5.24.0.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 203.5351 369.69 moveto
+188.2954 360.4827 163.4458 345.4694 145.0437 334.3514 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 146.9952 331.4414 moveto
+136.6262 329.2659 lineto
+143.3754 337.4328 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 146.9952 331.4414 moveto
+136.6262 329.2659 lineto
+143.3754 337.4328 lineto
+closepath stroke
+grestore
+% /gnu/store/wx8ifbb7x22cl4998fyldsr24fcv18j3-texinfo-6.3.drv->/gnu/store/1jpld53g41rzv2bmjp6v9mckmyw75vs3-make-boot0-4.2.1.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 211.1034 369.8465 moveto
+203.9924 360.2177 192.2763 343.5411 184.2896 328 curveto
+171.2358 302.5991 167.5865 295.8559 161.2896 268 curveto
+152.8596 230.7082 151.2547 185.8705 151.1014 160.6821 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 154.6007 160.9663 moveto
+151.1218 150.9589 lineto
+147.6007 160.9515 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 154.6007 160.9663 moveto
+151.1218 150.9589 lineto
+147.6007 160.9515 lineto
+closepath stroke
+grestore
+% /gnu/store/wx8ifbb7x22cl4998fyldsr24fcv18j3-texinfo-6.3.drv->/gnu/store/zpphawi07xidhfs2dja3w7hmnfp99j02-diffutils-boot0-3.5.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 218.5534 369.5094 moveto
+220.8391 356.0812 226.5529 329.4707 238.2896 310 curveto
+251.9178 287.3912 270.1872 292.3892 280.2896 268 curveto
+286.8077 252.2638 281.9067 233.0744 276.3555 219.2717 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 279.707 218.1889 moveto
+272.3993 210.5176 lineto
+273.3282 221.0717 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 279.707 218.1889 moveto
+272.3993 210.5176 lineto
+273.3282 221.0717 lineto
+closepath stroke
+grestore
+% /gnu/store/wx8ifbb7x22cl4998fyldsr24fcv18j3-texinfo-6.3.drv->/gnu/store/m4900ip34w4rcgn5620iqdi1wv198d9s-findutils-boot0-4.6.0.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 217.4334 369.5137 moveto
+217.7491 350.8886 218.5097 306.0103 218.9531 279.8493 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 222.4513 279.9806 moveto
+219.1214 269.9227 lineto
+215.4523 279.8619 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 222.4513 279.9806 moveto
+219.1214 269.9227 lineto
+215.4523 279.8619 lineto
+closepath stroke
+grestore
+% /gnu/store/wx8ifbb7x22cl4998fyldsr24fcv18j3-texinfo-6.3.drv->/gnu/store/nwzyr3xskw0ms8cndffsfvhvm5xz96pc-file-boot0-5.28.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 186.2645 369.5224 moveto
+145.2307 358.0018 77.2542 337.7254 70.2896 328 curveto
+50.1056 299.8151 60.8864 283.367 70.2896 250 curveto
+73.4788 238.6831 80.0915 227.3993 86.2988 218.5174 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 89.0735 220.6512 moveto
+92.2631 210.5478 lineto
+83.4692 216.4569 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 89.0735 220.6512 moveto
+92.2631 210.5478 lineto
+83.4692 216.4569 lineto
+closepath stroke
+grestore
+% /gnu/store/wx8ifbb7x22cl4998fyldsr24fcv18j3-texinfo-6.3.drv->/gnu/store/wda0p45jlbzg6w9j8zxw2sd11n2a4pbv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 250.6645 369.909 moveto
+295.7353 358.655 371.373 338.4812 379.2896 328 curveto
+413.7172 282.4188 420.0216 115.5661 384.2896 71 curveto
+364.4111 46.207 281.198 33.1499 223.0188 26.9169 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 223.5536 23.4535 moveto
+213.2486 25.9144 lineto
+222.839 30.4169 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 223.5536 23.4535 moveto
+213.2486 25.9144 lineto
+222.839 30.4169 lineto
+closepath stroke
+grestore
+% /gnu/store/wx8ifbb7x22cl4998fyldsr24fcv18j3-texinfo-6.3.drv->/gnu/store/jxlg2pb4bhxjld9kimc0vgc1pvgifzag-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 185.1456 369.5049 moveto
+142.6099 357.9637 72.0609 337.6633 64.2896 328 curveto
+36.8257 293.8499 42.6873 172.9723 55.2896 131 curveto
+58.8917 119.0027 66.4085 107.2273 73.3593 98.1204 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 75.905 100.5369 moveto
+79.5111 90.5746 lineto
+70.4795 96.1137 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 75.905 100.5369 moveto
+79.5111 90.5746 lineto
+70.4795 96.1137 lineto
+closepath stroke
+grestore
+% /gnu/store/wx8ifbb7x22cl4998fyldsr24fcv18j3-texinfo-6.3.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 250.3056 369.5903 moveto
+293.9905 358.1493 366.4274 337.9659 374.2896 328 curveto
+393.0588 304.2085 379.2896 290.3038 379.2896 260 curveto
+379.2896 260 379.2896 260 379.2896 199 curveto
+379.2896 161.065 357.4226 121.1543 342.9043 98.8366 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 345.8519 96.9472 moveto
+337.3445 90.6325 lineto
+340.0572 100.8742 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 345.8519 96.9472 moveto
+337.3445 90.6325 lineto
+340.0572 100.8742 lineto
+closepath stroke
+grestore
+% /gnu/store/wx8ifbb7x22cl4998fyldsr24fcv18j3-texinfo-6.3.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 250.601 369.6867 moveto
+294.5819 358.2631 367.4052 337.994 375.2896 328 curveto
+394.0588 304.2085 380.2896 290.3038 380.2896 260 curveto
+380.2896 260 380.2896 260 380.2896 199 curveto
+380.2896 160.8926 358.2234 120.7914 343.4046 98.5333 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 346.48 96.8247 moveto
+337.8911 90.6214 lineto
+340.7369 100.8269 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 346.48 96.8247 moveto
+337.8911 90.6214 lineto
+340.7369 100.8269 lineto
+closepath stroke
+grestore
+% /gnu/store/wv8sf8h4n9s5cdya223iy2wp3alr92x8-binutils-bootstrap-0.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 271.7896 89 moveto
+166.7896 89 lineto
+166.7896 71 lineto
+271.7896 71 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+174.7896 77.8 moveto 89 (binutils-bootstrap-0) alignedtext
+grestore
+% /gnu/store/wx8ifbb7x22cl4998fyldsr24fcv18j3-texinfo-6.3.drv->/gnu/store/wv8sf8h4n9s5cdya223iy2wp3alr92x8-binutils-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.49804 1 0.80392 edgecolor
+newpath 219.5648 369.5977 moveto
+223.3947 356.2905 231.9401 329.8428 244.2896 310 curveto
+257.5907 288.6281 267.8768 288.6386 282.2896 268 curveto
+299.2493 243.7142 306.1941 237.7591 313.2896 209 curveto
+325.1486 160.9333 274.1225 117.3209 242.5957 95.563 curveto
+stroke
+0.49804 1 0.80392 edgecolor
+newpath 244.6766 92.7435 moveto
+234.4101 90.1262 lineto
+240.8037 98.5745 lineto
+closepath fill
+1 setlinewidth
+solid
+0.49804 1 0.80392 edgecolor
+newpath 244.6766 92.7435 moveto
+234.4101 90.1262 lineto
+240.8037 98.5745 lineto
+closepath stroke
+grestore
+% /gnu/store/ccj3as3258l70lmphi48hs7n017wv75s-perl-boot0-5.24.0.drv->/gnu/store/1jpld53g41rzv2bmjp6v9mckmyw75vs3-make-boot0-4.2.1.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 123.0932 309.5502 moveto
+126.9562 291.2712 136.1742 246.6646 142.2896 209 curveto
+144.9218 192.7879 147.3301 174.3069 148.9917 160.7075 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 152.4524 161.2449 moveto
+150.1599 150.901 lineto
+145.5015 160.4168 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 152.4524 161.2449 moveto
+150.1599 150.901 lineto
+145.5015 160.4168 lineto
+closepath stroke
+grestore
+% /gnu/store/ccj3as3258l70lmphi48hs7n017wv75s-perl-boot0-5.24.0.drv->/gnu/store/zpphawi07xidhfs2dja3w7hmnfp99j02-diffutils-boot0-3.5.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 169.7503 315.9881 moveto
+204.223 311.714 248.3374 299.8445 271.2896 268 curveto
+281.1903 254.2634 278.5624 234.5339 274.439 220.0409 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 277.8337 219.1562 moveto
+271.3454 210.7805 lineto
+271.1944 221.3742 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 277.8337 219.1562 moveto
+271.3454 210.7805 lineto
+271.1944 221.3742 lineto
+closepath stroke
+grestore
+% /gnu/store/ccj3as3258l70lmphi48hs7n017wv75s-perl-boot0-5.24.0.drv->/gnu/store/m4900ip34w4rcgn5620iqdi1wv198d9s-findutils-boot0-4.6.0.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 135.3306 309.69 moveto
+150.9601 300.4399 176.4913 285.3296 195.3023 274.1966 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 196.8302 277.3593 moveto
+203.6534 269.2541 lineto
+193.265 271.3353 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 196.8302 277.3593 moveto
+203.6534 269.2541 lineto
+193.265 271.3353 lineto
+closepath stroke
+grestore
+% /gnu/store/ccj3as3258l70lmphi48hs7n017wv75s-perl-boot0-5.24.0.drv->/gnu/store/nwzyr3xskw0ms8cndffsfvhvm5xz96pc-file-boot0-5.28.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 119.7793 309.5856 moveto
+116.4495 291.034 108.4048 246.2134 103.7585 220.327 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 107.2652 220.0522 moveto
+102.0535 210.8278 lineto
+100.3753 221.2889 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 107.2652 220.0522 moveto
+102.0535 210.8278 lineto
+100.3753 221.2889 lineto
+closepath stroke
+grestore
+% /gnu/store/ccj3as3258l70lmphi48hs7n017wv75s-perl-boot0-5.24.0.drv->/gnu/store/wda0p45jlbzg6w9j8zxw2sd11n2a4pbv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 112.178 309.6148 moveto
+102.5357 300.2923 87.4707 284.3788 78.2896 268 curveto
+56.603 229.3121 21.6655 107.8879 46.2896 71 curveto
+59.7838 50.7851 83.3433 38.8981 105.8801 31.9134 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 106.6633 35.3286 moveto
+115.3549 29.2701 lineto
+104.7822 28.5861 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 106.6633 35.3286 moveto
+115.3549 29.2701 lineto
+104.7822 28.5861 lineto
+closepath stroke
+grestore
+% /gnu/store/ccj3as3258l70lmphi48hs7n017wv75s-perl-boot0-5.24.0.drv->/gnu/store/jxlg2pb4bhxjld9kimc0vgc1pvgifzag-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 114.6838 309.6015 moveto
+101.4012 292.115 71.8297 250.0053 61.2896 209 curveto
+51.3811 170.4525 67.6911 124.698 78.9668 99.6676 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 82.0436 101.3475 moveto
+83.1718 90.8129 lineto
+75.7204 98.3446 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 82.0436 101.3475 moveto
+83.1718 90.8129 lineto
+75.7204 98.3446 lineto
+closepath stroke
+grestore
+% /gnu/store/ccj3as3258l70lmphi48hs7n017wv75s-perl-boot0-5.24.0.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 169.74 310.3337 moveto
+201.7959 303.4038 243.4452 290.6788 274.2896 268 curveto
+300.222 248.9328 304.8365 239.0812 316.2896 209 curveto
+330.1077 172.7072 331.6189 126.7284 331.1629 100.9214 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 334.6615 100.8202 moveto
+330.8476 90.9357 lineto
+327.665 101.0412 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 334.6615 100.8202 moveto
+330.8476 90.9357 lineto
+327.665 101.0412 lineto
+closepath stroke
+grestore
+% /gnu/store/ccj3as3258l70lmphi48hs7n017wv75s-perl-boot0-5.24.0.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 169.5321 310.5592 moveto
+201.8826 303.6813 244.1075 290.9271 275.2896 268 curveto
+301.222 248.9328 305.8365 239.0812 317.2896 209 curveto
+331.1077 172.7072 332.6189 126.7284 331.8504 100.9214 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 335.3465 100.7537 moveto
+331.367 90.9347 lineto
+328.3547 101.0922 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 335.3465 100.7537 moveto
+331.367 90.9347 lineto
+328.3547 101.0922 lineto
+closepath stroke
+grestore
+% /gnu/store/ccj3as3258l70lmphi48hs7n017wv75s-perl-boot0-5.24.0.drv->/gnu/store/wv8sf8h4n9s5cdya223iy2wp3alr92x8-binutils-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.078431 0.27059 0.5451 edgecolor
+newpath 123.4141 309.5541 moveto
+129.7591 284.66 148.8962 212.004 161.2896 191 curveto
+174.3893 168.7988 188.7079 171.4988 201.2896 149 curveto
+209.6865 133.9845 214.2927 114.9029 216.7374 100.7774 curveto
+stroke
+0.078431 0.27059 0.5451 edgecolor
+newpath 220.1891 101.3603 moveto
+218.1989 90.9541 lineto
+213.2653 100.3302 lineto
+closepath fill
+1 setlinewidth
+solid
+0.078431 0.27059 0.5451 edgecolor
+newpath 220.1891 101.3603 moveto
+218.1989 90.9541 lineto
+213.2653 100.3302 lineto
+closepath stroke
+grestore
+% /gnu/store/w9adgzgdqkwz0w13zxf2fn363v9wcllc-gcc-cross-boot0-4.9.4.drv->/gnu/store/v1v7jp438hc5rpgriwpjp04x049vh0g4-binutils-cross-boot0-2.27.drv
+gsave
+1 setlinewidth
+0.33333 0.23922 0.73725 edgecolor
+newpath 309.2896 369.9353 moveto
+309.2896 362.1459 309.2896 350.0416 309.2896 339.7013 curveto
+stroke
+0.33333 0.23922 0.73725 edgecolor
+newpath 312.7897 339.8853 moveto
+309.2896 329.8853 lineto
+305.7897 339.8853 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 0.23922 0.73725 edgecolor
+newpath 312.7897 339.8853 moveto
+309.2896 329.8853 lineto
+305.7897 339.8853 lineto
+closepath stroke
+grestore
+% /gnu/store/w9adgzgdqkwz0w13zxf2fn363v9wcllc-gcc-cross-boot0-4.9.4.drv->/gnu/store/1jpld53g41rzv2bmjp6v9mckmyw75vs3-make-boot0-4.2.1.drv
+gsave
+1 setlinewidth
+0.33333 0.23922 0.73725 edgecolor
+newpath 289.4154 369.5364 moveto
+256.9971 354.5139 193.7058 319.8134 167.2896 268 curveto
+157.9717 249.7237 153.7719 191.754 152.1543 160.8497 curveto
+stroke
+0.33333 0.23922 0.73725 edgecolor
+newpath 155.6556 160.7908 moveto
+151.6838 150.9686 lineto
+148.6635 161.1238 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 0.23922 0.73725 edgecolor
+newpath 155.6556 160.7908 moveto
+151.6838 150.9686 lineto
+148.6635 161.1238 lineto
+closepath stroke
+grestore
+% /gnu/store/w9adgzgdqkwz0w13zxf2fn363v9wcllc-gcc-cross-boot0-4.9.4.drv->/gnu/store/zpphawi07xidhfs2dja3w7hmnfp99j02-diffutils-boot0-3.5.drv
+gsave
+1 setlinewidth
+0.33333 0.23922 0.73725 edgecolor
+newpath 291.6888 369.5004 moveto
+276.7803 361.2184 256.4171 347.0867 247.2896 328 curveto
+233.8731 299.9445 272.5001 297.1667 283.2896 268 curveto
+289.1891 252.052 283.5993 233.1507 277.4631 219.4967 curveto
+stroke
+0.33333 0.23922 0.73725 edgecolor
+newpath 280.7104 218.1642 moveto
+273.0988 210.7943 lineto
+274.4532 221.3022 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 0.23922 0.73725 edgecolor
+newpath 280.7104 218.1642 moveto
+273.0988 210.7943 lineto
+274.4532 221.3022 lineto
+closepath stroke
+grestore
+% /gnu/store/w9adgzgdqkwz0w13zxf2fn363v9wcllc-gcc-cross-boot0-4.9.4.drv->/gnu/store/m4900ip34w4rcgn5620iqdi1wv198d9s-findutils-boot0-4.6.0.drv
+gsave
+1 setlinewidth
+0.33333 0.23922 0.73725 edgecolor
+newpath 292.389 369.5593 moveto
+276.9874 361.0515 254.6615 346.5403 241.2896 328 curveto
+230.8479 313.5225 225.1942 293.8427 222.2448 279.3792 curveto
+stroke
+0.33333 0.23922 0.73725 edgecolor
+newpath 225.7334 279.0092 moveto
+220.558 269.7644 lineto
+218.8387 280.2188 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 0.23922 0.73725 edgecolor
+newpath 225.7334 279.0092 moveto
+220.558 269.7644 lineto
+218.8387 280.2188 lineto
+closepath stroke
+grestore
+% /gnu/store/w9adgzgdqkwz0w13zxf2fn363v9wcllc-gcc-cross-boot0-4.9.4.drv->/gnu/store/nwzyr3xskw0ms8cndffsfvhvm5xz96pc-file-boot0-5.28.drv
+gsave
+1 setlinewidth
+0.33333 0.23922 0.73725 edgecolor
+newpath 252.1015 369.5383 moveto
+186.7551 359.2888 87.358 341.6956 76.2896 328 curveto
+50.6292 296.2489 73.5629 245.4844 88.9813 218.7676 curveto
+stroke
+0.33333 0.23922 0.73725 edgecolor
+newpath 91.8018 220.8663 moveto
+93.9946 210.5009 lineto
+85.8164 217.2365 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 0.23922 0.73725 edgecolor
+newpath 91.8018 220.8663 moveto
+93.9946 210.5009 lineto
+85.8164 217.2365 lineto
+closepath stroke
+grestore
+% /gnu/store/w9adgzgdqkwz0w13zxf2fn363v9wcllc-gcc-cross-boot0-4.9.4.drv->/gnu/store/wda0p45jlbzg6w9j8zxw2sd11n2a4pbv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.33333 0.23922 0.73725 edgecolor
+newpath 327.6526 369.6207 moveto
+344.1065 361.2467 367.8144 346.9048 382.2896 328 curveto
+451.7557 237.276 467.735 154.0825 389.2896 71 curveto
+366.9361 47.3252 281.9343 33.9401 223.0594 27.3353 curveto
+stroke
+0.33333 0.23922 0.73725 edgecolor
+newpath 223.482 23.8607 moveto
+213.1639 26.2663 lineto
+222.7301 30.8202 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 0.23922 0.73725 edgecolor
+newpath 223.482 23.8607 moveto
+213.1639 26.2663 lineto
+222.7301 30.8202 lineto
+closepath stroke
+grestore
+% /gnu/store/w9adgzgdqkwz0w13zxf2fn363v9wcllc-gcc-cross-boot0-4.9.4.drv->/gnu/store/jxlg2pb4bhxjld9kimc0vgc1pvgifzag-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.33333 0.23922 0.73725 edgecolor
+newpath 251.144 369.506 moveto
+184.3387 359.186 82.3175 341.4844 70.2896 328 curveto
+41.1247 295.3035 50.8253 173.2874 62.2896 131 curveto
+65.344 119.7331 71.199 108.1076 76.5805 98.9051 curveto
+stroke
+0.33333 0.23922 0.73725 edgecolor
+newpath 79.3925 101.0117 moveto
+81.6868 90.6683 lineto
+73.443 97.3234 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 0.23922 0.73725 edgecolor
+newpath 79.3925 101.0117 moveto
+81.6868 90.6683 lineto
+73.443 97.3234 lineto
+closepath stroke
+grestore
+% /gnu/store/w9adgzgdqkwz0w13zxf2fn363v9wcllc-gcc-cross-boot0-4.9.4.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0.33333 0.23922 0.73725 edgecolor
+newpath 330.7095 369.5472 moveto
+347.5892 361.6061 369.9439 347.9393 380.2896 328 curveto
+388.4115 312.3465 387.4333 153.1878 378.2896 131 curveto
+372.6731 117.3713 361.4409 105.3369 351.2534 96.4916 curveto
+stroke
+0.33333 0.23922 0.73725 edgecolor
+newpath 353.5335 93.8343 moveto
+343.5587 90.2629 lineto
+349.1292 99.2751 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 0.23922 0.73725 edgecolor
+newpath 353.5335 93.8343 moveto
+343.5587 90.2629 lineto
+349.1292 99.2751 lineto
+closepath stroke
+grestore
+% /gnu/store/w9adgzgdqkwz0w13zxf2fn363v9wcllc-gcc-cross-boot0-4.9.4.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0.33333 0.23922 0.73725 edgecolor
+newpath 331.5123 369.5472 moveto
+348.5892 361.6061 370.9439 347.9393 381.2896 328 curveto
+389.4115 312.3465 388.4333 153.1878 379.2896 131 curveto
+373.6158 117.2323 362.211 105.0914 351.8289 96.2218 curveto
+stroke
+0.33333 0.23922 0.73725 edgecolor
+newpath 354.3281 93.7375 moveto
+344.3228 90.2527 lineto
+349.9712 99.2163 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 0.23922 0.73725 edgecolor
+newpath 354.3281 93.7375 moveto
+344.3228 90.2527 lineto
+349.9712 99.2163 lineto
+closepath stroke
+grestore
+% /gnu/store/w9adgzgdqkwz0w13zxf2fn363v9wcllc-gcc-cross-boot0-4.9.4.drv->/gnu/store/wv8sf8h4n9s5cdya223iy2wp3alr92x8-binutils-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.33333 0.23922 0.73725 edgecolor
+newpath 326.8903 369.5004 moveto
+341.7988 361.2184 362.1621 347.0867 371.2896 328 curveto
+374.7409 320.7828 372.5974 317.8924 371.2896 310 curveto
+357.5491 227.0826 364.3324 195.3698 310.2896 131 curveto
+296.0463 114.0351 274.5096 101.8363 255.963 93.737 curveto
+stroke
+0.33333 0.23922 0.73725 edgecolor
+newpath 257.4473 90.5628 moveto
+246.8669 90.0107 lineto
+254.7937 97.0404 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 0.23922 0.73725 edgecolor
+newpath 257.4473 90.5628 moveto
+246.8669 90.0107 lineto
+254.7937 97.0404 lineto
+closepath stroke
+grestore
+% /gnu/store/72snmrnjphwjxffknjhzm3xg38wd08al-ld-wrapper-x86_64-guix-linux-gnu-0.drv->/gnu/store/v1v7jp438hc5rpgriwpjp04x049vh0g4-binutils-cross-boot0-2.27.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 441.7512 369.5663 moveto
+415.6933 359.8156 372.556 343.6739 342.6192 332.4717 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 343.8651 329.201 moveto
+333.2726 328.9743 lineto
+341.4118 335.757 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 343.8651 329.201 moveto
+333.2726 328.9743 lineto
+341.4118 335.757 lineto
+closepath stroke
+grestore
+% /gnu/store/72snmrnjphwjxffknjhzm3xg38wd08al-ld-wrapper-x86_64-guix-linux-gnu-0.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 455.3152 369.7959 moveto
+445.9625 360.6284 431.7832 344.8464 425.2896 328 curveto
+414.3903 299.7241 420.2896 290.3038 420.2896 260 curveto
+420.2896 260 420.2896 260 420.2896 199 curveto
+420.2896 154.2539 378.8685 115.9122 352.2269 95.879 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 354.5675 93.2521 moveto
+344.4114 90.2349 lineto
+350.4693 98.927 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 354.5675 93.2521 moveto
+344.4114 90.2349 lineto
+350.4693 98.927 lineto
+closepath stroke
+grestore
+% /gnu/store/af19ma2vm3qhvh3rw6cdivyp98s18bj3-guile-bootstrap-2.0.drv
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+newpath 525.7896 328 moveto
+422.7896 328 lineto
+422.7896 310 lineto
+525.7896 310 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /dejavu sans set_font
+430.7896 316.8 moveto 87 (guile-bootstrap-2.0) alignedtext
+grestore
+% /gnu/store/72snmrnjphwjxffknjhzm3xg38wd08al-ld-wrapper-x86_64-guix-linux-gnu-0.drv->/gnu/store/af19ma2vm3qhvh3rw6cdivyp98s18bj3-guile-bootstrap-2.0.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 465.68 369.9353 moveto
+467.023 362.1459 469.11 350.0416 470.8928 339.7013 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 474.339 340.3126 moveto
+472.589 329.8633 lineto
+467.4407 339.1232 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 474.339 340.3126 moveto
+472.589 329.8633 lineto
+467.4407 339.1232 lineto
+closepath stroke
+grestore
+% /gnu/store/v1v7jp438hc5rpgriwpjp04x049vh0g4-binutils-cross-boot0-2.27.drv->/gnu/store/1jpld53g41rzv2bmjp6v9mckmyw75vs3-make-boot0-4.2.1.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 306.6238 309.7201 moveto
+301.9429 296.1182 291.2072 268.6907 275.2896 250 curveto
+255.0564 226.2419 241.9921 229.2982 218.2896 209 curveto
+199.2893 192.7287 179.4031 172.0058 166.2806 157.737 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 169.0435 155.5732 moveto
+159.729 150.5244 lineto
+163.862 160.2798 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 169.0435 155.5732 moveto
+159.729 150.5244 lineto
+163.862 160.2798 lineto
+closepath stroke
+grestore
+% /gnu/store/v1v7jp438hc5rpgriwpjp04x049vh0g4-binutils-cross-boot0-2.27.drv->/gnu/store/zpphawi07xidhfs2dja3w7hmnfp99j02-diffutils-boot0-3.5.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 307.8755 309.8648 moveto
+305.4895 296.9235 300.1432 270.9682 292.2896 250 curveto
+288.3363 239.4453 282.7149 228.2086 277.8036 219.1617 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 281.0142 217.7307 moveto
+273.066 210.7253 lineto
+274.9107 221.1583 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 281.0142 217.7307 moveto
+273.066 210.7253 lineto
+274.9107 221.1583 lineto
+closepath stroke
+grestore
+% /gnu/store/v1v7jp438hc5rpgriwpjp04x049vh0g4-binutils-cross-boot0-2.27.drv->/gnu/store/m4900ip34w4rcgn5620iqdi1wv198d9s-findutils-boot0-4.6.0.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 296.3948 309.69 moveto
+282.174 300.5255 259.0275 285.6089 241.8001 274.5068 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 244.0271 271.7781 moveto
+233.7254 269.3031 lineto
+240.2351 277.6621 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 244.0271 271.7781 moveto
+233.7254 269.3031 lineto
+240.2351 277.6621 lineto
+closepath stroke
+grestore
+% /gnu/store/v1v7jp438hc5rpgriwpjp04x049vh0g4-binutils-cross-boot0-2.27.drv->/gnu/store/nwzyr3xskw0ms8cndffsfvhvm5xz96pc-file-boot0-5.28.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 260.3161 309.5425 moveto
+228.3591 302.3095 186.87 289.5447 155.2896 268 curveto
+136.4827 255.1696 120.6966 234.106 110.9288 219.0204 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 113.9506 217.2524 moveto
+105.7181 210.5833 lineto
+107.9948 220.9306 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 113.9506 217.2524 moveto
+105.7181 210.5833 lineto
+107.9948 220.9306 lineto
+closepath stroke
+grestore
+% /gnu/store/v1v7jp438hc5rpgriwpjp04x049vh0g4-binutils-cross-boot0-2.27.drv->/gnu/store/wda0p45jlbzg6w9j8zxw2sd11n2a4pbv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 313.5815 309.7381 moveto
+333.2701 271.3076 412.6654 110.2507 381.2896 71 curveto
+361.7334 46.5356 279.8574 33.4022 222.4758 27.0619 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 223.1701 23.616 moveto
+212.8569 26.0426 lineto
+222.4324 30.577 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 223.1701 23.616 moveto
+212.8569 26.0426 lineto
+222.4324 30.577 lineto
+closepath stroke
+grestore
+% /gnu/store/v1v7jp438hc5rpgriwpjp04x049vh0g4-binutils-cross-boot0-2.27.drv->/gnu/store/jxlg2pb4bhxjld9kimc0vgc1pvgifzag-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 245.3198 309.5225 moveto
+217.0263 302.682 185.4447 290.3241 164.2896 268 curveto
+139.808 242.1656 160.5192 221.5687 142.2896 191 curveto
+128.6066 168.0554 111.5967 172.711 99.2896 149 curveto
+91.5282 134.047 88.9779 114.9591 88.2537 100.8153 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 91.7567 100.9104 moveto
+88.0381 90.9896 lineto
+84.7584 101.064 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 91.7567 100.9104 moveto
+88.0381 90.9896 lineto
+84.7584 101.064 lineto
+closepath stroke
+grestore
+% /gnu/store/v1v7jp438hc5rpgriwpjp04x049vh0g4-binutils-cross-boot0-2.27.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 313.4537 309.7713 moveto
+318.1138 300.0719 325.3904 283.329 328.2896 268 curveto
+339.6851 207.7471 335.3545 134.6136 332.2998 100.4022 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 335.8187 100.4274 moveto
+331.3726 90.8106 lineto
+328.8511 101.101 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 335.8187 100.4274 moveto
+331.3726 90.8106 lineto
+328.8511 101.101 lineto
+closepath stroke
+grestore
+% /gnu/store/v1v7jp438hc5rpgriwpjp04x049vh0g4-binutils-cross-boot0-2.27.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 314.171 309.7713 moveto
+319.1138 300.0719 326.3904 283.329 329.2896 268 curveto
+340.6851 207.7471 336.3545 134.6136 332.8982 100.4022 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 336.415 100.3546 moveto
+331.82 90.8081 lineto
+329.4588 101.1365 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 336.415 100.3546 moveto
+331.82 90.8081 lineto
+329.4588 101.1365 lineto
+closepath stroke
+grestore
+% /gnu/store/v1v7jp438hc5rpgriwpjp04x049vh0g4-binutils-cross-boot0-2.27.drv->/gnu/store/wv8sf8h4n9s5cdya223iy2wp3alr92x8-binutils-bootstrap-0.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 310.381 309.693 moveto
+314.4506 277.3859 327.4992 160.4457 307.2896 131 curveto
+295.3762 113.642 275.3386 101.5797 257.3908 93.6582 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 258.8428 90.4706 moveto
+248.2618 89.9297 lineto
+256.1961 96.951 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 258.8428 90.4706 moveto
+248.2618 89.9297 lineto
+256.1961 96.951 lineto
+closepath stroke
+grestore
+% /gnu/store/1jpld53g41rzv2bmjp6v9mckmyw75vs3-make-boot0-4.2.1.drv->/gnu/store/wda0p45jlbzg6w9j8zxw2sd11n2a4pbv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 152.2245 130.5856 moveto
+154.2764 112.1183 159.2206 67.6203 162.1028 41.6811 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 165.5701 42.1678 moveto
+163.1959 31.8424 lineto
+158.613 41.3947 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 165.5701 42.1678 moveto
+163.1959 31.8424 lineto
+158.613 41.3947 lineto
+closepath stroke
+grestore
+% /gnu/store/1jpld53g41rzv2bmjp6v9mckmyw75vs3-make-boot0-4.2.1.drv->/gnu/store/jxlg2pb4bhxjld9kimc0vgc1pvgifzag-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 142.2632 130.69 moveto
+132.7196 121.9038 117.4332 107.8307 105.5609 96.9006 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 108.1403 94.5179 moveto
+98.4127 90.3197 lineto
+103.3991 99.6678 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 108.1403 94.5179 moveto
+98.4127 90.3197 lineto
+103.3991 99.6678 lineto
+closepath stroke
+grestore
+% /gnu/store/1jpld53g41rzv2bmjp6v9mckmyw75vs3-make-boot0-4.2.1.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 177.3177 130.5663 moveto
+207.9407 120.6438 258.9888 104.103 293.6124 92.8842 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 294.356 96.3225 moveto
+302.7902 89.9104 lineto
+292.1982 89.6634 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 294.356 96.3225 moveto
+302.7902 89.9104 lineto
+292.1982 89.6634 lineto
+closepath stroke
+grestore
+% /gnu/store/1jpld53g41rzv2bmjp6v9mckmyw75vs3-make-boot0-4.2.1.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 177.8653 130.5663 moveto
+208.7317 120.6438 259.8037 104.103 294.2315 92.8842 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 294.9174 96.3421 moveto
+303.3389 89.9133 lineto
+292.7465 89.6872 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 294.9174 96.3421 moveto
+303.3389 89.9133 lineto
+292.7465 89.6872 lineto
+closepath stroke
+grestore
+% /gnu/store/1jpld53g41rzv2bmjp6v9mckmyw75vs3-make-boot0-4.2.1.drv->/gnu/store/wv8sf8h4n9s5cdya223iy2wp3alr92x8-binutils-bootstrap-0.drv
+gsave
+1 setlinewidth
+0 0 0.41176 edgecolor
+newpath 161.0323 130.69 moveto
+171.4343 121.8177 188.157 107.5542 201.0233 96.58 curveto
+stroke
+0 0 0.41176 edgecolor
+newpath 203.0763 99.4292 moveto
+208.4133 90.2768 lineto
+198.5337 94.1034 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0.41176 edgecolor
+newpath 203.0763 99.4292 moveto
+208.4133 90.2768 lineto
+198.5337 94.1034 lineto
+closepath stroke
+grestore
+% /gnu/store/zpphawi07xidhfs2dja3w7hmnfp99j02-diffutils-boot0-3.5.drv->/gnu/store/1jpld53g41rzv2bmjp6v9mckmyw75vs3-make-boot0-4.2.1.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 250.6696 190.69 moveto
+231.8267 181.2686 200.8254 165.7679 178.454 154.5822 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 180.1192 151.5018 moveto
+169.6097 150.1601 lineto
+176.9887 157.7627 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 180.1192 151.5018 moveto
+169.6097 150.1601 lineto
+176.9887 157.7627 lineto
+closepath stroke
+grestore
+% /gnu/store/zpphawi07xidhfs2dja3w7hmnfp99j02-diffutils-boot0-3.5.drv->/gnu/store/wda0p45jlbzg6w9j8zxw2sd11n2a4pbv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 270.3032 190.6783 moveto
+277.6014 168.9675 293.8833 109.6169 269.2896 71 curveto
+257.7558 52.8897 237.5873 41.3632 217.9891 34.0786 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 219.247 30.8091 moveto
+208.6529 30.936 lineto
+217.0138 37.4433 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 219.247 30.8091 moveto
+208.6529 30.936 lineto
+217.0138 37.4433 lineto
+closepath stroke
+grestore
+% /gnu/store/zpphawi07xidhfs2dja3w7hmnfp99j02-diffutils-boot0-3.5.drv->/gnu/store/jxlg2pb4bhxjld9kimc0vgc1pvgifzag-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 260.2825 190.5219 moveto
+248.4612 176.6348 223.2902 148.8068 197.2896 131 curveto
+174.2189 115.1998 145.3537 102.216 123.1243 93.4425 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 124.4889 90.2173 moveto
+113.8987 89.9047 lineto
+121.9825 96.7532 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 124.4889 90.2173 moveto
+113.8987 89.9047 lineto
+121.9825 96.7532 lineto
+closepath stroke
+grestore
+% /gnu/store/zpphawi07xidhfs2dja3w7hmnfp99j02-diffutils-boot0-3.5.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 279.8188 190.6676 moveto
+292.0012 181.8431 309.9884 166.7491 319.2896 149 curveto
+327.1094 134.0775 329.6539 114.9866 330.361 100.8338 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 333.8568 101.0684 moveto
+330.5615 90.9991 lineto
+326.8583 100.9256 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 333.8568 101.0684 moveto
+330.5615 90.9991 lineto
+326.8583 100.9256 lineto
+closepath stroke
+grestore
+% /gnu/store/zpphawi07xidhfs2dja3w7hmnfp99j02-diffutils-boot0-3.5.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 280.5746 190.6676 moveto
+293.0012 181.8431 310.9884 166.7491 320.2896 149 curveto
+328.1094 134.0775 330.6539 114.9866 331.1943 100.8338 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 334.6938 101.0077 moveto
+331.2175 90.9994 lineto
+327.6939 100.9911 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 334.6938 101.0077 moveto
+331.2175 90.9994 lineto
+327.6939 100.9911 lineto
+closepath stroke
+grestore
+% /gnu/store/zpphawi07xidhfs2dja3w7hmnfp99j02-diffutils-boot0-3.5.drv->/gnu/store/wv8sf8h4n9s5cdya223iy2wp3alr92x8-binutils-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 263.8375 190.5137 moveto
+256.1574 171.6334 237.5034 125.7758 226.9309 99.7849 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 230.2907 98.7555 moveto
+223.2806 90.8114 lineto
+223.8066 101.3931 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 230.2907 98.7555 moveto
+223.2806 90.8114 lineto
+223.8066 101.3931 lineto
+closepath stroke
+grestore
+% /gnu/store/m4900ip34w4rcgn5620iqdi1wv198d9s-findutils-boot0-4.6.0.drv->/gnu/store/1jpld53g41rzv2bmjp6v9mckmyw75vs3-make-boot0-4.2.1.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 214.3992 249.5856 moveto
+203.47 230.781 176.8542 184.9862 161.913 159.2786 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 164.9472 157.5338 moveto
+156.8962 150.6467 lineto
+158.8951 161.0513 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 164.9472 157.5338 moveto
+156.8962 150.6467 lineto
+158.8951 161.0513 lineto
+closepath stroke
+grestore
+% /gnu/store/m4900ip34w4rcgn5620iqdi1wv198d9s-findutils-boot0-4.6.0.drv->/gnu/store/zpphawi07xidhfs2dja3w7hmnfp99j02-diffutils-boot0-3.5.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 226.3721 249.5895 moveto
+233.3203 241.3385 244.1175 228.5168 252.8762 218.1158 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 255.4388 220.5064 moveto
+259.203 210.6028 lineto
+250.0844 215.9974 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 255.4388 220.5064 moveto
+259.203 210.6028 lineto
+250.0844 215.9974 lineto
+closepath stroke
+grestore
+% /gnu/store/m4900ip34w4rcgn5620iqdi1wv198d9s-findutils-boot0-4.6.0.drv->/gnu/store/wda0p45jlbzg6w9j8zxw2sd11n2a4pbv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 218.6565 249.6164 moveto
+216.7031 224.8963 210.3504 152.6762 201.2896 131 curveto
+192.2389 109.3482 177.6176 110.9399 169.2896 89 curveto
+163.5177 73.7942 162.5501 55.2758 162.8655 41.5645 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 166.3563 41.8333 moveto
+163.3692 31.6683 lineto
+159.3653 41.4774 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 166.3563 41.8333 moveto
+163.3692 31.6683 lineto
+159.3653 41.4774 lineto
+closepath stroke
+grestore
+% /gnu/store/m4900ip34w4rcgn5620iqdi1wv198d9s-findutils-boot0-4.6.0.drv->/gnu/store/jxlg2pb4bhxjld9kimc0vgc1pvgifzag-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 211.5226 249.5062 moveto
+199.5661 236.5445 175.7787 211.2042 154.2896 191 curveto
+133.3924 171.3525 120.3691 173.3992 105.2896 149 curveto
+96.179 134.2589 91.9439 114.8759 89.9792 100.577 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 93.4613 100.2218 moveto
+88.902 90.6582 lineto
+86.5023 100.9777 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 93.4613 100.2218 moveto
+88.902 90.6582 lineto
+86.5023 100.9777 lineto
+closepath stroke
+grestore
+% /gnu/store/m4900ip34w4rcgn5620iqdi1wv198d9s-findutils-boot0-4.6.0.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 217.6715 249.7512 moveto
+215.5069 236.6808 212.8461 210.6773 221.2896 191 curveto
+239.3387 148.9371 281.5893 114.1707 307.8687 95.5993 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 309.5541 98.6873 moveto
+315.8262 90.1485 lineto
+305.5982 92.9122 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 309.5541 98.6873 moveto
+315.8262 90.1485 lineto
+305.5982 92.9122 lineto
+closepath stroke
+grestore
+% /gnu/store/m4900ip34w4rcgn5620iqdi1wv198d9s-findutils-boot0-4.6.0.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 218.3002 249.7512 moveto
+216.5069 236.6808 213.8461 210.6773 222.2896 191 curveto
+240.2592 149.1224 282.2175 114.4771 308.2302 95.8457 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 310.1986 98.74 moveto
+316.4104 90.1573 lineto
+306.2021 92.993 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 310.1986 98.74 moveto
+316.4104 90.1573 lineto
+306.2021 92.993 lineto
+closepath stroke
+grestore
+% /gnu/store/m4900ip34w4rcgn5620iqdi1wv198d9s-findutils-boot0-4.6.0.drv->/gnu/store/wv8sf8h4n9s5cdya223iy2wp3alr92x8-binutils-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 219.068 249.6776 moveto
+218.8205 239.9296 218.4354 223.2939 218.2896 209 curveto
+217.8976 170.5859 218.491 125.6856 218.9177 100.575 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 222.4112 100.9616 moveto
+219.0922 90.9001 lineto
+215.4123 100.8353 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 222.4112 100.9616 moveto
+219.0922 90.9001 lineto
+215.4123 100.8353 lineto
+closepath stroke
+grestore
+% /gnu/store/nwzyr3xskw0ms8cndffsfvhvm5xz96pc-file-boot0-5.28.drv->/gnu/store/1jpld53g41rzv2bmjp6v9mckmyw75vs3-make-boot0-4.2.1.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 107.3809 190.9353 moveto
+114.9076 182.3755 127.0161 168.6052 136.6131 157.6909 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 138.9538 160.3293 moveto
+142.9287 150.5084 lineto
+133.6969 155.7069 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 138.9538 160.3293 moveto
+142.9287 150.5084 lineto
+133.6969 155.7069 lineto
+closepath stroke
+grestore
+% /gnu/store/nwzyr3xskw0ms8cndffsfvhvm5xz96pc-file-boot0-5.28.drv->/gnu/store/wda0p45jlbzg6w9j8zxw2sd11n2a4pbv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 97.795 190.7566 moveto
+94.2711 177.667 89.0276 151.5122 96.2896 131 curveto
+104.3046 108.3605 117.2274 109.1536 130.2896 89 curveto
+140.4878 73.2652 149.9534 54.0756 156.2936 40.2725 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 159.3202 42.0773 moveto
+160.2131 31.5202 lineto
+152.9316 39.2163 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 159.3202 42.0773 moveto
+160.2131 31.5202 lineto
+152.9316 39.2163 lineto
+closepath stroke
+grestore
+% /gnu/store/nwzyr3xskw0ms8cndffsfvhvm5xz96pc-file-boot0-5.28.drv->/gnu/store/jxlg2pb4bhxjld9kimc0vgc1pvgifzag-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 98.9304 190.5279 moveto
+97.3778 180.5999 94.8512 163.6425 93.2896 149 curveto
+91.5582 132.7657 90.2411 114.2864 89.3944 100.6934 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 92.8997 100.6786 moveto
+88.8177 90.9017 lineto
+85.9119 101.0902 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 92.8997 100.6786 moveto
+88.8177 90.9017 lineto
+85.9119 101.0902 lineto
+closepath stroke
+grestore
+% /gnu/store/nwzyr3xskw0ms8cndffsfvhvm5xz96pc-file-boot0-5.28.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 117.3234 190.6013 moveto
+137.2636 180.7422 171.2575 163.8495 200.2896 149 curveto
+236.563 130.4467 278.2622 108.5298 304.4442 94.6967 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 305.7864 97.9462 moveto
+312.9897 90.1769 lineto
+302.5136 91.7584 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 305.7864 97.9462 moveto
+312.9897 90.1769 lineto
+302.5136 91.7584 lineto
+closepath stroke
+grestore
+% /gnu/store/nwzyr3xskw0ms8cndffsfvhvm5xz96pc-file-boot0-5.28.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 118.0407 190.6013 moveto
+138.2636 180.7422 172.2575 163.8495 201.2896 149 curveto
+237.4018 130.5291 278.8916 108.7246 304.8534 94.8816 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 306.468 97.9873 moveto
+313.6338 90.1833 lineto
+303.1654 91.8153 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 306.468 97.9873 moveto
+313.6338 90.1833 lineto
+303.1654 91.8153 lineto
+closepath stroke
+grestore
+% /gnu/store/nwzyr3xskw0ms8cndffsfvhvm5xz96pc-file-boot0-5.28.drv->/gnu/store/wv8sf8h4n9s5cdya223iy2wp3alr92x8-binutils-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.11765 0.93725 0.72157 edgecolor
+newpath 97.8816 190.5997 moveto
+94.4685 176.8244 89.9188 149.1535 102.2896 131 curveto
+115.2721 111.9487 137.1153 100.1209 158.4366 92.7932 curveto
+stroke
+0.11765 0.93725 0.72157 edgecolor
+newpath 159.2037 96.2203 moveto
+167.7084 89.902 lineto
+157.1199 89.5377 lineto
+closepath fill
+1 setlinewidth
+solid
+0.11765 0.93725 0.72157 edgecolor
+newpath 159.2037 96.2203 moveto
+167.7084 89.902 lineto
+157.1199 89.5377 lineto
+closepath stroke
+grestore
+% /gnu/store/jxlg2pb4bhxjld9kimc0vgc1pvgifzag-gcc-bootstrap-0.drv->/gnu/store/wda0p45jlbzg6w9j8zxw2sd11n2a4pbv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.33333 0.23922 0.73725 edgecolor
+newpath 99.5036 70.5895 moveto
+111.1785 61.8333 129.7167 47.9297 143.9772 37.2343 curveto
+stroke
+0.33333 0.23922 0.73725 edgecolor
+newpath 145.9186 40.1532 moveto
+151.8187 31.3532 lineto
+141.7186 34.5532 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 0.23922 0.73725 edgecolor
+newpath 145.9186 40.1532 moveto
+151.8187 31.3532 lineto
+141.7186 34.5532 lineto
+closepath stroke
+grestore
+% /gnu/store/5syba2bxhh8z79jhq83fzy8fxcx5xb4s-linux-libre-headers-4.4.18.drv->/gnu/store/ccj3as3258l70lmphi48hs7n017wv75s-perl-boot0-5.24.0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 114.4019 369.9353 moveto
+115.4763 362.1459 117.1459 350.0416 118.5721 339.7013 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 122.0287 340.2556 moveto
+119.928 329.8711 lineto
+115.0944 339.2991 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 122.0287 340.2556 moveto
+119.928 329.8711 lineto
+115.0944 339.2991 lineto
+closepath stroke
+grestore
+% /gnu/store/5syba2bxhh8z79jhq83fzy8fxcx5xb4s-linux-libre-headers-4.4.18.drv->/gnu/store/1jpld53g41rzv2bmjp6v9mckmyw75vs3-make-boot0-4.2.1.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 102.9463 369.8265 moveto
+88.8875 357.6476 66.2538 333.6286 73.2896 310 curveto
+88.5926 258.6067 119.562 258.8626 139.2896 209 curveto
+145.5025 193.2963 148.5115 174.284 149.9612 160.3599 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 153.4185 161.0114 moveto
+150.774 150.7519 lineto
+146.4434 160.4213 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 153.4185 161.0114 moveto
+150.774 150.7519 lineto
+146.4434 160.4213 lineto
+closepath stroke
+grestore
+% /gnu/store/5syba2bxhh8z79jhq83fzy8fxcx5xb4s-linux-libre-headers-4.4.18.drv->/gnu/store/zpphawi07xidhfs2dja3w7hmnfp99j02-diffutils-boot0-3.5.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 127.095 369.6615 moveto
+164.7512 346.7777 266.9945 283.659 275.2896 268 curveto
+283.0935 253.268 279.7486 234.21 275.2387 220.1884 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 278.5198 218.97 moveto
+271.754 210.8169 lineto
+271.9587 221.4097 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 278.5198 218.97 moveto
+271.754 210.8169 lineto
+271.9587 221.4097 lineto
+closepath stroke
+grestore
+% /gnu/store/5syba2bxhh8z79jhq83fzy8fxcx5xb4s-linux-libre-headers-4.4.18.drv->/gnu/store/m4900ip34w4rcgn5620iqdi1wv198d9s-findutils-boot0-4.6.0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 125.1232 369.7489 moveto
+137.7817 360.5412 157.9671 344.7251 172.2896 328 curveto
+178.3878 320.8787 178.1023 317.8099 183.2896 310 curveto
+190.591 299.0071 199.2161 286.9969 206.1933 277.5031 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 208.9296 279.6891 moveto
+212.0753 269.572 lineto
+203.3071 275.5192 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 208.9296 279.6891 moveto
+212.0753 269.572 lineto
+203.3071 275.5192 lineto
+closepath stroke
+grestore
+% /gnu/store/5syba2bxhh8z79jhq83fzy8fxcx5xb4s-linux-libre-headers-4.4.18.drv->/gnu/store/nwzyr3xskw0ms8cndffsfvhvm5xz96pc-file-boot0-5.28.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 99.6706 369.6324 moveto
+87.0321 360.9855 69.041 346.2067 61.2896 328 curveto
+47.7099 296.1038 49.8554 282.7267 61.2896 250 curveto
+65.6013 237.659 74.4657 226.1016 82.6552 217.314 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 85.0603 219.8587 moveto
+89.656 210.3125 lineto
+80.1102 214.9092 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 85.0603 219.8587 moveto
+89.656 210.3125 lineto
+80.1102 214.9092 lineto
+closepath stroke
+grestore
+% /gnu/store/5syba2bxhh8z79jhq83fzy8fxcx5xb4s-linux-libre-headers-4.4.18.drv->/gnu/store/wda0p45jlbzg6w9j8zxw2sd11n2a4pbv-glibc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 95.3732 369.5291 moveto
+80.1494 361.2661 59.2307 347.1459 49.2896 328 curveto
+-3.3782 226.5662 -23.9835 165.5076 40.2896 71 curveto
+55.1338 49.1729 81.3581 37.0687 105.8785 30.3564 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 106.6282 33.7763 moveto
+115.5076 27.9964 lineto
+104.9619 26.9775 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 106.6282 33.7763 moveto
+115.5076 27.9964 lineto
+104.9619 26.9775 lineto
+closepath stroke
+grestore
+% /gnu/store/5syba2bxhh8z79jhq83fzy8fxcx5xb4s-linux-libre-headers-4.4.18.drv->/gnu/store/jxlg2pb4bhxjld9kimc0vgc1pvgifzag-gcc-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 98.2966 369.6592 moveto
+84.5518 361.1287 64.9188 346.5186 55.2896 328 curveto
+36.8106 292.4621 39.2466 160.2047 49.2896 131 curveto
+53.6393 118.3512 62.645 106.4461 70.9075 97.4281 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 73.1647 100.1254 moveto
+77.663 90.5329 lineto
+68.1645 95.2266 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 73.1647 100.1254 moveto
+77.663 90.5329 lineto
+68.1645 95.2266 lineto
+closepath stroke
+grestore
+% /gnu/store/5syba2bxhh8z79jhq83fzy8fxcx5xb4s-linux-libre-headers-4.4.18.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 134.2947 369.5898 moveto
+180.0834 349.8517 287.3425 295.581 319.2896 209 curveto
+332.7025 172.6492 332.977 126.6911 331.7678 100.9034 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 335.2615 100.6917 moveto
+331.1548 90.9251 lineto
+328.2747 101.121 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 335.2615 100.6917 moveto
+331.1548 90.9251 lineto
+328.2747 101.121 lineto
+closepath stroke
+grestore
+% /gnu/store/5syba2bxhh8z79jhq83fzy8fxcx5xb4s-linux-libre-headers-4.4.18.drv->/gnu/store/pmvh852v0x1zbl4r37pcpdqnq6m3bwfk-bootstrap-binaries-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 134.8214 369.5898 moveto
+181.0834 349.8517 288.3425 295.581 320.2896 209 curveto
+333.764 172.4824 333.9792 126.2692 332.4343 100.5498 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 335.9506 100.6171 moveto
+331.675 90.9233 lineto
+328.9723 101.1676 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 335.9506 100.6171 moveto
+331.675 90.9233 lineto
+328.9723 101.1676 lineto
+closepath stroke
+grestore
+% /gnu/store/5syba2bxhh8z79jhq83fzy8fxcx5xb4s-linux-libre-headers-4.4.18.drv->/gnu/store/wv8sf8h4n9s5cdya223iy2wp3alr92x8-binutils-bootstrap-0.drv
+gsave
+1 setlinewidth
+0.66667 1 1 edgecolor
+newpath 127.1633 369.6963 moveto
+140.0396 361.0968 158.373 346.352 166.2896 328 curveto
+180.0253 296.1582 157.6447 284.0355 164.2896 250 curveto
+173.5727 202.4512 191.2352 195.3631 205.2896 149 curveto
+210.1619 132.9269 213.8779 114.2047 216.2529 100.4792 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 219.6443 101.4263 moveto
+217.807 90.992 lineto
+212.7364 100.2947 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 219.6443 101.4263 moveto
+217.807 90.992 lineto
+212.7364 100.2947 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+end
+restore
+%%EOF

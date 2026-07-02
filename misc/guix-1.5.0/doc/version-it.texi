@@ -1,0 +1,4 @@
+@set UPDATED 16 January 2026
+@set UPDATED-MONTH January 2026
+@set EDITION 1.5.0
+@set VERSION 1.5.0
