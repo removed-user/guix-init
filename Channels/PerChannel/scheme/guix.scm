@@ -4,7 +4,7 @@
   (branch "master")
   (introduction
     (make-channel-introduction
-## Commit by Vinicius Monego
+	; ## Commit by Vinicius Monego
       "27d13fbe68807eb7306770ac26ac8b10655cb9fd"
       (openpgp-fingerprint
-        "4008 6A7E 0252 9B60 31FB  8607 8354 7635 3176 9CA6"))))
+        'B845 5B7F FAD5 E8E9 5DEF  4296 637B 0B13 8065 B68A'))))
