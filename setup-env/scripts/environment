@@ -1,0 +1,2 @@
+GUIX_DAEMON_SOCKET=/var/guix/daemon-socket/socket
+NIX_REMOTE="unix:///nix/var/nix/daemon-socket/socket"
