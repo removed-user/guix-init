@@ -1,0 +1,17 @@
+disarchive = pkgs.disarchive;
+guile = pkgs.guile;
+guile-avahi = pkgs.guile-avahi;
+guile-gcrypt = pkgs.guile-gcrypt;
+guile-git = pkgs.guile-git;
+guile-gnutls = pkgs.guile-gnutls;
+guile-json = pkgs.guile-json;
+guile-lib = pkgs.guile-lib;
+guile-lzlib = pkgs.guile-lzlib;
+guile-lzma = pkgs.guile-lzma;
+guile-semver = pkgs.guile-semver;
+guile-sqlite3 = pkgs.guile-sqlite3;
+guile-ssh = pkgs.guile-ssh;
+guile-zlib = pkgs.guile-zlib;
+guile-zstd = pkgs.guile-zstd;
+guix = pkgs.guix;
+scheme-bytestructures = pkgs.scheme-bytestructures;

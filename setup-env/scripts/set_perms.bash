@@ -16,3 +16,4 @@ daemon-socket
 chown -R root:root /var/guix/profiles/per-user/root
 }
 set_owner
+chown -R root:root /var/guix/userpool/
