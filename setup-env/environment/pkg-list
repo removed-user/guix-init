@@ -1,0 +1,18 @@
+disarchive 
+guile-avahi 
+guile-gcrypt 
+guile-git 
+guile-gnutls 
+guile-json 
+guile-lib 
+guile-lzlib 
+guile-lzma 
+guile-semver 
+guile-sqlite3 
+guile-ssh 
+guile-zlib 
+guile-zstd 
+scheme-bytestructures 
+
+# guix 
+# guile 
