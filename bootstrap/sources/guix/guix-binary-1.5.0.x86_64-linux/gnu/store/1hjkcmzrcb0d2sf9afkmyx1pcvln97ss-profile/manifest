@@ -1,0 +1,77 @@
+;; This file was automatically generated and is for internal use only.
+;; It cannot be passed to the '--manifest' option.
+;; Run 'guix package --export-manifest' if you want to export a file
+;; suitable for '--manifest'.
+
+(manifest
+  (version 4)
+  (packages
+    (("guix"
+      "1.5.0"
+      "out"
+      "/gnu/store/ganla421f3g1p9rh3r68zj9djc9b807m-guix-1.5.0"
+      (propagated-inputs
+        (("guile-gnutls"
+          "5.0.1"
+          "out"
+          "/gnu/store/0z0c5w0xbcqhx8ff4h45iyaxgikq2yzi-guile-gnutls-5.0.1")
+         ("guile-avahi"
+          "0.4.1"
+          "out"
+          "/gnu/store/c5jifvqp6apyk04lknf7i9c4zpw0n2vd-guile-avahi-0.4.1")
+         ("guile-gcrypt"
+          "0.5.0"
+          "out"
+          "/gnu/store/fhixp6zlpdnmgk6d67jvsrq646ln0wsl-guile-gcrypt-0.5.0")
+         ("guile-json"
+          "4.7.3"
+          "out"
+          "/gnu/store/0yyi0kbyn75dv26qhyiv2h7xmiyc3iwv-guile-json-4.7.3")
+         ("guile-lib"
+          "0.2.8.1"
+          "out"
+          "/gnu/store/wrzjv30p6faa7kfh9k0s6dr5dzyzbbii-guile-lib-0.2.8.1")
+         ("guile-semver"
+          "0.2.0"
+          "out"
+          "/gnu/store/w9zkh40c2a21hzlljpcawjvd6fkqig20-guile-semver-0.2.0")
+         ("guile-sqlite3"
+          "0.1.3"
+          "out"
+          "/gnu/store/xn1s4c3pchszpl7mq8aa3w2p61px8kfj-guile-sqlite3-0.1.3")
+         ("guile-ssh"
+          "0.18.0"
+          "out"
+          "/gnu/store/m2ysynx4wd8rp7cij0y5v9fmjyb0qvf4-guile-ssh-0.18.0")
+         ("guile-git"
+          "0.10.0"
+          "out"
+          "/gnu/store/882aflaivazdl05ix6lh24avb2rax9zc-guile-git-0.10.0"
+          (propagated-inputs
+            (("guile-bytestructures"
+              "1.0.10"
+              "out"
+              "/gnu/store/j9qn3wf46hy8z5wvhqfm9nwv2n7i61i1-guile-bytestructures-1.0.10"))))
+         ("guile-zlib"
+          "0.2.2"
+          "out"
+          "/gnu/store/8zdpzbqs9pvsip03gmw3z7mbysvgi810-guile-zlib-0.2.2")
+         ("guile-lzlib"
+          "0.3.0"
+          "out"
+          "/gnu/store/1wlp4j8x82b40zmzyfzrrkr65vhb6pcn-guile-lzlib-0.3.0")
+         ("guile-zstd"
+          "0.1.1"
+          "out"
+          "/gnu/store/qxq8zda8rfpx5vy451hxdz6nnhpdh65p-guile-zstd-0.1.1")))
+      (search-paths
+        (("GUIX_EXTENSIONS_PATH"
+          ("share/guix/extensions")
+          ":"
+          directory
+          #f)
+         ("SSL_CERT_DIR"
+          ("etc/ssl/certs")
+          #f
+          directory
+          #f)))))))

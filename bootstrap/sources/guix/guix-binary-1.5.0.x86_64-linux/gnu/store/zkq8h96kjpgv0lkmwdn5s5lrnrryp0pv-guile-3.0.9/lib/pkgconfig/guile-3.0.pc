@@ -1,0 +1,30 @@
+prefix=/gnu/store/zkq8h96kjpgv0lkmwdn5s5lrnrryp0pv-guile-3.0.9
+exec_prefix=/gnu/store/zkq8h96kjpgv0lkmwdn5s5lrnrryp0pv-guile-3.0.9
+bindir=/gnu/store/zkq8h96kjpgv0lkmwdn5s5lrnrryp0pv-guile-3.0.9/bin
+libdir=/gnu/store/zkq8h96kjpgv0lkmwdn5s5lrnrryp0pv-guile-3.0.9/lib
+includedir=/gnu/store/zkq8h96kjpgv0lkmwdn5s5lrnrryp0pv-guile-3.0.9/include
+datarootdir=/gnu/store/zkq8h96kjpgv0lkmwdn5s5lrnrryp0pv-guile-3.0.9/share
+datadir=/gnu/store/zkq8h96kjpgv0lkmwdn5s5lrnrryp0pv-guile-3.0.9/share
+pkgdatadir=/gnu/store/zkq8h96kjpgv0lkmwdn5s5lrnrryp0pv-guile-3.0.9/share/guile
+pkgincludedir=/gnu/store/zkq8h96kjpgv0lkmwdn5s5lrnrryp0pv-guile-3.0.9/include/guile
+
+sitedir=/gnu/store/zkq8h96kjpgv0lkmwdn5s5lrnrryp0pv-guile-3.0.9/share/guile/site/3.0
+extensiondir=/gnu/store/zkq8h96kjpgv0lkmwdn5s5lrnrryp0pv-guile-3.0.9/lib/guile/3.0/extensions
+siteccachedir=/gnu/store/zkq8h96kjpgv0lkmwdn5s5lrnrryp0pv-guile-3.0.9/lib/guile/3.0/site-ccache
+libguileinterface=7:0:6
+
+# Actual name of the 'guile' and 'guild' programs.  This is
+# particularly useful when '--program-transform-name' or similar has
+# been used.
+guild=${bindir}/guild
+guile=${bindir}/guile
+
+Name: GNU Guile
+Description: GNU's Ubiquitous Intelligent Language for Extension
+Version: 3.0.9
+Libs: -L${libdir} -lguile-3.0 -L/gnu/store/y3m3cx1kjmyhakq5rakc0384pfdysdx5-libgc-8.2.8/lib -lgc -lpthread -ldl
+Libs.private:    -L/gnu/store/qvp9pb46k3qnpgb6sx7cjzfpcrkkqgnp-libffi-3.4.6/lib/../lib -lffi	\
+  -lunistring -L/gnu/store/36fn8zmf8mh7pcpqk2w63jc0s7wphf67-libxcrypt-4.4.38/lib -lcrypt  -lm   		\
+     		\
+  
+Cflags: -I${pkgincludedir}/3.0  

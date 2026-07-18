@@ -1,0 +1,43 @@
+Dies ist die Datei .../info/dir, die den obersten Knoten der
+Info-Hierarchie enthält, genannt (dir)Top.
+Beim ersten Aufruf von Info geht es bei diesem Knoten los.
+
+File: dir,	Node: Top	Dies ist der Beginn des INFO-Baums
+
+  Dieser Verzeichnis-Knoten zeigt ein Menü aller Hauptpunkte an.
+  „q“ beendet Info, „H“ listet alle Info-Befehle auf, „d“ kehrt hierher
+  zurück, „h“ gibt eine Einsteiger-Hilfe, „mEmacs<Return>“ besucht das
+  Emacs-Manual, etc.
+
+  Im Emacs kann man mit dem zweiten Mausknopf auf einen Menüeintrag oder
+  einen Querverweis klicken, um einen solchen auswählen.
+
+* Menu:
+
+Softwareentwicklung
+* guix build: (guix.de)guix build aufrufen.
+                                Erstellen von Paketen.
+* guix environment: (guix.de)guix environment aufrufen.
+                                Umgebungen für Entwickler erstellen
+* guix pack: (guix.de)guix pack aufrufen.
+                                Bündel aus Binärdateien erstellen.
+* guix shell: (guix.de)guix shell aufrufen.
+                                Software-Umgebungen erzeugen.
+
+Systemadministration
+* Guix-Kochbuch: (guix-cookbook.de).
+                                Anleitungen und Beispiele für GNU Guix.
+* Guix.de: (guix.de).           Installierte Software und 
+                                  Systemkonfigurationen verwalten.
+* guix deploy: (guix.de)guix deploy aufrufen.
+                                Betriebssystemkonfigurationen entfernter 
+                                  Rechner verwalten.
+* guix gc: (guix.de)guix gc aufrufen.
+                                Unbenutzten Plattenspeicher wieder freigeben.
+* guix package: (guix.de)guix package aufrufen.
+                                Pakete installieren, entfernen und 
+                                  aktualisieren.
+* guix pull: (guix.de)guix pull aufrufen.
+                                Die Liste verfügbarer Pakete aktualisieren.
+* guix system: (guix.de)guix system aufrufen.
+                                Die Betriebssystemkonfiguration verwalten.

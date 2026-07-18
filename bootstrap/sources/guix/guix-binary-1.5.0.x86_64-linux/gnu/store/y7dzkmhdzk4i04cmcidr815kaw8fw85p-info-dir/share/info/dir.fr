@@ -1,0 +1,48 @@
+Ceci est le fichier .../info/dir, qui contient le nœud le
+plus haut de la hiérarchie Info. Ce nœud est appelé (dir)Top.
+C'est de ce nœud que vous démarrez la première fois que
+vous utilisez Info.
+
+File: dir,	Node: Top	Ceci est le haut de l'arborescence INFO
+
+  Ceci (le nœud Répertoire) fournit un menu des sujets majeurs.
+  Entrez « q » pour quitter, « H » pour afficher toutes les commandes Info,
+  « d » pour revenir ici ;, « h » affiche un guide d'initiation pour les
+  nouveaux venus.
+  « mEmacs<Entrée> » démarre une consultation du manuel Emacs, et cætera.
+
+  Dans Emacs, vous pouvez cliquer avec le deuxième bouton de la souris
+  sur une entrée de menu ou sur un renvoi pour le sélectionner.
+
+* Menu:
+
+Administration système
+* Guix.fr: (guix.fr).           Gérer les logiciels installés et la 
+                                  configuration du système.
+* Livre de recettes de Guix: (guix-cookbook.fr).
+                                Didacticiels et exemples pour GNU Guix.
+* guix deploy: (guix.fr)Invoquer guix deploy.
+                                Gérer la configuration du système 
+                                  d’exploitation d’hôtes distants.
+* guix gc: (guix.fr)Invoquer guix gc.
+                                Récupérer de l’espace disque inutilisé.
+* guix package: (guix.fr)Invoquer guix package.
+                                Installer, supprimer et mettre à jour des 
+                                  paquets.
+* guix pull: (guix.fr)Invoquer guix pull.
+                                Mettre à jour la liste des paquets 
+                                  disponibles.
+* guix system: (guix.fr)Invoquer guix system.
+                                Gérer la configuration du système 
+                                  d’exploitation.
+
+Développement logiciel
+* guix build: (guix.fr)Invoquer guix build.
+                                Construire des paquets.
+* guix environment: (guix.fr)Invoquer guix environment.
+                                Construire des environnements de construction 
+                                  avec Guix.
+* guix pack: (guix.fr) Invoquer guix pack.
+                                Créer des lots binaires.
+* guix shell: (guix.fr)Invoquer guix shell.
+                                Créer des environnements logiciels.

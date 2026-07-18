@@ -1,0 +1,11 @@
+prefix=/gnu/store/naxzf8ln08v8s5fsa9319ac1fn01i0ki-libxau-1.0.12
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Xau
+Description: X authorization file management library
+Version: 1.0.12
+Requires: xproto
+Cflags: -I${includedir}
+Libs: -L${libdir} -lXau

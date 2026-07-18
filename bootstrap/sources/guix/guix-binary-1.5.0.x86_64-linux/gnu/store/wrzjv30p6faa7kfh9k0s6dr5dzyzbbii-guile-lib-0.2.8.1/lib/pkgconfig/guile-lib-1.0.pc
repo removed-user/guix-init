@@ -1,0 +1,19 @@
+# Package Information for pkg-config
+
+prefix=/gnu/store/wrzjv30p6faa7kfh9k0s6dr5dzyzbbii-guile-lib-0.2.8.1
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+
+guile_site=no
+
+sitedir=${datarootdir}/guile-lib
+siteccachedir=${exec_prefix}/lib/guile-lib/guile/3.0/site-ccache
+
+Name: Guile-Lib
+
+Description: Guile-lib, also known as Guile-Library, is a down-scaled,
+limited-scope CPAN for Guile
+
+Version: 0.2.8.1

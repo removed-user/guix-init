@@ -1,0 +1,11 @@
+prefix="/gnu/store/fig6cd70970gg3mblim6wkdmwzk6w493-libgit2-1.9.1"
+libdir="/gnu/store/fig6cd70970gg3mblim6wkdmwzk6w493-libgit2-1.9.1/lib"
+includedir="/gnu/store/fig6cd70970gg3mblim6wkdmwzk6w493-libgit2-1.9.1/include"
+
+Name: libgit2
+Description: The git library, take 2
+Version: 1.9.1
+Libs: -L${libdir} -lgit2
+Libs.private: -lhttp_parser -L/gnu/store/my3b6l0x7fx9231n1l6ik799y0acbzb4-libssh2-1.10.0/lib -lssh2 -lrt
+Requires.private: openssl libpcre2-8 zlib
+Cflags: -I${includedir} 

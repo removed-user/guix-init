@@ -1,0 +1,12 @@
+prefix=/gnu/store/n1zapkd6v9aalp26xhapq30524svivgr-glib-2.83.3
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+gmodule_supported=true
+
+Name: GModule
+Description: Dynamic module loader for GLib
+Version: 2.83.3
+Requires: glib-2.0
+Libs: -L${libdir} -lgmodule-2.0 -pthread
+Cflags: -I${includedir} -pthread

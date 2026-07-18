@@ -1,0 +1,11 @@
+prefix=/gnu/store/xsvhq9avxln79kbh9999mlzjp98ykphr-mit-krb5-1.21
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: mit-krb5-gssapi
+Description: Kerberos implementation of the GSSAPI
+Version: 1.21
+Requires.private: mit-krb5
+Cflags: -I${includedir}
+Libs: -L${libdir} -lgssapi_krb5

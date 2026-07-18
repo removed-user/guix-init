@@ -1,0 +1,1 @@
+/gnu/store/xn1s4c3pchszpl7mq8aa3w2p61px8kfj-guile-sqlite3-0.1.3/share/guile/site/3.0/sqlite3.scm

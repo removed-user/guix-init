@@ -1,0 +1,41 @@
+This is the file .../info/dir, which contains the
+topmost node of the Info hierarchy, called (dir)Top.
+The first time you invoke Info you start off looking at this node.
+
+File: dir,	Node: Top	This is the top of the INFO tree
+
+  This (the Directory node) gives a menu of major topics.
+  Typing "q" exits, "H" lists all Info commands, "d" returns here,
+  "h" gives a primer for first-timers,
+  "mEmacs<Return>" visits the Emacs manual, etc.
+
+  In Emacs, you can click mouse button 2 on a menu item or cross reference
+  to select it.
+
+* Menu:
+
+系统管理
+* Guix 烹饪书: (guix-cookbook.zh_CN).
+                                GNU Guix 的教程和示例。
+* Guix.zh_CN: (guix.zh_CN).     管理安装的软件和系统配置。
+* guix deploy: (guix.zh_CN) 调用 guix deploy.
+                                Manage operating system configurations for 
+                                  remote hosts.
+* guix gc：(guix.zh_CN) 调用 guix gc.
+                                回收不使用的硬盘空间。
+* guix package: (guix.zh_CN) 调用 guix package.
+                                安装、删除和升级软件包。
+* guix pull: (guix.zh_CN) 调用 guix pull.
+                                更新可用的软件包列表。
+* guix system: (guix.zh_CN) 调用 guix system.
+                                管理操作系统配置。
+
+软件开发
+* guix build: (guix.zh_CN) 调用 guix build.
+                                构建软件包。
+* guix environment: (guix.zh_CN) 调用 guix environment.
+                                用 Guix 构建开发环境。
+* guix pack: (guix.zh_CN) 调用 guix pack.
+                                创建二进制 bundle。
+* guix shell: (guix.zh_CN) 调用 guix shell.
+                                Creating software environments.

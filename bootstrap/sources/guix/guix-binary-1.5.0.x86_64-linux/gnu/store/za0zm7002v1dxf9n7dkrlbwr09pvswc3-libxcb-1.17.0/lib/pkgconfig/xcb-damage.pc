@@ -1,0 +1,11 @@
+prefix=/gnu/store/za0zm7002v1dxf9n7dkrlbwr09pvswc3-libxcb-1.17.0
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: XCB Damage
+Description: XCB Damage Extension
+Version: 1.17.0
+Requires.private: xcb xcb-xfixes
+Libs: -L${libdir} -lxcb-damage
+Cflags: -I${includedir}

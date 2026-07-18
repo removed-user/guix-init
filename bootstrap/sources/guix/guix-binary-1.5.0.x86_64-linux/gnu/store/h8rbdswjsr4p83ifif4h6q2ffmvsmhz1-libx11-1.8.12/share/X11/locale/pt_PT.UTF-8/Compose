@@ -1,0 +1,3 @@
+include "/gnu/store/h8rbdswjsr4p83ifif4h6q2ffmvsmhz1-libx11-1.8.12/share/X11/locale/en_US.UTF-8/Compose"
+<dead_acute> <C>	: "Ç" Ccedilla # LATIN CAPITAL LETTER C WITH CEDILLA
+<dead_acute> <c>	: "ç" ccedilla # LATIN SMALL LETTER C WITH CEDILLA

@@ -1,0 +1,44 @@
+Esse é o arquivo .../info/dir, que contém o
+nodo principal da hierarquia Info, chamado (dir)Topo.
+A primeira vez que você chamar o Info você verá esse nodo.
+
+File: dir,	Node: Top	Esse é o topo da árvore do INFO
+
+  Fornece (o nodo do diretório mais alto) um menu de tópicos principais.
+  Digitando "q" sai, "H" lista todos os comandos Info, "d" retorna para cá,
+  "h" fornece uma cartilha para iniciantes,
+  "mEmacs<Return>" visita o manual do Emacs, etc.
+
+  No Emacs, você pode clicar no botão 2 do mouse sobre um item de menu ou referência cruzada
+  para selecioná-lo.
+
+* Menu:
+
+Administração do sistema
+* Guix.pt_BR: (guix.pt_BR).     Gerencie softwares instalados e configuração 
+                                  do sistema.
+* Livro de receitas do Guix: (guix-cookbook.pt_BR).
+                                Tutoriais e exemplos para o GNU Guix.
+* guix deploy: (guix.pt_BR)Invocando guix deploy.
+                                Gerenciar configurações do sistema 
+                                  operacional para hosts remotos.
+* guix gc: (guix.pt_BR)Invocando guix gc.
+                                Recuperando espaço em disco não utilizado.
+* guix package: (guix.pt_BR)Invocando guix package.
+                                Instalando, removendo e atualizando pacotes.
+* guix pull: (guix.pt_BR)Invocando guix pull.
+                                Atualize a lista de pacotes disponíveis.
+* guix system: (guix.pt_BR)Invocando guix system.
+                                Gerencie a configuração do sistema 
+                                  operacional.
+
+Desenvolvimento de software
+* guix build: (guix.pt_BR)Invocando guix build.
+                                Compilando pacotes.
+* guix environment: (guix.pt_BR)Invocando guix environment.
+                                Compilando ambientes de desenvolvimento com 
+                                  Guix.
+* guix pack: (guix.pt_BR)Invocando guix pack.
+                                Criando embalagens de binários.
+* guix shell: (guix.pt_BR)Invocando guix shell.
+                                Creating software environments.

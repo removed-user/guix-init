@@ -1,0 +1,1 @@
+/gnu/store/qxq8zda8rfpx5vy451hxdz6nnhpdh65p-guile-zstd-0.1.1/lib/guile/3.0/site-ccache/zstd.go

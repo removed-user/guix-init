@@ -1,0 +1,11 @@
+prefix=/gnu/store/5qmb8hpblv5pdfv0zxk7bs841vx3wv5f-avahi-0.8
+exec_prefix=${prefix}
+libdir=/gnu/store/5qmb8hpblv5pdfv0zxk7bs841vx3wv5f-avahi-0.8/lib
+includedir=${prefix}/include
+
+Name: avahi-glib
+Description: Avahi Multicast DNS Responder (GLib Support)
+Version: 0.8
+Requires: glib-2.0
+Libs: -L${libdir} -lavahi-glib
+Cflags: -D_REENTRANT -I${includedir}

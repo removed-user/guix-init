@@ -1,0 +1,54 @@
+This is the file .../info/dir, which contains the
+topmost node of the Info hierarchy, called (dir)Top.
+The first time you invoke Info you start off looking at this node.
+
+File: dir,	Node: Top	This is the top of the INFO tree
+
+  This (the Directory node) gives a menu of major topics.
+  Typing "q" exits, "H" lists all Info commands, "d" returns here,
+  "h" gives a primer for first-timers,
+  "mEmacs<Return>" visits the Emacs manual, etc.
+
+  In Emacs, you can click mouse button 2 on a menu item or cross reference
+  to select it.
+
+* Menu:
+
+Software development
+* guix build: (guix)Invoking guix build.
+                                Building packages.
+* guix environment: (guix)Invoking guix environment.
+                                Building development environments with Guix.
+* guix pack: (guix)Invoking guix pack.
+                                Creating binary bundles.
+* guix shell: (guix)Invoking guix shell.
+                                Creating software environments.
+
+Software libraries
+* Guile-GnuTLS: (gnutls-guile). Guile bindings for GNU Transport Layer 
+                                  Security Library.
+
+System administration
+* Guix: (guix).                 Manage installed software and system 
+                                  configuration.
+* Guix cookbook: (guix-cookbook).
+                                Tutorials and examples for GNU Guix.
+* guix deploy: (guix)Invoking guix deploy.
+                                Manage operating system configurations for 
+                                  remote hosts.
+* guix gc: (guix)Invoking guix gc.
+                                Reclaiming unused disk space.
+* guix package: (guix)Invoking guix package.
+                                Installing, removing, and upgrading packages.
+* guix pull: (guix)Invoking guix pull.
+                                Update the list of available packages.
+* guix system: (guix)Invoking guix system.
+                                Manage the operating system configuration.
+
+The Algorithmic Language Scheme
+* Guile Library: (guile-library.info).
+                                Common modules for Guile Scheme.
+* Guile-Avahi: (Guile-Avahi).   Guile bindings for Avahi.
+* Guile-Gcrypt: (guile-gcrypt). Cryptographic library for Guile.
+* Guile-Git: (guile-git).       Git library for Guile.
+* Guile-SSH: (guile-ssh).       Guile bindings to libssh.

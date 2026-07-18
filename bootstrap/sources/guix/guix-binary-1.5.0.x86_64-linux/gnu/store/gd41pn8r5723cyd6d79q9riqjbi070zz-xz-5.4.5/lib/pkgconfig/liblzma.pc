@@ -1,0 +1,20 @@
+#
+# Author: Lasse Collin
+#
+# This file has been put into the public domain.
+# You can do whatever you want with this file.
+#
+
+prefix=/gnu/store/gd41pn8r5723cyd6d79q9riqjbi070zz-xz-5.4.5
+exec_prefix=/gnu/store/gd41pn8r5723cyd6d79q9riqjbi070zz-xz-5.4.5
+libdir=/gnu/store/gd41pn8r5723cyd6d79q9riqjbi070zz-xz-5.4.5/lib
+includedir=/gnu/store/gd41pn8r5723cyd6d79q9riqjbi070zz-xz-5.4.5/include
+
+Name: liblzma
+Description: General purpose data compression library
+URL: https://tukaani.org/xz/
+Version: 5.4.5
+Cflags: -I${includedir}
+Cflags.private: -DLZMA_API_STATIC
+Libs: -L${libdir} -llzma
+Libs.private: -pthread -lpthread

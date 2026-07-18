@@ -1,0 +1,240 @@
+#!/gnu/store/zkq8h96kjpgv0lkmwdn5s5lrnrryp0pv-guile-3.0.9/bin/guile \
+--debug -e main
+# aside from this initial boilerplate, this is actually -*- scheme -*- code
+!#
+
+;;; sssh.scm -- Scheme Secure Shell.
+
+;; Copyright (C) 2013, 2014, 2015 Artyom V. Poptsov <poptsov.artyom@gmail.com>
+;;
+;; This program is free software: you can redistribute it and/or
+;; modify it under the terms of the GNU General Public License as
+;; published by the Free Software Foundation, either version 3 of the
+;; License, or (at your option) any later version.
+;;
+;; This program is distributed in the hope that it will be useful, but
+;; WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;; General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see
+;; <http://www.gnu.org/licenses/>.
+
+
+;;; Commentary:
+
+;; This program is aimed to demonstrate some features of Guile-SSH
+;; library.  See https://github.com/artyom-poptsov/guile-ssh
+
+
+;;; Code:
+
+(use-modules (ice-9 getopt-long)
+             (ice-9 rdelim)
+             (ssh channel)
+             (ssh session)
+             (ssh auth)
+             (ssh key)
+             (ssh version))
+
+
+;;; Variables and constants
+
+(define *program-name* "sssh")
+(define *default-identity-file*
+  (string-append (getenv "HOME") "/.ssh/id_rsa"))
+(define *default-log-verbosity* "nolog")
+
+(define %accepted-key-types "ssh-rsa,rsa-sha2-256,ssh-dss,ecdh-sha2-nistp256")
+
+(define debug? #f)
+
+
+;; Command line options
+(define *option-spec*
+  '((user          (single-char #\u) (value #t))
+    (port          (single-char #\p) (value #t))
+    (identity-file (single-char #\i) (value #t))
+    (help          (single-char #\h) (value #f))
+    (version       (single-char #\v) (value #f))
+    (debug         (single-char #\d) (value #f))
+    (known-hosts-file                (value #t))
+    (ssh-debug                       (value #t))))
+
+
+;;; Helper procedures
+
+(define (handle-error session)
+  "Handle an SSH error; exit with an error code."
+  (write-line (get-error session))
+  (exit 1))
+
+(define (print-debug msg)
+  "Print debug information"
+  (if debug?
+      (display msg)))
+
+(define (format-debug fmt . args)
+  "Format a debug message."
+  (if debug?
+      (apply format #t fmt args)))
+
+(define (read-all port)
+  "Read all lines from the PORT."
+  (define (read-and-catch)
+    (catch 'guile-ssh-error
+      (lambda ()
+        (read-line port 'concat))
+      (lambda (key . args)
+        (format (current-error-port) "~a: ~a~%" key args)
+        #f)))
+  (let r ((res "")
+          (str (read-and-catch)))
+    (if (and str (not (eof-object? str)))
+        (r (string-append res str) (read-and-catch))
+        res)))
+
+;;; Printing of various information
+
+
+(define (print-version-and-exit)
+  "Print information about versions."
+  (format #t "libssh version:       ~a~%" (get-libssh-version))
+  (format #t "libguile-ssh version: ~a~%" (get-library-version))
+  (exit))
+
+
+(define (print-help-and-exit)
+  "Print information about program usage."
+  (display
+   (string-append
+    *program-name* " -- Scheme Secure Shell
+Copyright (C) Artyom Poptsov <poptsov.artyom@gmail.com>
+Licensed under GNU GPLv3+
+
+Usage: " *program-name* " [ -upidv ] <host> <command>
+
+Options:
+  --user=<user>, -u <user>                User name
+  --port=<port-number>, -p <port-number>  Port number
+  --identity-file=<file>, -i <file>       Path to private key
+  --debug, -d                             Debug mode
+  --ssh-debug=<verbosity>                 Debug libssh
+  --version, -v                           Print version
+"))
+  (exit))
+
+
+;;; Entry point of the program
+
+(define (main args)
+
+  (if (null? (cdr args))
+      (print-help-and-exit))
+
+  (let* ((options           (getopt-long args *option-spec*))
+         (user              (option-ref options 'user (getenv "USER")))
+         (port              (string->number (option-ref options 'port "22")))
+         (identity-file     (option-ref options 'identity-file
+                                        *default-identity-file*))
+         (debug-needed?     (option-ref options 'debug #f))
+         (ssh-debug         (option-ref options 'ssh-debug
+                                        *default-log-verbosity*))
+         (known-hosts-file  (option-ref options 'known-hosts-file #f))
+         (help-needed?      (option-ref options 'help #f))
+         (version-needed?   (option-ref options 'version #f))
+         (args              (option-ref options '() #f)))
+
+    (set! debug? debug-needed?)
+
+    (if help-needed?
+        (print-help-and-exit))
+
+    (if version-needed?
+        (print-version-and-exit))
+
+    (if (or (null? args) (null? (cdr args)))
+        (print-help-and-exit))
+
+    (let ((host (car args))
+          (cmd  (cadr args)))
+
+      (print-debug "1. make-session (ssh_new)\n")
+      (let ((session (make-session #:user user
+                                   #:host host
+                                   #:port port
+                                   #:identity identity-file
+                                   #:public-key-accepted-types %accepted-key-types
+                                   #:log-verbosity (string->symbol ssh-debug))))
+
+        (and known-hosts-file
+             (not (string-null? known-hosts-file))
+             (session-set! session 'knownhosts known-hosts-file))
+
+        (print-debug "3. connect! (ssh_connect_x)\n")
+        (connect! session)
+
+        (format-debug "   Available authentication methods: ~a~%"
+                      (userauth-get-list session))
+
+        (print-debug "4. authenticate-server (ssh_is_server_known)\n")
+        (when (and known-hosts-file
+                   (not (string-null? known-hosts-file)))
+          (case (authenticate-server session)
+            ((ok)        (print-debug "   ok\n"))
+            ((not-known) (display "   The server is unknown.  Please check MD5.\n"))))
+
+        (let* ((pubkey (get-server-public-key session))
+               (hash   (get-public-key-hash pubkey 'md5)))
+          (format-debug "   MD5 hash: ~a~%" (bytevector->hex-string hash)))
+
+        (print-debug "5. userauth-autopubkey!\n")
+        (let ((res (userauth-public-key/auto! session)))
+          (format-debug "    result: ~a~%\n" res)
+          (unless (equal? res 'success)
+            (handle-error session)))
+
+        (print-debug "6. make-channel (ssh_channel_new)\n")
+        (let ((channel (make-channel session)))
+
+          (format-debug "   channel: ~a~%" channel)
+
+          (unless channel
+            (handle-error session))
+
+          (print-debug "7. channel-open-session (ssh_channel_open_session)\n")
+          (catch #t
+            (lambda () (channel-open-session channel))
+            (lambda (key . args)
+              (display args)
+              (newline)))
+
+          (format-debug "   channel: ~a~%" channel)
+
+          (print-debug "8. channel-request-exec (ssh_channel_request_exec)\n")
+          (channel-request-exec channel cmd)
+
+          (case (channel-get-exit-status channel)
+            ((0)
+             (print-debug "9. channel-poll (ssh_channel_poll)\n")
+             (let poll ((ready? (char-ready? channel)))
+               (if ready?
+                   (begin
+                     (print-debug "10. channel-read (ssh_channel_read)\n")
+                     (display (read-all channel))
+                     (newline))
+                   (if (channel-open? channel)
+                       (poll (char-ready? channel))
+                       (format (current-error-port)
+                               "Channel is closed: ~a~%"
+                               channel)))))
+            (else =>
+                  (lambda (status)
+                    (format #t
+                     "ERROR: Failed to execute command `~a' (exit status ~a)~%"
+                      cmd status))))
+          (close channel)
+          (disconnect! session))))))
+
+;;; sssh.scm ends here

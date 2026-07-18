@@ -1,0 +1,14 @@
+prefix=/gnu/store/xsvhq9avxln79kbh9999mlzjp98ykphr-mit-krb5-1.21
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+vendor=MIT
+
+defccname=FILE:/tmp/krb5cc_%{uid}
+defktname=FILE:/etc/krb5.keytab
+defcktname=FILE:/var/krb5/user/%{euid}/client.keytab
+
+Name: krb5
+Description: An implementation of Kerberos network authentication
+Version: 1.21
+Requires: mit-krb5

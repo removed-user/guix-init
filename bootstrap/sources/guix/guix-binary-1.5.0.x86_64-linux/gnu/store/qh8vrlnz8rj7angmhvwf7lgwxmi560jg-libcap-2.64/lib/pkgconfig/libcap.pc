@@ -1,0 +1,11 @@
+prefix=/gnu/store/qh8vrlnz8rj7angmhvwf7lgwxmi560jg-libcap-2.64
+exec_prefix=/gnu/store/qh8vrlnz8rj7angmhvwf7lgwxmi560jg-libcap-2.64
+libdir=/gnu/store/qh8vrlnz8rj7angmhvwf7lgwxmi560jg-libcap-2.64/lib
+includedir=/gnu/store/qh8vrlnz8rj7angmhvwf7lgwxmi560jg-libcap-2.64/include
+
+Name: libcap
+Description: libcap - linux capabilities library
+Version: 2.64
+Libs: -L${libdir} -lcap
+Libs.private: 
+Cflags: -I${includedir}

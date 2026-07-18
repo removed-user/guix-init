@@ -1,0 +1,11 @@
+prefix=/gnu/store/5qmb8hpblv5pdfv0zxk7bs841vx3wv5f-avahi-0.8
+exec_prefix=${prefix}
+libdir=/gnu/store/5qmb8hpblv5pdfv0zxk7bs841vx3wv5f-avahi-0.8/lib
+includedir=${prefix}/include
+
+Name: avahi-gobject
+Description: Avahi Multicast DNS Responder (GLib GObject Support)
+Version: 0.8
+Requires.private: glib-2.0 gobject-2.0 avahi-glib avahi-client
+Libs: -L${libdir} -lavahi-gobject
+Cflags: -D_REENTRANT -I${includedir}

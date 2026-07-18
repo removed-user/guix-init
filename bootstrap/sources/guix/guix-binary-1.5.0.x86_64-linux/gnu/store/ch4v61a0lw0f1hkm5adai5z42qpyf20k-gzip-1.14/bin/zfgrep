@@ -1,0 +1,2 @@
+#!/gnu/store/k66i68s5l93n1lgxp29vn2292nsywp1v-bash-minimal-5.2.37/bin/bash
+exec zgrep -F "$@"

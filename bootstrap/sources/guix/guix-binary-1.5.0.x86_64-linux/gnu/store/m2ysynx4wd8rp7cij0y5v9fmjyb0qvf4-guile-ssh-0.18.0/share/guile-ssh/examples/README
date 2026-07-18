@@ -1,0 +1,61 @@
+# -*- mode: org; -*-
+
+* Examples
+  This directory includes an examples of programs that use Guile-SSH
+  library to access SSH protocol.
+
+  Executable =.scm= files are produced from =.scm.in= files during the build
+  process.
+** =sssh.scm=
+Scheme Secure Shell (SSSH) uses Guile-SSH API to implement basic SSH client
+functionality.
+*** Usage
+Please see
+#+BEGIN_EXAMPLE
+  $ ./sssh.scm --help
+#+END_EXAMPLE
+for information about program usage.
+*** Examples
+#+BEGIN_EXAMPLE
+  $ ./sssh.scm --identity=~/.ssh/id_rsa --user=avp localhost "uname -a"
+#+END_EXAMPLE
+
+** =ssshd.scm=
+   Scheme Secure Shell Daemon (SSSHD) uses Guile-SSH API to implement basic
+   SSH server functionality.
+** =echo=
+   Echo client and server.
+** =rrepl.scm=
+   A demo program that allows to connect to a remote REPL (RREPL) server.  Pass
+   =--help= (or =-h=) flag to the program to get usage information.
+** =rpc=
+   RPC over an SSH tunnel.
+** =sscp.scm=
+*** Usage
+#+BEGIN_EXAMPLE
+$ sscp avp@127.0.0.1:/etc/profile profile
+#+END_EXAMPLE
+** =pg-tunnel.scm=
+   An example of using Guile-SSH tunnels and [[http://www.nongnu.org/guile-pg/][Guile-PG]] to access a remote
+   PostgreSQL database.
+*** Usage
+   Please see
+#+BEGIN_EXAMPLE
+  $ ./pg-tunnel.scm --help
+#+END_EXAMPLE
+   for information about program usage.
+*** Examples
+#+BEGIN_EXAMPLE
+$ ./pg-tunnel.scm --host=example.org --dbname=example --user=alice \
+    'select * from people'
+#+END_EXAMPLE
+** =uptop.scm=
+   Connect to a remote host, execute =top= command on it and print the output
+   in uppercase letters, with terminal control characters intact.
+
+   The program shows usage of remote pipes (from =(ssh popen)= module.)
+*** Usage
+#+BEGIN_EXAMPLE
+./uptop.scm <hostname>
+#+END_EXAMPLE
+    The program can be stopped by hitting Ctrl-C.

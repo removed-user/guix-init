@@ -1,0 +1,37 @@
+Upstream-status: https://lists.gnu.org/archive/html/jami/2024-03/msg00008.html
+
+This makes it possible to use the system-provided qwindowkit library.
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 29bfde9a..3b4c7a92 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -101,13 +101,13 @@ endif()
+ 
+ # qwindowkit (frameless window)
+ add_fetch_content(
+-  TARGET qwindowkit
++  TARGET QWindowKit
+   URL https://github.com/stdware/qwindowkit.git
+   BRANCH 758b00cb6c2d924be3a1ea137ec366dc33a5132d
+   PATCHES ${QWINDOWKIT_PATCHES}
+   OPTIONS ${QWINDOWKIT_OPTIONS}
+ )
+-list(APPEND CLIENT_INCLUDE_DIRS ${QWindowKit_BINARY_DIR}/include)
++
+ list(APPEND CLIENT_LIBS QWindowKit::Quick)
+ 
+ # If ENABLE_CRASHREPORTS is enabled, we will use crashpad_cmake for now.
+diff --git a/tests/CMakeLists.txt b/tests/CMakeLists.txt
+index c5228ccf..816f97a7 100644
+--- a/tests/CMakeLists.txt
++++ b/tests/CMakeLists.txt
+@@ -61,7 +61,7 @@ target_include_directories(test_common_obj PRIVATE
+     ${CMAKE_CURRENT_SOURCE_DIR}
+     ${CMAKE_SOURCE_DIR}/src)
+ target_link_directories(test_common_obj PRIVATE ${CLIENT_LINK_DIRS})
+-target_link_libraries(test_common_obj ${QML_TEST_LIBS})
++target_link_libraries(test_common_obj ${QML_TEST_LIBS} ${CLIENT_LIBS})
+ target_compile_definitions(test_common_obj PRIVATE BUILD_TESTING="ON")
+ 
+ set(COMMON_TESTS_SOURCES

@@ -1,0 +1,4 @@
+/* GNU ld script
+*/
+OUTPUT_FORMAT(elf64-x86-64)
+GROUP ( /gnu/store/yj053cys0724p7vs9kir808x7fivz17m-glibc-2.41/lib/libm.so.6  AS_NEEDED ( /gnu/store/yj053cys0724p7vs9kir808x7fivz17m-glibc-2.41/lib/libmvec.so.1 ) )

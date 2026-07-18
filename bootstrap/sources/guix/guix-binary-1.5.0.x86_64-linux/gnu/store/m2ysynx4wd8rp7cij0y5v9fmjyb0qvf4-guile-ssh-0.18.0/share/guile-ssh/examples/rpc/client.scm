@@ -1,0 +1,121 @@
+#!/gnu/store/zkq8h96kjpgv0lkmwdn5s5lrnrryp0pv-guile-3.0.9/bin/guile \
+-e main
+!#
+
+;;; client.scm -- An example of an RPC call over a SSH tunnel.
+
+;; Copyright (C) 2015 Artyom V. Poptsov <poptsov.artyom@gmail.com>
+;;
+;; This program is free software: you can redistribute it and/or
+;; modify it under the terms of the GNU General Public License as
+;; published by the Free Software Foundation, either version 3 of the
+;; License, or (at your option) any later version.
+;;
+;; This program is distributed in the hope that it will be useful, but
+;; WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;; General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see
+;; <http://www.gnu.org/licenses/>.
+
+
+;;; Commentary:
+
+;; A demo program that makes an RPC call over a SSH tunnel.  For simplicity
+;; the program uses ssh-agent for authentication.
+;;
+;; The basic code for the RPC call is taken from Guile-RPC documentation.
+
+
+;;; Code:
+
+(use-modules (ice-9 getopt-long)
+             ;; RPC
+             (rpc rpc)
+             (rpc xdr)
+             (rpc xdr types)
+             ;; Guile-SSH
+             (ssh session)
+             (ssh auth)
+             (ssh tunnel))
+
+(define result-type
+  (make-xdr-struct-type (list xdr-integer             ;; `integer_part'
+                              xdr-unsigned-integer))) ;; `decimal_part'
+
+(define invoke-split-number
+  (make-synchronous-rpc-call 80000 0    ;; program and version
+                             1          ;; procedure number
+                             xdr-double ;; argument type
+                             result-type))
+
+(define (print-help-and-exit)
+  "Print information about program usage."
+  (display "\
+Usage: rrepl.scm [options] <host>
+
+Connect to a remote REPL (RREPL) using an ssh-agent for authentication.
+
+Options:
+  --user, -u <user>       User name.
+  --port, -p <port>       SSH port number (default: 22)
+  --help, -h              Print this message and exit.
+")
+  (exit))
+
+(define (main args)
+  "Entry point of the program."
+  (let* ((options-spec '((user          (single-char #\u) (value #t))
+                         (port          (single-char #\p) (value #t))
+                         (local-port    (single-char #\l) (value #t))
+                         (help          (single-char #\h) (value #f))))
+         (options      (getopt-long args options-spec))
+         (user         (option-ref options 'user      (getenv "USER")))
+         (port         (option-ref options 'port      "22"))
+         (local-port   (option-ref options 'local-port "12345"))
+         (help-needed? (option-ref options 'help      #f))
+         (args         (option-ref options '()        #f)))
+
+    (and (or help-needed?
+             (not args)
+             (null? args))
+        (print-help-and-exit))
+
+    (let ((pid (primitive-fork)))
+      (if (zero? pid)
+          ;; Make a new SSH session, connect it and authenticate the user.
+          (let* ((host    (car args))
+                 (session (make-session #:user user
+                                        #:host host
+                                        #:port (string->number port)
+                                        #:log-verbosity 'nolog)))
+            (connect! session)
+            (userauth-agent! session)
+            ;; Make a new SSH tunnel.
+            (let ((tunnel  (make-tunnel session
+                                        #:port (string->number local-port)
+                                        ;; Guile-RPC server listens on localhost.
+                                        #:host "127.0.0.1"
+                                        ;; Guile-RPC server port.
+                                        #:host-port 6666)))
+              (start-forward tunnel)))
+          (let ((sock (socket PF_INET SOCK_STREAM 0)))
+            (dynamic-wind
+              (const #t)
+              (lambda ()
+                (sleep 1)
+                (connect sock AF_INET (inet-pton AF_INET "127.0.0.1")
+                         (string->number local-port))
+
+                ;; Make an RPC call using the SSH tunnel.
+
+                (display (invoke-split-number 3.14 #x7777 sock))
+                (newline))
+              (lambda ()
+                (close sock)
+                (kill pid SIGTERM)
+                (waitpid pid))))))))
+
+;;; client.scm ends here.

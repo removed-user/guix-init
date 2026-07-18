@@ -1,0 +1,11 @@
+prefix=/gnu/store/za0zm7002v1dxf9n7dkrlbwr09pvswc3-libxcb-1.17.0
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: XCB RandR
+Description: XCB RandR Extension
+Version: 1.17.0
+Requires.private: xcb xcb-render
+Libs: -L${libdir} -lxcb-randr
+Cflags: -I${includedir}

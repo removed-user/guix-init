@@ -1,0 +1,26 @@
+;;; Guile-zstd --- GNU Guile bindings to the zstd compression library.
+;;; Copyright © 2020 Ludovic Courtès <ludo@gnu.org>
+;;;
+;;; This file is part of Guile-zstd.
+;;;
+;;; Guile-zstd is free software; you can redistribute it and/or modify it
+;;; under the terms of the GNU General Public License as published by
+;;; the Free Software Foundation; either version 3 of the License, or (at
+;;; your option) any later version.
+;;;
+;;; Guile-zstd is distributed in the hope that it will be useful, but
+;;; WITHOUT ANY WARRANTY; without even the implied warranty of
+;;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;; GNU General Public License for more details.
+;;;
+;;; You should have received a copy of the GNU General Public License
+;;; along with Guile-zstd.  If not, see <http://www.gnu.org/licenses/>.
+
+(define-module (zstd config)
+  #:export (%zstd-library-file-name))
+
+(define %zstd-library-file-name
+  ;; 'dynamic-link' in Guile >= 3.0.2 first looks up file names literally
+  ;; (hence ".so.1"), which is not the case with older versions of Guile.
+  (cond-expand ((not guile-3) "/gnu/store/k13an3vw4kzf03qxld7y1anfby09jqb1-zstd-1.5.6-lib/lib/libzstd")
+               (else          "/gnu/store/k13an3vw4kzf03qxld7y1anfby09jqb1-zstd-1.5.6-lib/lib/libzstd.so.1")))

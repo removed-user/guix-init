@@ -1,0 +1,925 @@
+;;; GnuTLS --- Guile bindings for GnuTLS.
+;;; Copyright (C) 2007-2025 Free Software Foundation, Inc.
+;;;
+;;; This file is part of Guile-GnuTLS.
+;;;
+;;; This library is free software; you can redistribute it and/or
+;;; modify it under the terms of the GNU Lesser General Public
+;;; License as published by the Free Software Foundation; either
+;;; version 2.1 of the License, or (at your option) any later version.
+;;;
+;;; This library is distributed in the hope that it will be useful,
+;;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;;; Lesser General Public License for more details.
+;;;
+;;; You should have received a copy of the GNU Lesser General Public
+;;; License along with this library; if not, see <https://www.gnu.org/licenses/>.
+
+;;; Written by Ludovic Courtès <ludo@gnu.org>
+
+(define-module (gnutls)
+  ;; Note: The export list must be manually kept in sync with the build
+  ;; system.
+  :export (;; versioning
+           gnutls-version
+
+           ;; sessions
+           session?
+           make-session bye handshake rehandshake reauthenticate
+           alert-get alert-send
+           session-cipher session-kx session-mac session-protocol
+           session-compression-method session-certificate-type
+           session-authentication-type session-server-authentication-type
+           session-client-authentication-type
+           session-peer-certificate-chain session-our-certificate-chain
+           set-session-transport-fd! set-session-transport-port!
+           set-session-credentials! set-server-session-certificate-request!
+           set-session-server-name!
+
+           ;; anonymous credentials
+           anonymous-client-credentials? anonymous-server-credentials?
+           make-anonymous-client-credentials make-anonymous-server-credentials
+           set-anonymous-server-dh-parameters!
+
+           ;; certificate credentials
+           certificate-credentials? make-certificate-credentials
+           set-certificate-credentials-dh-parameters!
+           set-certificate-credentials-x509-key-files!
+           set-certificate-credentials-x509-trust-file!
+           set-certificate-credentials-x509-crl-file!
+           set-certificate-credentials-x509-key-data!
+           set-certificate-credentials-x509-trust-data!
+           set-certificate-credentials-x509-crl-data!
+           set-certificate-credentials-x509-keys!
+           set-certificate-credentials-verify-limits!
+           set-certificate-credentials-verify-flags!
+           peer-certificate-status
+
+           ;; SRP credentials
+           srp-client-credentials? srp-server-credentials?
+           make-srp-client-credentials make-srp-server-credentials
+           set-srp-client-credentials!
+           set-srp-server-credentials-files!
+           server-session-srp-username
+           srp-base64-encode srp-base64-decode
+
+           ;; PSK credentials
+           psk-client-credentials? psk-server-credentials?
+           make-psk-client-credentials make-psk-server-credentials
+           set-psk-client-credentials!
+           set-psk-server-credentials-file!
+           server-session-psk-username
+
+           ;; priorities
+           set-session-priorities!
+           set-session-default-priority!
+
+           ;; DH
+           set-session-dh-prime-bits!
+           make-dh-parameters dh-parameters?
+           pkcs3-import-dh-parameters pkcs3-export-dh-parameters
+
+           ;; X.509
+           x509-certificate? x509-private-key?
+           generate-x509-private-key
+           make-x509-certificate
+           import-x509-certificate export-x509-certificate
+           x509-certificate-matches-hostname?
+           x509-certificate-dn x509-certificate-dn-oid
+           x509-certificate-issuer-dn x509-certificate-issuer-dn-oid
+           x509-certificate-signature-algorithm x509-certificate-version
+           x509-certificate-key-id x509-certificate-authority-key-id
+           x509-certificate-subject-key-id
+           x509-certificate-subject-alternative-name
+           x509-certificate-public-key-algorithm x509-certificate-key-usage
+           x509-certificate-fingerprint
+           x509-certificate-activation-time
+           x509-certificate-expiration-time
+           x509-certificate-ca-status
+           x509-certificate-serial
+           set-x509-certificate-dn-by-oid!
+           set-x509-certificate-key!
+           set-x509-certificate-activation-time!
+           set-x509-certificate-expiration-time!
+           set-x509-certificate-ca-status!
+           set-x509-certificate-version!
+           set-x509-certificate-key-usage!
+           set-x509-certificate-subject-key-id!
+           set-x509-certificate-serial!
+           sign-x509-certificate!
+           import-x509-private-key export-x509-private-key
+           pkcs8-import-x509-private-key
+
+           ;; Abstract public and private keys
+           import-raw-dsa-public-key
+           import-raw-ecc-public-key
+           import-raw-rsa-public-key
+           import-raw-dsa-private-key
+           import-raw-ecc-private-key
+           import-raw-rsa-private-key
+           import-public-key
+           import-private-key
+           public-key-export-raw-dsa
+           public-key-export-raw-ecc
+           public-key-export-raw-rsa
+           private-key-export-raw-dsa
+           private-key-export-raw-ecc
+           private-key-export-raw-rsa
+           private-key->public-key
+           public-key-export
+           public-key-pk-algorithm
+           private-key-pk-algorithm
+           public-key-preferred-hash-algorithm
+           generate-private-key
+           private-key-sign-data
+           private-key-sign-hash
+           private-key-decrypt-data
+           public-key-encrypt-data
+           public-key-verify-data
+           public-key-verify-hash
+           x509-certificate->public-key
+           x509-private-key->private-key
+
+           ;; HMAC and MAC
+           mac-nonce-size
+           hmac? make-hmac hmac! hmac-copy hmac-direct
+           hmac-length hmac-output set-hmac-nonce! hmac-algorithm
+
+           ;; Hash
+           hash? make-hash hash! hash-copy hash-direct
+           hash-length hash-output hash-algorithm
+
+           ;; AEAD and non-AEAD ciphers
+           cipher-tag-size cipher-key-size cipher-block-size cipher-iv-size
+           aead-cipher? make-aead-cipher aead-cipher-encrypt aead-cipher-decrypt
+           aead-cipher-algorithm
+           cipher? make-cipher cipher-encrypt cipher-decrypt cipher-set-iv!
+           cipher-add-auth! cipher-tag
+           cipher-algorithm
+
+           ;; PK algorithm
+           string->pk-algorithm pk-algorithm->oid pk-algorithm-list
+           pk-algorithm->sign-algorithm oid->pk-algorithm
+
+           ;; Sign algorithm
+           oid->sign-algorithm sign-algorithm->digest-algorithm
+           string->sign-algorithm sign-algorithm->oid
+           sign-algorithm-is-secure? sign-algorithm-list
+           sign-algorithm->pk-algorithm sign-algorithm-supports?
+
+           ;; ECC curves
+           string->ecc-curve ecc-curve->oid ecc-curve-list
+           oid->ecc-curve ecc-curve->pk-algorithm ecc-curve-size
+
+           ;; Random
+           gnutls-random
+
+           ;; record layer
+           record-send record-receive!
+           record-get-direction
+           session-record-port
+           set-session-record-port-close!
+
+           ;; debugging
+           set-log-procedure! set-log-level!
+
+           ;; enum->string functions
+           cipher->string kx->string params->string credentials->string
+           mac->string digest->string compression-method->string
+           connection-end->string connection-flag->string
+           alert-level->string
+           alert-description->string handshake-description->string
+           certificate-status->string certificate-request->string
+           close-request->string
+           protocol->string certificate-type->string
+           x509-certificate-format->string
+           x509-subject-alternative-name->string pk-algorithm->string
+           sign-algorithm->string psk-key-format->string key-usage->string
+           certificate-verify->string error->string
+           cipher-suite->string server-name-type->string
+           privkey->string oid->string ecc-curve->string
+           random-level->string
+
+           ;; enum values
+           cipher/null
+           cipher/arcfour
+           cipher/arcfour-128
+           cipher/3des-cbc
+           cipher/aes-128-cbc
+           cipher/aes-256-cbc
+           cipher/arcfour-40
+           cipher/camellia-128-cbc
+           cipher/camellia-256-cbc
+           cipher/aes-192-cbc
+           cipher/aes-128-gcm
+           cipher/aes-256-gcm
+           cipher/camellia-192-cbc
+           cipher/salsa20-256
+           cipher/estream-salsa20-256
+           cipher/camellia-128-gcm
+           cipher/camellia-256-gcm
+           cipher/rc2-40-cbc
+           cipher/des-cbc
+           cipher/aes-128-ccm
+           cipher/aes-256-ccm
+           cipher/aes-128-ccm-8
+           cipher/aes-256-ccm-8
+           cipher/chacha20-poly1305
+           cipher/gost28147-tc26z-cfb
+           cipher/gost28147-cpa-cfb
+           cipher/gost28147-cpb-cfb
+           cipher/gost28147-cpc-cfb
+           cipher/gost28147-cpd-cfb
+           cipher/aes-128-cfb8
+           cipher/aes-192-cfb8
+           cipher/aes-256-cfb8
+           cipher/aes-128-xts
+           cipher/aes-256-xts
+           cipher/gost28147-tc26z-cnt
+           cipher/chacha20-64
+           cipher/chacha20-32
+           cipher/aes-128-siv
+           cipher/aes-256-siv
+           cipher/aes-192-gcm
+           cipher/magma-ctr-acpkm
+           cipher/kuznyechik-ctr-acpkm
+           cipher/idea-pgp-cfb
+           cipher/3des-pgp-cfb
+           cipher/cast5-pgp-cfb
+           cipher/blowfish-pgp-cfb
+           cipher/safer-sk128-pgp-cfb
+           cipher/aes128-pgp-cfb
+           cipher/aes192-pgp-cfb
+           cipher/aes256-pgp-cfb
+           cipher/twofish-pgp-cfb
+           kx/rsa
+           kx/dhe-dss
+           kx/dhe-rsa
+           kx/anon-dh
+           kx/srp
+           kx/rsa-export
+           kx/srp-rsa
+           kx/srp-dss
+           kx/psk
+           kx/dhe-dss
+           params/rsa-export
+           params/dh
+           credentials/certificate
+           credentials/anon
+           credentials/anonymous
+           credentials/srp
+           credentials/psk
+           credentials/ia
+           mac/unknown
+           mac/null
+           mac/md5
+           mac/sha1
+           mac/rmd160
+           mac/md2
+           mac/sha256
+           mac/sha384
+           mac/sha512
+           mac/sha224
+           mac/sha3-224
+           mac/sha3-256
+           mac/sha3-384
+           mac/sha3-512
+           mac/md5-sha1
+           mac/gostr-94
+           mac/streebog-256
+           mac/streebog-512
+           mac/aead
+           mac/umac-96
+           mac/umac-128
+           mac/aes-cmac-128
+           mac/aes-cmac-256
+           mac/aes-gmac-128
+           mac/aes-gmac-192
+           mac/aes-gmac-256
+           mac/gost28147-tc26z-imit
+           mac/shake-128
+           mac/shake-256
+           mac/magma-omac
+           mac/kuznyechik-omac
+           digest/null
+           digest/md5
+           digest/sha1
+           digest/rmd160
+           digest/md2
+           digest/sha256
+           digest/sha384
+           digest/sha512
+           digest/sha224
+           digest/sha3-224
+           digest/sha3-256
+           digest/sha3-384
+           digest/sha3-512
+           digest/md5-sha1
+           digest/gostr-94
+           digest/streebog-256
+           digest/streebog-512
+           digest/shake-128
+           digest/shake-256
+           compression-method/null
+           compression-method/deflate
+           compression-method/lzo
+           connection-end/server
+           connection-end/client
+           connection-flag/datagram
+           connection-flag/nonblock
+           connection-flag/no-extensions
+           connection-flag/no-replay-protection
+           connection-flag/no-signal
+           connection-flag/allow-id-change
+           connection-flag/enable-false-start
+           connection-flag/force-client-cert
+           connection-flag/no-tickets
+           connection-flag/key-share-top
+           connection-flag/key-share-top2
+           connection-flag/key-share-top3
+           connection-flag/post-handshake-auth
+           connection-flag/no-auto-rekey
+           connection-flag/safe-padding-check
+           connection-flag/enable-early-start
+           connection-flag/enable-rawpk
+           connection-flag/auto-reauth
+           connection-flag/enable-early-data
+           alert-level/warning
+           alert-level/fatal
+           alert-description/close-notify
+           alert-description/unexpected-message
+           alert-description/bad-record-mac
+           alert-description/decryption-failed
+           alert-description/record-overflow
+           alert-description/decompression-failure
+           alert-description/handshake-failure
+           alert-description/ssl3-no-certificate
+           alert-description/bad-certificate
+           alert-description/unsupported-certificate
+           alert-description/certificate-revoked
+           alert-description/certificate-expired
+           alert-description/certificate-unknown
+           alert-description/illegal-parameter
+           alert-description/unknown-ca
+           alert-description/access-denied
+           alert-description/decode-error
+           alert-description/decrypt-error
+           alert-description/export-restriction
+           alert-description/protocol-version
+           alert-description/insufficient-security
+           alert-description/internal-error
+           alert-description/user-canceled
+           alert-description/no-renegotiation
+           alert-description/unsupported-extension
+           alert-description/certificate-unobtainable
+           alert-description/unrecognized-name
+           alert-description/unknown-psk-identity
+           alert-description/inner-application-failure
+           alert-description/inner-application-verification
+           handshake-description/hello-request
+           handshake-description/client-hello
+           handshake-description/server-hello
+           handshake-description/certificate-pkt
+           handshake-description/server-key-exchange
+           handshake-description/certificate-request
+           handshake-description/server-hello-done
+           handshake-description/certificate-verify
+           handshake-description/client-key-exchange
+           handshake-description/finished
+           certificate-status/invalid
+           certificate-status/revoked
+           certificate-status/signer-not-found
+           certificate-status/signer-not-ca
+           certificate-status/insecure-algorithm
+           certificate-status/not-activated
+           certificate-status/expired
+           certificate-status/signature-failure
+           certificate-status/revocation-data-superseded
+           certificate-status/unexpected-owner
+           certificate-status/revocation-data-issued-in-future
+           certificate-status/signer-constraints-failed
+           certificate-status/mismatch
+           certificate-status/purpose-mismatch
+           certificate-status/missing-ocsp-status
+           certificate-status/invalid-ocsp-status
+           certificate-status/unknown-crit-extensions
+           certificate-request/ignore
+           certificate-request/request
+           certificate-request/require
+           close-request/rdwr
+           close-request/wr
+           protocol/ssl-3
+           protocol/tls-1.0
+           protocol/tls-1.1
+           protocol/version-unknown
+           certificate-type/x509
+           certificate-type/openpgp
+           x509-certificate-format/der
+           x509-certificate-format/pem
+           x509-subject-alternative-name/dnsname
+           x509-subject-alternative-name/rfc822name
+           x509-subject-alternative-name/uri
+           x509-subject-alternative-name/ipaddress
+           pk-algorithm/unknown
+           pk-algorithm/rsa
+           pk-algorithm/dsa
+           pk-algorithm/dh
+           pk-algorithm/ecdsa
+           pk-algorithm/ecc
+           pk-algorithm/ec
+           pk-algorithm/ecdh-x25519
+           pk-algorithm/ecdhx
+           pk-algorithm/rsa-pss
+           pk-algorithm/eddsa-ed25519
+           pk-algorithm/gost-01
+           pk-algorithm/gost-12-256
+           pk-algorithm/gost-12-512
+           pk-algorithm/ecdh-x448
+           pk-algorithm/eddsa-ed448
+           pk-algorithm/rsa-oaep
+           pk-algorithm/mlkem768
+           pk-algorithm/mldsa44
+           pk-algorithm/mldsa65
+           pk-algorithm/mldsa87
+           pk-algorithm/mlkem1024
+           sign-algorithm/unknown
+           sign-algorithm/rsa-sha1
+           sign-algorithm/dsa-sha1
+           sign-algorithm/rsa-md5
+           sign-algorithm/rsa-md2
+           sign-algorithm/rsa-rmd160
+           sign-algorithm/rsa-sha256
+           sign-algorithm/rsa-sha384
+           sign-algorithm/rsa-sha512
+           sign-algorithm/rsa-sha224
+           sign-algorithm/dsa-sha224
+           sign-algorithm/dsa-sha256
+           sign-algorithm/ecdsa-sha1
+           sign-algorithm/ecdsa-sha224
+           sign-algorithm/ecdsa-sha256
+           sign-algorithm/ecdsa-sha384
+           sign-algorithm/ecdsa-sha512
+           sign-algorithm/dsa-sha384
+           sign-algorithm/dsa-sha512
+           sign-algorithm/ecdsa-sha3-224
+           sign-algorithm/ecdsa-sha3-256
+           sign-algorithm/ecdsa-sha3-384
+           sign-algorithm/ecdsa-sha3-512
+           sign-algorithm/dsa-sha3-224
+           sign-algorithm/dsa-sha3-256
+           sign-algorithm/dsa-sha3-384
+           sign-algorithm/dsa-sha3-512
+           sign-algorithm/rsa-sha3-224
+           sign-algorithm/rsa-sha3-256
+           sign-algorithm/rsa-sha3-384
+           sign-algorithm/rsa-sha3-512
+           sign-algorithm/rsa-pss-sha256
+           sign-algorithm/rsa-pss-sha384
+           sign-algorithm/rsa-pss-sha512
+           sign-algorithm/eddsa-ed25519
+           sign-algorithm/rsa-raw
+           sign-algorithm/ecdsa-secp256r1-sha256
+           sign-algorithm/ecdsa-secp384r1-sha384
+           sign-algorithm/ecdsa-secp521r1-sha512
+           sign-algorithm/rsa-pss-rsae-sha256
+           sign-algorithm/rsa-pss-rsae-sha384
+           sign-algorithm/rsa-pss-rsae-sha512
+           sign-algorithm/gost-94
+           sign-algorithm/gost-256
+           sign-algorithm/gost-512
+           sign-algorithm/eddsa-ed448
+           sign-algorithm/mldsa44
+           sign-algorithm/mldsa65
+           sign-algorithm/mldsa87
+           psk-key-format/raw
+           psk-key-format/hex
+           key-usage/digital-signature
+           key-usage/non-repudiation
+           key-usage/key-encipherment
+           key-usage/data-encipherment
+           key-usage/key-agreement
+           key-usage/key-cert-sign
+           key-usage/crl-sign
+           key-usage/encipher-only
+           key-usage/decipher-only
+           certificate-verify/disable-ca-sign
+           certificate-verify/allow-x509-v1-ca-crt
+           certificate-verify/allow-x509-v1-ca-certificate
+           certificate-verify/do-not-allow-same
+           certificate-verify/allow-any-x509-v1-ca-crt
+           certificate-verify/allow-any-x509-v1-ca-certificate
+           certificate-verify/allow-sign-rsa-md2
+           certificate-verify/allow-sign-rsa-md5
+           server-name-type/dns
+           privkey/import-auto-release
+           privkey/import-copy
+           privkey/disable-callbacks
+           privkey/sign-flag-tls1-rsa
+           privkey/flag-provable
+           privkey/flag-export-compat
+           privkey/sign-flag-rsa-pss
+           privkey/flag-reproducible
+           privkey/flag-ca
+           privkey/flag-rsa-pss-fixed-salt-length
+           oid/x520-country-name
+           oid/x520-organization-name
+           oid/x520-organizational-unit-name
+           oid/x520-common-name
+           oid/x520-locality-name
+           oid/x520-state-or-province-name
+           oid/x520-initials
+           oid/x520-generation-qualifier
+           oid/x520-surname
+           oid/x520-given-name
+           oid/x520-title
+           oid/x520-dn-qualifier
+           oid/x520-pseudonym
+           oid/x520-postalcode
+           oid/x520-name
+           oid/ldap-dc
+           oid/ldap-uid
+           oid/pkcs9-email
+           oid/pkix-date-of-birth
+           oid/pkix-place-of-birth
+           oid/pkix-gender
+           oid/pkix-country-of-citizenship
+           oid/pkix-country-of-residence
+           oid/aia
+           oid/ad-ocsp
+           oid/ad-caissuers
+           ecc-curve/invalid
+           ecc-curve/secp224r1
+           ecc-curve/secp256r1
+           ecc-curve/secp384r1
+           ecc-curve/secp521r1
+           ecc-curve/secp192r1
+           ecc-curve/x25519
+           ecc-curve/ed25519
+           ecc-curve/gost256cpa
+           ecc-curve/gost256cpb
+           ecc-curve/gost256cpc
+           ecc-curve/gost256cpxa
+           ecc-curve/gost256cpxb
+           ecc-curve/gost512a
+           ecc-curve/gost512b
+           ecc-curve/gost512c
+           ecc-curve/gost256a
+           ecc-curve/gost256b
+           ecc-curve/gost256c
+           ecc-curve/gost256d
+           ecc-curve/x448
+           ecc-curve/ed448
+           random-level/nonce
+           random-level/random
+           random-level/key
+
+           ;; FIXME: Automate this:
+           ;; grep '^#define GNUTLS_E_' ../../lib/includes/gnutls/gnutls.h.in | \
+           ;;   sed -r -e 's|^#define GNUTLS_E_([^ ]+).*$|error/\1|' | tr A-Z_ a-z-
+           error/success
+           error/unsupported-version-packet
+           error/tls-packet-decoding-error
+           error/unexpected-packet-length
+           error/invalid-session
+           error/fatal-alert-received
+           error/unexpected-packet
+           error/warning-alert-received
+           error/error-in-finished-packet
+           error/unexpected-handshake-packet
+           error/decryption-failed
+           error/memory-error
+           error/decompression-failed
+           error/compression-failed
+           error/again
+           error/expired
+           error/db-error
+           error/srp-pwd-error
+           error/keyfile-error
+           error/insufficient-credentials
+           error/insuficient-credentials
+           error/insufficient-cred
+           error/insuficient-cred
+           error/hash-failed
+           error/base64-decoding-error
+           error/rehandshake
+           error/got-application-data
+           error/record-limit-reached
+           error/encryption-failed
+           error/pk-encryption-failed
+           error/pk-decryption-failed
+           error/pk-sign-failed
+           error/x509-unsupported-critical-extension
+           error/key-usage-violation
+           error/no-certificate-found
+           error/invalid-request
+           error/short-memory-buffer
+           error/interrupted
+           error/push-error
+           error/pull-error
+           error/received-illegal-parameter
+           error/requested-data-not-available
+           error/pkcs1-wrong-pad
+           error/received-illegal-extension
+           error/internal-error
+           error/dh-prime-unacceptable
+           error/file-error
+           error/too-many-empty-packets
+           error/unknown-pk-algorithm
+           error/too-many-handshake-packets
+           error/received-disallowed-name
+           error/certificate-required
+           error/no-temporary-rsa-params
+           error/no-compression-algorithms
+           error/no-cipher-suites
+           error/openpgp-getkey-failed
+           error/pk-sig-verify-failed
+           error/illegal-srp-username
+           error/srp-pwd-parsing-error
+           error/keyfile-parsing-error
+           error/no-temporary-dh-params
+           error/asn1-element-not-found
+           error/asn1-identifier-not-found
+           error/asn1-der-error
+           error/asn1-value-not-found
+           error/asn1-generic-error
+           error/asn1-value-not-valid
+           error/asn1-tag-error
+           error/asn1-tag-implicit
+           error/asn1-type-any-error
+           error/asn1-syntax-error
+           error/asn1-der-overflow
+           error/openpgp-uid-revoked
+           error/certificate-error
+           error/x509-certificate-error
+           error/certificate-key-mismatch
+           error/unsupported-certificate-type
+           error/x509-unknown-san
+           error/openpgp-fingerprint-unsupported
+           error/x509-unsupported-attribute
+           error/unknown-hash-algorithm
+           error/unknown-pkcs-content-type
+           error/unknown-pkcs-bag-type
+           error/invalid-password
+           error/mac-verify-failed
+           error/constraint-error
+           error/warning-ia-iphf-received
+           error/warning-ia-fphf-received
+           error/ia-verify-failed
+           error/unknown-algorithm
+           error/unsupported-signature-algorithm
+           error/safe-renegotiation-failed
+           error/unsafe-renegotiation-denied
+           error/unknown-srp-username
+           error/premature-termination
+           error/malformed-cidr
+           error/base64-encoding-error
+           error/incompatible-gcrypt-library
+           error/incompatible-crypto-library
+           error/incompatible-libtasn1-library
+           error/openpgp-keyring-error
+           error/x509-unsupported-oid
+           error/random-failed
+           error/base64-unexpected-header-error
+           error/openpgp-subkey-error
+           error/crypto-already-registered
+           error/already-registered
+           error/handshake-too-large
+           error/cryptodev-ioctl-error
+           error/cryptodev-device-error
+           error/channel-binding-not-available
+           error/bad-cookie
+           error/openpgp-preferred-key-error
+           error/incompat-dsa-key-with-tls-protocol
+           error/insufficient-security
+           error/heartbeat-pong-received
+           error/heartbeat-ping-received
+           error/unrecognized-name
+           error/pkcs11-error
+           error/pkcs11-load-error
+           error/parsing-error
+           error/pkcs11-pin-error
+           error/pkcs11-slot-error
+           error/locking-error
+           error/pkcs11-attribute-error
+           error/pkcs11-device-error
+           error/pkcs11-data-error
+           error/pkcs11-unsupported-feature-error
+           error/pkcs11-key-error
+           error/pkcs11-pin-expired
+           error/pkcs11-pin-locked
+           error/pkcs11-session-error
+           error/pkcs11-signature-error
+           error/pkcs11-token-error
+           error/pkcs11-user-error
+           error/crypto-init-failed
+           error/timedout
+           error/user-error
+           error/ecc-no-supported-curves
+           error/ecc-unsupported-curve
+           error/pkcs11-requested-object-not-availble
+           error/certificate-list-unsorted
+           error/illegal-parameter
+           error/no-priorities-were-set
+           error/x509-unsupported-extension
+           error/session-eof
+           error/tpm-error
+           error/tpm-key-password-error
+           error/tpm-srk-password-error
+           error/tpm-session-error
+           error/tpm-key-not-found
+           error/tpm-uninitialized
+           error/tpm-no-lib
+           error/no-certificate-status
+           error/ocsp-response-error
+           error/random-device-error
+           error/auth-error
+           error/no-application-protocol
+           error/sockets-init-error
+           error/key-import-failed
+           error/inappropriate-fallback
+           error/certificate-verification-error
+           error/privkey-verification-error
+           error/unexpected-extensions-length
+           error/asn1-embedded-null-in-string
+           error/self-test-error
+           error/no-self-test
+           error/lib-in-error-state
+           error/pk-generation-error
+           error/idna-error
+           error/need-fallback
+           error/session-user-id-changed
+           error/handshake-during-false-start
+           error/unavailable-during-handshake
+           error/pk-invalid-pubkey
+           error/pk-invalid-privkey
+           error/not-yet-activated
+           error/invalid-utf8-string
+           error/no-embedded-data
+           error/invalid-utf8-email
+           error/invalid-password-string
+           error/certificate-time-error
+           error/record-overflow
+           error/asn1-time-error
+           error/incompatible-sig-with-key
+           error/pk-invalid-pubkey-params
+           error/pk-no-validation-params
+           error/ocsp-mismatch-with-certs
+           error/no-common-key-share
+           error/reauth-request
+           error/too-many-matches
+           error/crl-verification-error
+           error/missing-extension
+           error/db-entry-exists
+           error/early-data-rejected
+           error/unimplemented-feature
+           error/int-ret-0
+           error/int-check-again
+           error/application-error-max
+           error/application-error-min
+
+           fatal-error?
+
+           ;; base16
+           hex-encode hex-decode
+
+           ;; base64
+           base64-encode base64-decode
+
+           ;; OpenPGP keys (formerly in GnuTLS-extra)
+           openpgp-certificate? openpgp-private-key?
+           import-openpgp-certificate import-openpgp-private-key
+           openpgp-certificate-id openpgp-certificate-id!
+           openpgp-certificate-fingerprint openpgp-certificate-fingerprint!
+           openpgp-certificate-name openpgp-certificate-names
+           openpgp-certificate-algorithm openpgp-certificate-version
+           openpgp-certificate-usage
+
+           ;; OpenPGP keyrings
+           openpgp-keyring? import-openpgp-keyring
+           openpgp-keyring-contains-key-id?
+
+           ;; certificate credentials
+           set-certificate-credentials-openpgp-keys!
+
+           ;; enum->string functions
+           openpgp-certificate-format->string
+
+           ;; enum values
+           openpgp-certificate-format/raw
+           openpgp-certificate-format/base64))
+
+(eval-when (expand load eval)
+  (define %libdir
+    (or (getenv "GNUTLS_GUILE_EXTENSION_DIR")
+
+        ;; The .scm file is supposed to be architecture-independent.  Thus,
+        ;; save 'extensiondir' only if it's different from what Guile expects.
+        "/gnu/store/0z0c5w0xbcqhx8ff4h45iyaxgikq2yzi-guile-gnutls-5.0.1/lib/guile/3.0/extensions"))
+
+  (unless (getenv "GNUTLS_GUILE_CROSS_COMPILING")
+    (load-extension (if %libdir
+                        (string-append %libdir "/guile-gnutls-v-2")
+                        "guile-gnutls-v-2")
+                    "scm_init_gnutls")))
+
+(define-syntax define-deprecated
+  (lambda (s)
+    "Define a deprecated variable or procedure, along these lines:
+
+  (define-deprecated variable alias)
+
+This defines 'variable' as an alias for 'alias', and emits a warning when
+'variable' is used."
+    (syntax-case s ()
+      ((_ variable)
+       (with-syntax ((alias (datum->syntax
+                             #'variable
+                             (symbol-append
+                              '% (syntax->datum #'variable)))))
+         #'(define-deprecated variable alias)))
+      ((_ variable alias)
+       (identifier? #'variable)
+       #`(define-syntax variable
+           (lambda (s)
+             (issue-deprecation-warning
+              (format #f "GnuTLS variable '~a' is deprecated"
+                      (syntax->datum #'variable)))
+             (syntax-case s ()
+               ((_ args (... ...))
+                #'(alias args (... ...)))
+               (id
+                (identifier? #'id)
+                #'alias))))))))
+
+;; Renaming.
+(define protocol/ssl-3 #f)
+(define protocol/tls-1.0 #f)
+(define protocol/tls-1.1 #f)
+
+;; Aliases.
+(define credentials/anonymous   #f)
+(define cipher/rijndael-256-cbc #f)
+(define cipher/rijndael-128-cbc #f)
+(define cipher/rijndael-cbc     #f)
+(define cipher/arcfour-128      #f)
+(define certificate-verify/allow-any-x509-v1-ca-certificate #f)
+(define certificate-verify/allow-x509-v1-ca-certificate #f)
+
+(unless (getenv "GNUTLS_GUILE_CROSS_COMPILING")
+  ;; Renaming.
+  (set! protocol/ssl-3 protocol/ssl3)
+  (set! protocol/tls-1.0 protocol/tls1-0)
+  (set! protocol/tls-1.1 protocol/tls1-1)
+
+  ;; Aliases.
+  (set! credentials/anonymous   credentials/anon)
+  (set! cipher/rijndael-256-cbc cipher/aes-256-cbc)
+  (set! cipher/rijndael-128-cbc cipher/aes-128-cbc)
+  (set! cipher/rijndael-cbc     cipher/aes-128-cbc)
+  (set! cipher/arcfour-128      cipher/arcfour)
+  (set! certificate-verify/allow-any-x509-v1-ca-certificate
+    certificate-verify/allow-any-x509-v1-ca-crt)
+  (set! certificate-verify/allow-x509-v1-ca-certificate
+    certificate-verify/allow-x509-v1-ca-crt))
+
+;; Deprecated OpenPGP bindings.
+(define-deprecated certificate-type/openpgp)
+(define-deprecated error/openpgp-getkey-failed)
+(define-deprecated error/openpgp-uid-revoked)
+(define-deprecated error/openpgp-fingerprint-unsupported)
+(define-deprecated error/openpgp-keyring-error)
+(define-deprecated error/openpgp-subkey-error)
+(define-deprecated error/openpgp-preferred-key-error)
+(define-deprecated openpgp-private-key?)
+(define-deprecated import-openpgp-certificate)
+(define-deprecated import-openpgp-private-key)
+(define-deprecated openpgp-certificate-id)
+(define-deprecated openpgp-certificate-id!)
+(define-deprecated openpgp-certificate-fingerprint)
+(define-deprecated openpgp-certificate-fingerprint!)
+(define-deprecated openpgp-certificate-name)
+(define-deprecated openpgp-certificate-names)
+(define-deprecated openpgp-certificate-algorithm)
+(define-deprecated openpgp-certificate-version)
+(define-deprecated openpgp-certificate-usage)
+(define-deprecated openpgp-keyring?)
+(define-deprecated import-openpgp-keyring)
+(define-deprecated openpgp-keyring-contains-key-id?)
+(define-deprecated set-certificate-credentials-openpgp-keys!)
+
+;; XXX: The following bindings should be marked as deprecated as well, but due
+;; to the way binding names are constructed for enums and smobs, it's
+;; complicated.  Oh well.
+;;
+;; (define-deprecated openpgp-certificate?)
+;; (define-deprecated openpgp-certificate-format->string)
+;; (define-deprecated openpgp-certificate-format/raw)
+;; (define-deprecated openpgp-certificate-format/base64)
+
+;;; Local Variables:
+;;; mode: scheme
+;;; coding: utf-8
+;;; End:
+
+;;; arch-tag: 3394732c-d9fa-48dd-a093-9fba3a325b8b

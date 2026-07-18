@@ -1,0 +1,1 @@
+/gnu/store/882aflaivazdl05ix6lh24avb2rax9zc-guile-git-0.10.0/share/guile/site/3.0/git.scm

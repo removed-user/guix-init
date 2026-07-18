@@ -1,0 +1,1 @@
+/gnu/store/qxq8zda8rfpx5vy451hxdz6nnhpdh65p-guile-zstd-0.1.1/share/guile/site/3.0/zstd.scm

@@ -1,0 +1,10 @@
+prefix=/gnu/store/5qmb8hpblv5pdfv0zxk7bs841vx3wv5f-avahi-0.8
+exec_prefix=${prefix}
+libdir=/gnu/store/5qmb8hpblv5pdfv0zxk7bs841vx3wv5f-avahi-0.8/lib
+includedir=${prefix}/include
+
+Name: avahi-core
+Description: Avahi Multicast DNS Responder (Embeddable Stack)
+Version: 0.8
+Libs: -L${libdir} -lavahi-common -lavahi-core
+Cflags: -D_REENTRANT -I${includedir}

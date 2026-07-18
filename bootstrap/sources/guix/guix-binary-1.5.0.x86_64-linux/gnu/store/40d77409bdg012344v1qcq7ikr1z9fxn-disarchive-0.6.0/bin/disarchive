@@ -1,0 +1,85 @@
+#!/gnu/store/zkq8h96kjpgv0lkmwdn5s5lrnrryp0pv-guile-3.0.9/bin/guile \
+--no-auto-compile -e main -L /gnu/store/40d77409bdg012344v1qcq7ikr1z9fxn-disarchive-0.6.0/share/guile/site/3.0/ -C /gnu/store/40d77409bdg012344v1qcq7ikr1z9fxn-disarchive-0.6.0/lib/guile/3.0/site-ccache/ -s
+!#
+
+;;; Disarchive
+;;; Copyright © 2020-2022 Timothy Sample <samplet@ngyro.com>
+;;;
+;;; This file is part of Disarchive.
+;;;
+;;; Disarchive is free software: you can redistribute it and/or modify
+;;; it under the terms of the GNU General Public License as published by
+;;; the Free Software Foundation, either version 3 of the License, or
+;;; (at your option) any later version.
+;;;
+;;; Disarchive is distributed in the hope that it will be useful,
+;;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;;; GNU General Public License for more details.
+;;;
+;;; You should have received a copy of the GNU General Public License
+;;; along with Disarchive.  If not, see <http://www.gnu.org/licenses/>.
+
+(use-modules (disarchive config)
+             (disarchive scripts assemble)
+             (disarchive scripts disassemble)
+             (ice-9 getopt-long)
+             (ice-9 match))
+
+(define options-grammar
+  '((help (single-char #\h))
+    (version)))
+
+(define help-message "\
+Usage: disarchive [OPTION]... [COMMAND] [COMMAND-OPTION]...
+Separate and combine archive file contents and metadata.
+
+Commands:
+  assemble       Recreate an archive from its contents and metadata
+  disassemble    Separate an archive into its contents and metadata
+
+Run 'disarchive COMMAND --help' for help on using COMMAND.
+
+Top-level options:
+  -h, --help     display this help and exit
+  --version      display version information and exit
+")
+
+(define short-help-message "\
+Run 'disarchive --help' for usage instructions.
+")
+
+(define (getopt-long* . args)
+  (catch 'quit
+    (lambda ()
+      (apply getopt-long args))
+    (lambda (_ status)
+      (display short-help-message (current-error-port))
+      (exit status))))
+
+(define (main args)
+  (let ((options (getopt-long* args options-grammar
+                              #:stop-at-first-non-option #t)))
+    (when (option-ref options 'help #f)
+      (display help-message)
+      (exit EXIT_SUCCESS))
+    (when (option-ref options 'version #f)
+      (display version-message)
+      (exit EXIT_SUCCESS))
+    (match (option-ref options '() '())
+      (("assemble" args ...) (apply assemble-main "assemble" args))
+      (("disassemble" args ...) (apply disassemble-main "disassemble" args))
+      ((cmd . _) (with-output-to-port (current-error-port)
+                   (lambda ()
+                     (format #t "disarchive: No such command: ~a~%" cmd)
+                     (display short-help-message)
+                     (exit EXIT_FAILURE))))
+      (() (with-output-to-port (current-error-port)
+            (lambda ()
+              (display "disarchive: An option or command is required\n")
+              (display short-help-message)
+              (exit EXIT_FAILURE)))))))
+
+;;; Local Variables:
+;;; mode: scheme
+;;; End:

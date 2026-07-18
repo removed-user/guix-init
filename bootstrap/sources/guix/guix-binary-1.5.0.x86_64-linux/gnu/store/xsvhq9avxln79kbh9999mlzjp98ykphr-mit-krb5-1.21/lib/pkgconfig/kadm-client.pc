@@ -1,0 +1,11 @@
+prefix=/gnu/store/xsvhq9avxln79kbh9999mlzjp98ykphr-mit-krb5-1.21
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: kadm-client
+Description: Kerberos administration client library
+Version: 1.21
+Requires.private: mit-krb5-gssapi gssrpc
+Cflags: -I${includedir}
+Libs: -L${libdir} -lkadm5clnt_mit
